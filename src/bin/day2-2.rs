@@ -12,7 +12,7 @@ fn main() {
 }
 
 fn points_from_line(line: &str) -> usize {
-    let split: Vec<&str> = line.trim().split(" ").collect();
+    let split: Vec<&str> = line.trim().split(' ').collect();
     let opp = split[0];
     let me = split[1];
     
