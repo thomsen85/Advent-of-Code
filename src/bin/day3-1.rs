@@ -16,14 +16,14 @@ fn main() {
         }
     }
 
-    let val = res.into_iter().fold(0, |acc, c | acc + char_to_priority(c));
-    
+    let val = res.into_iter().fold(0, |acc, c| acc + char_to_priority(c));
+
     println!("Sum = {}", val);
 }
 
 fn char_to_priority(c: char) -> u32 {
     if c.is_ascii_lowercase() {
-        c as u32 - 96 
+        c as u32 - 96
     } else {
         c as u32 - 38
     }

@@ -2,7 +2,7 @@ extern crate aoc2022_rust;
 use aoc2022_rust::utils;
 
 fn main() {
-    let input = utils::lines_from_file("inputs/day1.txt"); 
+    let input = utils::lines_from_file("inputs/day1.txt");
     let mut acc = 0;
     let mut res = Vec::new();
     for entry in input {
@@ -14,5 +14,4 @@ fn main() {
         }
     }
     println!("{:?}", res.into_iter().max().unwrap());
-
 }

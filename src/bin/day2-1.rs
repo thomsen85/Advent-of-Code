@@ -1,14 +1,12 @@
 extern crate aoc2022_rust;
 use aoc2022_rust::utils;
 
-
 fn main() {
     let input = utils::lines_from_file("inputs/day2.txt");
 
     let total_points = input.iter().fold(0, |acc, x| acc + points_from_line(x));
 
     println!("Points is {}", total_points);
-
 }
 
 fn points_from_line(line: &str) -> usize {
