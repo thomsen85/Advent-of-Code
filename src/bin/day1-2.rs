@@ -1,15 +1,5 @@
-use std::fs::File;
-use std::io::{BufRead, BufReader};
-
 fn main() {
-    let file = File::open("inputs/day1.txt").unwrap();
-    // let input = BufReader::new(file).lines().into_iter().fold("".to_string(),|acc, x| acc.to_string() + x.unwrap().to_string());
-
-    let input = BufReader::new(file)
-        .lines()
-        .into_iter()
-        .map(|a| a.unwrap())
-        .collect::<Vec<String>>();
+    let input = aoc2022_rust::utils::lines_from_file("inputs/day1.txt");
     let mut acc = 0;
     let mut res = Vec::new();
     for entry in input {

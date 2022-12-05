@@ -4,7 +4,7 @@ use aoc2022_rust::utils;
 fn main() {
     let input = utils::lines_from_file("inputs/day2.txt");
 
-    let total_points = input.iter().fold(0, |acc, x| acc + points_from_line(x));
+    let total_points: usize = input.iter().map(|x| points_from_line(x)).sum();
 
     println!("Points is {}", total_points);
 }
