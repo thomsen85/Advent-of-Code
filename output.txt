@@ -1,0 +1,2197 @@
+Inserting: (0, 0)
+Inserting: (3, 0)
+Inserting: (8, 0)
+Inserting: (14, 0)
+Inserting: (22, 0)
+Inserting: (48, 0)
+Inserting: (0, 1)
+Inserting: (9, 1)
+Inserting: (22, 1)
+Inserting: (46, 1)
+Inserting: (0, 2)
+Inserting: (1, 2)
+Inserting: (7, 2)
+Inserting: (23, 2)
+Inserting: (39, 2)
+Inserting: (0, 3)
+Inserting: (2, 3)
+Inserting: (12, 3)
+Inserting: (17, 3)
+Inserting: (35, 3)
+Inserting: (0, 4)
+Inserting: (1, 4)
+Inserting: (2, 4)
+Inserting: (5, 4)
+Inserting: (25, 4)
+Inserting: (32, 4)
+Inserting: (0, 5)
+Inserting: (4, 5)
+Inserting: (18, 5)
+Inserting: (34, 5)
+Inserting: (0, 6)
+Inserting: (1, 6)
+Inserting: (7, 6)
+Inserting: (15, 6)
+Inserting: (26, 6)
+Inserting: (0, 7)
+Inserting: (3, 7)
+Inserting: (12, 7)
+Inserting: (28, 7)
+Inserting: (46, 7)
+Inserting: (0, 8)
+Inserting: (4, 8)
+Inserting: (5, 8)
+Inserting: (22, 8)
+Inserting: (27, 8)
+Inserting: (43, 8)
+Inserting: (0, 9)
+Inserting: (1, 9)
+Inserting: (4, 9)
+Inserting: (10, 9)
+Inserting: (22, 9)
+Inserting: (43, 9)
+Inserting: (0, 10)
+Inserting: (4, 10)
+Inserting: (9, 10)
+Inserting: (28, 10)
+Inserting: (35, 10)
+Inserting: (0, 11)
+Inserting: (1, 11)
+Inserting: (2, 11)
+Inserting: (10, 11)
+Inserting: (20, 11)
+Inserting: (34, 11)
+Inserting: (0, 12)
+Inserting: (12, 12)
+Inserting: (27, 12)
+Inserting: (31, 12)
+Inserting: (0, 13)
+Inserting: (6, 13)
+Inserting: (14, 13)
+Inserting: (16, 13)
+Inserting: (34, 13)
+Inserting: (0, 14)
+Inserting: (1, 14)
+Inserting: (15, 14)
+Inserting: (31, 14)
+Inserting: (48, 14)
+Inserting: (0, 15)
+Inserting: (1, 15)
+Inserting: (6, 15)
+Inserting: (14, 15)
+Inserting: (33, 15)
+Inserting: (42, 15)
+Inserting: (0, 16)
+Inserting: (6, 16)
+Inserting: (12, 16)
+Inserting: (23, 16)
+Inserting: (25, 16)
+Inserting: (39, 16)
+Inserting: (0, 17)
+Inserting: (4, 17)
+Inserting: (12, 17)
+Inserting: (24, 17)
+Inserting: (39, 17)
+Inserting: (0, 18)
+Inserting: (7, 18)
+Inserting: (19, 18)
+Inserting: (34, 18)
+Inserting: (37, 18)
+Inserting: (0, 19)
+Inserting: (2, 19)
+Inserting: (4, 19)
+Inserting: (19, 19)
+Inserting: (25, 19)
+Inserting: (34, 19)
+Inserting: (0, 20)
+Inserting: (1, 20)
+Inserting: (13, 20)
+Inserting: (22, 20)
+Inserting: (31, 20)
+Inserting: (0, 21)
+Inserting: (1, 21)
+Inserting: (3, 21)
+Inserting: (11, 21)
+Inserting: (20, 21)
+Inserting: (34, 21)
+Inserting: (0, 22)
+Inserting: (1, 22)
+Inserting: (3, 22)
+Inserting: (8, 22)
+Inserting: (24, 22)
+Inserting: (31, 22)
+Inserting: (49, 22)
+Inserting: (0, 23)
+Inserting: (1, 23)
+Inserting: (14, 23)
+Inserting: (28, 23)
+Inserting: (40, 23)
+Inserting: (0, 24)
+Inserting: (12, 24)
+Inserting: (16, 24)
+Inserting: (26, 24)
+Inserting: (41, 24)
+Inserting: (0, 25)
+Inserting: (6, 25)
+Inserting: (8, 25)
+Inserting: (18, 25)
+Inserting: (26, 25)
+Inserting: (36, 25)
+Inserting: (0, 26)
+Inserting: (5, 26)
+Inserting: (13, 26)
+Inserting: (17, 26)
+Inserting: (25, 26)
+Inserting: (36, 26)
+Inserting: (0, 27)
+Inserting: (2, 27)
+Inserting: (6, 27)
+Inserting: (17, 27)
+Inserting: (28, 27)
+Inserting: (37, 27)
+Inserting: (0, 28)
+Inserting: (5, 28)
+Inserting: (9, 28)
+Inserting: (12, 28)
+Inserting: (16, 28)
+Inserting: (22, 28)
+Inserting: (34, 28)
+Inserting: (0, 29)
+Inserting: (14, 29)
+Inserting: (22, 29)
+Inserting: (44, 29)
+Inserting: (48, 29)
+Inserting: (0, 30)
+Inserting: (4, 30)
+Inserting: (7, 30)
+Inserting: (15, 30)
+Inserting: (21, 30)
+Inserting: (33, 30)
+Inserting: (43, 30)
+Inserting: (0, 31)
+Inserting: (5, 31)
+Inserting: (7, 31)
+Inserting: (14, 31)
+Inserting: (23, 31)
+Inserting: (30, 31)
+Inserting: (41, 31)
+Inserting: (0, 32)
+Inserting: (2, 32)
+Inserting: (3, 32)
+Inserting: (13, 32)
+Inserting: (22, 32)
+Inserting: (29, 32)
+Inserting: (45, 32)
+Inserting: (0, 33)
+Inserting: (1, 33)
+Inserting: (6, 33)
+Inserting: (12, 33)
+Inserting: (27, 33)
+Inserting: (48, 33)
+Inserting: (0, 34)
+Inserting: (3, 34)
+Inserting: (5, 34)
+Inserting: (13, 34)
+Inserting: (19, 34)
+Inserting: (26, 34)
+Inserting: (56, 34)
+Inserting: (0, 35)
+Inserting: (1, 35)
+Inserting: (2, 35)
+Inserting: (11, 35)
+Inserting: (19, 35)
+Inserting: (36, 35)
+Inserting: (0, 36)
+Inserting: (1, 36)
+Inserting: (3, 36)
+Inserting: (7, 36)
+Inserting: (17, 36)
+Inserting: (25, 36)
+Inserting: (41, 36)
+Inserting: (0, 37)
+Inserting: (1, 37)
+Inserting: (3, 37)
+Inserting: (14, 37)
+Inserting: (19, 37)
+Inserting: (28, 37)
+Inserting: (43, 37)
+Inserting: (0, 38)
+Inserting: (1, 38)
+Inserting: (17, 38)
+Inserting: (19, 38)
+Inserting: (30, 38)
+Inserting: (41, 38)
+Inserting: (0, 39)
+Inserting: (1, 39)
+Inserting: (6, 39)
+Inserting: (12, 39)
+Inserting: (16, 39)
+Inserting: (25, 39)
+Inserting: (32, 39)
+Inserting: (0, 40)
+Inserting: (1, 40)
+Inserting: (2, 40)
+Inserting: (10, 40)
+Inserting: (24, 40)
+Inserting: (31, 40)
+Inserting: (0, 41)
+Inserting: (1, 41)
+Inserting: (2, 41)
+Inserting: (10, 41)
+Inserting: (20, 41)
+Inserting: (25, 41)
+Inserting: (47, 41)
+Inserting: (0, 42)
+Inserting: (4, 42)
+Inserting: (13, 42)
+Inserting: (20, 42)
+Inserting: (23, 42)
+Inserting: (38, 42)
+Inserting: (0, 43)
+Inserting: (11, 43)
+Inserting: (20, 43)
+Inserting: (24, 43)
+Inserting: (30, 43)
+Inserting: (0, 44)
+Inserting: (1, 44)
+Inserting: (9, 44)
+Inserting: (22, 44)
+Inserting: (33, 44)
+Inserting: (0, 45)
+Inserting: (2, 45)
+Inserting: (16, 45)
+Inserting: (19, 45)
+Inserting: (31, 45)
+Inserting: (0, 46)
+Inserting: (1, 46)
+Inserting: (7, 46)
+Inserting: (17, 46)
+Inserting: (23, 46)
+Inserting: (35, 46)
+Inserting: (0, 47)
+Inserting: (5, 47)
+Inserting: (9, 47)
+Inserting: (14, 47)
+Inserting: (18, 47)
+Inserting: (29, 47)
+Inserting: (0, 48)
+Inserting: (1, 48)
+Inserting: (10, 48)
+Inserting: (26, 48)
+Inserting: (33, 48)
+Inserting: (0, 49)
+Inserting: (1, 49)
+Inserting: (20, 49)
+Inserting: (22, 49)
+Inserting: (28, 49)
+Inserting: (41, 49)
+Inserting: (0, 50)
+Inserting: (1, 50)
+Inserting: (7, 50)
+Inserting: (16, 50)
+Inserting: (24, 50)
+Inserting: (30, 50)
+Inserting: (0, 51)
+Inserting: (11, 51)
+Inserting: (15, 51)
+Inserting: (28, 51)
+Inserting: (43, 51)
+Inserting: (0, 52)
+Inserting: (2, 52)
+Inserting: (8, 52)
+Inserting: (18, 52)
+Inserting: (28, 52)
+Inserting: (29, 52)
+Inserting: (0, 53)
+Inserting: (1, 53)
+Inserting: (8, 53)
+Inserting: (16, 53)
+Inserting: (23, 53)
+Inserting: (38, 53)
+Inserting: (0, 54)
+Inserting: (7, 54)
+Inserting: (19, 54)
+Inserting: (22, 54)
+Inserting: (31, 54)
+Inserting: (0, 55)
+Inserting: (3, 55)
+Inserting: (6, 55)
+Inserting: (21, 55)
+Inserting: (30, 55)
+Inserting: (38, 55)
+Inserting: (0, 56)
+Inserting: (1, 56)
+Inserting: (4, 56)
+Inserting: (19, 56)
+Inserting: (22, 56)
+Inserting: (31, 56)
+Inserting: (0, 57)
+Inserting: (1, 57)
+Inserting: (10, 57)
+Inserting: (15, 57)
+Inserting: (25, 57)
+Inserting: (30, 57)
+Inserting: (0, 58)
+Inserting: (1, 58)
+Inserting: (16, 58)
+Inserting: (25, 58)
+Inserting: (36, 58)
+Inserting: (0, 59)
+Inserting: (2, 59)
+Inserting: (8, 59)
+Inserting: (19, 59)
+Inserting: (27, 59)
+Inserting: (31, 59)
+Inserting: (0, 60)
+Inserting: (1, 60)
+Inserting: (16, 60)
+Inserting: (24, 60)
+Inserting: (38, 60)
+Inserting: (0, 61)
+Inserting: (1, 61)
+Inserting: (2, 61)
+Inserting: (15, 61)
+Inserting: (17, 61)
+Inserting: (24, 61)
+Inserting: (34, 61)
+Inserting: (0, 62)
+Inserting: (5, 62)
+Inserting: (12, 62)
+Inserting: (19, 62)
+Inserting: (24, 62)
+Inserting: (32, 62)
+Inserting: (0, 63)
+Inserting: (2, 63)
+Inserting: (13, 63)
+Inserting: (17, 63)
+Inserting: (26, 63)
+Inserting: (35, 63)
+Inserting: (0, 64)
+Inserting: (1, 64)
+Inserting: (3, 64)
+Inserting: (6, 64)
+Inserting: (13, 64)
+Inserting: (23, 64)
+Inserting: (26, 64)
+Inserting: (36, 64)
+Inserting: (0, 65)
+Inserting: (9, 65)
+Inserting: (10, 65)
+Inserting: (21, 65)
+Inserting: (27, 65)
+Inserting: (36, 65)
+Inserting: (0, 66)
+Inserting: (1, 66)
+Inserting: (3, 66)
+Inserting: (12, 66)
+Inserting: (28, 66)
+Inserting: (29, 66)
+Inserting: (39, 66)
+Inserting: (0, 67)
+Inserting: (1, 67)
+Inserting: (2, 67)
+Inserting: (3, 67)
+Inserting: (14, 67)
+Inserting: (20, 67)
+Inserting: (38, 67)
+Inserting: (0, 68)
+Inserting: (9, 68)
+Inserting: (12, 68)
+Inserting: (22, 68)
+Inserting: (29, 68)
+Inserting: (40, 68)
+Inserting: (0, 69)
+Inserting: (5, 69)
+Inserting: (12, 69)
+Inserting: (18, 69)
+Inserting: (31, 69)
+Inserting: (38, 69)
+Inserting: (41, 69)
+Inserting: (0, 70)
+Inserting: (10, 70)
+Inserting: (12, 70)
+Inserting: (24, 70)
+Inserting: (35, 70)
+Inserting: (43, 70)
+Inserting: (0, 71)
+Inserting: (2, 71)
+Inserting: (6, 71)
+Inserting: (20, 71)
+Inserting: (24, 71)
+Inserting: (36, 71)
+Inserting: (0, 72)
+Inserting: (7, 72)
+Inserting: (13, 72)
+Inserting: (35, 72)
+Inserting: (0, 73)
+Inserting: (6, 73)
+Inserting: (14, 73)
+Inserting: (24, 73)
+Inserting: (36, 73)
+Inserting: (0, 74)
+Inserting: (13, 74)
+Inserting: (25, 74)
+Inserting: (29, 74)
+Inserting: (35, 74)
+Inserting: (0, 75)
+Inserting: (2, 75)
+Inserting: (5, 75)
+Inserting: (8, 75)
+Inserting: (16, 75)
+Inserting: (39, 75)
+Inserting: (0, 76)
+Inserting: (4, 76)
+Inserting: (7, 76)
+Inserting: (16, 76)
+Inserting: (36, 76)
+Inserting: (40, 76)
+Inserting: (0, 77)
+Inserting: (5, 77)
+Inserting: (9, 77)
+Inserting: (19, 77)
+Inserting: (29, 77)
+Inserting: (40, 77)
+Inserting: (0, 78)
+Inserting: (11, 78)
+Inserting: (20, 78)
+Inserting: (37, 78)
+Inserting: (45, 78)
+Inserting: (0, 79)
+Inserting: (1, 79)
+Inserting: (11, 79)
+Inserting: (31, 79)
+Inserting: (41, 79)
+Inserting: (0, 80)
+Inserting: (10, 80)
+Inserting: (12, 80)
+Inserting: (21, 80)
+Inserting: (31, 80)
+Inserting: (0, 81)
+Inserting: (1, 81)
+Inserting: (14, 81)
+Inserting: (16, 81)
+Inserting: (23, 81)
+Inserting: (38, 81)
+Inserting: (0, 82)
+Inserting: (2, 82)
+Inserting: (16, 82)
+Inserting: (23, 82)
+Inserting: (37, 82)
+Inserting: (0, 83)
+Inserting: (3, 83)
+Inserting: (14, 83)
+Inserting: (23, 83)
+Inserting: (36, 83)
+Inserting: (0, 84)
+Inserting: (2, 84)
+Inserting: (5, 84)
+Inserting: (6, 84)
+Inserting: (16, 84)
+Inserting: (29, 84)
+Inserting: (49, 84)
+Inserting: (0, 85)
+Inserting: (6, 85)
+Inserting: (19, 85)
+Inserting: (26, 85)
+Inserting: (46, 85)
+Inserting: (0, 86)
+Inserting: (5, 86)
+Inserting: (19, 86)
+Inserting: (27, 86)
+Inserting: (52, 86)
+Inserting: (0, 87)
+Inserting: (3, 87)
+Inserting: (9, 87)
+Inserting: (18, 87)
+Inserting: (40, 87)
+Inserting: (0, 88)
+Inserting: (17, 88)
+Inserting: (21, 88)
+Inserting: (34, 88)
+Inserting: (0, 89)
+Inserting: (5, 89)
+Inserting: (8, 89)
+Inserting: (25, 89)
+Inserting: (34, 89)
+Inserting: (0, 90)
+Inserting: (16, 90)
+Inserting: (20, 90)
+Inserting: (35, 90)
+Inserting: (0, 91)
+Inserting: (3, 91)
+Inserting: (15, 91)
+Inserting: (24, 91)
+Inserting: (41, 91)
+Inserting: (0, 92)
+Inserting: (2, 92)
+Inserting: (14, 92)
+Inserting: (27, 92)
+Inserting: (41, 92)
+Inserting: (0, 93)
+Inserting: (2, 93)
+Inserting: (8, 93)
+Inserting: (12, 93)
+Inserting: (37, 93)
+Inserting: (0, 94)
+Inserting: (5, 94)
+Inserting: (14, 94)
+Inserting: (33, 94)
+Inserting: (0, 95)
+Inserting: (1, 95)
+Inserting: (5, 95)
+Inserting: (15, 95)
+Inserting: (31, 95)
+Inserting: (0, 96)
+Inserting: (1, 96)
+Inserting: (5, 96)
+Inserting: (22, 96)
+Inserting: (38, 96)
+Inserting: (0, 97)
+Inserting: (4, 97)
+Inserting: (7, 97)
+Inserting: (17, 97)
+Inserting: (32, 97)
+Inserting: (0, 98)
+Inserting: (1, 98)
+Inserting: (7, 98)
+Inserting: (21, 98)
+Inserting: (47, 98)
+Inserting: (98, 0)
+Inserting: (90, 0)
+Inserting: (77, 0)
+Inserting: (50, 0)
+Inserting: (98, 1)
+Inserting: (97, 1)
+Inserting: (92, 1)
+Inserting: (78, 1)
+Inserting: (61, 1)
+Inserting: (98, 2)
+Inserting: (93, 2)
+Inserting: (81, 2)
+Inserting: (63, 2)
+Inserting: (98, 3)
+Inserting: (96, 3)
+Inserting: (90, 3)
+Inserting: (80, 3)
+Inserting: (66, 3)
+Inserting: (98, 4)
+Inserting: (88, 4)
+Inserting: (80, 4)
+Inserting: (69, 4)
+Inserting: (98, 5)
+Inserting: (97, 5)
+Inserting: (95, 5)
+Inserting: (82, 5)
+Inserting: (68, 5)
+Inserting: (98, 6)
+Inserting: (97, 6)
+Inserting: (94, 6)
+Inserting: (85, 6)
+Inserting: (74, 6)
+Inserting: (98, 7)
+Inserting: (96, 7)
+Inserting: (85, 7)
+Inserting: (71, 7)
+Inserting: (49, 7)
+Inserting: (98, 8)
+Inserting: (87, 8)
+Inserting: (70, 8)
+Inserting: (60, 8)
+Inserting: (98, 9)
+Inserting: (90, 9)
+Inserting: (69, 9)
+Inserting: (60, 9)
+Inserting: (98, 10)
+Inserting: (97, 10)
+Inserting: (89, 10)
+Inserting: (78, 10)
+Inserting: (62, 10)
+Inserting: (98, 11)
+Inserting: (95, 11)
+Inserting: (91, 11)
+Inserting: (80, 11)
+Inserting: (68, 11)
+Inserting: (98, 12)
+Inserting: (96, 12)
+Inserting: (89, 12)
+Inserting: (80, 12)
+Inserting: (64, 12)
+Inserting: (98, 13)
+Inserting: (94, 13)
+Inserting: (83, 13)
+Inserting: (61, 13)
+Inserting: (98, 14)
+Inserting: (93, 14)
+Inserting: (81, 14)
+Inserting: (74, 14)
+Inserting: (52, 14)
+Inserting: (98, 15)
+Inserting: (96, 15)
+Inserting: (85, 15)
+Inserting: (62, 15)
+Inserting: (56, 15)
+Inserting: (98, 16)
+Inserting: (95, 16)
+Inserting: (85, 16)
+Inserting: (75, 16)
+Inserting: (52, 16)
+Inserting: (98, 17)
+Inserting: (96, 17)
+Inserting: (88, 17)
+Inserting: (74, 17)
+Inserting: (63, 17)
+Inserting: (98, 18)
+Inserting: (96, 18)
+Inserting: (88, 18)
+Inserting: (79, 18)
+Inserting: (65, 18)
+Inserting: (98, 19)
+Inserting: (97, 19)
+Inserting: (80, 19)
+Inserting: (65, 19)
+Inserting: (98, 20)
+Inserting: (97, 20)
+Inserting: (85, 20)
+Inserting: (76, 20)
+Inserting: (60, 20)
+Inserting: (98, 21)
+Inserting: (97, 21)
+Inserting: (87, 21)
+Inserting: (78, 21)
+Inserting: (70, 21)
+Inserting: (98, 22)
+Inserting: (79, 22)
+Inserting: (69, 22)
+Inserting: (53, 22)
+Inserting: (98, 23)
+Inserting: (94, 23)
+Inserting: (92, 23)
+Inserting: (83, 23)
+Inserting: (66, 23)
+Inserting: (58, 23)
+Inserting: (98, 24)
+Inserting: (97, 24)
+Inserting: (92, 24)
+Inserting: (81, 24)
+Inserting: (70, 24)
+Inserting: (60, 24)
+Inserting: (98, 25)
+Inserting: (97, 25)
+Inserting: (93, 25)
+Inserting: (82, 25)
+Inserting: (72, 25)
+Inserting: (60, 25)
+Inserting: (98, 26)
+Inserting: (91, 26)
+Inserting: (86, 26)
+Inserting: (71, 26)
+Inserting: (65, 26)
+Inserting: (98, 27)
+Inserting: (91, 27)
+Inserting: (82, 27)
+Inserting: (77, 27)
+Inserting: (65, 27)
+Inserting: (98, 28)
+Inserting: (96, 28)
+Inserting: (95, 28)
+Inserting: (93, 28)
+Inserting: (82, 28)
+Inserting: (76, 28)
+Inserting: (66, 28)
+Inserting: (98, 29)
+Inserting: (95, 29)
+Inserting: (91, 29)
+Inserting: (83, 29)
+Inserting: (75, 29)
+Inserting: (68, 29)
+Inserting: (55, 29)
+Inserting: (98, 30)
+Inserting: (87, 30)
+Inserting: (72, 30)
+Inserting: (67, 30)
+Inserting: (57, 30)
+Inserting: (98, 31)
+Inserting: (96, 31)
+Inserting: (83, 31)
+Inserting: (70, 31)
+Inserting: (48, 31)
+Inserting: (98, 32)
+Inserting: (92, 32)
+Inserting: (89, 32)
+Inserting: (81, 32)
+Inserting: (69, 32)
+Inserting: (59, 32)
+Inserting: (98, 33)
+Inserting: (97, 33)
+Inserting: (93, 33)
+Inserting: (87, 33)
+Inserting: (81, 33)
+Inserting: (73, 33)
+Inserting: (61, 33)
+Inserting: (98, 34)
+Inserting: (97, 34)
+Inserting: (85, 34)
+Inserting: (81, 34)
+Inserting: (73, 34)
+Inserting: (64, 34)
+Inserting: (98, 35)
+Inserting: (89, 35)
+Inserting: (82, 35)
+Inserting: (73, 35)
+Inserting: (63, 35)
+Inserting: (98, 36)
+Inserting: (97, 36)
+Inserting: (92, 36)
+Inserting: (89, 36)
+Inserting: (76, 36)
+Inserting: (68, 36)
+Inserting: (62, 36)
+Inserting: (98, 37)
+Inserting: (90, 37)
+Inserting: (82, 37)
+Inserting: (71, 37)
+Inserting: (64, 37)
+Inserting: (98, 38)
+Inserting: (89, 38)
+Inserting: (76, 38)
+Inserting: (73, 38)
+Inserting: (60, 38)
+Inserting: (98, 39)
+Inserting: (97, 39)
+Inserting: (90, 39)
+Inserting: (89, 39)
+Inserting: (84, 39)
+Inserting: (72, 39)
+Inserting: (64, 39)
+Inserting: (98, 40)
+Inserting: (96, 40)
+Inserting: (87, 40)
+Inserting: (73, 40)
+Inserting: (70, 40)
+Inserting: (63, 40)
+Inserting: (98, 41)
+Inserting: (97, 41)
+Inserting: (93, 41)
+Inserting: (88, 41)
+Inserting: (74, 41)
+Inserting: (72, 41)
+Inserting: (69, 41)
+Inserting: (98, 42)
+Inserting: (85, 42)
+Inserting: (83, 42)
+Inserting: (74, 42)
+Inserting: (65, 42)
+Inserting: (98, 43)
+Inserting: (97, 43)
+Inserting: (96, 43)
+Inserting: (90, 43)
+Inserting: (79, 43)
+Inserting: (69, 43)
+Inserting: (55, 43)
+Inserting: (98, 44)
+Inserting: (93, 44)
+Inserting: (91, 44)
+Inserting: (77, 44)
+Inserting: (68, 44)
+Inserting: (98, 45)
+Inserting: (94, 45)
+Inserting: (92, 45)
+Inserting: (81, 45)
+Inserting: (77, 45)
+Inserting: (63, 45)
+Inserting: (98, 46)
+Inserting: (96, 46)
+Inserting: (92, 46)
+Inserting: (84, 46)
+Inserting: (68, 46)
+Inserting: (55, 46)
+Inserting: (98, 47)
+Inserting: (97, 47)
+Inserting: (91, 47)
+Inserting: (85, 47)
+Inserting: (78, 47)
+Inserting: (70, 47)
+Inserting: (98, 48)
+Inserting: (97, 48)
+Inserting: (93, 48)
+Inserting: (85, 48)
+Inserting: (75, 48)
+Inserting: (71, 48)
+Inserting: (98, 49)
+Inserting: (97, 49)
+Inserting: (92, 49)
+Inserting: (83, 49)
+Inserting: (69, 49)
+Inserting: (98, 50)
+Inserting: (97, 50)
+Inserting: (96, 50)
+Inserting: (94, 50)
+Inserting: (91, 50)
+Inserting: (85, 50)
+Inserting: (71, 50)
+Inserting: (69, 50)
+Inserting: (98, 51)
+Inserting: (88, 51)
+Inserting: (86, 51)
+Inserting: (74, 51)
+Inserting: (64, 51)
+Inserting: (98, 52)
+Inserting: (96, 52)
+Inserting: (95, 52)
+Inserting: (94, 52)
+Inserting: (91, 52)
+Inserting: (82, 52)
+Inserting: (71, 52)
+Inserting: (70, 52)
+Inserting: (98, 53)
+Inserting: (97, 53)
+Inserting: (96, 53)
+Inserting: (93, 53)
+Inserting: (79, 53)
+Inserting: (67, 53)
+Inserting: (62, 53)
+Inserting: (98, 54)
+Inserting: (96, 54)
+Inserting: (93, 54)
+Inserting: (92, 54)
+Inserting: (83, 54)
+Inserting: (74, 54)
+Inserting: (59, 54)
+Inserting: (98, 55)
+Inserting: (92, 55)
+Inserting: (75, 55)
+Inserting: (67, 55)
+Inserting: (98, 56)
+Inserting: (96, 56)
+Inserting: (84, 56)
+Inserting: (72, 56)
+Inserting: (62, 56)
+Inserting: (98, 57)
+Inserting: (97, 57)
+Inserting: (95, 57)
+Inserting: (84, 57)
+Inserting: (74, 57)
+Inserting: (68, 57)
+Inserting: (98, 58)
+Inserting: (97, 58)
+Inserting: (82, 58)
+Inserting: (69, 58)
+Inserting: (98, 59)
+Inserting: (97, 59)
+Inserting: (96, 59)
+Inserting: (92, 59)
+Inserting: (83, 59)
+Inserting: (77, 59)
+Inserting: (68, 59)
+Inserting: (98, 60)
+Inserting: (97, 60)
+Inserting: (92, 60)
+Inserting: (83, 60)
+Inserting: (77, 60)
+Inserting: (64, 60)
+Inserting: (98, 61)
+Inserting: (97, 61)
+Inserting: (94, 61)
+Inserting: (76, 61)
+Inserting: (66, 61)
+Inserting: (98, 62)
+Inserting: (95, 62)
+Inserting: (84, 62)
+Inserting: (83, 62)
+Inserting: (76, 62)
+Inserting: (66, 62)
+Inserting: (98, 63)
+Inserting: (93, 63)
+Inserting: (86, 63)
+Inserting: (83, 63)
+Inserting: (74, 63)
+Inserting: (66, 63)
+Inserting: (98, 64)
+Inserting: (96, 64)
+Inserting: (79, 64)
+Inserting: (72, 64)
+Inserting: (50, 64)
+Inserting: (98, 65)
+Inserting: (95, 65)
+Inserting: (90, 65)
+Inserting: (79, 65)
+Inserting: (72, 65)
+Inserting: (64, 65)
+Inserting: (98, 66)
+Inserting: (95, 66)
+Inserting: (89, 66)
+Inserting: (78, 66)
+Inserting: (74, 66)
+Inserting: (64, 66)
+Inserting: (98, 67)
+Inserting: (97, 67)
+Inserting: (94, 67)
+Inserting: (85, 67)
+Inserting: (79, 67)
+Inserting: (71, 67)
+Inserting: (51, 67)
+Inserting: (98, 68)
+Inserting: (97, 68)
+Inserting: (95, 68)
+Inserting: (84, 68)
+Inserting: (72, 68)
+Inserting: (61, 68)
+Inserting: (98, 69)
+Inserting: (97, 69)
+Inserting: (96, 69)
+Inserting: (79, 69)
+Inserting: (57, 69)
+Inserting: (98, 70)
+Inserting: (97, 70)
+Inserting: (94, 70)
+Inserting: (90, 70)
+Inserting: (86, 70)
+Inserting: (80, 70)
+Inserting: (58, 70)
+Inserting: (98, 71)
+Inserting: (96, 71)
+Inserting: (91, 71)
+Inserting: (83, 71)
+Inserting: (79, 71)
+Inserting: (68, 71)
+Inserting: (98, 72)
+Inserting: (95, 72)
+Inserting: (86, 72)
+Inserting: (76, 72)
+Inserting: (67, 72)
+Inserting: (98, 73)
+Inserting: (96, 73)
+Inserting: (91, 73)
+Inserting: (80, 73)
+Inserting: (76, 73)
+Inserting: (66, 73)
+Inserting: (98, 74)
+Inserting: (93, 74)
+Inserting: (78, 74)
+Inserting: (73, 74)
+Inserting: (66, 74)
+Inserting: (98, 75)
+Inserting: (96, 75)
+Inserting: (88, 75)
+Inserting: (73, 75)
+Inserting: (68, 75)
+Inserting: (55, 75)
+Inserting: (98, 76)
+Inserting: (97, 76)
+Inserting: (88, 76)
+Inserting: (84, 76)
+Inserting: (71, 76)
+Inserting: (60, 76)
+Inserting: (98, 77)
+Inserting: (82, 77)
+Inserting: (81, 77)
+Inserting: (70, 77)
+Inserting: (59, 77)
+Inserting: (98, 78)
+Inserting: (95, 78)
+Inserting: (92, 78)
+Inserting: (87, 78)
+Inserting: (81, 78)
+Inserting: (70, 78)
+Inserting: (53, 78)
+Inserting: (98, 79)
+Inserting: (96, 79)
+Inserting: (93, 79)
+Inserting: (91, 79)
+Inserting: (81, 79)
+Inserting: (71, 79)
+Inserting: (98, 80)
+Inserting: (89, 80)
+Inserting: (70, 80)
+Inserting: (98, 81)
+Inserting: (97, 81)
+Inserting: (90, 81)
+Inserting: (89, 81)
+Inserting: (79, 81)
+Inserting: (61, 81)
+Inserting: (98, 82)
+Inserting: (97, 82)
+Inserting: (95, 82)
+Inserting: (86, 82)
+Inserting: (70, 82)
+Inserting: (64, 82)
+Inserting: (98, 83)
+Inserting: (96, 83)
+Inserting: (88, 83)
+Inserting: (77, 83)
+Inserting: (64, 83)
+Inserting: (98, 84)
+Inserting: (97, 84)
+Inserting: (90, 84)
+Inserting: (87, 84)
+Inserting: (72, 84)
+Inserting: (52, 84)
+Inserting: (98, 85)
+Inserting: (92, 85)
+Inserting: (85, 85)
+Inserting: (70, 85)
+Inserting: (55, 85)
+Inserting: (98, 86)
+Inserting: (97, 86)
+Inserting: (91, 86)
+Inserting: (87, 86)
+Inserting: (82, 86)
+Inserting: (60, 86)
+(52, 86) allready found
+Inserting: (98, 87)
+Inserting: (96, 87)
+Inserting: (94, 87)
+Inserting: (82, 87)
+Inserting: (66, 87)
+Inserting: (98, 88)
+Inserting: (97, 88)
+Inserting: (82, 88)
+Inserting: (81, 88)
+Inserting: (69, 88)
+Inserting: (98, 89)
+Inserting: (97, 89)
+Inserting: (91, 89)
+Inserting: (79, 89)
+Inserting: (59, 89)
+Inserting: (98, 90)
+Inserting: (87, 90)
+Inserting: (74, 90)
+Inserting: (56, 90)
+Inserting: (98, 91)
+Inserting: (97, 91)
+Inserting: (96, 91)
+Inserting: (84, 91)
+Inserting: (69, 91)
+Inserting: (59, 91)
+Inserting: (98, 92)
+Inserting: (97, 92)
+Inserting: (96, 92)
+Inserting: (84, 92)
+Inserting: (76, 92)
+Inserting: (50, 92)
+Inserting: (98, 93)
+Inserting: (97, 93)
+Inserting: (96, 93)
+Inserting: (84, 93)
+Inserting: (64, 93)
+Inserting: (98, 94)
+Inserting: (97, 94)
+Inserting: (87, 94)
+Inserting: (74, 94)
+Inserting: (98, 95)
+Inserting: (96, 95)
+Inserting: (85, 95)
+Inserting: (72, 95)
+Inserting: (98, 96)
+Inserting: (93, 96)
+Inserting: (63, 96)
+Inserting: (98, 97)
+Inserting: (97, 97)
+Inserting: (95, 97)
+Inserting: (91, 97)
+Inserting: (82, 97)
+Inserting: (68, 97)
+Inserting: (98, 98)
+Inserting: (97, 98)
+Inserting: (86, 98)
+Inserting: (77, 98)
+Inserting: (65, 98)
+(0, 98) allready found
+(1, 98) allready found
+(7, 98) allready found
+(21, 98) allready found
+(47, 98) allready found
+(0, 97) allready found
+(4, 97) allready found
+(7, 97) allready found
+(17, 97) allready found
+(32, 97) allready found
+(0, 96) allready found
+(1, 96) allready found
+(5, 96) allready found
+(22, 96) allready found
+(38, 96) allready found
+(0, 95) allready found
+(1, 95) allready found
+(5, 95) allready found
+(15, 95) allready found
+(31, 95) allready found
+(0, 94) allready found
+(5, 94) allready found
+(14, 94) allready found
+(33, 94) allready found
+(0, 93) allready found
+(2, 93) allready found
+(8, 93) allready found
+(12, 93) allready found
+(37, 93) allready found
+(0, 92) allready found
+(2, 92) allready found
+(14, 92) allready found
+(27, 92) allready found
+(41, 92) allready found
+(0, 91) allready found
+(3, 91) allready found
+(15, 91) allready found
+(24, 91) allready found
+(41, 91) allready found
+(0, 90) allready found
+(16, 90) allready found
+(20, 90) allready found
+(35, 90) allready found
+(0, 89) allready found
+(5, 89) allready found
+(8, 89) allready found
+(25, 89) allready found
+(34, 89) allready found
+(0, 88) allready found
+(17, 88) allready found
+(21, 88) allready found
+(34, 88) allready found
+(0, 87) allready found
+(3, 87) allready found
+(9, 87) allready found
+(18, 87) allready found
+(40, 87) allready found
+(0, 86) allready found
+(5, 86) allready found
+(19, 86) allready found
+(27, 86) allready found
+(52, 86) allready found
+(0, 85) allready found
+(6, 85) allready found
+(19, 85) allready found
+(26, 85) allready found
+(46, 85) allready found
+(0, 84) allready found
+(2, 84) allready found
+(5, 84) allready found
+(6, 84) allready found
+(16, 84) allready found
+(29, 84) allready found
+(49, 84) allready found
+(0, 83) allready found
+(3, 83) allready found
+(14, 83) allready found
+(23, 83) allready found
+(36, 83) allready found
+(0, 82) allready found
+(2, 82) allready found
+(16, 82) allready found
+(23, 82) allready found
+(37, 82) allready found
+(0, 81) allready found
+(1, 81) allready found
+(14, 81) allready found
+(16, 81) allready found
+(23, 81) allready found
+(38, 81) allready found
+(0, 80) allready found
+(10, 80) allready found
+(12, 80) allready found
+(21, 80) allready found
+(31, 80) allready found
+(0, 79) allready found
+(1, 79) allready found
+(11, 79) allready found
+(31, 79) allready found
+(41, 79) allready found
+(0, 78) allready found
+(11, 78) allready found
+(20, 78) allready found
+(37, 78) allready found
+(45, 78) allready found
+(0, 77) allready found
+(5, 77) allready found
+(9, 77) allready found
+(19, 77) allready found
+(29, 77) allready found
+(40, 77) allready found
+(0, 76) allready found
+(4, 76) allready found
+(7, 76) allready found
+(16, 76) allready found
+(36, 76) allready found
+(40, 76) allready found
+(0, 75) allready found
+(2, 75) allready found
+(5, 75) allready found
+(8, 75) allready found
+(16, 75) allready found
+(39, 75) allready found
+(0, 74) allready found
+(13, 74) allready found
+(25, 74) allready found
+(29, 74) allready found
+(35, 74) allready found
+(0, 73) allready found
+(6, 73) allready found
+(14, 73) allready found
+(24, 73) allready found
+(36, 73) allready found
+(0, 72) allready found
+(7, 72) allready found
+(13, 72) allready found
+(35, 72) allready found
+(0, 71) allready found
+(2, 71) allready found
+(6, 71) allready found
+(20, 71) allready found
+(24, 71) allready found
+(36, 71) allready found
+(0, 70) allready found
+(10, 70) allready found
+(12, 70) allready found
+(24, 70) allready found
+(35, 70) allready found
+(43, 70) allready found
+(0, 69) allready found
+(5, 69) allready found
+(12, 69) allready found
+(18, 69) allready found
+(31, 69) allready found
+(38, 69) allready found
+(41, 69) allready found
+(0, 68) allready found
+(9, 68) allready found
+(12, 68) allready found
+(22, 68) allready found
+(29, 68) allready found
+(40, 68) allready found
+(0, 67) allready found
+(1, 67) allready found
+(2, 67) allready found
+(3, 67) allready found
+(14, 67) allready found
+(20, 67) allready found
+(38, 67) allready found
+(0, 66) allready found
+(1, 66) allready found
+(3, 66) allready found
+(12, 66) allready found
+(28, 66) allready found
+(29, 66) allready found
+(39, 66) allready found
+(0, 65) allready found
+(9, 65) allready found
+(10, 65) allready found
+(21, 65) allready found
+(27, 65) allready found
+(36, 65) allready found
+(0, 64) allready found
+(1, 64) allready found
+(3, 64) allready found
+(6, 64) allready found
+(13, 64) allready found
+(23, 64) allready found
+(26, 64) allready found
+(36, 64) allready found
+(0, 63) allready found
+(2, 63) allready found
+(13, 63) allready found
+(17, 63) allready found
+(26, 63) allready found
+(35, 63) allready found
+(0, 62) allready found
+(5, 62) allready found
+(12, 62) allready found
+(19, 62) allready found
+(24, 62) allready found
+(32, 62) allready found
+(0, 61) allready found
+(1, 61) allready found
+(2, 61) allready found
+(15, 61) allready found
+(17, 61) allready found
+(24, 61) allready found
+(34, 61) allready found
+(0, 60) allready found
+(1, 60) allready found
+(16, 60) allready found
+(24, 60) allready found
+(38, 60) allready found
+(0, 59) allready found
+(2, 59) allready found
+(8, 59) allready found
+(19, 59) allready found
+(27, 59) allready found
+(31, 59) allready found
+(0, 58) allready found
+(1, 58) allready found
+(16, 58) allready found
+(25, 58) allready found
+(36, 58) allready found
+(0, 57) allready found
+(1, 57) allready found
+(10, 57) allready found
+(15, 57) allready found
+(25, 57) allready found
+(30, 57) allready found
+(0, 56) allready found
+(1, 56) allready found
+(4, 56) allready found
+(19, 56) allready found
+(22, 56) allready found
+(31, 56) allready found
+(0, 55) allready found
+(3, 55) allready found
+(6, 55) allready found
+(21, 55) allready found
+(30, 55) allready found
+(38, 55) allready found
+(0, 54) allready found
+(7, 54) allready found
+(19, 54) allready found
+(22, 54) allready found
+(31, 54) allready found
+(0, 53) allready found
+(1, 53) allready found
+(8, 53) allready found
+(16, 53) allready found
+(23, 53) allready found
+(38, 53) allready found
+(0, 52) allready found
+(2, 52) allready found
+(8, 52) allready found
+(18, 52) allready found
+(28, 52) allready found
+(29, 52) allready found
+(0, 51) allready found
+(11, 51) allready found
+(15, 51) allready found
+(28, 51) allready found
+(43, 51) allready found
+(0, 50) allready found
+(1, 50) allready found
+(7, 50) allready found
+(16, 50) allready found
+(24, 50) allready found
+(30, 50) allready found
+(0, 49) allready found
+(1, 49) allready found
+(20, 49) allready found
+(22, 49) allready found
+(28, 49) allready found
+(41, 49) allready found
+(0, 48) allready found
+(1, 48) allready found
+(10, 48) allready found
+(26, 48) allready found
+(33, 48) allready found
+(0, 47) allready found
+(5, 47) allready found
+(9, 47) allready found
+(14, 47) allready found
+(18, 47) allready found
+(29, 47) allready found
+(0, 46) allready found
+(1, 46) allready found
+(7, 46) allready found
+(17, 46) allready found
+(23, 46) allready found
+(35, 46) allready found
+(0, 45) allready found
+(2, 45) allready found
+(16, 45) allready found
+(19, 45) allready found
+(31, 45) allready found
+(0, 44) allready found
+(1, 44) allready found
+(9, 44) allready found
+(22, 44) allready found
+(33, 44) allready found
+(0, 43) allready found
+(11, 43) allready found
+(20, 43) allready found
+(24, 43) allready found
+(30, 43) allready found
+(0, 42) allready found
+(4, 42) allready found
+(13, 42) allready found
+(20, 42) allready found
+(23, 42) allready found
+(38, 42) allready found
+(0, 41) allready found
+(1, 41) allready found
+(2, 41) allready found
+(10, 41) allready found
+(20, 41) allready found
+(25, 41) allready found
+(47, 41) allready found
+(0, 40) allready found
+(1, 40) allready found
+(2, 40) allready found
+(10, 40) allready found
+(24, 40) allready found
+(31, 40) allready found
+(0, 39) allready found
+(1, 39) allready found
+(6, 39) allready found
+(12, 39) allready found
+(16, 39) allready found
+(25, 39) allready found
+(32, 39) allready found
+(0, 38) allready found
+(1, 38) allready found
+(17, 38) allready found
+(19, 38) allready found
+(30, 38) allready found
+(41, 38) allready found
+(0, 37) allready found
+(1, 37) allready found
+(3, 37) allready found
+(14, 37) allready found
+(19, 37) allready found
+(28, 37) allready found
+(43, 37) allready found
+(0, 36) allready found
+(1, 36) allready found
+(3, 36) allready found
+(7, 36) allready found
+(17, 36) allready found
+(25, 36) allready found
+(41, 36) allready found
+(0, 35) allready found
+(1, 35) allready found
+(2, 35) allready found
+(11, 35) allready found
+(19, 35) allready found
+(36, 35) allready found
+(0, 34) allready found
+(3, 34) allready found
+(5, 34) allready found
+(13, 34) allready found
+(19, 34) allready found
+(26, 34) allready found
+(56, 34) allready found
+(0, 33) allready found
+(1, 33) allready found
+(6, 33) allready found
+(12, 33) allready found
+(27, 33) allready found
+(48, 33) allready found
+(0, 32) allready found
+(2, 32) allready found
+(3, 32) allready found
+(13, 32) allready found
+(22, 32) allready found
+(29, 32) allready found
+(45, 32) allready found
+(0, 31) allready found
+(5, 31) allready found
+(7, 31) allready found
+(14, 31) allready found
+(23, 31) allready found
+(30, 31) allready found
+(41, 31) allready found
+(0, 30) allready found
+(4, 30) allready found
+(7, 30) allready found
+(15, 30) allready found
+(21, 30) allready found
+(33, 30) allready found
+(43, 30) allready found
+(0, 29) allready found
+(14, 29) allready found
+(22, 29) allready found
+(44, 29) allready found
+(48, 29) allready found
+(0, 28) allready found
+(5, 28) allready found
+(9, 28) allready found
+(12, 28) allready found
+(16, 28) allready found
+(22, 28) allready found
+(34, 28) allready found
+(0, 27) allready found
+(2, 27) allready found
+(6, 27) allready found
+(17, 27) allready found
+(28, 27) allready found
+(37, 27) allready found
+(0, 26) allready found
+(5, 26) allready found
+(13, 26) allready found
+(17, 26) allready found
+(25, 26) allready found
+(36, 26) allready found
+(0, 25) allready found
+(6, 25) allready found
+(8, 25) allready found
+(18, 25) allready found
+(26, 25) allready found
+(36, 25) allready found
+(0, 24) allready found
+(12, 24) allready found
+(16, 24) allready found
+(26, 24) allready found
+(41, 24) allready found
+(0, 23) allready found
+(1, 23) allready found
+(14, 23) allready found
+(28, 23) allready found
+(40, 23) allready found
+(0, 22) allready found
+(1, 22) allready found
+(3, 22) allready found
+(8, 22) allready found
+(24, 22) allready found
+(31, 22) allready found
+(49, 22) allready found
+(0, 21) allready found
+(1, 21) allready found
+(3, 21) allready found
+(11, 21) allready found
+(20, 21) allready found
+(34, 21) allready found
+(0, 20) allready found
+(1, 20) allready found
+(13, 20) allready found
+(22, 20) allready found
+(31, 20) allready found
+(0, 19) allready found
+(2, 19) allready found
+(4, 19) allready found
+(19, 19) allready found
+(25, 19) allready found
+(34, 19) allready found
+(0, 18) allready found
+(7, 18) allready found
+(19, 18) allready found
+(34, 18) allready found
+(37, 18) allready found
+(0, 17) allready found
+(4, 17) allready found
+(12, 17) allready found
+(24, 17) allready found
+(39, 17) allready found
+(0, 16) allready found
+(6, 16) allready found
+(12, 16) allready found
+(23, 16) allready found
+(25, 16) allready found
+(39, 16) allready found
+(0, 15) allready found
+(1, 15) allready found
+(6, 15) allready found
+(14, 15) allready found
+(33, 15) allready found
+(42, 15) allready found
+(0, 14) allready found
+(1, 14) allready found
+(15, 14) allready found
+(31, 14) allready found
+(48, 14) allready found
+(0, 13) allready found
+(6, 13) allready found
+(14, 13) allready found
+(16, 13) allready found
+(34, 13) allready found
+(0, 12) allready found
+(12, 12) allready found
+(27, 12) allready found
+(31, 12) allready found
+(0, 11) allready found
+(1, 11) allready found
+(2, 11) allready found
+(10, 11) allready found
+(20, 11) allready found
+(34, 11) allready found
+(0, 10) allready found
+(4, 10) allready found
+(9, 10) allready found
+(28, 10) allready found
+(35, 10) allready found
+(0, 9) allready found
+(1, 9) allready found
+(4, 9) allready found
+(10, 9) allready found
+(22, 9) allready found
+(43, 9) allready found
+(0, 8) allready found
+(4, 8) allready found
+(5, 8) allready found
+(22, 8) allready found
+(27, 8) allready found
+(43, 8) allready found
+(0, 7) allready found
+(3, 7) allready found
+(12, 7) allready found
+(28, 7) allready found
+(46, 7) allready found
+(0, 6) allready found
+(1, 6) allready found
+(7, 6) allready found
+(15, 6) allready found
+(26, 6) allready found
+(0, 5) allready found
+(4, 5) allready found
+(18, 5) allready found
+(34, 5) allready found
+(0, 4) allready found
+(1, 4) allready found
+(2, 4) allready found
+(5, 4) allready found
+(25, 4) allready found
+(32, 4) allready found
+(0, 3) allready found
+(2, 3) allready found
+(12, 3) allready found
+(17, 3) allready found
+(35, 3) allready found
+(0, 2) allready found
+(1, 2) allready found
+(7, 2) allready found
+(23, 2) allready found
+(39, 2) allready found
+(0, 1) allready found
+(9, 1) allready found
+(22, 1) allready found
+(46, 1) allready found
+(0, 0) allready found
+(3, 0) allready found
+(8, 0) allready found
+(14, 0) allready found
+(22, 0) allready found
+(48, 0) allready found
+(98, 98) allready found
+(97, 98) allready found
+(86, 98) allready found
+(77, 98) allready found
+(65, 98) allready found
+(98, 97) allready found
+(97, 97) allready found
+(95, 97) allready found
+(91, 97) allready found
+(82, 97) allready found
+(68, 97) allready found
+(98, 96) allready found
+(93, 96) allready found
+(63, 96) allready found
+(98, 95) allready found
+(96, 95) allready found
+(85, 95) allready found
+(72, 95) allready found
+(98, 94) allready found
+(97, 94) allready found
+(87, 94) allready found
+(74, 94) allready found
+(98, 93) allready found
+(97, 93) allready found
+(96, 93) allready found
+(84, 93) allready found
+(64, 93) allready found
+(98, 92) allready found
+(97, 92) allready found
+(96, 92) allready found
+(84, 92) allready found
+(76, 92) allready found
+(50, 92) allready found
+(98, 91) allready found
+(97, 91) allready found
+(96, 91) allready found
+(84, 91) allready found
+(69, 91) allready found
+(59, 91) allready found
+(98, 90) allready found
+(87, 90) allready found
+(74, 90) allready found
+(56, 90) allready found
+(98, 89) allready found
+(97, 89) allready found
+(91, 89) allready found
+(79, 89) allready found
+(59, 89) allready found
+(98, 88) allready found
+(97, 88) allready found
+(82, 88) allready found
+(81, 88) allready found
+(69, 88) allready found
+(98, 87) allready found
+(96, 87) allready found
+(94, 87) allready found
+(82, 87) allready found
+(66, 87) allready found
+(98, 86) allready found
+(97, 86) allready found
+(91, 86) allready found
+(87, 86) allready found
+(82, 86) allready found
+(60, 86) allready found
+(52, 86) allready found
+(98, 85) allready found
+(92, 85) allready found
+(85, 85) allready found
+(70, 85) allready found
+(55, 85) allready found
+(98, 84) allready found
+(97, 84) allready found
+(90, 84) allready found
+(87, 84) allready found
+(72, 84) allready found
+(52, 84) allready found
+(98, 83) allready found
+(96, 83) allready found
+(88, 83) allready found
+(77, 83) allready found
+(64, 83) allready found
+(98, 82) allready found
+(97, 82) allready found
+(95, 82) allready found
+(86, 82) allready found
+(70, 82) allready found
+(64, 82) allready found
+(98, 81) allready found
+(97, 81) allready found
+(90, 81) allready found
+(89, 81) allready found
+(79, 81) allready found
+(61, 81) allready found
+(98, 80) allready found
+(89, 80) allready found
+(70, 80) allready found
+(98, 79) allready found
+(96, 79) allready found
+(93, 79) allready found
+(91, 79) allready found
+(81, 79) allready found
+(71, 79) allready found
+(98, 78) allready found
+(95, 78) allready found
+(92, 78) allready found
+(87, 78) allready found
+(81, 78) allready found
+(70, 78) allready found
+(53, 78) allready found
+(98, 77) allready found
+(82, 77) allready found
+(81, 77) allready found
+(70, 77) allready found
+(59, 77) allready found
+(98, 76) allready found
+(97, 76) allready found
+(88, 76) allready found
+(84, 76) allready found
+(71, 76) allready found
+(60, 76) allready found
+(98, 75) allready found
+(96, 75) allready found
+(88, 75) allready found
+(73, 75) allready found
+(68, 75) allready found
+(55, 75) allready found
+(98, 74) allready found
+(93, 74) allready found
+(78, 74) allready found
+(73, 74) allready found
+(66, 74) allready found
+(98, 73) allready found
+(96, 73) allready found
+(91, 73) allready found
+(80, 73) allready found
+(76, 73) allready found
+(66, 73) allready found
+(98, 72) allready found
+(95, 72) allready found
+(86, 72) allready found
+(76, 72) allready found
+(67, 72) allready found
+(98, 71) allready found
+(96, 71) allready found
+(91, 71) allready found
+(83, 71) allready found
+(79, 71) allready found
+(68, 71) allready found
+(98, 70) allready found
+(97, 70) allready found
+(94, 70) allready found
+(90, 70) allready found
+(86, 70) allready found
+(80, 70) allready found
+(58, 70) allready found
+(98, 69) allready found
+(97, 69) allready found
+(96, 69) allready found
+(79, 69) allready found
+(57, 69) allready found
+(98, 68) allready found
+(97, 68) allready found
+(95, 68) allready found
+(84, 68) allready found
+(72, 68) allready found
+(61, 68) allready found
+(98, 67) allready found
+(97, 67) allready found
+(94, 67) allready found
+(85, 67) allready found
+(79, 67) allready found
+(71, 67) allready found
+(51, 67) allready found
+(98, 66) allready found
+(95, 66) allready found
+(89, 66) allready found
+(78, 66) allready found
+(74, 66) allready found
+(64, 66) allready found
+(98, 65) allready found
+(95, 65) allready found
+(90, 65) allready found
+(79, 65) allready found
+(72, 65) allready found
+(64, 65) allready found
+(98, 64) allready found
+(96, 64) allready found
+(79, 64) allready found
+(72, 64) allready found
+(50, 64) allready found
+(98, 63) allready found
+(93, 63) allready found
+(86, 63) allready found
+(83, 63) allready found
+(74, 63) allready found
+(66, 63) allready found
+(98, 62) allready found
+(95, 62) allready found
+(84, 62) allready found
+(83, 62) allready found
+(76, 62) allready found
+(66, 62) allready found
+(98, 61) allready found
+(97, 61) allready found
+(94, 61) allready found
+(76, 61) allready found
+(66, 61) allready found
+(98, 60) allready found
+(97, 60) allready found
+(92, 60) allready found
+(83, 60) allready found
+(77, 60) allready found
+(64, 60) allready found
+(98, 59) allready found
+(97, 59) allready found
+(96, 59) allready found
+(92, 59) allready found
+(83, 59) allready found
+(77, 59) allready found
+(68, 59) allready found
+(98, 58) allready found
+(97, 58) allready found
+(82, 58) allready found
+(69, 58) allready found
+(98, 57) allready found
+(97, 57) allready found
+(95, 57) allready found
+(84, 57) allready found
+(74, 57) allready found
+(68, 57) allready found
+(98, 56) allready found
+(96, 56) allready found
+(84, 56) allready found
+(72, 56) allready found
+(62, 56) allready found
+(98, 55) allready found
+(92, 55) allready found
+(75, 55) allready found
+(67, 55) allready found
+(98, 54) allready found
+(96, 54) allready found
+(93, 54) allready found
+(92, 54) allready found
+(83, 54) allready found
+(74, 54) allready found
+(59, 54) allready found
+(98, 53) allready found
+(97, 53) allready found
+(96, 53) allready found
+(93, 53) allready found
+(79, 53) allready found
+(67, 53) allready found
+(62, 53) allready found
+(98, 52) allready found
+(96, 52) allready found
+(95, 52) allready found
+(94, 52) allready found
+(91, 52) allready found
+(82, 52) allready found
+(71, 52) allready found
+(70, 52) allready found
+(98, 51) allready found
+(88, 51) allready found
+(86, 51) allready found
+(74, 51) allready found
+(64, 51) allready found
+(98, 50) allready found
+(97, 50) allready found
+(96, 50) allready found
+(94, 50) allready found
+(91, 50) allready found
+(85, 50) allready found
+(71, 50) allready found
+(69, 50) allready found
+(98, 49) allready found
+(97, 49) allready found
+(92, 49) allready found
+(83, 49) allready found
+(69, 49) allready found
+(98, 48) allready found
+(97, 48) allready found
+(93, 48) allready found
+(85, 48) allready found
+(75, 48) allready found
+(71, 48) allready found
+(98, 47) allready found
+(97, 47) allready found
+(91, 47) allready found
+(85, 47) allready found
+(78, 47) allready found
+(70, 47) allready found
+(98, 46) allready found
+(96, 46) allready found
+(92, 46) allready found
+(84, 46) allready found
+(68, 46) allready found
+(55, 46) allready found
+(98, 45) allready found
+(94, 45) allready found
+(92, 45) allready found
+(81, 45) allready found
+(77, 45) allready found
+(63, 45) allready found
+(98, 44) allready found
+(93, 44) allready found
+(91, 44) allready found
+(77, 44) allready found
+(68, 44) allready found
+(98, 43) allready found
+(97, 43) allready found
+(96, 43) allready found
+(90, 43) allready found
+(79, 43) allready found
+(69, 43) allready found
+(55, 43) allready found
+(98, 42) allready found
+(85, 42) allready found
+(83, 42) allready found
+(74, 42) allready found
+(65, 42) allready found
+(98, 41) allready found
+(97, 41) allready found
+(93, 41) allready found
+(88, 41) allready found
+(74, 41) allready found
+(72, 41) allready found
+(69, 41) allready found
+(98, 40) allready found
+(96, 40) allready found
+(87, 40) allready found
+(73, 40) allready found
+(70, 40) allready found
+(63, 40) allready found
+(98, 39) allready found
+(97, 39) allready found
+(90, 39) allready found
+(89, 39) allready found
+(84, 39) allready found
+(72, 39) allready found
+(64, 39) allready found
+(98, 38) allready found
+(89, 38) allready found
+(76, 38) allready found
+(73, 38) allready found
+(60, 38) allready found
+(98, 37) allready found
+(90, 37) allready found
+(82, 37) allready found
+(71, 37) allready found
+(64, 37) allready found
+(98, 36) allready found
+(97, 36) allready found
+(92, 36) allready found
+(89, 36) allready found
+(76, 36) allready found
+(68, 36) allready found
+(62, 36) allready found
+(98, 35) allready found
+(89, 35) allready found
+(82, 35) allready found
+(73, 35) allready found
+(63, 35) allready found
+(98, 34) allready found
+(97, 34) allready found
+(85, 34) allready found
+(81, 34) allready found
+(73, 34) allready found
+(64, 34) allready found
+(98, 33) allready found
+(97, 33) allready found
+(93, 33) allready found
+(87, 33) allready found
+(81, 33) allready found
+(73, 33) allready found
+(61, 33) allready found
+(98, 32) allready found
+(92, 32) allready found
+(89, 32) allready found
+(81, 32) allready found
+(69, 32) allready found
+(59, 32) allready found
+(98, 31) allready found
+(96, 31) allready found
+(83, 31) allready found
+(70, 31) allready found
+(48, 31) allready found
+(98, 30) allready found
+(87, 30) allready found
+(72, 30) allready found
+(67, 30) allready found
+(57, 30) allready found
+(98, 29) allready found
+(95, 29) allready found
+(91, 29) allready found
+(83, 29) allready found
+(75, 29) allready found
+(68, 29) allready found
+(55, 29) allready found
+(98, 28) allready found
+(96, 28) allready found
+(95, 28) allready found
+(93, 28) allready found
+(82, 28) allready found
+(76, 28) allready found
+(66, 28) allready found
+(98, 27) allready found
+(91, 27) allready found
+(82, 27) allready found
+(77, 27) allready found
+(65, 27) allready found
+(98, 26) allready found
+(91, 26) allready found
+(86, 26) allready found
+(71, 26) allready found
+(65, 26) allready found
+(98, 25) allready found
+(97, 25) allready found
+(93, 25) allready found
+(82, 25) allready found
+(72, 25) allready found
+(60, 25) allready found
+(98, 24) allready found
+(97, 24) allready found
+(92, 24) allready found
+(81, 24) allready found
+(70, 24) allready found
+(60, 24) allready found
+(98, 23) allready found
+(94, 23) allready found
+(92, 23) allready found
+(83, 23) allready found
+(66, 23) allready found
+(58, 23) allready found
+(98, 22) allready found
+(79, 22) allready found
+(69, 22) allready found
+(53, 22) allready found
+(98, 21) allready found
+(97, 21) allready found
+(87, 21) allready found
+(78, 21) allready found
+(70, 21) allready found
+(98, 20) allready found
+(97, 20) allready found
+(85, 20) allready found
+(76, 20) allready found
+(60, 20) allready found
+(98, 19) allready found
+(97, 19) allready found
+(80, 19) allready found
+(65, 19) allready found
+(98, 18) allready found
+(96, 18) allready found
+(88, 18) allready found
+(79, 18) allready found
+(65, 18) allready found
+(98, 17) allready found
+(96, 17) allready found
+(88, 17) allready found
+(74, 17) allready found
+(63, 17) allready found
+(98, 16) allready found
+(95, 16) allready found
+(85, 16) allready found
+(75, 16) allready found
+(52, 16) allready found
+(98, 15) allready found
+(96, 15) allready found
+(85, 15) allready found
+(62, 15) allready found
+(56, 15) allready found
+(98, 14) allready found
+(93, 14) allready found
+(81, 14) allready found
+(74, 14) allready found
+(52, 14) allready found
+(98, 13) allready found
+(94, 13) allready found
+(83, 13) allready found
+(61, 13) allready found
+(98, 12) allready found
+(96, 12) allready found
+(89, 12) allready found
+(80, 12) allready found
+(64, 12) allready found
+(98, 11) allready found
+(95, 11) allready found
+(91, 11) allready found
+(80, 11) allready found
+(68, 11) allready found
+(98, 10) allready found
+(97, 10) allready found
+(89, 10) allready found
+(78, 10) allready found
+(62, 10) allready found
+(98, 9) allready found
+(90, 9) allready found
+(69, 9) allready found
+(60, 9) allready found
+(98, 8) allready found
+(87, 8) allready found
+(70, 8) allready found
+(60, 8) allready found
+(98, 7) allready found
+(96, 7) allready found
+(85, 7) allready found
+(71, 7) allready found
+(49, 7) allready found
+(98, 6) allready found
+(97, 6) allready found
+(94, 6) allready found
+(85, 6) allready found
+(74, 6) allready found
+(98, 5) allready found
+(97, 5) allready found
+(95, 5) allready found
+(82, 5) allready found
+(68, 5) allready found
+(98, 4) allready found
+(88, 4) allready found
+(80, 4) allready found
+(69, 4) allready found
+(98, 3) allready found
+(96, 3) allready found
+(90, 3) allready found
+(80, 3) allready found
+(66, 3) allready found
+(98, 2) allready found
+(93, 2) allready found
+(81, 2) allready found
+(63, 2) allready found
+(98, 1) allready found
+(97, 1) allready found
+(92, 1) allready found
+(78, 1) allready found
+(61, 1) allready found
+(98, 0) allready found
+(90, 0) allready found
+(77, 0) allready found
+(50, 0) allready found
+Amount of visible trees: 99

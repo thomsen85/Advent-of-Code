@@ -1,4 +1,4 @@
-use std::sync::{Arc, Weak, Mutex};
+use std::sync::{Arc, Mutex, Weak};
 
 #[derive(Debug)]
 struct Node {
@@ -32,7 +32,7 @@ impl Node {
     fn get_child(&self, id: &str) -> Option<Arc<Mutex<Node>>> {
         for child in &self.children {
             if child.lock().unwrap().id == id {
-                return Some(Arc::clone(child))
+                return Some(Arc::clone(child));
             }
         }
         None
@@ -42,7 +42,7 @@ impl Node {
         self.value += value;
 
         if let Some(parent) = &self.parent {
-            if let Some(ptr) = parent.upgrade(){
+            if let Some(ptr) = parent.upgrade() {
                 ptr.lock().unwrap()._backpropegate(value);
             }
         }
@@ -51,7 +51,7 @@ impl Node {
 
 #[derive(Debug)]
 struct Tree {
-    root: Arc<Mutex<Node>>
+    root: Arc<Mutex<Node>>,
 }
 
 impl Tree {
@@ -71,10 +71,9 @@ impl Tree {
     }
 }
 
-
 fn main() {
     let input = aoc2022_rust::utils::lines_from_file("inputs/day7.txt");
-    
+
     let mut tree = Tree::new("/".to_string());
     let mut path = Vec::new();
 
@@ -89,24 +88,39 @@ fn main() {
                         path.push(split[2].to_string());
                     }
                 }
-            },
+            }
             "dir" => {
                 let parent = tree.get_node(&path);
-                let child = Node::new_child(split[1].to_string(), 0, Arc::downgrade(&parent)); 
-                parent.lock().unwrap().children.push(Arc::new(Mutex::new(child)));
+                let child = Node::new_child(split[1].to_string(), 0, Arc::downgrade(&parent));
+                parent
+                    .lock()
+                    .unwrap()
+                    .children
+                    .push(Arc::new(Mutex::new(child)));
             }
             _ => {
                 let parent = tree.get_node(&path);
-                let child = Node::new_child(split[1].to_string(), split[0].parse().unwrap(), Arc::downgrade(&parent)); 
-                parent.lock().unwrap().children.push(Arc::new(Mutex::new(child)));
+                let child = Node::new_child(
+                    split[1].to_string(),
+                    split[0].parse().unwrap(),
+                    Arc::downgrade(&parent),
+                );
+                parent
+                    .lock()
+                    .unwrap()
+                    .children
+                    .push(Arc::new(Mutex::new(child)));
             }
         }
     }
     let mut l = Vec::new();
     println!("{}", get_sum(&tree.root));
     get_all(&tree.root, &mut l, 0);
-    l.sort_by(|a,b| a.0.cmp(&b.0));
-    let la = l.into_iter().filter(|o| o.0 > 6233734).collect::<Vec<(usize,String,usize)>>();
+    l.sort_by(|a, b| a.0.cmp(&b.0));
+    let la = l
+        .into_iter()
+        .filter(|o| o.0 > 6233734)
+        .collect::<Vec<(usize, String, usize)>>();
     println!("{:?}", la.first());
 }
 
@@ -136,9 +150,7 @@ fn get_all(node: &Arc<Mutex<Node>>, vec: &mut Vec<(usize, String, usize)>, depth
         vec.push((size, value, depth));
 
         for child in &node.lock().unwrap().children {
-            get_all(child, vec, depth+1)
+            get_all(child, vec, depth + 1)
         }
     }
 }
-    
-    
