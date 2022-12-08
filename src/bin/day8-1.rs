@@ -19,7 +19,7 @@ fn main() {
     println!("Amount of visible trees: {}", visible.len());
 }
 
-fn scan_h<T>(input: &Vec<Vec<i32>>, visible: &mut HashSet<(usize, usize)>, col_range: T)
+fn scan_h<T>(input: &[Vec<i32>], visible: &mut HashSet<(usize, usize)>, col_range: T)
 where
     T: IntoIterator<Item = usize> + Clone,
 {

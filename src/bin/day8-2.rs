@@ -18,7 +18,7 @@ fn main() {
     println!("Largest scenic score: {}", res.iter().max().unwrap());
 }
 
-fn get_scenic_score(input: &Vec<Vec<i32>>, col: usize, row: usize) -> usize {
+fn get_scenic_score(input: &[Vec<i32>], col: usize, row: usize) -> usize {
     let height = input[row][col];
     let mut scores: Vec<usize> = Vec::new();
     // Up

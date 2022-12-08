@@ -63,8 +63,8 @@ impl Tree {
 
     fn get_node(&mut self, path: &Vec<String>) -> Arc<Mutex<Node>> {
         let mut temp_child = Arc::clone(&self.root);
-        for i in 1..path.len() {
-            let child = temp_child.lock().unwrap().get_child(&path[i]);
+        for p in path {
+            let child = temp_child.lock().unwrap().get_child(p);
             temp_child = child.unwrap();
         }
         temp_child
@@ -126,7 +126,7 @@ fn main() {
 
 fn get_sum(node: &Arc<Mutex<Node>>) -> usize {
     let mut sum = 0;
-    if node.lock().unwrap().children.len() == 0 {
+    if node.lock().unwrap().children.is_empty() {
         return 0;
     } else {
         if node.lock().unwrap().value < 100_000 {
@@ -142,8 +142,8 @@ fn get_sum(node: &Arc<Mutex<Node>>) -> usize {
 }
 
 fn get_all(node: &Arc<Mutex<Node>>, vec: &mut Vec<(usize, String, usize)>, depth: usize) {
-    if node.lock().unwrap().children.len() == 0 {
-        return;
+    if node.lock().unwrap().children.is_empty() {
+        
     } else {
         let size = node.lock().unwrap().value;
         let value = node.lock().unwrap().id.clone();

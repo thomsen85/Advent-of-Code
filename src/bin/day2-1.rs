@@ -22,11 +22,11 @@ fn points_from_line(line: &str) -> usize {
         } else if me == "Y" {
             points += 2 + 6;
         } else if me == "Z" {
-            points += 3 + 0;
+            points += 3;
         }
     } else if opp == "B" {
         if me == "X" {
-            points += 1 + 0;
+            points += 1;
         } else if me == "Y" {
             points += 2 + 3;
         } else if me == "Z" {
@@ -36,7 +36,7 @@ fn points_from_line(line: &str) -> usize {
         if me == "X" {
             points += 1 + 6;
         } else if me == "Y" {
-            points += 2 + 0;
+            points += 2;
         } else if me == "Z" {
             points += 3 + 3;
         }

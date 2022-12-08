@@ -20,7 +20,7 @@ fn points_from_line(line: &str) -> usize {
         // Rock 1
         if me == "X" {
             // lose
-            points += 0 + 3;
+            points += 3;
         } else if me == "Y" {
             // draw
             points += 3 + 1;
@@ -31,7 +31,7 @@ fn points_from_line(line: &str) -> usize {
     } else if opp == "B" {
         // Paper 2
         if me == "X" {
-            points += 0 + 1;
+            points += 1;
         } else if me == "Y" {
             points += 3 + 2;
         } else if me == "Z" {
@@ -40,7 +40,7 @@ fn points_from_line(line: &str) -> usize {
     } else if opp == "C" {
         // Scissors 3
         if me == "X" {
-            points += 0 + 2;
+            points += 2;
         } else if me == "Y" {
             points += 3 + 3;
         } else if me == "Z" {

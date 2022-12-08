@@ -15,10 +15,8 @@ fn main() {
             if (f1..=f1 + diff).contains(&b1) {
                 amount += 1
             }
-        } else {
-            if (b1..=b1 + diff).contains(&f1) {
-                amount += 1
-            }
+        } else if (b1..=b1 + diff).contains(&f1) {
+            amount += 1
         }
     }
     println!("Amount = {}", amount);
