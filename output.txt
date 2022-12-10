@@ -1,0 +1,490 @@
+Sprite pos: 0..3
+CRT draws pixel in position 1
+Sprite pos: 15..18
+CRT draws pixel in position 2
+Sprite pos: 15..18
+CRT draws pixel in position 3
+Sprite pos: 4..7
+CRT draws pixel in position 4
+Sprite pos: 4..7
+CRT draws pixel in position 5
+Sprite pos: 10..13
+CRT draws pixel in position 6
+Sprite pos: 10..13
+CRT draws pixel in position 7
+Sprite pos: 7..10
+CRT draws pixel in position 8
+Sprite pos: 7..10
+CRT draws pixel in position 9
+Sprite pos: 12..15
+CRT draws pixel in position 10
+Sprite pos: 12..15
+CRT draws pixel in position 11
+Sprite pos: 11..14
+CRT draws pixel in position 12
+Sprite pos: 11..14
+CRT draws pixel in position 13
+Sprite pos: 3..6
+CRT draws pixel in position 14
+Sprite pos: 3..6
+CRT draws pixel in position 15
+Sprite pos: 16..19
+CRT draws pixel in position 16
+Sprite pos: 16..19
+CRT draws pixel in position 17
+Sprite pos: 20..23
+CRT draws pixel in position 18
+Sprite pos: 20..23
+CRT draws pixel in position 19
+Sprite pos: 20..23
+CRT draws pixel in position 20
+Sprite pos: 19..22
+CRT draws pixel in position 21
+Sprite pos: 19..22
+CRT draws pixel in position 22
+Sprite pos: 24..27
+CRT draws pixel in position 23
+Sprite pos: 24..27
+CRT draws pixel in position 24
+Sprite pos: 23..26
+CRT draws pixel in position 25
+Sprite pos: 23..26
+CRT draws pixel in position 26
+Sprite pos: 28..31
+CRT draws pixel in position 27
+Sprite pos: 28..31
+CRT draws pixel in position 28
+Sprite pos: 27..30
+CRT draws pixel in position 29
+Sprite pos: 27..30
+CRT draws pixel in position 30
+Sprite pos: 32..35
+CRT draws pixel in position 31
+Sprite pos: 32..35
+CRT draws pixel in position 32
+Sprite pos: 31..34
+CRT draws pixel in position 33
+Sprite pos: 31..34
+CRT draws pixel in position 34
+Sprite pos: 36..39
+CRT draws pixel in position 35
+Sprite pos: 36..39
+CRT draws pixel in position 36
+Sprite pos: 35..38
+CRT draws pixel in position 37
+Sprite pos: 35..38
+CRT draws pixel in position 38
+Sprite pos: 0..3
+CRT draws pixel in position 39
+Sprite pos: 0..3
+CRT draws pixel in position 40
+Sprite pos: 1..4
+CRT draws pixel in position 41
+Sprite pos: 1..4
+CRT draws pixel in position 42
+Sprite pos: 25..28
+CRT draws pixel in position 43
+Sprite pos: 25..28
+CRT draws pixel in position 44
+Sprite pos: 6..9
+CRT draws pixel in position 45
+Sprite pos: 6..9
+CRT draws pixel in position 46
+Sprite pos: 7..10
+CRT draws pixel in position 47
+Sprite pos: 7..10
+CRT draws pixel in position 48
+Sprite pos: 23..26
+CRT draws pixel in position 49
+Sprite pos: 23..26
+CRT draws pixel in position 50
+Sprite pos: 12..15
+CRT draws pixel in position 51
+Sprite pos: 12..15
+CRT draws pixel in position 52
+Sprite pos: 12..15
+CRT draws pixel in position 53
+Sprite pos: 12..15
+CRT draws pixel in position 54
+Sprite pos: 33..36
+CRT draws pixel in position 55
+Sprite pos: 33..36
+CRT draws pixel in position 56
+Sprite pos: 18..21
+CRT draws pixel in position 57
+Sprite pos: 18..21
+CRT draws pixel in position 58
+Sprite pos: 18..21
+CRT draws pixel in position 59
+Sprite pos: 18..21
+CRT draws pixel in position 60
+Sprite pos: 15..18
+CRT draws pixel in position 61
+Sprite pos: 15..18
+CRT draws pixel in position 62
+Sprite pos: 24..27
+CRT draws pixel in position 63
+Sprite pos: 24..27
+CRT draws pixel in position 64
+Sprite pos: 25..28
+CRT draws pixel in position 65
+Sprite pos: 25..28
+CRT draws pixel in position 66
+Sprite pos: 22..25
+CRT draws pixel in position 67
+Sprite pos: 22..25
+CRT draws pixel in position 68
+Sprite pos: 30..33
+CRT draws pixel in position 69
+Sprite pos: 30..33
+CRT draws pixel in position 70
+Sprite pos: 31..34
+CRT draws pixel in position 71
+Sprite pos: 31..34
+CRT draws pixel in position 72
+Sprite pos: 36..39
+CRT draws pixel in position 73
+Sprite pos: 36..39
+CRT draws pixel in position 74
+Sprite pos: 36..39
+CRT draws pixel in position 75
+Sprite pos: 36..39
+CRT draws pixel in position 76
+Sprite pos: 36..39
+CRT draws pixel in position 77
+Sprite pos: 36..39
+CRT draws pixel in position 78
+Sprite pos: 36..39
+CRT draws pixel in position 79
+Sprite pos: 0..3
+CRT draws pixel in position 80
+Sprite pos: 0..3
+CRT draws pixel in position 81
+Sprite pos: 0..3
+CRT draws pixel in position 82
+Sprite pos: 1..4
+CRT draws pixel in position 83
+Sprite pos: 1..4
+CRT draws pixel in position 84
+Sprite pos: 8..11
+CRT draws pixel in position 85
+Sprite pos: 8..11
+CRT draws pixel in position 86
+Sprite pos: 8..11
+CRT draws pixel in position 87
+Sprite pos: 8..11
+CRT draws pixel in position 88
+Sprite pos: 8..11
+CRT draws pixel in position 89
+Sprite pos: 10..13
+CRT draws pixel in position 90
+Sprite pos: 10..13
+CRT draws pixel in position 91
+Sprite pos: 16..19
+CRT draws pixel in position 92
+Sprite pos: 16..19
+CRT draws pixel in position 93
+Sprite pos: 16..19
+CRT draws pixel in position 94
+Sprite pos: 16..19
+CRT draws pixel in position 95
+Sprite pos: 16..19
+CRT draws pixel in position 96
+Sprite pos: 16..19
+CRT draws pixel in position 97
+Sprite pos: 16..19
+CRT draws pixel in position 98
+Sprite pos: 17..20
+CRT draws pixel in position 99
+Sprite pos: 17..20
+CRT draws pixel in position 100
+Sprite pos: 17..20
+CRT draws pixel in position 101
+Sprite pos: 17..20
+CRT draws pixel in position 102
+Sprite pos: 24..27
+CRT draws pixel in position 103
+Sprite pos: 24..27
+CRT draws pixel in position 104
+Sprite pos: 25..28
+CRT draws pixel in position 105
+Sprite pos: 25..28
+CRT draws pixel in position 106
+Sprite pos: 25..28
+CRT draws pixel in position 107
+Sprite pos: 12..15
+CRT draws pixel in position 108
+Sprite pos: 12..15
+CRT draws pixel in position 109
+Sprite pos: 25..28
+CRT draws pixel in position 110
+Sprite pos: 25..28
+CRT draws pixel in position 111
+Sprite pos: 32..35
+CRT draws pixel in position 112
+Sprite pos: 32..35
+CRT draws pixel in position 113
+Sprite pos: 32..35
+CRT draws pixel in position 114
+Sprite pos: 33..36
+CRT draws pixel in position 115
+Sprite pos: 33..36
+CRT draws pixel in position 116
+Sprite pos: 0..3
+CRT draws pixel in position 117
+Sprite pos: 0..3
+CRT draws pixel in position 118
+Sprite pos: 0..3
+CRT draws pixel in position 119
+Sprite pos: 0..3
+CRT draws pixel in position 120
+Sprite pos: 0..3
+CRT draws pixel in position 121
+Sprite pos: 2..5
+CRT draws pixel in position 122
+Sprite pos: 2..5
+CRT draws pixel in position 123
+Sprite pos: 2..5
+CRT draws pixel in position 124
+Sprite pos: 2..5
+CRT draws pixel in position 125
+Sprite pos: 2..5
+CRT draws pixel in position 126
+Sprite pos: 10..13
+CRT draws pixel in position 127
+Sprite pos: 10..13
+CRT draws pixel in position 128
+Sprite pos: 10..13
+CRT draws pixel in position 129
+Sprite pos: 9..12
+CRT draws pixel in position 130
+Sprite pos: 9..12
+CRT draws pixel in position 131
+Sprite pos: 11..14
+CRT draws pixel in position 132
+Sprite pos: 11..14
+CRT draws pixel in position 133
+Sprite pos: 12..15
+CRT draws pixel in position 134
+Sprite pos: 12..15
+CRT draws pixel in position 135
+Sprite pos: 12..15
+CRT draws pixel in position 136
+Sprite pos: 29..32
+CRT draws pixel in position 137
+Sprite pos: 29..32
+CRT draws pixel in position 138
+Sprite pos: 20..23
+CRT draws pixel in position 139
+Sprite pos: 20..23
+CRT draws pixel in position 140
+Sprite pos: 21..24
+CRT draws pixel in position 141
+Sprite pos: 21..24
+CRT draws pixel in position 142
+Sprite pos: 22..25
+CRT draws pixel in position 143
+Sprite pos: 22..25
+CRT draws pixel in position 144
+Sprite pos: 19..22
+CRT draws pixel in position 145
+Sprite pos: 19..22
+CRT draws pixel in position 146
+Sprite pos: 30..33
+CRT draws pixel in position 147
+Sprite pos: 30..33
+CRT draws pixel in position 148
+Sprite pos: 30..33
+CRT draws pixel in position 149
+Sprite pos: 30..33
+CRT draws pixel in position 150
+Sprite pos: 31..34
+CRT draws pixel in position 151
+Sprite pos: 31..34
+CRT draws pixel in position 152
+Sprite pos: 31..34
+CRT draws pixel in position 153
+Sprite pos: 32..35
+CRT draws pixel in position 154
+Sprite pos: 32..35
+CRT draws pixel in position 155
+Sprite pos: 32..35
+CRT draws pixel in position 156
+Sprite pos: 32..35
+CRT draws pixel in position 157
+Sprite pos: 19..22
+CRT draws pixel in position 158
+Sprite pos: 19..22
+CRT draws pixel in position 159
+Sprite pos: 0..3
+CRT draws pixel in position 160
+Sprite pos: 0..3
+CRT draws pixel in position 161
+Sprite pos: 1..4
+CRT draws pixel in position 162
+Sprite pos: 1..4
+CRT draws pixel in position 163
+Sprite pos: 4..7
+CRT draws pixel in position 164
+Sprite pos: 4..7
+CRT draws pixel in position 165
+Sprite pos: 30..33
+CRT draws pixel in position 166
+Sprite pos: 30..33
+CRT draws pixel in position 167
+Sprite pos: 0..3
+CRT draws pixel in position 168
+Sprite pos: 0..3
+CRT draws pixel in position 169
+Sprite pos: 12..15
+CRT draws pixel in position 170
+Sprite pos: 12..15
+CRT draws pixel in position 171
+Sprite pos: 11..14
+CRT draws pixel in position 172
+Sprite pos: 11..14
+CRT draws pixel in position 173
+Sprite pos: 14..17
+CRT draws pixel in position 174
+Sprite pos: 14..17
+CRT draws pixel in position 175
+Sprite pos: 15..18
+CRT draws pixel in position 176
+Sprite pos: 15..18
+CRT draws pixel in position 177
+Sprite pos: 15..18
+CRT draws pixel in position 178
+Sprite pos: 15..18
+CRT draws pixel in position 179
+Sprite pos: 15..18
+CRT draws pixel in position 180
+Sprite pos: 6..9
+CRT draws pixel in position 181
+Sprite pos: 6..9
+CRT draws pixel in position 182
+Sprite pos: 24..27
+CRT draws pixel in position 183
+Sprite pos: 24..27
+CRT draws pixel in position 184
+Sprite pos: 25..28
+CRT draws pixel in position 185
+Sprite pos: 25..28
+CRT draws pixel in position 186
+Sprite pos: 27..30
+CRT draws pixel in position 187
+Sprite pos: 27..30
+CRT draws pixel in position 188
+Sprite pos: 27..30
+CRT draws pixel in position 189
+Sprite pos: 27..30
+CRT draws pixel in position 190
+Sprite pos: 36..39
+CRT draws pixel in position 191
+Sprite pos: 36..39
+CRT draws pixel in position 192
+Sprite pos: 36..39
+CRT draws pixel in position 193
+Sprite pos: 36..39
+CRT draws pixel in position 194
+Sprite pos: 36..39
+CRT draws pixel in position 195
+Sprite pos: 35..38
+CRT draws pixel in position 196
+Sprite pos: 35..38
+CRT draws pixel in position 197
+Sprite pos: 37..40
+CRT draws pixel in position 198
+Sprite pos: 37..40
+CRT draws pixel in position 199
+Sprite pos: 0..3
+CRT draws pixel in position 200
+Sprite pos: 0..3
+CRT draws pixel in position 201
+Sprite pos: 1..4
+CRT draws pixel in position 202
+Sprite pos: 1..4
+CRT draws pixel in position 203
+Sprite pos: 4..7
+CRT draws pixel in position 204
+Sprite pos: 4..7
+CRT draws pixel in position 205
+Sprite pos: 4..7
+CRT draws pixel in position 206
+Sprite pos: 19..22
+CRT draws pixel in position 207
+Sprite pos: 19..22
+CRT draws pixel in position 208
+Sprite pos: -2..1
+CRT draws pixel in position 209
+Sprite pos: -2..1
+CRT draws pixel in position 210
+Sprite pos: 20..23
+CRT draws pixel in position 211
+Sprite pos: 20..23
+CRT draws pixel in position 212
+Sprite pos: 14..17
+CRT draws pixel in position 213
+Sprite pos: 14..17
+CRT draws pixel in position 214
+Sprite pos: 15..18
+CRT draws pixel in position 215
+Sprite pos: 15..18
+CRT draws pixel in position 216
+Sprite pos: 15..18
+CRT draws pixel in position 217
+Sprite pos: 17..20
+CRT draws pixel in position 218
+Sprite pos: 17..20
+CRT draws pixel in position 219
+Sprite pos: 18..21
+CRT draws pixel in position 220
+Sprite pos: 18..21
+CRT draws pixel in position 221
+Sprite pos: 18..21
+CRT draws pixel in position 222
+Sprite pos: 8..11
+CRT draws pixel in position 223
+Sprite pos: 8..11
+CRT draws pixel in position 224
+Sprite pos: 8..11
+CRT draws pixel in position 225
+Sprite pos: 8..11
+CRT draws pixel in position 226
+Sprite pos: 28..31
+CRT draws pixel in position 227
+Sprite pos: 28..31
+CRT draws pixel in position 228
+Sprite pos: 29..32
+CRT draws pixel in position 229
+Sprite pos: 29..32
+CRT draws pixel in position 230
+Sprite pos: 31..34
+CRT draws pixel in position 231
+Sprite pos: 31..34
+CRT draws pixel in position 232
+Sprite pos: 33..36
+CRT draws pixel in position 233
+Sprite pos: 33..36
+CRT draws pixel in position 234
+Sprite pos: 27..30
+CRT draws pixel in position 235
+Sprite pos: 27..30
+CRT draws pixel in position 236
+Sprite pos: 16..19
+CRT draws pixel in position 237
+Sprite pos: 16..19
+CRT draws pixel in position 238
+Sprite pos: 16..19
+CRT draws pixel in position 239
+Sprite pos: 16..19
+CRT draws pixel in position 240
+Sprite pos: 16..19
+CRT draws pixel in position 241
+
+##..##..##..##..##..##..##..##..##..##..
+###...###...###...###...###...###...###.
+####....####....####....####....####....
+#####.....#####.....#####.....#####.....
+######......######......######......####
+#######.......#######.......#######.....
+..

@@ -1,5 +1,5 @@
-use std::thread::sleep;
-use std::time::Duration;
+
+
 use std::{
     collections::HashSet,
     fmt::{Display, Write},
@@ -94,7 +94,7 @@ impl Display for Rope {
             for x in -size..size {
                 let mut empty = true;
                 for (i, pos) in self.rope.iter().enumerate() {
-                    if pos == &Vec2::new(x, y * -1) {
+                    if pos == &Vec2::new(x, -y) {
                         empty = false;
                         f.write_str(&(i + 1).to_string())?;
                         break;
@@ -102,8 +102,8 @@ impl Display for Rope {
                 }
 
                 if empty {
-                    for (i, pos) in self.history.iter().enumerate() {
-                        if pos == &Vec2::new(x, y * -1) {
+                    for (_i, pos) in self.history.iter().enumerate() {
+                        if pos == &Vec2::new(x, -y) {
                             empty = false;
                             f.write_char('#')?;
                             break;
