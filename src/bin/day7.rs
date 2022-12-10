@@ -143,7 +143,6 @@ fn get_sum(node: &Arc<Mutex<Node>>) -> usize {
 
 fn get_all(node: &Arc<Mutex<Node>>, vec: &mut Vec<(usize, String, usize)>, depth: usize) {
     if node.lock().unwrap().children.is_empty() {
-        
     } else {
         let size = node.lock().unwrap().value;
         let value = node.lock().unwrap().id.clone();
