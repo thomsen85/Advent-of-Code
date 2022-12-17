@@ -1,5 +1,3 @@
-
-
 use std::{
     collections::HashSet,
     fmt::{Display, Write},
