@@ -1,4 +1,4 @@
-use std::collections::{BinaryHeap};
+use std::collections::BinaryHeap;
 
 #[derive(Debug, Clone, PartialEq, Eq)]
 struct EdgeTo {
