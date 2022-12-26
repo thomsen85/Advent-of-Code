@@ -1,85 +1,15 @@
 use std::{
     collections::{HashMap, HashSet},
-    ops::{Add, Div, Mul, Sub},
 };
 
 use nom::{
     bytes::complete::tag,
     character::complete::newline,
     multi::separated_list1,
-    sequence::{pair, separated_pair},
+    sequence::separated_pair,
     IResult,
 };
-
-#[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Hash, Clone, Copy)]
-struct Vec2 {
-    x: i32,
-    y: i32,
-}
-
-impl Vec2 {
-    const DOWN: Self = Self { x: 0, y: 1 };
-    const DOWN_LEFT: Self = Self { x: -1, y: 1 };
-    const DOWN_RIGHT: Self = Self { x: 1, y: 1 };
-
-    fn new(x: i32, y: i32) -> Self {
-        Self { x, y }
-    }
-
-    fn len(self) -> f32 {
-        ((self.x.pow(2) + self.y.pow(2)) as f32).sqrt()
-    }
-}
-
-impl Add for Vec2 {
-    type Output = Self;
-
-    fn add(self, other: Self) -> Self {
-        Self {
-            x: self.x + other.x,
-            y: self.y + other.y,
-        }
-    }
-}
-
-impl Sub for Vec2 {
-    type Output = Self;
-
-    fn sub(self, other: Self) -> Self {
-        Self {
-            x: self.x - other.x,
-            y: self.y - other.y,
-        }
-    }
-}
-
-impl Mul<i32> for Vec2 {
-    type Output = Self;
-
-    fn mul(self, c: i32) -> Self {
-        Self {
-            x: self.x * c,
-            y: self.y * c,
-        }
-    }
-}
-
-impl Div<i32> for Vec2 {
-    type Output = Self;
-
-    fn div(self, c: i32) -> Self {
-        Self {
-            x: self.x / c,
-            y: self.y / c,
-        }
-    }
-}
-
-impl From<(i32, i32)> for Vec2 {
-    fn from((x, y): (i32, i32)) -> Self {
-        Self { x, y }
-    }
-}
+use aoc2022_rust::datastructs::Vec2::Vec2;
 
 struct SandSim {
     rocks: HashSet<Vec2>,
@@ -142,10 +72,6 @@ fn part1(input: &str) {
         counter += 1;
     }
 
-    println!(
-        "{}",
-        get_drawing(Vec2::new(490, 0), Vec2::new(505, 10), sim.rocks, sim.sand)
-    );
     println!("Amount = {}", counter);
 }
 
@@ -164,10 +90,6 @@ fn part2(input: &str) {
         counter += 1;
     }
 
-    println!(
-        "{}",
-        get_drawing(Vec2::new(490, 0), Vec2::new(505, 10), sim.rocks, sim.sand)
-    );
     println!("Amount = {}", counter);
 }
 
