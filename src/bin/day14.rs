@@ -1,4 +1,4 @@
-use std::collections::{HashMap, HashSet};
+use std::collections::{HashSet};
 
 use aoc2022_rust::datastructs::Vec2::Vec2;
 use nom::{
