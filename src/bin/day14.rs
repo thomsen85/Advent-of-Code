@@ -1,15 +1,10 @@
-use std::{
-    collections::{HashMap, HashSet},
-};
+use std::collections::{HashMap, HashSet};
 
-use nom::{
-    bytes::complete::tag,
-    character::complete::newline,
-    multi::separated_list1,
-    sequence::separated_pair,
-    IResult,
-};
 use aoc2022_rust::datastructs::Vec2::Vec2;
+use nom::{
+    bytes::complete::tag, character::complete::newline, multi::separated_list1,
+    sequence::separated_pair, IResult,
+};
 
 struct SandSim {
     rocks: HashSet<Vec2>,

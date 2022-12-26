@@ -1,4 +1,4 @@
-use std::ops::{Add, Sub, Mul, Div};
+use std::ops::{Add, Div, Mul, Sub};
 
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Hash, Clone, Copy)]
 pub struct Vec2 {
@@ -7,6 +7,9 @@ pub struct Vec2 {
 }
 
 impl Vec2 {
+    pub const UP: Self = Self { x: 0, y: -1 };
+    pub const LEFT: Self = Self { x: -1, y: 0 };
+    pub const RIGHT: Self = Self { x: 1, y: 0 };
     pub const DOWN: Self = Self { x: 0, y: 1 };
     pub const DOWN_LEFT: Self = Self { x: -1, y: 1 };
     pub const DOWN_RIGHT: Self = Self { x: 1, y: 1 };
@@ -17,6 +20,21 @@ impl Vec2 {
 
     pub fn len(self) -> f32 {
         ((self.x.pow(2) + self.y.pow(2)) as f32).sqrt()
+    }
+
+    pub fn direction(&self) -> Option<Self> {
+        if self.x == 0 && self.y == 0 {
+            return None;
+        } else if self.x == 0 {
+            return Some(Self::new(0, self.y.signum()));
+        } else if self.y == 0 {
+            return Some(Self::new(self.x.signum(), 0));
+        }
+        None
+    }
+
+    pub fn decomposition(&self) -> (Self, Self) {
+        (Self::new(self.x, 0), Self::new(0, self.y))
     }
 }
 

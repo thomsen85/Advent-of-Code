@@ -1,2 +1,2 @@
-pub mod utils;
 pub mod datastructs;
+pub mod utils;
