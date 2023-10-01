@@ -25,7 +25,7 @@ fn intersects(sb: &Vec<(Vec2, Vec2)>, point: &Vec2) -> bool {
             return false;
         }
     }
-
+    
     for (sensor, beacon) in sb {
         let sb_dist = manhattan_dist(sensor, beacon);
         let p_dist = manhattan_dist(sensor, point);
@@ -79,7 +79,7 @@ fn part2() {
     let input = aoc2022_rust::utils::string_from_file("inputs/day15.txt");
     let parsed = parse_input(&input).unwrap().1;
     let mut finished = false;
-    const MAX: i32 = 4000000;
+    const MAX: i32 = 4_000_000;
     for (sensor, beacon) in &parsed {
         let dist = manhattan_dist(sensor, beacon) + 1;
         let points = get_cirlce_points(dist, sensor)
