@@ -72,7 +72,7 @@ impl Tree {
 }
 
 fn main() {
-    let input = aoc2022_rust::utils::lines_from_file("inputs/day7.txt");
+    let input = common::utils::lines_from_file("inputs/day7.txt");
 
     let mut tree = Tree::new("/".to_string());
     let mut path = Vec::new();

@@ -1,5 +1,5 @@
 fn main() {
-    let input = aoc2022_rust::utils::lines_from_file("inputs/day4.txt");
+    let input = common::utils::lines_from_file("inputs/day4.txt");
 
     let mut amount = 0;
     for line in input {

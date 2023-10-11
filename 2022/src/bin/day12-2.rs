@@ -132,7 +132,7 @@ fn full_dijkstra(map: &Map, source: u32) -> (Vec<u32>, Vec<Option<usize>>) {
 }
 
 fn main() {
-    let input: Vec<Vec<u8>> = aoc2022_rust::utils::lines_from_file("inputs/day12.txt")
+    let input: Vec<Vec<u8>> = common::utils::lines_from_file("inputs/day12.txt")
         .into_iter()
         .map(|s| s.as_bytes().to_owned())
         .collect();

@@ -1,5 +1,5 @@
-extern crate aoc2022_rust;
-use aoc2022_rust::utils;
+extern crate common;
+use common::utils;
 
 fn main() {
     let input = utils::lines_from_file("inputs/day2.txt");

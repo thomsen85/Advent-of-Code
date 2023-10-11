@@ -6,7 +6,7 @@ use nom::{
     IResult,
 };
 
-use aoc2022_rust::datastructs::Vec2::Vec2;
+use common::datastructs::Vec2::Vec2;
 
 fn main() {
     part1();
@@ -51,7 +51,7 @@ fn intersects_w_sb(sb: &Vec<(Vec2, Vec2)>, point: &Vec2) -> bool {
 
 fn part1() {
     println!("== Part 1 ==");
-    let input = aoc2022_rust::utils::string_from_file("inputs/day15.txt");
+    let input = common::utils::string_from_file("inputs/day15.txt");
     let parsed = parse_input(&input).unwrap().1;
     const LINE: i32 = 2_000_000;
     let min_x = parsed
@@ -76,7 +76,7 @@ fn part1() {
 
 fn part2() {
     println!("== Part 2 ==");
-    let input = aoc2022_rust::utils::string_from_file("inputs/day15.txt");
+    let input = common::utils::string_from_file("inputs/day15.txt");
     let parsed = parse_input(&input).unwrap().1;
     let mut finished = false;
     const MAX: i32 = 4_000_000;

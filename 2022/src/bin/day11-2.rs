@@ -158,7 +158,7 @@ fn parse_paragraph(input: &str) -> IResult<&str, Monkey> {
 }
 
 fn main() {
-    let mut monkeys: Vec<Monkey> = aoc2022_rust::utils::paragraph_from_file("inputs/day11.txt")
+    let mut monkeys: Vec<Monkey> = common::utils::paragraph_from_file("inputs/day11.txt")
         .into_iter()
         .map(|a| parse_paragraph(&a).unwrap().1)
         .collect();

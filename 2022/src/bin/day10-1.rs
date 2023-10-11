@@ -48,7 +48,7 @@ impl Driver {
 }
 
 fn main() {
-    let input: VecDeque<Instruction> = aoc2022_rust::utils::lines_from_file("inputs/day10.txt")
+    let input: VecDeque<Instruction> = common::utils::lines_from_file("inputs/day10.txt")
         .iter()
         .map(|s| s.split_ascii_whitespace().collect::<Vec<&str>>())
         .map(|s| {

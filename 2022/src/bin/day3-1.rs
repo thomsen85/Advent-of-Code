@@ -1,4 +1,4 @@
-use aoc2022_rust::utils::lines_from_file;
+use common::utils::lines_from_file;
 
 fn main() {
     let input = lines_from_file("inputs/day3.txt");

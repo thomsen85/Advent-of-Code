@@ -1,5 +1,5 @@
 fn main() {
-    let input = aoc2022_rust::utils::lines_from_file("inputs/day5.txt");
+    let input = common::utils::lines_from_file("inputs/day5.txt");
 
     let mut table: Vec<Vec<char>> = Vec::new();
 

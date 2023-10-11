@@ -1,7 +1,7 @@
 use std::collections::HashSet;
 
 fn main() {
-    let input = aoc2022_rust::utils::lines_from_file("inputs/day8.txt")
+    let input = common::utils::lines_from_file("inputs/day8.txt")
         .into_iter()
         .map(|line| {
             line.chars()

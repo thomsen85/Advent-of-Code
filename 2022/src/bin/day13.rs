@@ -104,7 +104,7 @@ fn main() {
 }
 
 fn part2() {
-    let mut input: Vec<NestedList> = aoc2022_rust::utils::lines_from_file("inputs/day13.txt")
+    let mut input: Vec<NestedList> = common::utils::lines_from_file("inputs/day13.txt")
         .into_iter()
         .filter(|s| !s.is_empty())
         .map(|s| parse(&s))
@@ -120,7 +120,7 @@ fn part2() {
 }
 
 fn part1() {
-    let input: Vec<Vec<String>> = aoc2022_rust::utils::paragraph_from_file("inputs/day13.txt")
+    let input: Vec<Vec<String>> = common::utils::paragraph_from_file("inputs/day13.txt")
         .into_iter()
         .map(|s| s.lines().map(|s| s.to_string()).collect())
         .collect();

@@ -1,5 +1,5 @@
 fn main() {
-    let input: Vec<char> = aoc2022_rust::utils::lines_from_file("inputs/day6.txt")
+    let input: Vec<char> = common::utils::lines_from_file("inputs/day6.txt")
         .first()
         .unwrap()
         .to_owned()

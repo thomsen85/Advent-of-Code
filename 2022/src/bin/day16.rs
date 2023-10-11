@@ -56,7 +56,7 @@ impl Move {
 }
 
 fn main() {
-    let graph = parser(&aoc2022_rust::utils::string_from_file("inputs/day16t.txt"))
+    let graph = parser(&common::utils::string_from_file("inputs/day16t.txt"))
         .unwrap()
         .1;
 

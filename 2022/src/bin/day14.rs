@@ -1,6 +1,6 @@
 use std::collections::HashSet;
 
-use aoc2022_rust::datastructs::Vec2::Vec2;
+use common::datastructs::Vec2::Vec2;
 use nom::{
     bytes::complete::tag, character::complete::newline, multi::separated_list1,
     sequence::separated_pair, IResult,
@@ -52,7 +52,7 @@ impl SandSim {
 }
 
 fn main() {
-    let input: String = aoc2022_rust::utils::string_from_file("inputs/day14.txt");
+    let input: String = common::utils::string_from_file("inputs/day14.txt");
     //const INPUT: &str = "498,4 -> 498,6 -> 496,6\n503,4 -> 502,4 -> 502,9 -> 494,9";
     part1(&input);
     part2(&input);

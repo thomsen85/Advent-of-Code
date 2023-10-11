@@ -131,7 +131,7 @@ fn rc_to_id(row: usize, col: usize, cols: usize) -> u32 {
 }
 
 fn main() {
-    let input: Vec<Vec<u8>> = aoc2022_rust::utils::lines_from_file("inputs/day12.txt")
+    let input: Vec<Vec<u8>> = common::utils::lines_from_file("inputs/day12.txt")
         .into_iter()
         .map(|s| s.as_bytes().to_owned())
         .collect();

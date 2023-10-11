@@ -3,7 +3,7 @@ use itertools::Itertools;
 fn main() {
     println!(
         "{:?}",
-        aoc2022_rust::utils::lines_from_file("inputs/day1.txt")
+        common::utils::lines_from_file("inputs/day1.txt")
             .into_iter()
             .fold(vec![0], |mut acc, x| {
                 if x.is_empty() {

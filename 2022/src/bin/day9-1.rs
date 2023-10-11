@@ -80,7 +80,7 @@ impl Rope {
 fn main() {
     let mut rope = Rope::new();
 
-    aoc2022_rust::utils::lines_from_file("inputs/day9.txt")
+    common::utils::lines_from_file("inputs/day9.txt")
         .iter()
         .map(|line| line.split_ascii_whitespace().collect::<Vec<&str>>())
         .map(|o| (o[0], o[1].parse::<i32>().unwrap()))
