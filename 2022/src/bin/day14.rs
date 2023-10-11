@@ -1,6 +1,6 @@
 use std::collections::HashSet;
 
-use common::datastructs::Vec2::Vec2;
+use common::datastructs::vec2::Vec2;
 use nom::{
     bytes::complete::tag, character::complete::newline, multi::separated_list1,
     sequence::separated_pair, IResult,

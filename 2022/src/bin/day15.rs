@@ -6,7 +6,7 @@ use nom::{
     IResult,
 };
 
-use common::datastructs::Vec2::Vec2;
+use common::datastructs::vec2::Vec2;
 
 fn main() {
     part1();
