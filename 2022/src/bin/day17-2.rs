@@ -14,7 +14,9 @@ const BOX_PIECE: Piece = &[&[1, 1], &[1, 1]];
 
 const PIECE_ORDER: [Piece; 5] = [H_LONG_PIECE, PLUS_PIECE, L_PIECE, V_LONG_PIECE, BOX_PIECE];
 fn main() {
-    let input = common::utils::string_from_file("inputs/day17.txt");
+    let input = common::utils::string_from_file("inputs/day17.txt")
+        .trim()
+        .to_owned();
     dbg!(get_height_of_sim(input));
 }
 
@@ -46,25 +48,78 @@ fn print_map(map: &Vec<Row>, piece: Piece, p_x: usize, p_y: usize) {
 
     println!("+{}+\n", "-".repeat(ROW_LENGTH));
 }
-
-fn get_height_of_sim(input: String) -> usize {
+fn get_repeating_height(input: String) -> usize {
     let mut highest_point = 0;
     let mut piece_index = 0;
     let mut jet_index = 0;
 
-    let mut rocks_settled = 0;
+    let mut rocks_settled: usize = 0;
     let mut map: Vec<Row> = Vec::from([[1; ROW_LENGTH], [0; ROW_LENGTH], [0; ROW_LENGTH]]);
 
     let mut current_x = 2;
     let mut current_y = 5;
 
-    while rocks_settled < 2022 {
+    let multiplum = input.len() * PIECE_ORDER.len();
+    let mut last_height = 0;
+
+    loop {
         // Check if settable
         if map_and_piece_overlaps(&map, PIECE_ORDER[piece_index], current_x, current_y - 1) {
             insert_piece_on_map(&mut map, PIECE_ORDER[piece_index], current_x, current_y);
             current_x = 2;
-            highest_point = (current_y + PIECE_ORDER[piece_index].len() + 3).max(highest_point);
-            current_y = highest_point;
+            highest_point = (current_y + PIECE_ORDER[piece_index].len()).max(highest_point);
+            current_y = highest_point + 3;
+            rocks_settled += 1;
+            piece_index = (piece_index + 1) % PIECE_ORDER.len();
+            if rocks_settled % multiplum == 0 {
+                println!("{}", highest_point - last_height);
+                last_height = highest_point;
+            }
+        } else {
+            // Fall
+            current_y -= 1;
+        }
+
+        // Push
+        if input.chars().nth(jet_index).unwrap() == '<'
+            && current_x > 0
+            && !map_and_piece_overlaps(&map, PIECE_ORDER[piece_index], current_x - 1, current_y)
+        {
+            current_x -= 1;
+        } else if input.chars().nth(jet_index).unwrap() == '>'
+            && (current_x + PIECE_ORDER[piece_index][0].len()) < ROW_LENGTH
+            && !map_and_piece_overlaps(&map, PIECE_ORDER[piece_index], current_x + 1, current_y)
+        {
+            current_x += 1;
+        }
+        jet_index = (jet_index + 1) % input.len();
+
+        // print_map(&map, PIECE_ORDER[piece_index], current_x, current_y);
+    }
+
+    current_y - 4
+}
+fn get_height_of_sim(input: String) -> usize {
+    let desired_rocks_settled = 1000000000000_usize;
+    let mut highest_point = 0;
+    let mut piece_index = 0;
+    let mut jet_index = 0;
+
+    let mut rocks_settled: usize = 0;
+    let mut map: Vec<Row> = Vec::from([[1; ROW_LENGTH], [0; ROW_LENGTH], [0; ROW_LENGTH]]);
+
+    let mut current_x = 2;
+    let mut current_y = 5;
+
+    let repeating_height = get_repeating_height(input.clone());
+
+    while rocks_settled < (desired_rocks_settled % repeating_height) {
+        // Check if settable
+        if map_and_piece_overlaps(&map, PIECE_ORDER[piece_index], current_x, current_y - 1) {
+            insert_piece_on_map(&mut map, PIECE_ORDER[piece_index], current_x, current_y);
+            current_x = 2;
+            highest_point = (current_y + PIECE_ORDER[piece_index].len()).max(highest_point);
+            current_y = highest_point + 3;
             rocks_settled += 1;
             piece_index = (piece_index + 1) % PIECE_ORDER.len();
             // dbg!(rocks_settled);
@@ -137,7 +192,7 @@ mod tests {
     #[test]
     fn example_1() {
         let input = ">>><<><>><<<>><>>><<<>>><<<><<<>><>><<>>".to_owned();
-        assert_eq!(get_height_of_sim(input), 3068);
+        assert_eq!(get_height_of_sim(input), 1514285714288);
     }
 
     #[test]
