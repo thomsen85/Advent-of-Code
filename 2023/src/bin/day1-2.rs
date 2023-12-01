@@ -8,11 +8,7 @@ fn main() {
 }
 
 fn solve(input: &str) -> i32 {
-    input
-        .lines()
-        .into_iter()
-        .map(|l| parse_line(l).unwrap().1)
-        .sum()
+    input.lines().map(|l| parse_line(l).unwrap().1).sum()
 }
 
 fn parse_line(input: &str) -> IResult<&str, i32> {
