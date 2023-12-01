@@ -10,6 +10,13 @@ pub fn lines_from_file(path: &str) -> Vec<String> {
         .map(|a| a.unwrap().trim().to_owned())
         .collect::<Vec<String>>()
 }
+pub fn lines_from_string(string: String) -> Vec<String> {
+    string
+        .lines()
+        .into_iter()
+        .map(|a| a.trim().to_owned())
+        .collect::<Vec<String>>()
+}
 
 pub fn string_from_file(path: &str) -> String {
     fs::read_to_string(path).unwrap()
