@@ -49,17 +49,10 @@ enum Lexicon {
 }
 
 impl Lexicon {
-    fn to_val(&self, wires: &mut HashMap<String, u16>) -> u16 {
+    fn to_val(&self, wires: &mut HashMap<String, u16>) -> Option<u16> {
         match self {
-            Lexicon::SignalStrength(v) => v.to_owned(),
-            Lexicon::Wire(w) => {
-                if let Some(val) = wires.get(w) {
-                    val.to_owned()
-                } else {
-                    wires.insert(w.to_owned(), 0);
-                    0
-                }
-            }
+            Lexicon::SignalStrength(v) => Some(v.to_owned()),
+            Lexicon::Wire(w) => wires.get(w).map(|w| w.to_owned()),
             _ => panic!(),
         }
     }
@@ -79,17 +72,30 @@ fn solve(input: &str) {
 
         match &lex[..] {
             [v1, To, Wire(w)] => {
-                let val_1 = v1.to_val(&mut wires);
-                wires.insert(w.to_owned(), val_1);
+                if let Some(val_1) = v1.to_val(&mut wires) {
+                    wires.insert(w.to_owned(), val_1);
+                }
             }
             [v1, Operator(o), v2, To, Wire(w3)] => {
                 let val_1 = v1.to_val(&mut wires);
                 let val_2 = v2.to_val(&mut wires);
-                wires.insert(w3.to_owned(), perform_operation(o.to_owned(), val_1, val_2));
+
+                if val_1.is_none() || val_2.is_none() {
+                    continue;
+                }
+
+                wires.insert(
+                    w3.to_owned(),
+                    perform_operation(o.to_owned(), val_1.unwrap(), val_2.unwrap()),
+                );
+                if w3 == "a" {
+                    dbg!(val_1);
+                }
             }
             [Operator(Operation::NOT), v1, To, Wire(w)] => {
-                let val_1 = v1.to_val(&mut wires);
-                wires.insert(w.to_owned(), !val_1);
+                if let Some(val_1) = v1.to_val(&mut wires) {
+                    wires.insert(w.to_owned(), !val_1);
+                }
             }
             _ => unimplemented!("{:?}", lex),
         };
