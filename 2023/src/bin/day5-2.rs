@@ -13,6 +13,7 @@ use nom::{
     IResult,
 };
 
+use rayon::prelude::*;
 fn main() {
     dbg!(solve(include_str!("../../inputs/day5.txt")));
 }
@@ -25,7 +26,7 @@ fn solve(input: &str) -> usize {
         nseeds.extend(seeds[i]..(seeds[i] + seeds[i + 1]));
     }
 
-    for (i, mut s) in nseeds.iter_mut().enumerate() {
+    nseeds.par_iter_mut().for_each(|s| {
         for (_name, map) in &maps {
             for line in map {
                 if (line[1]..(line[1] + line[2])).contains(&s) {
@@ -35,7 +36,7 @@ fn solve(input: &str) -> usize {
                 }
             }
         }
-    }
+    });
 
     nseeds.iter().min().unwrap().to_owned() as usize
 }
