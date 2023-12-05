@@ -1,46 +1,43 @@
 #![allow(dead_code)]
 
-use indicatif::ProgressBar;
+use std::usize;
+
 use nom::{
-    bytes::complete::{is_not, tag},
-    character::complete::{multispace1, newline, space1},
+    bytes::{
+        complete::{is_not, tag},
+        streaming::take_until,
+    },
+    character::complete::{alpha1, multispace1, newline, space1},
     multi::separated_list1,
     sequence::{preceded, separated_pair},
     IResult,
 };
-use rayon::prelude::*;
 
 fn main() {
     dbg!(solve(include_str!("../../inputs/day5.txt")));
 }
 
-fn solve(input: &str) -> u64 {
-    let (_, (seeds, maps)) = parse(input).unwrap();
+fn solve(input: &str) -> usize {
+    let (_, (mut seeds, maps)) = parse(input).unwrap();
 
     let mut nseeds = Vec::new();
     for i in (0..seeds.len()).step_by(2) {
         nseeds.extend(seeds[i]..(seeds[i] + seeds[i + 1]));
     }
 
-    //let bar = ProgressBar::new(nseeds.len() as u64);
-
-    nseeds
-        .par_iter()
-        .map(|s| {
-            let mut ns = s.to_owned();
-            for (_name, map) in &maps {
-                for line in map {
-                    if (line[1]..(line[1] + line[2])).contains(&s) {
-                        ns = ns + line[0] - line[1];
-                        break;
-                    }
+    for (i, mut s) in nseeds.iter_mut().enumerate() {
+        for (_name, map) in &maps {
+            for line in map {
+                if (line[1]..(line[1] + line[2])).contains(&s) {
+                    *s += line[0];
+                    *s -= line[1];
+                    break;
                 }
             }
-            //bar.inc(1);
-            ns
-        })
-        .min()
-        .unwrap()
+        }
+    }
+
+    nseeds.iter().min().unwrap().to_owned() as usize
 }
 
 fn parse(input: &str) -> IResult<&str, (Vec<u64>, Vec<(&str, Vec<Vec<u64>>)>)> {
