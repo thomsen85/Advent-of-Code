@@ -1,6 +1,6 @@
 #![allow(dead_code)]
 
-use nom::{branch::alt, combinator::opt, IResult};
+use nom::{combinator::opt, IResult};
 
 #[derive(Debug, Clone, Copy)]
 struct Num {

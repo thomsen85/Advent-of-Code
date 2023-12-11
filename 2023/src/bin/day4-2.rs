@@ -19,7 +19,7 @@ fn solve(input: &str) -> usize {
     for line in input.lines() {
         dbg!(line);
         let (_, (a, b)) = parse_line(line).unwrap();
-        let mut points: usize = b
+        let points: usize = b
             .into_iter()
             .map(|p| if a.contains(&p) { 1 } else { 0 })
             .sum::<usize>();

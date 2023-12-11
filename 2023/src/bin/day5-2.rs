@@ -3,11 +3,8 @@
 use std::usize;
 
 use nom::{
-    bytes::{
-        complete::{is_not, tag},
-        streaming::take_until,
-    },
-    character::complete::{alpha1, multispace1, newline, space1},
+    bytes::complete::{is_not, tag},
+    character::complete::{multispace1, newline, space1},
     multi::separated_list1,
     sequence::{preceded, separated_pair},
     IResult,
@@ -19,7 +16,7 @@ fn main() {
 }
 
 fn solve(input: &str) -> usize {
-    let (_, (mut seeds, maps)) = parse(input).unwrap();
+    let (_, (seeds, maps)) = parse(input).unwrap();
 
     let mut nseeds = Vec::new();
     for i in (0..seeds.len()).step_by(2) {

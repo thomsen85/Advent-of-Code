@@ -1,13 +1,9 @@
-use std::{cmp::Ordering, error::Error};
+use std::cmp::Ordering;
 
 use itertools::Itertools;
 use nom::{
-    bytes::complete::{tag, take},
-    character::complete::{multispace0, multispace1, newline, space0, space1},
-    combinator::map,
-    multi::count,
-    sequence::{delimited, preceded, separated_pair},
-    IResult,
+    bytes::complete::take, character::complete::space1, combinator::map, multi::count,
+    sequence::separated_pair, IResult,
 };
 // For number types
 use nom::character::complete as cnom;

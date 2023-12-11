@@ -1,13 +1,9 @@
-use std::{cmp::Ordering, error::Error};
+use std::cmp::Ordering;
 
 use itertools::Itertools;
 use nom::{
-    bytes::complete::{tag, take},
-    character::complete::{multispace0, multispace1, newline, space0, space1},
-    combinator::map,
-    multi::count,
-    sequence::{delimited, preceded, separated_pair},
-    IResult,
+    bytes::complete::take, character::complete::space1, combinator::map, multi::count,
+    sequence::separated_pair, IResult,
 };
 // For number types
 use nom::character::complete as cnom;
@@ -113,20 +109,6 @@ impl PartialOrd for Hand {
     }
 }
 
-fn highest_card(hand: &Vec<char>) -> u32 {
-    hand.into_iter()
-        .map(|b| match *b {
-            'A' => 15,
-            'K' => 14,
-            'Q' => 13,
-            'J' => 12,
-            'T' => 11,
-            _ => b.to_digit(10).unwrap(),
-        })
-        .max()
-        .unwrap()
-}
-
 fn tight_eq(selfh: &Hand, other: &Hand) -> std::cmp::Ordering {
     for (a, b) in selfh.hand.iter().zip(other.hand.iter()) {
         if a == b {
@@ -165,7 +147,6 @@ fn tight_eq(selfh: &Hand, other: &Hand) -> std::cmp::Ordering {
         return a.cmp(&b);
     }
     panic!();
-    Ordering::Equal
 }
 
 impl Ord for Hand {

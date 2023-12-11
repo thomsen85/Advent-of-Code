@@ -14,7 +14,6 @@ fn main() {
 
 fn solve(input: &str) -> usize {
     let (_, (times, dists)) = parse(input).unwrap();
-    let mut won = 1;
     let time = times
         .into_iter()
         .fold("".to_string(), |mut acc, x| {

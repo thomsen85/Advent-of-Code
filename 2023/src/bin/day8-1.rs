@@ -1,15 +1,13 @@
-use std::{collections::HashMap, error::Error};
+use std::collections::HashMap;
 
 use nom::{
     bytes::complete::tag,
-    character::complete::{alpha1, multispace0, multispace1, newline, space0, space1},
+    character::complete::{alpha1, multispace1, newline},
     combinator::map,
-    multi::{separated_list0, separated_list1},
-    sequence::{delimited, preceded, separated_pair},
+    multi::separated_list1,
+    sequence::{delimited, separated_pair},
     IResult,
 };
-// For number types
-use nom::character::complete as cnom;
 
 #[derive(Debug, Clone)]
 struct Node {

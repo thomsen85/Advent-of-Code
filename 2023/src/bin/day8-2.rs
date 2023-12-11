@@ -1,23 +1,14 @@
-use std::{
-    collections::{HashMap, HashSet},
-    error::Error,
-    num,
-};
+use std::collections::{HashMap, HashSet};
 
 use itertools::Itertools;
 use nom::{
     bytes::complete::tag,
-    character::complete::{
-        alpha1, alphanumeric1, multispace0, multispace1, newline, space0, space1,
-    },
+    character::complete::{alpha1, alphanumeric1, multispace1, newline},
     combinator::map,
-    multi::{separated_list0, separated_list1},
-    sequence::{delimited, preceded, separated_pair},
+    multi::separated_list1,
+    sequence::{delimited, separated_pair},
     IResult,
 };
-// For number types
-use ::num::Integer;
-use nom::character::complete as cnom;
 
 #[derive(Debug, Clone)]
 struct Node {
@@ -60,14 +51,6 @@ impl Graph {
             self.nodes.push(Node { id, to: to_id });
             self.n_lookup.insert(name, id);
         }
-    }
-
-    fn get_name_from_id(&self, id: u16) -> Option<&str> {
-        self.n_lookup
-            .iter()
-            .filter(|(_, v)| **v == id)
-            .map(|(k, _)| k.as_str())
-            .next()
     }
 }
 
