@@ -1,20 +1,17 @@
-use std::collections::VecDeque;
+use std::collections::HashMap;
 
-use indicatif::{ProgressBar, ProgressIterator};
 use itertools::Itertools;
-
-use rayon::prelude::*;
 
 fn main() {
     dbg!(solve(include_str!("../../inputs/day12.txt")));
 }
 
 fn solve(input: &str) -> String {
-    let mut sum = 0;
-    let p = ProgressBar::new(input.lines().count() as u64);
+    // let p = ProgressBar::new(input.lines().count() as u64);
     let lines = input.lines().collect_vec();
+    let mut cache = HashMap::new();
     lines
-        .par_iter()
+        .into_iter()
         .map(|line| {
             let (pattern, arr) = line.split_once(" ").unwrap();
 
@@ -25,16 +22,13 @@ fn solve(input: &str) -> String {
             pattern.remove(l1 - 1);
             arr.remove(l2 - 1);
 
-            let mut arr = arr
+            let arr = arr
                 .split(",")
                 .map(|a| a.parse::<i32>().unwrap())
-                .collect::<VecDeque<_>>();
-            arr.push_front(0);
+                .collect_vec();
 
-            let mut valids = Vec::new();
-            backtrack(&pattern, &pattern, arr, true, &mut valids);
-            p.inc(1);
-            valids.len()
+            // p.inc(1);
+            backtrack(&pattern, arr, &mut cache)
         })
         .sum::<usize>()
         .to_string()
@@ -42,67 +36,50 @@ fn solve(input: &str) -> String {
 
 fn backtrack(
     pattern: &str,
-    original_pattern: &str,
-    mut arr: VecDeque<i32>,
-    last_space: bool,
-    valid: &mut Vec<String>,
-) {
-    // dbg!(&pattern, &original_pattern, &arr, &last_space, &valid);
-    if arr.iter().sum::<i32>() == 0 && pattern.chars().all(|a| a == '.') {
-        valid.push(original_pattern.to_string());
-        return;
+    arr: Vec<i32>,
+    cache: &mut HashMap<(String, Vec<i32>), usize>,
+) -> usize {
+    let key = (pattern.to_string(), arr.clone());
+
+    if let Some(valid) = cache.get(&key) {
+        return *valid;
     }
 
-    if pattern.len() == 0 {
-        return;
+    if arr.is_empty() && pattern.is_empty() {
+        return 1;
     }
-    if arr.len() == 0 {
-        return;
+
+    if !pattern.contains("#") && arr.is_empty() {
+        return 1;
     }
-    if arr.iter().skip(2).fold(0, |acc, x| acc + x + 1) > pattern.len() as i32 {
-        return;
+
+    if arr.is_empty() || pattern.is_empty() {
+        return 0;
     }
 
     let current = pattern.chars().next().unwrap();
-    let new_pat = &pattern[1..];
 
-    match current {
-        '?' => {
-            backtrack(
-                &pattern.replacen('?', ".", 1),
-                &original_pattern.replacen('?', ".", 1),
-                arr.clone(),
-                last_space,
-                valid,
-            );
-            backtrack(
-                &pattern.replacen('?', "#", 1),
-                &original_pattern.replacen('?', "#", 1),
-                arr,
-                last_space,
-                valid,
-            );
-        }
-        '.' => backtrack(new_pat, original_pattern, arr, true, valid),
-        '#' => {
-            if last_space {
-                if arr[0] != 0 || arr.len() <= 1 {
-                    return;
-                }
-                arr.pop_front();
-
-                arr[0] -= 1;
-                backtrack(new_pat, original_pattern, arr, false, valid);
+    let mut valid = 0;
+    if "?.".contains(current) {
+        valid += backtrack(&pattern[1..], arr.clone(), cache);
+    }
+    if "?#".contains(current) {
+        if arr[0] <= pattern.len() as i32
+            && !&pattern[..(arr[0] as usize)].contains('.')
+            && (arr[0] == pattern.len() as i32
+                || pattern.chars().nth(arr[0] as usize).unwrap() != '#')
+        {
+            if arr[0] == pattern.len() as i32 {
+                valid += backtrack("", arr[1..].to_vec(), cache)
             } else {
-                arr[0] -= 1;
-                if arr[0] < 0 {
-                    return;
-                }
-                backtrack(new_pat, original_pattern, arr, false, valid);
+                valid += backtrack(&pattern[(arr[0] as usize + 1)..], arr[1..].to_vec(), cache);
             }
         }
-        oof => panic!("{} was not expected", oof),
     }
+
+    cache.insert(key, valid);
+
+    valid
 }
 
 #[cfg(test)]
