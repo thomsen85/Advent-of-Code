@@ -1,4 +1,4 @@
-use std::collections::{BTreeMap, HashMap, HashSet};
+use std::collections::{BTreeMap, BinaryHeap, HashMap, HashSet, VecDeque};
 
 use glam::{IVec2, UVec2};
 use itertools::Itertools;
@@ -88,15 +88,21 @@ fn solve(input: &str) -> String {
 fn cracked_astar(map: &Vec<Vec<u8>>, start: IVec2, goal: IVec2) -> i32 {
     let rows = map.len();
     let cols = map[0].len();
+    dbg!(rows, cols, rows * cols);
     // Value: Position_to_look_at,
-    let mut nodes: BTreeMap<i32, (IVec2, Direction, u8, i32)> = BTreeMap::new(); // k Heuristic
-    nodes.insert(0, (start, Direction::Right, 0, 0));
-    let mut dist = HashMap::new();
-    dist.insert(start, 0);
+    let mut nodes: BinaryHeap<(i32, (IVec2, Direction, u8, i32))> = VecDeque::new(); // k Heuristic
+    nodes.insert(0, (0, (start, Direction::Right, 0, 0)));
+    let mut dists = vec![i32::MAX; rows * cols];
+    dists[0] = 0;
 
-    while let Some((_, (pos, direction, same_direction_count, cost))) = nodes.pop_first() {
-        dist.insert(pos, cost);
-        dbg!(&dist);
+    while let Some((_, (pos, direction, same_direction_count, cost))) = nodes.pop_front() {
+        let i = (pos.x * cols as i32 + pos.y) as usize;
+        if dists[i] < cost {
+            continue;
+        }
+
+        dists[i] = cost;
+
         if pos == goal {
             return cost;
         }
@@ -106,7 +112,13 @@ fn cracked_astar(map: &Vec<Vec<u8>>, start: IVec2, goal: IVec2) -> i32 {
         if !is_invalid_pos(l_pos, rows, cols) {
             let cost = cost + map[l_pos.x as usize][l_pos.y as usize] as i32;
             let l_f = estimated_cost(l_pos, goal) + cost;
-            nodes.insert(l_f, (l_pos, l_direction, 0, cost));
+
+            let index = match nodes.binary_search_by(|x| x.0.cmp(&l_f)) {
+                Ok(a) => a,
+                Err(a) => a,
+            };
+
+            nodes.insert(index, (l_f, (l_pos, l_direction, 0, cost)));
         }
         // Right
         let r_direction = direction.rot90();
@@ -114,15 +126,28 @@ fn cracked_astar(map: &Vec<Vec<u8>>, start: IVec2, goal: IVec2) -> i32 {
         if !is_invalid_pos(r_pos, rows, cols) {
             let cost = cost + map[r_pos.x as usize][r_pos.y as usize] as i32;
             let r_f = estimated_cost(r_pos, goal) + cost;
-            nodes.insert(r_f, (r_pos, r_direction, 0, cost));
+            let index = match nodes.binary_search_by(|x| x.0.cmp(&r_f)) {
+                Ok(a) => a,
+                Err(a) => a,
+            };
+
+            nodes.insert(index, (r_f, (r_pos, r_direction, 0, cost)));
         }
 
         // Straigt
         let s_pos = pos + direction.ivec_delta();
-        if same_direction_count <= 3 && !is_invalid_pos(s_pos, rows, cols) {
+        if same_direction_count <= 2 && !is_invalid_pos(s_pos, rows, cols) {
             let cost = cost + map[s_pos.x as usize][s_pos.y as usize] as i32;
             let s_f = estimated_cost(s_pos, goal) + cost;
-            nodes.insert(s_f, (s_pos, direction, same_direction_count + 1, cost));
+            let index = match nodes.binary_search_by(|x| x.0.cmp(&s_f)) {
+                Ok(a) => a,
+                Err(a) => a,
+            };
+
+            nodes.insert(
+                index,
+                (s_f, (s_pos, direction, same_direction_count + 1, cost)),
+            );
         }
     }
     0
@@ -133,52 +158,8 @@ fn is_invalid_pos(pos: IVec2, rows: usize, cols: usize) -> bool {
 }
 
 fn estimated_cost(start: IVec2, end: IVec2) -> i32 {
-    (start.distance_squared(end) as f32).sqrt().round() as i32
-}
-
-fn get_edges(
-    map: &Vec<Vec<(u32, u8)>>,
-    last_pos: IVec2,
-    direction: Direction,
-    same_direction_count: u8,
-    mut tot_cost: u32,
-    costs: &mut HashMap<IVec2, u32>,
-) {
-    let rows = map.len();
-    let cols = map[0].len();
-    let new_pos = last_pos + direction.ivec_delta();
-
-    if new_pos.x < 0 || new_pos.x >= rows as i32 || new_pos.y < 0 || new_pos.y >= cols as i32 {
-        return;
-    }
-
-    let cost = map[new_pos.x as usize][new_pos.y as usize].1;
-
-    tot_cost += cost as u32;
-
-    if let Some(old_cost) = costs.get_mut(&new_pos) {
-        if *old_cost < tot_cost {
-            return;
-        } else {
-            *old_cost = tot_cost;
-        }
-    } else {
-        costs.insert(new_pos, tot_cost);
-    }
-
-    if same_direction_count < 3 {
-        get_edges(
-            map,
-            new_pos,
-            direction,
-            same_direction_count + 1,
-            tot_cost,
-            costs,
-        );
-    }
-
-    get_edges(map, new_pos, direction.rot90(), 0, tot_cost, costs);
-    get_edges(map, new_pos, direction.rot90_cc(), 0, tot_cost, costs);
+    0
+    //(start.distance_squared(end) as f32).sqrt().round() as i32 * 4
 }
 
 fn parse(input: &str) -> IResult<&str, ()> {
