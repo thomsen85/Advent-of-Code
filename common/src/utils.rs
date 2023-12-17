@@ -31,3 +31,24 @@ pub fn paragraph_from_file(path: &str) -> Vec<String> {
         .filter(|a| !a.is_empty())
         .collect::<Vec<String>>()
 }
+
+pub fn transpose_2d_vec<T>(v: Vec<Vec<T>>) -> Vec<Vec<T>> {
+    assert!(!v.is_empty());
+    let len = v[0].len();
+    let mut iters: Vec<_> = v.into_iter().map(|n| n.into_iter()).collect();
+    (0..len)
+        .map(|_| {
+            iters
+                .iter_mut()
+                .map(|n| n.next().unwrap())
+                .collect::<Vec<T>>()
+        })
+        .collect()
+}
+
+pub fn string_to_grid(input: &str) -> Vec<Vec<char>> {
+    input
+        .lines()
+        .map(|line| line.chars().collect::<Vec<_>>())
+        .collect::<Vec<_>>()
+}
