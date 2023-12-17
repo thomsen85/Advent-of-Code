@@ -96,6 +96,7 @@ fn cracked_astar(map: &Vec<Vec<u8>>, start: IVec2, goal: IVec2) -> i32 {
 
     while let Some((_, (pos, direction, same_direction_count, cost))) = nodes.pop_first() {
         dist.insert(pos, cost);
+        dbg!(&dist);
         if pos == goal {
             return cost;
         }
@@ -105,13 +106,7 @@ fn cracked_astar(map: &Vec<Vec<u8>>, start: IVec2, goal: IVec2) -> i32 {
         if !is_invalid_pos(l_pos, rows, cols) {
             let cost = cost + map[l_pos.x as usize][l_pos.y as usize] as i32;
             let l_f = estimated_cost(l_pos, goal) + cost;
-            if let Some(prev_cost) = dist.get(&l_pos) {
-                if *prev_cost > cost {
-                    nodes.insert(l_f, (l_pos, l_direction, 0, cost));
-                }
-            } else {
-                nodes.insert(l_f, (l_pos, l_direction, 0, cost));
-            }
+            nodes.insert(l_f, (l_pos, l_direction, 0, cost));
         }
         // Right
         let r_direction = direction.rot90();
@@ -119,13 +114,7 @@ fn cracked_astar(map: &Vec<Vec<u8>>, start: IVec2, goal: IVec2) -> i32 {
         if !is_invalid_pos(r_pos, rows, cols) {
             let cost = cost + map[r_pos.x as usize][r_pos.y as usize] as i32;
             let r_f = estimated_cost(r_pos, goal) + cost;
-            if let Some(prev_cost) = dist.get(&r_pos) {
-                if *prev_cost > cost {
-                    nodes.insert(r_f, (r_pos, r_direction, 0, cost));
-                }
-            } else {
-                nodes.insert(r_f, (r_pos, r_direction, 0, cost));
-            }
+            nodes.insert(r_f, (r_pos, r_direction, 0, cost));
         }
 
         // Straigt
@@ -133,13 +122,7 @@ fn cracked_astar(map: &Vec<Vec<u8>>, start: IVec2, goal: IVec2) -> i32 {
         if same_direction_count <= 3 && !is_invalid_pos(s_pos, rows, cols) {
             let cost = cost + map[s_pos.x as usize][s_pos.y as usize] as i32;
             let s_f = estimated_cost(s_pos, goal) + cost;
-            if let Some(prev_cost) = dist.get(&s_pos) {
-                if *prev_cost > cost {
-                    nodes.insert(s_f, (s_pos, direction, same_direction_count + 1, cost));
-                }
-            } else {
-                nodes.insert(s_f, (s_pos, direction, same_direction_count + 1, cost));
-            }
+            nodes.insert(s_f, (s_pos, direction, same_direction_count + 1, cost));
         }
     }
     0
