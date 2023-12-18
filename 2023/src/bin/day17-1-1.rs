@@ -85,17 +85,36 @@ fn solve(input: &str) -> String {
     .to_string()
 }
 
+struct Priority(i32, (IVec2, Direction, u8, i32));
+
+impl Eq for Priority {}
+impl PartialEq for Priority {
+    fn eq(&self, other: &Self) -> bool {
+        self.0 == other.0
+    }
+}
+impl PartialOrd for Priority {
+    fn partial_cmp(&self, other: &Self) -> Option<std::cmp::Ordering> {
+        Some(self.0.partial_cmp(&other.0).unwrap().reverse())
+    }
+}
+impl Ord for Priority {
+    fn cmp(&self, other: &Self) -> std::cmp::Ordering {
+        self.0.cmp(&other.0).reverse()
+    }
+}
+
 fn cracked_astar(map: &Vec<Vec<u8>>, start: IVec2, goal: IVec2) -> i32 {
     let rows = map.len();
     let cols = map[0].len();
     dbg!(rows, cols, rows * cols);
     // Value: Position_to_look_at,
-    let mut nodes: BinaryHeap<(i32, (IVec2, Direction, u8, i32))> = VecDeque::new(); // k Heuristic
-    nodes.insert(0, (0, (start, Direction::Right, 0, 0)));
+    let mut nodes: BinaryHeap<Priority> = BinaryHeap::new(); // k Heuristic
+    nodes.push(Priority(0, (start, Direction::Right, 0, 0)));
     let mut dists = vec![i32::MAX; rows * cols];
     dists[0] = 0;
 
-    while let Some((_, (pos, direction, same_direction_count, cost))) = nodes.pop_front() {
+    while let Some(Priority(_, (pos, direction, same_direction_count, cost))) = nodes.pop() {
         let i = (pos.x * cols as i32 + pos.y) as usize;
         if dists[i] < cost {
             continue;
@@ -113,25 +132,17 @@ fn cracked_astar(map: &Vec<Vec<u8>>, start: IVec2, goal: IVec2) -> i32 {
             let cost = cost + map[l_pos.x as usize][l_pos.y as usize] as i32;
             let l_f = estimated_cost(l_pos, goal) + cost;
 
-            let index = match nodes.binary_search_by(|x| x.0.cmp(&l_f)) {
-                Ok(a) => a,
-                Err(a) => a,
-            };
-
-            nodes.insert(index, (l_f, (l_pos, l_direction, 0, cost)));
+            nodes.push(Priority(l_f, (l_pos, l_direction, 0, cost)));
         }
+
         // Right
         let r_direction = direction.rot90();
         let r_pos = pos + r_direction.ivec_delta();
         if !is_invalid_pos(r_pos, rows, cols) {
             let cost = cost + map[r_pos.x as usize][r_pos.y as usize] as i32;
             let r_f = estimated_cost(r_pos, goal) + cost;
-            let index = match nodes.binary_search_by(|x| x.0.cmp(&r_f)) {
-                Ok(a) => a,
-                Err(a) => a,
-            };
 
-            nodes.insert(index, (r_f, (r_pos, r_direction, 0, cost)));
+            nodes.push(Priority(r_f, (r_pos, r_direction, 0, cost)));
         }
 
         // Straigt
@@ -139,15 +150,11 @@ fn cracked_astar(map: &Vec<Vec<u8>>, start: IVec2, goal: IVec2) -> i32 {
         if same_direction_count <= 2 && !is_invalid_pos(s_pos, rows, cols) {
             let cost = cost + map[s_pos.x as usize][s_pos.y as usize] as i32;
             let s_f = estimated_cost(s_pos, goal) + cost;
-            let index = match nodes.binary_search_by(|x| x.0.cmp(&s_f)) {
-                Ok(a) => a,
-                Err(a) => a,
-            };
 
-            nodes.insert(
-                index,
-                (s_f, (s_pos, direction, same_direction_count + 1, cost)),
-            );
+            nodes.push(Priority(
+                s_f,
+                (s_pos, direction, same_direction_count + 1, cost),
+            ));
         }
     }
     0
@@ -158,14 +165,7 @@ fn is_invalid_pos(pos: IVec2, rows: usize, cols: usize) -> bool {
 }
 
 fn estimated_cost(start: IVec2, end: IVec2) -> i32 {
-    0
-    //(start.distance_squared(end) as f32).sqrt().round() as i32 * 4
-}
-
-fn parse(input: &str) -> IResult<&str, ()> {
-    todo!("Add parser");
-
-    Ok((input, ()))
+    (start.distance_squared(end) as f32).sqrt() as i32 * 2
 }
 
 #[cfg(test)]
