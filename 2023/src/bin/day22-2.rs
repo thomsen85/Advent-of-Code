@@ -40,6 +40,8 @@ impl Add<(i32, i32, i32)> for Brick {
 }
 
 fn main() {
+    // 102227: too high :(
+    // 57770
     dbg!(solve(include_str!("../../inputs/day22.txt")));
 }
 
@@ -102,15 +104,55 @@ fn solve(input: &str) -> String {
 
     let mut dont_remove = HashSet::new();
 
-    for inter in all_intersects {
+    // dbg!(&all_intersects);
+    for inter in &all_intersects {
         if inter.len() <= 1 {
             for dependet_on in inter {
                 dont_remove.insert(dependet_on);
             }
         }
     }
+    // dbg!(&dont_remove);
 
-    (bricks.len() - dont_remove.len()).to_string()
+    let mut rev_all_intersects = vec![vec![]; all_intersects.len()];
+    for i in 0..all_intersects.len() {
+        for k in &all_intersects[i] {
+            rev_all_intersects[*k].push(i);
+        }
+    }
+    // dbg!(&rev_all_intersects);
+
+    dont_remove
+        .into_iter()
+        .map(|n| count_dep(&all_intersects, *n))
+        .sum::<usize>()
+        .to_string()
+}
+
+fn count_dep(intersects: &Vec<Vec<usize>>, n: usize) -> usize {
+    let mut fallen = HashSet::new();
+    fallen.insert(n);
+
+    loop {
+        let mut changed = false;
+        for (i, inter) in intersects.iter().enumerate() {
+            if inter.is_empty() || fallen.contains(&i) {
+                continue;
+            }
+            if inter.iter().all(|a| fallen.contains(&a)) {
+                fallen.insert(i);
+                changed = true;
+            }
+        }
+        if !changed {
+            break;
+        }
+    }
+
+    fallen.remove(&n);
+    // println!("If {} is removed, {:?} falls", n, &fallen);
+
+    fallen.len()
 }
 
 #[cfg(test)]
@@ -126,6 +168,6 @@ mod tests {
 2,0,5~2,2,5
 0,1,6~2,1,6
 1,1,8~1,1,9";
-        assert_eq!(solve(ti), "5".to_string());
+        assert_eq!(solve(ti), "7-".to_string());
     }
 }

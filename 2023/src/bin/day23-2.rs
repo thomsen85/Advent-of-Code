@@ -52,12 +52,59 @@ fn solve(input: &str) -> String {
             .unwrap() as i32,
     );
 
-    let mut o = HashSet::new();
-    let d = f(start, end, &map, HashSet::new(), 0, &mut o);
+    let mut junc_list: HashMap<IVec2, HashMap<IVec2, usize>> = HashMap::new();
+    junc_list.insert(start, HashMap::new());
+    junc_list.insert(end, HashMap::new());
 
     for x in 0..map.len() {
         for y in 0..map[0].len() {
-            if d.1.contains(&IVec2::new(x as i32, y as i32)) {
+            let c = map[x][y];
+            if c == '#' {
+                continue;
+            }
+            let pos = IVec2::new(x as i32, y as i32);
+            if get_valid_neigbours(&map, pos).len() >= 3 {
+                junc_list.insert(pos, HashMap::new());
+            }
+        }
+    }
+
+    for p in junc_list.clone().keys() {
+        let mut stack = Vec::new();
+        stack.push((0, *p));
+        let mut seen = HashSet::new();
+
+        while let Some((dist, to)) = stack.pop() {
+            seen.insert(to);
+            if to != *p && junc_list.contains_key(&to) {
+                if let Some(v) = junc_list.get_mut(&p) {
+                    v.insert(to, dist);
+                    continue;
+                }
+            }
+
+            for n in get_valid_neigbours(&map, to) {
+                if seen.contains(&n) {
+                    continue;
+                }
+                stack.push((dist + 1, n))
+            }
+        }
+    }
+
+    // dbg!(junc_list);
+    //
+    dbg!(junc_list.len());
+
+    let d = f(start, end, &junc_list, HashSet::new(), 0);
+
+    for x in 0..map.len() {
+        for y in 0..map[0].len() {
+            if d.1
+                .clone()
+                .unwrap()
+                .contains(&IVec2::new(x as i32, y as i32))
+            {
                 print!("O")
             } else {
                 print!("{}", map[x][y])
@@ -70,64 +117,35 @@ fn solve(input: &str) -> String {
 }
 
 fn f(
-    mut start: IVec2,
+    start: IVec2,
     end: IVec2,
-    map: &Vec<Vec<char>>,
+    graph: &HashMap<IVec2, HashMap<IVec2, usize>>,
     mut visited: HashSet<IVec2>,
-    mut length_traveled: usize,
-    dead_ends: &mut HashSet<IVec2>,
-) -> (usize, HashSet<IVec2>) {
+    length_traveled: usize,
+) -> (usize, Option<HashSet<IVec2>>) {
     let mut max = 0;
     let mut max_v = None;
-    let o_start = start.clone();
+    visited.insert(start);
 
-    loop {
-        visited.insert(start);
-        if start == end {
-            return (length_traveled, visited);
-        }
-        let n = get_valid_neigbours(map, start, &visited, &dead_ends);
-
-        if n.len() == 0 {
-            dead_ends.insert(o_start);
-            return (0, visited);
-        }
-
-        if n.len() == 1 {
-            let p = n[0];
-            start = p;
-            length_traveled += 1;
-
-            continue;
-        }
-
-        for p in &n {
-            let res = f(
-                *p,
-                end,
-                map,
-                visited.clone(),
-                length_traveled + 1,
-                dead_ends,
-            );
-
-            if max < res.0 {
-                max = res.0;
-                max_v = Some(res.1);
-            }
-        }
-        break;
+    if start == end {
+        return (length_traveled, Some(visited));
     }
 
-    (max, max_v.unwrap())
+    for (p, dist) in graph.get(&start).unwrap() {
+        if visited.contains(p) {
+            continue;
+        }
+        let res = f(*p, end, graph, visited.clone(), *dist + length_traveled);
+        if res.0 > max {
+            max = res.0;
+            max_v = res.1;
+        }
+    }
+
+    (max, max_v)
 }
 
-fn get_valid_neigbours(
-    map: &Vec<Vec<char>>,
-    pos: IVec2,
-    visited: &HashSet<IVec2>,
-    dead_ends: &HashSet<IVec2>,
-) -> Vec<IVec2> {
+fn get_valid_neigbours(map: &Vec<Vec<char>>, pos: IVec2) -> Vec<IVec2> {
     [(0, 1), (0, -1), (1, 0), (-1, 0)]
         .into_iter()
         .map(|(x, y)| IVec2::new(x, y) + pos)
@@ -140,7 +158,7 @@ fn get_valid_neigbours(
                 return false;
             }
             let c = map[p.x as usize][p.y as usize];
-            c != '#' && !visited.contains(&p) && !dead_ends.contains(&p)
+            c != '#'
         })
         .collect_vec()
 }
