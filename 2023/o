@@ -1,453 +1,1454 @@
 
-running 4 tests
-test tests::test_ivec2index ... ok
-test tests::smol_test ... ok
-test tests::smol_test2 ... FAILED
+running 1 test
+.G.
+.G.
+...
+FFF
+..E
+D..
+CCC
+BBB
+.A.
+---
+.G.
+.G.
+...
+.F.
+EEE
+DDD
+..C
+B..
+AAA
+---
+Loop Start
+Looking at brick A
+Comparing to brick: B
+Brick is at bottom
+Comparing to brick: C
+Brick is at bottom
+Comparing to brick: D
+Brick is at bottom
+Comparing to brick: E
+Brick is at bottom
+Comparing to brick: F
+Brick is at bottom
+Comparing to brick: G
+Brick is at bottom
+Looking at brick B
+Comparing to brick: A
+	Comparing IVec3(0, 0, 1) to IVec3(1, 0, 1)
+	Comparing IVec3(0, 0, 1) to IVec3(1, 1, 1)
+	Comparing IVec3(0, 0, 1) to IVec3(1, 2, 1)
+	Comparing IVec3(1, 0, 1) to IVec3(1, 0, 1)
+Brick is crashing with A
+	Comparing IVec3(2, 0, 1) to IVec3(1, 0, 1)
+	Comparing IVec3(2, 0, 1) to IVec3(1, 1, 1)
+	Comparing IVec3(2, 0, 1) to IVec3(1, 2, 1)
+Comparing to brick: C
+	Comparing IVec3(0, 0, 1) to IVec3(0, 2, 3)
+	Comparing IVec3(0, 0, 1) to IVec3(1, 2, 3)
+	Comparing IVec3(0, 0, 1) to IVec3(2, 2, 3)
+	Comparing IVec3(1, 0, 1) to IVec3(0, 2, 3)
+	Comparing IVec3(1, 0, 1) to IVec3(1, 2, 3)
+	Comparing IVec3(1, 0, 1) to IVec3(2, 2, 3)
+	Comparing IVec3(2, 0, 1) to IVec3(0, 2, 3)
+	Comparing IVec3(2, 0, 1) to IVec3(1, 2, 3)
+	Comparing IVec3(2, 0, 1) to IVec3(2, 2, 3)
+Comparing to brick: D
+	Comparing IVec3(0, 0, 1) to IVec3(0, 0, 4)
+	Comparing IVec3(0, 0, 1) to IVec3(0, 1, 4)
+	Comparing IVec3(0, 0, 1) to IVec3(0, 2, 4)
+	Comparing IVec3(1, 0, 1) to IVec3(0, 0, 4)
+	Comparing IVec3(1, 0, 1) to IVec3(0, 1, 4)
+	Comparing IVec3(1, 0, 1) to IVec3(0, 2, 4)
+	Comparing IVec3(2, 0, 1) to IVec3(0, 0, 4)
+	Comparing IVec3(2, 0, 1) to IVec3(0, 1, 4)
+	Comparing IVec3(2, 0, 1) to IVec3(0, 2, 4)
+Comparing to brick: E
+	Comparing IVec3(0, 0, 1) to IVec3(2, 0, 5)
+	Comparing IVec3(0, 0, 1) to IVec3(2, 1, 5)
+	Comparing IVec3(0, 0, 1) to IVec3(2, 2, 5)
+	Comparing IVec3(1, 0, 1) to IVec3(2, 0, 5)
+	Comparing IVec3(1, 0, 1) to IVec3(2, 1, 5)
+	Comparing IVec3(1, 0, 1) to IVec3(2, 2, 5)
+	Comparing IVec3(2, 0, 1) to IVec3(2, 0, 5)
+	Comparing IVec3(2, 0, 1) to IVec3(2, 1, 5)
+	Comparing IVec3(2, 0, 1) to IVec3(2, 2, 5)
+Comparing to brick: F
+	Comparing IVec3(0, 0, 1) to IVec3(0, 1, 6)
+	Comparing IVec3(0, 0, 1) to IVec3(1, 1, 6)
+	Comparing IVec3(0, 0, 1) to IVec3(2, 1, 6)
+	Comparing IVec3(1, 0, 1) to IVec3(0, 1, 6)
+	Comparing IVec3(1, 0, 1) to IVec3(1, 1, 6)
+	Comparing IVec3(1, 0, 1) to IVec3(2, 1, 6)
+	Comparing IVec3(2, 0, 1) to IVec3(0, 1, 6)
+	Comparing IVec3(2, 0, 1) to IVec3(1, 1, 6)
+	Comparing IVec3(2, 0, 1) to IVec3(2, 1, 6)
+Comparing to brick: G
+	Comparing IVec3(0, 0, 1) to IVec3(1, 1, 8)
+	Comparing IVec3(0, 0, 1) to IVec3(1, 1, 9)
+	Comparing IVec3(1, 0, 1) to IVec3(1, 1, 8)
+	Comparing IVec3(1, 0, 1) to IVec3(1, 1, 9)
+	Comparing IVec3(2, 0, 1) to IVec3(1, 1, 8)
+	Comparing IVec3(2, 0, 1) to IVec3(1, 1, 9)
+Looking at brick C
+Comparing to brick: A
+	Comparing IVec3(0, 2, 2) to IVec3(1, 0, 1)
+	Comparing IVec3(0, 2, 2) to IVec3(1, 1, 1)
+	Comparing IVec3(0, 2, 2) to IVec3(1, 2, 1)
+	Comparing IVec3(1, 2, 2) to IVec3(1, 0, 1)
+	Comparing IVec3(1, 2, 2) to IVec3(1, 1, 1)
+	Comparing IVec3(1, 2, 2) to IVec3(1, 2, 1)
+	Comparing IVec3(2, 2, 2) to IVec3(1, 0, 1)
+	Comparing IVec3(2, 2, 2) to IVec3(1, 1, 1)
+	Comparing IVec3(2, 2, 2) to IVec3(1, 2, 1)
+Comparing to brick: B
+	Comparing IVec3(0, 2, 2) to IVec3(0, 0, 2)
+	Comparing IVec3(0, 2, 2) to IVec3(1, 0, 2)
+	Comparing IVec3(0, 2, 2) to IVec3(2, 0, 2)
+	Comparing IVec3(1, 2, 2) to IVec3(0, 0, 2)
+	Comparing IVec3(1, 2, 2) to IVec3(1, 0, 2)
+	Comparing IVec3(1, 2, 2) to IVec3(2, 0, 2)
+	Comparing IVec3(2, 2, 2) to IVec3(0, 0, 2)
+	Comparing IVec3(2, 2, 2) to IVec3(1, 0, 2)
+	Comparing IVec3(2, 2, 2) to IVec3(2, 0, 2)
+Comparing to brick: D
+	Comparing IVec3(0, 2, 2) to IVec3(0, 0, 4)
+	Comparing IVec3(0, 2, 2) to IVec3(0, 1, 4)
+	Comparing IVec3(0, 2, 2) to IVec3(0, 2, 4)
+	Comparing IVec3(1, 2, 2) to IVec3(0, 0, 4)
+	Comparing IVec3(1, 2, 2) to IVec3(0, 1, 4)
+	Comparing IVec3(1, 2, 2) to IVec3(0, 2, 4)
+	Comparing IVec3(2, 2, 2) to IVec3(0, 0, 4)
+	Comparing IVec3(2, 2, 2) to IVec3(0, 1, 4)
+	Comparing IVec3(2, 2, 2) to IVec3(0, 2, 4)
+Comparing to brick: E
+	Comparing IVec3(0, 2, 2) to IVec3(2, 0, 5)
+	Comparing IVec3(0, 2, 2) to IVec3(2, 1, 5)
+	Comparing IVec3(0, 2, 2) to IVec3(2, 2, 5)
+	Comparing IVec3(1, 2, 2) to IVec3(2, 0, 5)
+	Comparing IVec3(1, 2, 2) to IVec3(2, 1, 5)
+	Comparing IVec3(1, 2, 2) to IVec3(2, 2, 5)
+	Comparing IVec3(2, 2, 2) to IVec3(2, 0, 5)
+	Comparing IVec3(2, 2, 2) to IVec3(2, 1, 5)
+	Comparing IVec3(2, 2, 2) to IVec3(2, 2, 5)
+Comparing to brick: F
+	Comparing IVec3(0, 2, 2) to IVec3(0, 1, 6)
+	Comparing IVec3(0, 2, 2) to IVec3(1, 1, 6)
+	Comparing IVec3(0, 2, 2) to IVec3(2, 1, 6)
+	Comparing IVec3(1, 2, 2) to IVec3(0, 1, 6)
+	Comparing IVec3(1, 2, 2) to IVec3(1, 1, 6)
+	Comparing IVec3(1, 2, 2) to IVec3(2, 1, 6)
+	Comparing IVec3(2, 2, 2) to IVec3(0, 1, 6)
+	Comparing IVec3(2, 2, 2) to IVec3(1, 1, 6)
+	Comparing IVec3(2, 2, 2) to IVec3(2, 1, 6)
+Comparing to brick: G
+	Comparing IVec3(0, 2, 2) to IVec3(1, 1, 8)
+	Comparing IVec3(0, 2, 2) to IVec3(1, 1, 9)
+	Comparing IVec3(1, 2, 2) to IVec3(1, 1, 8)
+	Comparing IVec3(1, 2, 2) to IVec3(1, 1, 9)
+	Comparing IVec3(2, 2, 2) to IVec3(1, 1, 8)
+	Comparing IVec3(2, 2, 2) to IVec3(1, 1, 9)
+Moved 2
+Looking at brick D
+Comparing to brick: A
+	Comparing IVec3(0, 0, 3) to IVec3(1, 0, 1)
+	Comparing IVec3(0, 0, 3) to IVec3(1, 1, 1)
+	Comparing IVec3(0, 0, 3) to IVec3(1, 2, 1)
+	Comparing IVec3(0, 1, 3) to IVec3(1, 0, 1)
+	Comparing IVec3(0, 1, 3) to IVec3(1, 1, 1)
+	Comparing IVec3(0, 1, 3) to IVec3(1, 2, 1)
+	Comparing IVec3(0, 2, 3) to IVec3(1, 0, 1)
+	Comparing IVec3(0, 2, 3) to IVec3(1, 1, 1)
+	Comparing IVec3(0, 2, 3) to IVec3(1, 2, 1)
+Comparing to brick: B
+	Comparing IVec3(0, 0, 3) to IVec3(0, 0, 2)
+	Comparing IVec3(0, 0, 3) to IVec3(1, 0, 2)
+	Comparing IVec3(0, 0, 3) to IVec3(2, 0, 2)
+	Comparing IVec3(0, 1, 3) to IVec3(0, 0, 2)
+	Comparing IVec3(0, 1, 3) to IVec3(1, 0, 2)
+	Comparing IVec3(0, 1, 3) to IVec3(2, 0, 2)
+	Comparing IVec3(0, 2, 3) to IVec3(0, 0, 2)
+	Comparing IVec3(0, 2, 3) to IVec3(1, 0, 2)
+	Comparing IVec3(0, 2, 3) to IVec3(2, 0, 2)
+Comparing to brick: C
+	Comparing IVec3(0, 0, 3) to IVec3(0, 2, 2)
+	Comparing IVec3(0, 0, 3) to IVec3(1, 2, 2)
+	Comparing IVec3(0, 0, 3) to IVec3(2, 2, 2)
+	Comparing IVec3(0, 1, 3) to IVec3(0, 2, 2)
+	Comparing IVec3(0, 1, 3) to IVec3(1, 2, 2)
+	Comparing IVec3(0, 1, 3) to IVec3(2, 2, 2)
+	Comparing IVec3(0, 2, 3) to IVec3(0, 2, 2)
+	Comparing IVec3(0, 2, 3) to IVec3(1, 2, 2)
+	Comparing IVec3(0, 2, 3) to IVec3(2, 2, 2)
+Comparing to brick: E
+	Comparing IVec3(0, 0, 3) to IVec3(2, 0, 5)
+	Comparing IVec3(0, 0, 3) to IVec3(2, 1, 5)
+	Comparing IVec3(0, 0, 3) to IVec3(2, 2, 5)
+	Comparing IVec3(0, 1, 3) to IVec3(2, 0, 5)
+	Comparing IVec3(0, 1, 3) to IVec3(2, 1, 5)
+	Comparing IVec3(0, 1, 3) to IVec3(2, 2, 5)
+	Comparing IVec3(0, 2, 3) to IVec3(2, 0, 5)
+	Comparing IVec3(0, 2, 3) to IVec3(2, 1, 5)
+	Comparing IVec3(0, 2, 3) to IVec3(2, 2, 5)
+Comparing to brick: F
+	Comparing IVec3(0, 0, 3) to IVec3(0, 1, 6)
+	Comparing IVec3(0, 0, 3) to IVec3(1, 1, 6)
+	Comparing IVec3(0, 0, 3) to IVec3(2, 1, 6)
+	Comparing IVec3(0, 1, 3) to IVec3(0, 1, 6)
+	Comparing IVec3(0, 1, 3) to IVec3(1, 1, 6)
+	Comparing IVec3(0, 1, 3) to IVec3(2, 1, 6)
+	Comparing IVec3(0, 2, 3) to IVec3(0, 1, 6)
+	Comparing IVec3(0, 2, 3) to IVec3(1, 1, 6)
+	Comparing IVec3(0, 2, 3) to IVec3(2, 1, 6)
+Comparing to brick: G
+	Comparing IVec3(0, 0, 3) to IVec3(1, 1, 8)
+	Comparing IVec3(0, 0, 3) to IVec3(1, 1, 9)
+	Comparing IVec3(0, 1, 3) to IVec3(1, 1, 8)
+	Comparing IVec3(0, 1, 3) to IVec3(1, 1, 9)
+	Comparing IVec3(0, 2, 3) to IVec3(1, 1, 8)
+	Comparing IVec3(0, 2, 3) to IVec3(1, 1, 9)
+Moved 3
+Looking at brick E
+Comparing to brick: A
+	Comparing IVec3(2, 0, 4) to IVec3(1, 0, 1)
+	Comparing IVec3(2, 0, 4) to IVec3(1, 1, 1)
+	Comparing IVec3(2, 0, 4) to IVec3(1, 2, 1)
+	Comparing IVec3(2, 1, 4) to IVec3(1, 0, 1)
+	Comparing IVec3(2, 1, 4) to IVec3(1, 1, 1)
+	Comparing IVec3(2, 1, 4) to IVec3(1, 2, 1)
+	Comparing IVec3(2, 2, 4) to IVec3(1, 0, 1)
+	Comparing IVec3(2, 2, 4) to IVec3(1, 1, 1)
+	Comparing IVec3(2, 2, 4) to IVec3(1, 2, 1)
+Comparing to brick: B
+	Comparing IVec3(2, 0, 4) to IVec3(0, 0, 2)
+	Comparing IVec3(2, 0, 4) to IVec3(1, 0, 2)
+	Comparing IVec3(2, 0, 4) to IVec3(2, 0, 2)
+	Comparing IVec3(2, 1, 4) to IVec3(0, 0, 2)
+	Comparing IVec3(2, 1, 4) to IVec3(1, 0, 2)
+	Comparing IVec3(2, 1, 4) to IVec3(2, 0, 2)
+	Comparing IVec3(2, 2, 4) to IVec3(0, 0, 2)
+	Comparing IVec3(2, 2, 4) to IVec3(1, 0, 2)
+	Comparing IVec3(2, 2, 4) to IVec3(2, 0, 2)
+Comparing to brick: C
+	Comparing IVec3(2, 0, 4) to IVec3(0, 2, 2)
+	Comparing IVec3(2, 0, 4) to IVec3(1, 2, 2)
+	Comparing IVec3(2, 0, 4) to IVec3(2, 2, 2)
+	Comparing IVec3(2, 1, 4) to IVec3(0, 2, 2)
+	Comparing IVec3(2, 1, 4) to IVec3(1, 2, 2)
+	Comparing IVec3(2, 1, 4) to IVec3(2, 2, 2)
+	Comparing IVec3(2, 2, 4) to IVec3(0, 2, 2)
+	Comparing IVec3(2, 2, 4) to IVec3(1, 2, 2)
+	Comparing IVec3(2, 2, 4) to IVec3(2, 2, 2)
+Comparing to brick: D
+	Comparing IVec3(2, 0, 4) to IVec3(0, 0, 3)
+	Comparing IVec3(2, 0, 4) to IVec3(0, 1, 3)
+	Comparing IVec3(2, 0, 4) to IVec3(0, 2, 3)
+	Comparing IVec3(2, 1, 4) to IVec3(0, 0, 3)
+	Comparing IVec3(2, 1, 4) to IVec3(0, 1, 3)
+	Comparing IVec3(2, 1, 4) to IVec3(0, 2, 3)
+	Comparing IVec3(2, 2, 4) to IVec3(0, 0, 3)
+	Comparing IVec3(2, 2, 4) to IVec3(0, 1, 3)
+	Comparing IVec3(2, 2, 4) to IVec3(0, 2, 3)
+Comparing to brick: F
+	Comparing IVec3(2, 0, 4) to IVec3(0, 1, 6)
+	Comparing IVec3(2, 0, 4) to IVec3(1, 1, 6)
+	Comparing IVec3(2, 0, 4) to IVec3(2, 1, 6)
+	Comparing IVec3(2, 1, 4) to IVec3(0, 1, 6)
+	Comparing IVec3(2, 1, 4) to IVec3(1, 1, 6)
+	Comparing IVec3(2, 1, 4) to IVec3(2, 1, 6)
+	Comparing IVec3(2, 2, 4) to IVec3(0, 1, 6)
+	Comparing IVec3(2, 2, 4) to IVec3(1, 1, 6)
+	Comparing IVec3(2, 2, 4) to IVec3(2, 1, 6)
+Comparing to brick: G
+	Comparing IVec3(2, 0, 4) to IVec3(1, 1, 8)
+	Comparing IVec3(2, 0, 4) to IVec3(1, 1, 9)
+	Comparing IVec3(2, 1, 4) to IVec3(1, 1, 8)
+	Comparing IVec3(2, 1, 4) to IVec3(1, 1, 9)
+	Comparing IVec3(2, 2, 4) to IVec3(1, 1, 8)
+	Comparing IVec3(2, 2, 4) to IVec3(1, 1, 9)
+Moved 4
+Looking at brick F
+Comparing to brick: A
+	Comparing IVec3(0, 1, 5) to IVec3(1, 0, 1)
+	Comparing IVec3(0, 1, 5) to IVec3(1, 1, 1)
+	Comparing IVec3(0, 1, 5) to IVec3(1, 2, 1)
+	Comparing IVec3(1, 1, 5) to IVec3(1, 0, 1)
+	Comparing IVec3(1, 1, 5) to IVec3(1, 1, 1)
+	Comparing IVec3(1, 1, 5) to IVec3(1, 2, 1)
+	Comparing IVec3(2, 1, 5) to IVec3(1, 0, 1)
+	Comparing IVec3(2, 1, 5) to IVec3(1, 1, 1)
+	Comparing IVec3(2, 1, 5) to IVec3(1, 2, 1)
+Comparing to brick: B
+	Comparing IVec3(0, 1, 5) to IVec3(0, 0, 2)
+	Comparing IVec3(0, 1, 5) to IVec3(1, 0, 2)
+	Comparing IVec3(0, 1, 5) to IVec3(2, 0, 2)
+	Comparing IVec3(1, 1, 5) to IVec3(0, 0, 2)
+	Comparing IVec3(1, 1, 5) to IVec3(1, 0, 2)
+	Comparing IVec3(1, 1, 5) to IVec3(2, 0, 2)
+	Comparing IVec3(2, 1, 5) to IVec3(0, 0, 2)
+	Comparing IVec3(2, 1, 5) to IVec3(1, 0, 2)
+	Comparing IVec3(2, 1, 5) to IVec3(2, 0, 2)
+Comparing to brick: C
+	Comparing IVec3(0, 1, 5) to IVec3(0, 2, 2)
+	Comparing IVec3(0, 1, 5) to IVec3(1, 2, 2)
+	Comparing IVec3(0, 1, 5) to IVec3(2, 2, 2)
+	Comparing IVec3(1, 1, 5) to IVec3(0, 2, 2)
+	Comparing IVec3(1, 1, 5) to IVec3(1, 2, 2)
+	Comparing IVec3(1, 1, 5) to IVec3(2, 2, 2)
+	Comparing IVec3(2, 1, 5) to IVec3(0, 2, 2)
+	Comparing IVec3(2, 1, 5) to IVec3(1, 2, 2)
+	Comparing IVec3(2, 1, 5) to IVec3(2, 2, 2)
+Comparing to brick: D
+	Comparing IVec3(0, 1, 5) to IVec3(0, 0, 3)
+	Comparing IVec3(0, 1, 5) to IVec3(0, 1, 3)
+	Comparing IVec3(0, 1, 5) to IVec3(0, 2, 3)
+	Comparing IVec3(1, 1, 5) to IVec3(0, 0, 3)
+	Comparing IVec3(1, 1, 5) to IVec3(0, 1, 3)
+	Comparing IVec3(1, 1, 5) to IVec3(0, 2, 3)
+	Comparing IVec3(2, 1, 5) to IVec3(0, 0, 3)
+	Comparing IVec3(2, 1, 5) to IVec3(0, 1, 3)
+	Comparing IVec3(2, 1, 5) to IVec3(0, 2, 3)
+Comparing to brick: E
+	Comparing IVec3(0, 1, 5) to IVec3(2, 0, 4)
+	Comparing IVec3(0, 1, 5) to IVec3(2, 1, 4)
+	Comparing IVec3(0, 1, 5) to IVec3(2, 2, 4)
+	Comparing IVec3(1, 1, 5) to IVec3(2, 0, 4)
+	Comparing IVec3(1, 1, 5) to IVec3(2, 1, 4)
+	Comparing IVec3(1, 1, 5) to IVec3(2, 2, 4)
+	Comparing IVec3(2, 1, 5) to IVec3(2, 0, 4)
+	Comparing IVec3(2, 1, 5) to IVec3(2, 1, 4)
+	Comparing IVec3(2, 1, 5) to IVec3(2, 2, 4)
+Comparing to brick: G
+	Comparing IVec3(0, 1, 5) to IVec3(1, 1, 8)
+	Comparing IVec3(0, 1, 5) to IVec3(1, 1, 9)
+	Comparing IVec3(1, 1, 5) to IVec3(1, 1, 8)
+	Comparing IVec3(1, 1, 5) to IVec3(1, 1, 9)
+	Comparing IVec3(2, 1, 5) to IVec3(1, 1, 8)
+	Comparing IVec3(2, 1, 5) to IVec3(1, 1, 9)
+Moved 5
+Looking at brick G
+Comparing to brick: A
+	Comparing IVec3(1, 1, 7) to IVec3(1, 0, 1)
+	Comparing IVec3(1, 1, 7) to IVec3(1, 1, 1)
+	Comparing IVec3(1, 1, 7) to IVec3(1, 2, 1)
+	Comparing IVec3(1, 1, 8) to IVec3(1, 0, 1)
+	Comparing IVec3(1, 1, 8) to IVec3(1, 1, 1)
+	Comparing IVec3(1, 1, 8) to IVec3(1, 2, 1)
+Comparing to brick: B
+	Comparing IVec3(1, 1, 7) to IVec3(0, 0, 2)
+	Comparing IVec3(1, 1, 7) to IVec3(1, 0, 2)
+	Comparing IVec3(1, 1, 7) to IVec3(2, 0, 2)
+	Comparing IVec3(1, 1, 8) to IVec3(0, 0, 2)
+	Comparing IVec3(1, 1, 8) to IVec3(1, 0, 2)
+	Comparing IVec3(1, 1, 8) to IVec3(2, 0, 2)
+Comparing to brick: C
+	Comparing IVec3(1, 1, 7) to IVec3(0, 2, 2)
+	Comparing IVec3(1, 1, 7) to IVec3(1, 2, 2)
+	Comparing IVec3(1, 1, 7) to IVec3(2, 2, 2)
+	Comparing IVec3(1, 1, 8) to IVec3(0, 2, 2)
+	Comparing IVec3(1, 1, 8) to IVec3(1, 2, 2)
+	Comparing IVec3(1, 1, 8) to IVec3(2, 2, 2)
+Comparing to brick: D
+	Comparing IVec3(1, 1, 7) to IVec3(0, 0, 3)
+	Comparing IVec3(1, 1, 7) to IVec3(0, 1, 3)
+	Comparing IVec3(1, 1, 7) to IVec3(0, 2, 3)
+	Comparing IVec3(1, 1, 8) to IVec3(0, 0, 3)
+	Comparing IVec3(1, 1, 8) to IVec3(0, 1, 3)
+	Comparing IVec3(1, 1, 8) to IVec3(0, 2, 3)
+Comparing to brick: E
+	Comparing IVec3(1, 1, 7) to IVec3(2, 0, 4)
+	Comparing IVec3(1, 1, 7) to IVec3(2, 1, 4)
+	Comparing IVec3(1, 1, 7) to IVec3(2, 2, 4)
+	Comparing IVec3(1, 1, 8) to IVec3(2, 0, 4)
+	Comparing IVec3(1, 1, 8) to IVec3(2, 1, 4)
+	Comparing IVec3(1, 1, 8) to IVec3(2, 2, 4)
+Comparing to brick: F
+	Comparing IVec3(1, 1, 7) to IVec3(0, 1, 5)
+	Comparing IVec3(1, 1, 7) to IVec3(1, 1, 5)
+	Comparing IVec3(1, 1, 7) to IVec3(2, 1, 5)
+	Comparing IVec3(1, 1, 8) to IVec3(0, 1, 5)
+	Comparing IVec3(1, 1, 8) to IVec3(1, 1, 5)
+	Comparing IVec3(1, 1, 8) to IVec3(2, 1, 5)
+Moved 6
+Loop Start
+Looking at brick A
+Comparing to brick: B
+Brick is at bottom
+Comparing to brick: C
+Brick is at bottom
+Comparing to brick: D
+Brick is at bottom
+Comparing to brick: E
+Brick is at bottom
+Comparing to brick: F
+Brick is at bottom
+Comparing to brick: G
+Brick is at bottom
+Looking at brick B
+Comparing to brick: A
+	Comparing IVec3(0, 0, 1) to IVec3(1, 0, 1)
+	Comparing IVec3(0, 0, 1) to IVec3(1, 1, 1)
+	Comparing IVec3(0, 0, 1) to IVec3(1, 2, 1)
+	Comparing IVec3(1, 0, 1) to IVec3(1, 0, 1)
+Brick is crashing with A
+	Comparing IVec3(2, 0, 1) to IVec3(1, 0, 1)
+	Comparing IVec3(2, 0, 1) to IVec3(1, 1, 1)
+	Comparing IVec3(2, 0, 1) to IVec3(1, 2, 1)
+Comparing to brick: C
+	Comparing IVec3(0, 0, 1) to IVec3(0, 2, 2)
+	Comparing IVec3(0, 0, 1) to IVec3(1, 2, 2)
+	Comparing IVec3(0, 0, 1) to IVec3(2, 2, 2)
+	Comparing IVec3(1, 0, 1) to IVec3(0, 2, 2)
+	Comparing IVec3(1, 0, 1) to IVec3(1, 2, 2)
+	Comparing IVec3(1, 0, 1) to IVec3(2, 2, 2)
+	Comparing IVec3(2, 0, 1) to IVec3(0, 2, 2)
+	Comparing IVec3(2, 0, 1) to IVec3(1, 2, 2)
+	Comparing IVec3(2, 0, 1) to IVec3(2, 2, 2)
+Comparing to brick: D
+	Comparing IVec3(0, 0, 1) to IVec3(0, 0, 3)
+	Comparing IVec3(0, 0, 1) to IVec3(0, 1, 3)
+	Comparing IVec3(0, 0, 1) to IVec3(0, 2, 3)
+	Comparing IVec3(1, 0, 1) to IVec3(0, 0, 3)
+	Comparing IVec3(1, 0, 1) to IVec3(0, 1, 3)
+	Comparing IVec3(1, 0, 1) to IVec3(0, 2, 3)
+	Comparing IVec3(2, 0, 1) to IVec3(0, 0, 3)
+	Comparing IVec3(2, 0, 1) to IVec3(0, 1, 3)
+	Comparing IVec3(2, 0, 1) to IVec3(0, 2, 3)
+Comparing to brick: E
+	Comparing IVec3(0, 0, 1) to IVec3(2, 0, 4)
+	Comparing IVec3(0, 0, 1) to IVec3(2, 1, 4)
+	Comparing IVec3(0, 0, 1) to IVec3(2, 2, 4)
+	Comparing IVec3(1, 0, 1) to IVec3(2, 0, 4)
+	Comparing IVec3(1, 0, 1) to IVec3(2, 1, 4)
+	Comparing IVec3(1, 0, 1) to IVec3(2, 2, 4)
+	Comparing IVec3(2, 0, 1) to IVec3(2, 0, 4)
+	Comparing IVec3(2, 0, 1) to IVec3(2, 1, 4)
+	Comparing IVec3(2, 0, 1) to IVec3(2, 2, 4)
+Comparing to brick: F
+	Comparing IVec3(0, 0, 1) to IVec3(0, 1, 5)
+	Comparing IVec3(0, 0, 1) to IVec3(1, 1, 5)
+	Comparing IVec3(0, 0, 1) to IVec3(2, 1, 5)
+	Comparing IVec3(1, 0, 1) to IVec3(0, 1, 5)
+	Comparing IVec3(1, 0, 1) to IVec3(1, 1, 5)
+	Comparing IVec3(1, 0, 1) to IVec3(2, 1, 5)
+	Comparing IVec3(2, 0, 1) to IVec3(0, 1, 5)
+	Comparing IVec3(2, 0, 1) to IVec3(1, 1, 5)
+	Comparing IVec3(2, 0, 1) to IVec3(2, 1, 5)
+Comparing to brick: G
+	Comparing IVec3(0, 0, 1) to IVec3(1, 1, 7)
+	Comparing IVec3(0, 0, 1) to IVec3(1, 1, 8)
+	Comparing IVec3(1, 0, 1) to IVec3(1, 1, 7)
+	Comparing IVec3(1, 0, 1) to IVec3(1, 1, 8)
+	Comparing IVec3(2, 0, 1) to IVec3(1, 1, 7)
+	Comparing IVec3(2, 0, 1) to IVec3(1, 1, 8)
+Looking at brick C
+Comparing to brick: A
+	Comparing IVec3(0, 2, 1) to IVec3(1, 0, 1)
+	Comparing IVec3(0, 2, 1) to IVec3(1, 1, 1)
+	Comparing IVec3(0, 2, 1) to IVec3(1, 2, 1)
+	Comparing IVec3(1, 2, 1) to IVec3(1, 0, 1)
+	Comparing IVec3(1, 2, 1) to IVec3(1, 1, 1)
+	Comparing IVec3(1, 2, 1) to IVec3(1, 2, 1)
+Brick is crashing with A
+	Comparing IVec3(2, 2, 1) to IVec3(1, 0, 1)
+	Comparing IVec3(2, 2, 1) to IVec3(1, 1, 1)
+	Comparing IVec3(2, 2, 1) to IVec3(1, 2, 1)
+Comparing to brick: B
+	Comparing IVec3(0, 2, 1) to IVec3(0, 0, 2)
+	Comparing IVec3(0, 2, 1) to IVec3(1, 0, 2)
+	Comparing IVec3(0, 2, 1) to IVec3(2, 0, 2)
+	Comparing IVec3(1, 2, 1) to IVec3(0, 0, 2)
+	Comparing IVec3(1, 2, 1) to IVec3(1, 0, 2)
+	Comparing IVec3(1, 2, 1) to IVec3(2, 0, 2)
+	Comparing IVec3(2, 2, 1) to IVec3(0, 0, 2)
+	Comparing IVec3(2, 2, 1) to IVec3(1, 0, 2)
+	Comparing IVec3(2, 2, 1) to IVec3(2, 0, 2)
+Comparing to brick: D
+	Comparing IVec3(0, 2, 1) to IVec3(0, 0, 3)
+	Comparing IVec3(0, 2, 1) to IVec3(0, 1, 3)
+	Comparing IVec3(0, 2, 1) to IVec3(0, 2, 3)
+	Comparing IVec3(1, 2, 1) to IVec3(0, 0, 3)
+	Comparing IVec3(1, 2, 1) to IVec3(0, 1, 3)
+	Comparing IVec3(1, 2, 1) to IVec3(0, 2, 3)
+	Comparing IVec3(2, 2, 1) to IVec3(0, 0, 3)
+	Comparing IVec3(2, 2, 1) to IVec3(0, 1, 3)
+	Comparing IVec3(2, 2, 1) to IVec3(0, 2, 3)
+Comparing to brick: E
+	Comparing IVec3(0, 2, 1) to IVec3(2, 0, 4)
+	Comparing IVec3(0, 2, 1) to IVec3(2, 1, 4)
+	Comparing IVec3(0, 2, 1) to IVec3(2, 2, 4)
+	Comparing IVec3(1, 2, 1) to IVec3(2, 0, 4)
+	Comparing IVec3(1, 2, 1) to IVec3(2, 1, 4)
+	Comparing IVec3(1, 2, 1) to IVec3(2, 2, 4)
+	Comparing IVec3(2, 2, 1) to IVec3(2, 0, 4)
+	Comparing IVec3(2, 2, 1) to IVec3(2, 1, 4)
+	Comparing IVec3(2, 2, 1) to IVec3(2, 2, 4)
+Comparing to brick: F
+	Comparing IVec3(0, 2, 1) to IVec3(0, 1, 5)
+	Comparing IVec3(0, 2, 1) to IVec3(1, 1, 5)
+	Comparing IVec3(0, 2, 1) to IVec3(2, 1, 5)
+	Comparing IVec3(1, 2, 1) to IVec3(0, 1, 5)
+	Comparing IVec3(1, 2, 1) to IVec3(1, 1, 5)
+	Comparing IVec3(1, 2, 1) to IVec3(2, 1, 5)
+	Comparing IVec3(2, 2, 1) to IVec3(0, 1, 5)
+	Comparing IVec3(2, 2, 1) to IVec3(1, 1, 5)
+	Comparing IVec3(2, 2, 1) to IVec3(2, 1, 5)
+Comparing to brick: G
+	Comparing IVec3(0, 2, 1) to IVec3(1, 1, 7)
+	Comparing IVec3(0, 2, 1) to IVec3(1, 1, 8)
+	Comparing IVec3(1, 2, 1) to IVec3(1, 1, 7)
+	Comparing IVec3(1, 2, 1) to IVec3(1, 1, 8)
+	Comparing IVec3(2, 2, 1) to IVec3(1, 1, 7)
+	Comparing IVec3(2, 2, 1) to IVec3(1, 1, 8)
+Looking at brick D
+Comparing to brick: A
+	Comparing IVec3(0, 0, 2) to IVec3(1, 0, 1)
+	Comparing IVec3(0, 0, 2) to IVec3(1, 1, 1)
+	Comparing IVec3(0, 0, 2) to IVec3(1, 2, 1)
+	Comparing IVec3(0, 1, 2) to IVec3(1, 0, 1)
+	Comparing IVec3(0, 1, 2) to IVec3(1, 1, 1)
+	Comparing IVec3(0, 1, 2) to IVec3(1, 2, 1)
+	Comparing IVec3(0, 2, 2) to IVec3(1, 0, 1)
+	Comparing IVec3(0, 2, 2) to IVec3(1, 1, 1)
+	Comparing IVec3(0, 2, 2) to IVec3(1, 2, 1)
+Comparing to brick: B
+	Comparing IVec3(0, 0, 2) to IVec3(0, 0, 2)
+Brick is crashing with B
+	Comparing IVec3(0, 1, 2) to IVec3(0, 0, 2)
+	Comparing IVec3(0, 1, 2) to IVec3(1, 0, 2)
+	Comparing IVec3(0, 1, 2) to IVec3(2, 0, 2)
+	Comparing IVec3(0, 2, 2) to IVec3(0, 0, 2)
+	Comparing IVec3(0, 2, 2) to IVec3(1, 0, 2)
+	Comparing IVec3(0, 2, 2) to IVec3(2, 0, 2)
+Comparing to brick: C
+	Comparing IVec3(0, 0, 2) to IVec3(0, 2, 2)
+	Comparing IVec3(0, 0, 2) to IVec3(1, 2, 2)
+	Comparing IVec3(0, 0, 2) to IVec3(2, 2, 2)
+	Comparing IVec3(0, 1, 2) to IVec3(0, 2, 2)
+	Comparing IVec3(0, 1, 2) to IVec3(1, 2, 2)
+	Comparing IVec3(0, 1, 2) to IVec3(2, 2, 2)
+	Comparing IVec3(0, 2, 2) to IVec3(0, 2, 2)
+Brick is crashing with C
+Comparing to brick: E
+	Comparing IVec3(0, 0, 2) to IVec3(2, 0, 4)
+	Comparing IVec3(0, 0, 2) to IVec3(2, 1, 4)
+	Comparing IVec3(0, 0, 2) to IVec3(2, 2, 4)
+	Comparing IVec3(0, 1, 2) to IVec3(2, 0, 4)
+	Comparing IVec3(0, 1, 2) to IVec3(2, 1, 4)
+	Comparing IVec3(0, 1, 2) to IVec3(2, 2, 4)
+	Comparing IVec3(0, 2, 2) to IVec3(2, 0, 4)
+	Comparing IVec3(0, 2, 2) to IVec3(2, 1, 4)
+	Comparing IVec3(0, 2, 2) to IVec3(2, 2, 4)
+Comparing to brick: F
+	Comparing IVec3(0, 0, 2) to IVec3(0, 1, 5)
+	Comparing IVec3(0, 0, 2) to IVec3(1, 1, 5)
+	Comparing IVec3(0, 0, 2) to IVec3(2, 1, 5)
+	Comparing IVec3(0, 1, 2) to IVec3(0, 1, 5)
+	Comparing IVec3(0, 1, 2) to IVec3(1, 1, 5)
+	Comparing IVec3(0, 1, 2) to IVec3(2, 1, 5)
+	Comparing IVec3(0, 2, 2) to IVec3(0, 1, 5)
+	Comparing IVec3(0, 2, 2) to IVec3(1, 1, 5)
+	Comparing IVec3(0, 2, 2) to IVec3(2, 1, 5)
+Comparing to brick: G
+	Comparing IVec3(0, 0, 2) to IVec3(1, 1, 7)
+	Comparing IVec3(0, 0, 2) to IVec3(1, 1, 8)
+	Comparing IVec3(0, 1, 2) to IVec3(1, 1, 7)
+	Comparing IVec3(0, 1, 2) to IVec3(1, 1, 8)
+	Comparing IVec3(0, 2, 2) to IVec3(1, 1, 7)
+	Comparing IVec3(0, 2, 2) to IVec3(1, 1, 8)
+Looking at brick E
+Comparing to brick: A
+	Comparing IVec3(2, 0, 3) to IVec3(1, 0, 1)
+	Comparing IVec3(2, 0, 3) to IVec3(1, 1, 1)
+	Comparing IVec3(2, 0, 3) to IVec3(1, 2, 1)
+	Comparing IVec3(2, 1, 3) to IVec3(1, 0, 1)
+	Comparing IVec3(2, 1, 3) to IVec3(1, 1, 1)
+	Comparing IVec3(2, 1, 3) to IVec3(1, 2, 1)
+	Comparing IVec3(2, 2, 3) to IVec3(1, 0, 1)
+	Comparing IVec3(2, 2, 3) to IVec3(1, 1, 1)
+	Comparing IVec3(2, 2, 3) to IVec3(1, 2, 1)
+Comparing to brick: B
+	Comparing IVec3(2, 0, 3) to IVec3(0, 0, 2)
+	Comparing IVec3(2, 0, 3) to IVec3(1, 0, 2)
+	Comparing IVec3(2, 0, 3) to IVec3(2, 0, 2)
+	Comparing IVec3(2, 1, 3) to IVec3(0, 0, 2)
+	Comparing IVec3(2, 1, 3) to IVec3(1, 0, 2)
+	Comparing IVec3(2, 1, 3) to IVec3(2, 0, 2)
+	Comparing IVec3(2, 2, 3) to IVec3(0, 0, 2)
+	Comparing IVec3(2, 2, 3) to IVec3(1, 0, 2)
+	Comparing IVec3(2, 2, 3) to IVec3(2, 0, 2)
+Comparing to brick: C
+	Comparing IVec3(2, 0, 3) to IVec3(0, 2, 2)
+	Comparing IVec3(2, 0, 3) to IVec3(1, 2, 2)
+	Comparing IVec3(2, 0, 3) to IVec3(2, 2, 2)
+	Comparing IVec3(2, 1, 3) to IVec3(0, 2, 2)
+	Comparing IVec3(2, 1, 3) to IVec3(1, 2, 2)
+	Comparing IVec3(2, 1, 3) to IVec3(2, 2, 2)
+	Comparing IVec3(2, 2, 3) to IVec3(0, 2, 2)
+	Comparing IVec3(2, 2, 3) to IVec3(1, 2, 2)
+	Comparing IVec3(2, 2, 3) to IVec3(2, 2, 2)
+Comparing to brick: D
+	Comparing IVec3(2, 0, 3) to IVec3(0, 0, 3)
+	Comparing IVec3(2, 0, 3) to IVec3(0, 1, 3)
+	Comparing IVec3(2, 0, 3) to IVec3(0, 2, 3)
+	Comparing IVec3(2, 1, 3) to IVec3(0, 0, 3)
+	Comparing IVec3(2, 1, 3) to IVec3(0, 1, 3)
+	Comparing IVec3(2, 1, 3) to IVec3(0, 2, 3)
+	Comparing IVec3(2, 2, 3) to IVec3(0, 0, 3)
+	Comparing IVec3(2, 2, 3) to IVec3(0, 1, 3)
+	Comparing IVec3(2, 2, 3) to IVec3(0, 2, 3)
+Comparing to brick: F
+	Comparing IVec3(2, 0, 3) to IVec3(0, 1, 5)
+	Comparing IVec3(2, 0, 3) to IVec3(1, 1, 5)
+	Comparing IVec3(2, 0, 3) to IVec3(2, 1, 5)
+	Comparing IVec3(2, 1, 3) to IVec3(0, 1, 5)
+	Comparing IVec3(2, 1, 3) to IVec3(1, 1, 5)
+	Comparing IVec3(2, 1, 3) to IVec3(2, 1, 5)
+	Comparing IVec3(2, 2, 3) to IVec3(0, 1, 5)
+	Comparing IVec3(2, 2, 3) to IVec3(1, 1, 5)
+	Comparing IVec3(2, 2, 3) to IVec3(2, 1, 5)
+Comparing to brick: G
+	Comparing IVec3(2, 0, 3) to IVec3(1, 1, 7)
+	Comparing IVec3(2, 0, 3) to IVec3(1, 1, 8)
+	Comparing IVec3(2, 1, 3) to IVec3(1, 1, 7)
+	Comparing IVec3(2, 1, 3) to IVec3(1, 1, 8)
+	Comparing IVec3(2, 2, 3) to IVec3(1, 1, 7)
+	Comparing IVec3(2, 2, 3) to IVec3(1, 1, 8)
+Moved 4
+Looking at brick F
+Comparing to brick: A
+	Comparing IVec3(0, 1, 4) to IVec3(1, 0, 1)
+	Comparing IVec3(0, 1, 4) to IVec3(1, 1, 1)
+	Comparing IVec3(0, 1, 4) to IVec3(1, 2, 1)
+	Comparing IVec3(1, 1, 4) to IVec3(1, 0, 1)
+	Comparing IVec3(1, 1, 4) to IVec3(1, 1, 1)
+	Comparing IVec3(1, 1, 4) to IVec3(1, 2, 1)
+	Comparing IVec3(2, 1, 4) to IVec3(1, 0, 1)
+	Comparing IVec3(2, 1, 4) to IVec3(1, 1, 1)
+	Comparing IVec3(2, 1, 4) to IVec3(1, 2, 1)
+Comparing to brick: B
+	Comparing IVec3(0, 1, 4) to IVec3(0, 0, 2)
+	Comparing IVec3(0, 1, 4) to IVec3(1, 0, 2)
+	Comparing IVec3(0, 1, 4) to IVec3(2, 0, 2)
+	Comparing IVec3(1, 1, 4) to IVec3(0, 0, 2)
+	Comparing IVec3(1, 1, 4) to IVec3(1, 0, 2)
+	Comparing IVec3(1, 1, 4) to IVec3(2, 0, 2)
+	Comparing IVec3(2, 1, 4) to IVec3(0, 0, 2)
+	Comparing IVec3(2, 1, 4) to IVec3(1, 0, 2)
+	Comparing IVec3(2, 1, 4) to IVec3(2, 0, 2)
+Comparing to brick: C
+	Comparing IVec3(0, 1, 4) to IVec3(0, 2, 2)
+	Comparing IVec3(0, 1, 4) to IVec3(1, 2, 2)
+	Comparing IVec3(0, 1, 4) to IVec3(2, 2, 2)
+	Comparing IVec3(1, 1, 4) to IVec3(0, 2, 2)
+	Comparing IVec3(1, 1, 4) to IVec3(1, 2, 2)
+	Comparing IVec3(1, 1, 4) to IVec3(2, 2, 2)
+	Comparing IVec3(2, 1, 4) to IVec3(0, 2, 2)
+	Comparing IVec3(2, 1, 4) to IVec3(1, 2, 2)
+	Comparing IVec3(2, 1, 4) to IVec3(2, 2, 2)
+Comparing to brick: D
+	Comparing IVec3(0, 1, 4) to IVec3(0, 0, 3)
+	Comparing IVec3(0, 1, 4) to IVec3(0, 1, 3)
+	Comparing IVec3(0, 1, 4) to IVec3(0, 2, 3)
+	Comparing IVec3(1, 1, 4) to IVec3(0, 0, 3)
+	Comparing IVec3(1, 1, 4) to IVec3(0, 1, 3)
+	Comparing IVec3(1, 1, 4) to IVec3(0, 2, 3)
+	Comparing IVec3(2, 1, 4) to IVec3(0, 0, 3)
+	Comparing IVec3(2, 1, 4) to IVec3(0, 1, 3)
+	Comparing IVec3(2, 1, 4) to IVec3(0, 2, 3)
+Comparing to brick: E
+	Comparing IVec3(0, 1, 4) to IVec3(2, 0, 3)
+	Comparing IVec3(0, 1, 4) to IVec3(2, 1, 3)
+	Comparing IVec3(0, 1, 4) to IVec3(2, 2, 3)
+	Comparing IVec3(1, 1, 4) to IVec3(2, 0, 3)
+	Comparing IVec3(1, 1, 4) to IVec3(2, 1, 3)
+	Comparing IVec3(1, 1, 4) to IVec3(2, 2, 3)
+	Comparing IVec3(2, 1, 4) to IVec3(2, 0, 3)
+	Comparing IVec3(2, 1, 4) to IVec3(2, 1, 3)
+	Comparing IVec3(2, 1, 4) to IVec3(2, 2, 3)
+Comparing to brick: G
+	Comparing IVec3(0, 1, 4) to IVec3(1, 1, 7)
+	Comparing IVec3(0, 1, 4) to IVec3(1, 1, 8)
+	Comparing IVec3(1, 1, 4) to IVec3(1, 1, 7)
+	Comparing IVec3(1, 1, 4) to IVec3(1, 1, 8)
+	Comparing IVec3(2, 1, 4) to IVec3(1, 1, 7)
+	Comparing IVec3(2, 1, 4) to IVec3(1, 1, 8)
+Moved 5
+Looking at brick G
+Comparing to brick: A
+	Comparing IVec3(1, 1, 6) to IVec3(1, 0, 1)
+	Comparing IVec3(1, 1, 6) to IVec3(1, 1, 1)
+	Comparing IVec3(1, 1, 6) to IVec3(1, 2, 1)
+	Comparing IVec3(1, 1, 7) to IVec3(1, 0, 1)
+	Comparing IVec3(1, 1, 7) to IVec3(1, 1, 1)
+	Comparing IVec3(1, 1, 7) to IVec3(1, 2, 1)
+Comparing to brick: B
+	Comparing IVec3(1, 1, 6) to IVec3(0, 0, 2)
+	Comparing IVec3(1, 1, 6) to IVec3(1, 0, 2)
+	Comparing IVec3(1, 1, 6) to IVec3(2, 0, 2)
+	Comparing IVec3(1, 1, 7) to IVec3(0, 0, 2)
+	Comparing IVec3(1, 1, 7) to IVec3(1, 0, 2)
+	Comparing IVec3(1, 1, 7) to IVec3(2, 0, 2)
+Comparing to brick: C
+	Comparing IVec3(1, 1, 6) to IVec3(0, 2, 2)
+	Comparing IVec3(1, 1, 6) to IVec3(1, 2, 2)
+	Comparing IVec3(1, 1, 6) to IVec3(2, 2, 2)
+	Comparing IVec3(1, 1, 7) to IVec3(0, 2, 2)
+	Comparing IVec3(1, 1, 7) to IVec3(1, 2, 2)
+	Comparing IVec3(1, 1, 7) to IVec3(2, 2, 2)
+Comparing to brick: D
+	Comparing IVec3(1, 1, 6) to IVec3(0, 0, 3)
+	Comparing IVec3(1, 1, 6) to IVec3(0, 1, 3)
+	Comparing IVec3(1, 1, 6) to IVec3(0, 2, 3)
+	Comparing IVec3(1, 1, 7) to IVec3(0, 0, 3)
+	Comparing IVec3(1, 1, 7) to IVec3(0, 1, 3)
+	Comparing IVec3(1, 1, 7) to IVec3(0, 2, 3)
+Comparing to brick: E
+	Comparing IVec3(1, 1, 6) to IVec3(2, 0, 3)
+	Comparing IVec3(1, 1, 6) to IVec3(2, 1, 3)
+	Comparing IVec3(1, 1, 6) to IVec3(2, 2, 3)
+	Comparing IVec3(1, 1, 7) to IVec3(2, 0, 3)
+	Comparing IVec3(1, 1, 7) to IVec3(2, 1, 3)
+	Comparing IVec3(1, 1, 7) to IVec3(2, 2, 3)
+Comparing to brick: F
+	Comparing IVec3(1, 1, 6) to IVec3(0, 1, 4)
+	Comparing IVec3(1, 1, 6) to IVec3(1, 1, 4)
+	Comparing IVec3(1, 1, 6) to IVec3(2, 1, 4)
+	Comparing IVec3(1, 1, 7) to IVec3(0, 1, 4)
+	Comparing IVec3(1, 1, 7) to IVec3(1, 1, 4)
+	Comparing IVec3(1, 1, 7) to IVec3(2, 1, 4)
+Moved 6
+Loop Start
+Looking at brick A
+Comparing to brick: B
+Brick is at bottom
+Comparing to brick: C
+Brick is at bottom
+Comparing to brick: D
+Brick is at bottom
+Comparing to brick: E
+Brick is at bottom
+Comparing to brick: F
+Brick is at bottom
+Comparing to brick: G
+Brick is at bottom
+Looking at brick B
+Comparing to brick: A
+	Comparing IVec3(0, 0, 1) to IVec3(1, 0, 1)
+	Comparing IVec3(0, 0, 1) to IVec3(1, 1, 1)
+	Comparing IVec3(0, 0, 1) to IVec3(1, 2, 1)
+	Comparing IVec3(1, 0, 1) to IVec3(1, 0, 1)
+Brick is crashing with A
+	Comparing IVec3(2, 0, 1) to IVec3(1, 0, 1)
+	Comparing IVec3(2, 0, 1) to IVec3(1, 1, 1)
+	Comparing IVec3(2, 0, 1) to IVec3(1, 2, 1)
+Comparing to brick: C
+	Comparing IVec3(0, 0, 1) to IVec3(0, 2, 2)
+	Comparing IVec3(0, 0, 1) to IVec3(1, 2, 2)
+	Comparing IVec3(0, 0, 1) to IVec3(2, 2, 2)
+	Comparing IVec3(1, 0, 1) to IVec3(0, 2, 2)
+	Comparing IVec3(1, 0, 1) to IVec3(1, 2, 2)
+	Comparing IVec3(1, 0, 1) to IVec3(2, 2, 2)
+	Comparing IVec3(2, 0, 1) to IVec3(0, 2, 2)
+	Comparing IVec3(2, 0, 1) to IVec3(1, 2, 2)
+	Comparing IVec3(2, 0, 1) to IVec3(2, 2, 2)
+Comparing to brick: D
+	Comparing IVec3(0, 0, 1) to IVec3(0, 0, 3)
+	Comparing IVec3(0, 0, 1) to IVec3(0, 1, 3)
+	Comparing IVec3(0, 0, 1) to IVec3(0, 2, 3)
+	Comparing IVec3(1, 0, 1) to IVec3(0, 0, 3)
+	Comparing IVec3(1, 0, 1) to IVec3(0, 1, 3)
+	Comparing IVec3(1, 0, 1) to IVec3(0, 2, 3)
+	Comparing IVec3(2, 0, 1) to IVec3(0, 0, 3)
+	Comparing IVec3(2, 0, 1) to IVec3(0, 1, 3)
+	Comparing IVec3(2, 0, 1) to IVec3(0, 2, 3)
+Comparing to brick: E
+	Comparing IVec3(0, 0, 1) to IVec3(2, 0, 3)
+	Comparing IVec3(0, 0, 1) to IVec3(2, 1, 3)
+	Comparing IVec3(0, 0, 1) to IVec3(2, 2, 3)
+	Comparing IVec3(1, 0, 1) to IVec3(2, 0, 3)
+	Comparing IVec3(1, 0, 1) to IVec3(2, 1, 3)
+	Comparing IVec3(1, 0, 1) to IVec3(2, 2, 3)
+	Comparing IVec3(2, 0, 1) to IVec3(2, 0, 3)
+	Comparing IVec3(2, 0, 1) to IVec3(2, 1, 3)
+	Comparing IVec3(2, 0, 1) to IVec3(2, 2, 3)
+Comparing to brick: F
+	Comparing IVec3(0, 0, 1) to IVec3(0, 1, 4)
+	Comparing IVec3(0, 0, 1) to IVec3(1, 1, 4)
+	Comparing IVec3(0, 0, 1) to IVec3(2, 1, 4)
+	Comparing IVec3(1, 0, 1) to IVec3(0, 1, 4)
+	Comparing IVec3(1, 0, 1) to IVec3(1, 1, 4)
+	Comparing IVec3(1, 0, 1) to IVec3(2, 1, 4)
+	Comparing IVec3(2, 0, 1) to IVec3(0, 1, 4)
+	Comparing IVec3(2, 0, 1) to IVec3(1, 1, 4)
+	Comparing IVec3(2, 0, 1) to IVec3(2, 1, 4)
+Comparing to brick: G
+	Comparing IVec3(0, 0, 1) to IVec3(1, 1, 6)
+	Comparing IVec3(0, 0, 1) to IVec3(1, 1, 7)
+	Comparing IVec3(1, 0, 1) to IVec3(1, 1, 6)
+	Comparing IVec3(1, 0, 1) to IVec3(1, 1, 7)
+	Comparing IVec3(2, 0, 1) to IVec3(1, 1, 6)
+	Comparing IVec3(2, 0, 1) to IVec3(1, 1, 7)
+Looking at brick C
+Comparing to brick: A
+	Comparing IVec3(0, 2, 1) to IVec3(1, 0, 1)
+	Comparing IVec3(0, 2, 1) to IVec3(1, 1, 1)
+	Comparing IVec3(0, 2, 1) to IVec3(1, 2, 1)
+	Comparing IVec3(1, 2, 1) to IVec3(1, 0, 1)
+	Comparing IVec3(1, 2, 1) to IVec3(1, 1, 1)
+	Comparing IVec3(1, 2, 1) to IVec3(1, 2, 1)
+Brick is crashing with A
+	Comparing IVec3(2, 2, 1) to IVec3(1, 0, 1)
+	Comparing IVec3(2, 2, 1) to IVec3(1, 1, 1)
+	Comparing IVec3(2, 2, 1) to IVec3(1, 2, 1)
+Comparing to brick: B
+	Comparing IVec3(0, 2, 1) to IVec3(0, 0, 2)
+	Comparing IVec3(0, 2, 1) to IVec3(1, 0, 2)
+	Comparing IVec3(0, 2, 1) to IVec3(2, 0, 2)
+	Comparing IVec3(1, 2, 1) to IVec3(0, 0, 2)
+	Comparing IVec3(1, 2, 1) to IVec3(1, 0, 2)
+	Comparing IVec3(1, 2, 1) to IVec3(2, 0, 2)
+	Comparing IVec3(2, 2, 1) to IVec3(0, 0, 2)
+	Comparing IVec3(2, 2, 1) to IVec3(1, 0, 2)
+	Comparing IVec3(2, 2, 1) to IVec3(2, 0, 2)
+Comparing to brick: D
+	Comparing IVec3(0, 2, 1) to IVec3(0, 0, 3)
+	Comparing IVec3(0, 2, 1) to IVec3(0, 1, 3)
+	Comparing IVec3(0, 2, 1) to IVec3(0, 2, 3)
+	Comparing IVec3(1, 2, 1) to IVec3(0, 0, 3)
+	Comparing IVec3(1, 2, 1) to IVec3(0, 1, 3)
+	Comparing IVec3(1, 2, 1) to IVec3(0, 2, 3)
+	Comparing IVec3(2, 2, 1) to IVec3(0, 0, 3)
+	Comparing IVec3(2, 2, 1) to IVec3(0, 1, 3)
+	Comparing IVec3(2, 2, 1) to IVec3(0, 2, 3)
+Comparing to brick: E
+	Comparing IVec3(0, 2, 1) to IVec3(2, 0, 3)
+	Comparing IVec3(0, 2, 1) to IVec3(2, 1, 3)
+	Comparing IVec3(0, 2, 1) to IVec3(2, 2, 3)
+	Comparing IVec3(1, 2, 1) to IVec3(2, 0, 3)
+	Comparing IVec3(1, 2, 1) to IVec3(2, 1, 3)
+	Comparing IVec3(1, 2, 1) to IVec3(2, 2, 3)
+	Comparing IVec3(2, 2, 1) to IVec3(2, 0, 3)
+	Comparing IVec3(2, 2, 1) to IVec3(2, 1, 3)
+	Comparing IVec3(2, 2, 1) to IVec3(2, 2, 3)
+Comparing to brick: F
+	Comparing IVec3(0, 2, 1) to IVec3(0, 1, 4)
+	Comparing IVec3(0, 2, 1) to IVec3(1, 1, 4)
+	Comparing IVec3(0, 2, 1) to IVec3(2, 1, 4)
+	Comparing IVec3(1, 2, 1) to IVec3(0, 1, 4)
+	Comparing IVec3(1, 2, 1) to IVec3(1, 1, 4)
+	Comparing IVec3(1, 2, 1) to IVec3(2, 1, 4)
+	Comparing IVec3(2, 2, 1) to IVec3(0, 1, 4)
+	Comparing IVec3(2, 2, 1) to IVec3(1, 1, 4)
+	Comparing IVec3(2, 2, 1) to IVec3(2, 1, 4)
+Comparing to brick: G
+	Comparing IVec3(0, 2, 1) to IVec3(1, 1, 6)
+	Comparing IVec3(0, 2, 1) to IVec3(1, 1, 7)
+	Comparing IVec3(1, 2, 1) to IVec3(1, 1, 6)
+	Comparing IVec3(1, 2, 1) to IVec3(1, 1, 7)
+	Comparing IVec3(2, 2, 1) to IVec3(1, 1, 6)
+	Comparing IVec3(2, 2, 1) to IVec3(1, 1, 7)
+Looking at brick D
+Comparing to brick: A
+	Comparing IVec3(0, 0, 2) to IVec3(1, 0, 1)
+	Comparing IVec3(0, 0, 2) to IVec3(1, 1, 1)
+	Comparing IVec3(0, 0, 2) to IVec3(1, 2, 1)
+	Comparing IVec3(0, 1, 2) to IVec3(1, 0, 1)
+	Comparing IVec3(0, 1, 2) to IVec3(1, 1, 1)
+	Comparing IVec3(0, 1, 2) to IVec3(1, 2, 1)
+	Comparing IVec3(0, 2, 2) to IVec3(1, 0, 1)
+	Comparing IVec3(0, 2, 2) to IVec3(1, 1, 1)
+	Comparing IVec3(0, 2, 2) to IVec3(1, 2, 1)
+Comparing to brick: B
+	Comparing IVec3(0, 0, 2) to IVec3(0, 0, 2)
+Brick is crashing with B
+	Comparing IVec3(0, 1, 2) to IVec3(0, 0, 2)
+	Comparing IVec3(0, 1, 2) to IVec3(1, 0, 2)
+	Comparing IVec3(0, 1, 2) to IVec3(2, 0, 2)
+	Comparing IVec3(0, 2, 2) to IVec3(0, 0, 2)
+	Comparing IVec3(0, 2, 2) to IVec3(1, 0, 2)
+	Comparing IVec3(0, 2, 2) to IVec3(2, 0, 2)
+Comparing to brick: C
+	Comparing IVec3(0, 0, 2) to IVec3(0, 2, 2)
+	Comparing IVec3(0, 0, 2) to IVec3(1, 2, 2)
+	Comparing IVec3(0, 0, 2) to IVec3(2, 2, 2)
+	Comparing IVec3(0, 1, 2) to IVec3(0, 2, 2)
+	Comparing IVec3(0, 1, 2) to IVec3(1, 2, 2)
+	Comparing IVec3(0, 1, 2) to IVec3(2, 2, 2)
+	Comparing IVec3(0, 2, 2) to IVec3(0, 2, 2)
+Brick is crashing with C
+Comparing to brick: E
+	Comparing IVec3(0, 0, 2) to IVec3(2, 0, 3)
+	Comparing IVec3(0, 0, 2) to IVec3(2, 1, 3)
+	Comparing IVec3(0, 0, 2) to IVec3(2, 2, 3)
+	Comparing IVec3(0, 1, 2) to IVec3(2, 0, 3)
+	Comparing IVec3(0, 1, 2) to IVec3(2, 1, 3)
+	Comparing IVec3(0, 1, 2) to IVec3(2, 2, 3)
+	Comparing IVec3(0, 2, 2) to IVec3(2, 0, 3)
+	Comparing IVec3(0, 2, 2) to IVec3(2, 1, 3)
+	Comparing IVec3(0, 2, 2) to IVec3(2, 2, 3)
+Comparing to brick: F
+	Comparing IVec3(0, 0, 2) to IVec3(0, 1, 4)
+	Comparing IVec3(0, 0, 2) to IVec3(1, 1, 4)
+	Comparing IVec3(0, 0, 2) to IVec3(2, 1, 4)
+	Comparing IVec3(0, 1, 2) to IVec3(0, 1, 4)
+	Comparing IVec3(0, 1, 2) to IVec3(1, 1, 4)
+	Comparing IVec3(0, 1, 2) to IVec3(2, 1, 4)
+	Comparing IVec3(0, 2, 2) to IVec3(0, 1, 4)
+	Comparing IVec3(0, 2, 2) to IVec3(1, 1, 4)
+	Comparing IVec3(0, 2, 2) to IVec3(2, 1, 4)
+Comparing to brick: G
+	Comparing IVec3(0, 0, 2) to IVec3(1, 1, 6)
+	Comparing IVec3(0, 0, 2) to IVec3(1, 1, 7)
+	Comparing IVec3(0, 1, 2) to IVec3(1, 1, 6)
+	Comparing IVec3(0, 1, 2) to IVec3(1, 1, 7)
+	Comparing IVec3(0, 2, 2) to IVec3(1, 1, 6)
+	Comparing IVec3(0, 2, 2) to IVec3(1, 1, 7)
+Looking at brick E
+Comparing to brick: A
+	Comparing IVec3(2, 0, 2) to IVec3(1, 0, 1)
+	Comparing IVec3(2, 0, 2) to IVec3(1, 1, 1)
+	Comparing IVec3(2, 0, 2) to IVec3(1, 2, 1)
+	Comparing IVec3(2, 1, 2) to IVec3(1, 0, 1)
+	Comparing IVec3(2, 1, 2) to IVec3(1, 1, 1)
+	Comparing IVec3(2, 1, 2) to IVec3(1, 2, 1)
+	Comparing IVec3(2, 2, 2) to IVec3(1, 0, 1)
+	Comparing IVec3(2, 2, 2) to IVec3(1, 1, 1)
+	Comparing IVec3(2, 2, 2) to IVec3(1, 2, 1)
+Comparing to brick: B
+	Comparing IVec3(2, 0, 2) to IVec3(0, 0, 2)
+	Comparing IVec3(2, 0, 2) to IVec3(1, 0, 2)
+	Comparing IVec3(2, 0, 2) to IVec3(2, 0, 2)
+Brick is crashing with B
+	Comparing IVec3(2, 1, 2) to IVec3(0, 0, 2)
+	Comparing IVec3(2, 1, 2) to IVec3(1, 0, 2)
+	Comparing IVec3(2, 1, 2) to IVec3(2, 0, 2)
+	Comparing IVec3(2, 2, 2) to IVec3(0, 0, 2)
+	Comparing IVec3(2, 2, 2) to IVec3(1, 0, 2)
+	Comparing IVec3(2, 2, 2) to IVec3(2, 0, 2)
+Comparing to brick: C
+	Comparing IVec3(2, 0, 2) to IVec3(0, 2, 2)
+	Comparing IVec3(2, 0, 2) to IVec3(1, 2, 2)
+	Comparing IVec3(2, 0, 2) to IVec3(2, 2, 2)
+	Comparing IVec3(2, 1, 2) to IVec3(0, 2, 2)
+	Comparing IVec3(2, 1, 2) to IVec3(1, 2, 2)
+	Comparing IVec3(2, 1, 2) to IVec3(2, 2, 2)
+	Comparing IVec3(2, 2, 2) to IVec3(0, 2, 2)
+	Comparing IVec3(2, 2, 2) to IVec3(1, 2, 2)
+	Comparing IVec3(2, 2, 2) to IVec3(2, 2, 2)
+Brick is crashing with C
+Comparing to brick: D
+	Comparing IVec3(2, 0, 2) to IVec3(0, 0, 3)
+	Comparing IVec3(2, 0, 2) to IVec3(0, 1, 3)
+	Comparing IVec3(2, 0, 2) to IVec3(0, 2, 3)
+	Comparing IVec3(2, 1, 2) to IVec3(0, 0, 3)
+	Comparing IVec3(2, 1, 2) to IVec3(0, 1, 3)
+	Comparing IVec3(2, 1, 2) to IVec3(0, 2, 3)
+	Comparing IVec3(2, 2, 2) to IVec3(0, 0, 3)
+	Comparing IVec3(2, 2, 2) to IVec3(0, 1, 3)
+	Comparing IVec3(2, 2, 2) to IVec3(0, 2, 3)
+Comparing to brick: F
+	Comparing IVec3(2, 0, 2) to IVec3(0, 1, 4)
+	Comparing IVec3(2, 0, 2) to IVec3(1, 1, 4)
+	Comparing IVec3(2, 0, 2) to IVec3(2, 1, 4)
+	Comparing IVec3(2, 1, 2) to IVec3(0, 1, 4)
+	Comparing IVec3(2, 1, 2) to IVec3(1, 1, 4)
+	Comparing IVec3(2, 1, 2) to IVec3(2, 1, 4)
+	Comparing IVec3(2, 2, 2) to IVec3(0, 1, 4)
+	Comparing IVec3(2, 2, 2) to IVec3(1, 1, 4)
+	Comparing IVec3(2, 2, 2) to IVec3(2, 1, 4)
+Comparing to brick: G
+	Comparing IVec3(2, 0, 2) to IVec3(1, 1, 6)
+	Comparing IVec3(2, 0, 2) to IVec3(1, 1, 7)
+	Comparing IVec3(2, 1, 2) to IVec3(1, 1, 6)
+	Comparing IVec3(2, 1, 2) to IVec3(1, 1, 7)
+	Comparing IVec3(2, 2, 2) to IVec3(1, 1, 6)
+	Comparing IVec3(2, 2, 2) to IVec3(1, 1, 7)
+Looking at brick F
+Comparing to brick: A
+	Comparing IVec3(0, 1, 3) to IVec3(1, 0, 1)
+	Comparing IVec3(0, 1, 3) to IVec3(1, 1, 1)
+	Comparing IVec3(0, 1, 3) to IVec3(1, 2, 1)
+	Comparing IVec3(1, 1, 3) to IVec3(1, 0, 1)
+	Comparing IVec3(1, 1, 3) to IVec3(1, 1, 1)
+	Comparing IVec3(1, 1, 3) to IVec3(1, 2, 1)
+	Comparing IVec3(2, 1, 3) to IVec3(1, 0, 1)
+	Comparing IVec3(2, 1, 3) to IVec3(1, 1, 1)
+	Comparing IVec3(2, 1, 3) to IVec3(1, 2, 1)
+Comparing to brick: B
+	Comparing IVec3(0, 1, 3) to IVec3(0, 0, 2)
+	Comparing IVec3(0, 1, 3) to IVec3(1, 0, 2)
+	Comparing IVec3(0, 1, 3) to IVec3(2, 0, 2)
+	Comparing IVec3(1, 1, 3) to IVec3(0, 0, 2)
+	Comparing IVec3(1, 1, 3) to IVec3(1, 0, 2)
+	Comparing IVec3(1, 1, 3) to IVec3(2, 0, 2)
+	Comparing IVec3(2, 1, 3) to IVec3(0, 0, 2)
+	Comparing IVec3(2, 1, 3) to IVec3(1, 0, 2)
+	Comparing IVec3(2, 1, 3) to IVec3(2, 0, 2)
+Comparing to brick: C
+	Comparing IVec3(0, 1, 3) to IVec3(0, 2, 2)
+	Comparing IVec3(0, 1, 3) to IVec3(1, 2, 2)
+	Comparing IVec3(0, 1, 3) to IVec3(2, 2, 2)
+	Comparing IVec3(1, 1, 3) to IVec3(0, 2, 2)
+	Comparing IVec3(1, 1, 3) to IVec3(1, 2, 2)
+	Comparing IVec3(1, 1, 3) to IVec3(2, 2, 2)
+	Comparing IVec3(2, 1, 3) to IVec3(0, 2, 2)
+	Comparing IVec3(2, 1, 3) to IVec3(1, 2, 2)
+	Comparing IVec3(2, 1, 3) to IVec3(2, 2, 2)
+Comparing to brick: D
+	Comparing IVec3(0, 1, 3) to IVec3(0, 0, 3)
+	Comparing IVec3(0, 1, 3) to IVec3(0, 1, 3)
+Brick is crashing with D
+	Comparing IVec3(1, 1, 3) to IVec3(0, 0, 3)
+	Comparing IVec3(1, 1, 3) to IVec3(0, 1, 3)
+	Comparing IVec3(1, 1, 3) to IVec3(0, 2, 3)
+	Comparing IVec3(2, 1, 3) to IVec3(0, 0, 3)
+	Comparing IVec3(2, 1, 3) to IVec3(0, 1, 3)
+	Comparing IVec3(2, 1, 3) to IVec3(0, 2, 3)
+Comparing to brick: E
+	Comparing IVec3(0, 1, 3) to IVec3(2, 0, 3)
+	Comparing IVec3(0, 1, 3) to IVec3(2, 1, 3)
+	Comparing IVec3(0, 1, 3) to IVec3(2, 2, 3)
+	Comparing IVec3(1, 1, 3) to IVec3(2, 0, 3)
+	Comparing IVec3(1, 1, 3) to IVec3(2, 1, 3)
+	Comparing IVec3(1, 1, 3) to IVec3(2, 2, 3)
+	Comparing IVec3(2, 1, 3) to IVec3(2, 0, 3)
+	Comparing IVec3(2, 1, 3) to IVec3(2, 1, 3)
+Brick is crashing with E
+Comparing to brick: G
+	Comparing IVec3(0, 1, 3) to IVec3(1, 1, 6)
+	Comparing IVec3(0, 1, 3) to IVec3(1, 1, 7)
+	Comparing IVec3(1, 1, 3) to IVec3(1, 1, 6)
+	Comparing IVec3(1, 1, 3) to IVec3(1, 1, 7)
+	Comparing IVec3(2, 1, 3) to IVec3(1, 1, 6)
+	Comparing IVec3(2, 1, 3) to IVec3(1, 1, 7)
+Looking at brick G
+Comparing to brick: A
+	Comparing IVec3(1, 1, 5) to IVec3(1, 0, 1)
+	Comparing IVec3(1, 1, 5) to IVec3(1, 1, 1)
+	Comparing IVec3(1, 1, 5) to IVec3(1, 2, 1)
+	Comparing IVec3(1, 1, 6) to IVec3(1, 0, 1)
+	Comparing IVec3(1, 1, 6) to IVec3(1, 1, 1)
+	Comparing IVec3(1, 1, 6) to IVec3(1, 2, 1)
+Comparing to brick: B
+	Comparing IVec3(1, 1, 5) to IVec3(0, 0, 2)
+	Comparing IVec3(1, 1, 5) to IVec3(1, 0, 2)
+	Comparing IVec3(1, 1, 5) to IVec3(2, 0, 2)
+	Comparing IVec3(1, 1, 6) to IVec3(0, 0, 2)
+	Comparing IVec3(1, 1, 6) to IVec3(1, 0, 2)
+	Comparing IVec3(1, 1, 6) to IVec3(2, 0, 2)
+Comparing to brick: C
+	Comparing IVec3(1, 1, 5) to IVec3(0, 2, 2)
+	Comparing IVec3(1, 1, 5) to IVec3(1, 2, 2)
+	Comparing IVec3(1, 1, 5) to IVec3(2, 2, 2)
+	Comparing IVec3(1, 1, 6) to IVec3(0, 2, 2)
+	Comparing IVec3(1, 1, 6) to IVec3(1, 2, 2)
+	Comparing IVec3(1, 1, 6) to IVec3(2, 2, 2)
+Comparing to brick: D
+	Comparing IVec3(1, 1, 5) to IVec3(0, 0, 3)
+	Comparing IVec3(1, 1, 5) to IVec3(0, 1, 3)
+	Comparing IVec3(1, 1, 5) to IVec3(0, 2, 3)
+	Comparing IVec3(1, 1, 6) to IVec3(0, 0, 3)
+	Comparing IVec3(1, 1, 6) to IVec3(0, 1, 3)
+	Comparing IVec3(1, 1, 6) to IVec3(0, 2, 3)
+Comparing to brick: E
+	Comparing IVec3(1, 1, 5) to IVec3(2, 0, 3)
+	Comparing IVec3(1, 1, 5) to IVec3(2, 1, 3)
+	Comparing IVec3(1, 1, 5) to IVec3(2, 2, 3)
+	Comparing IVec3(1, 1, 6) to IVec3(2, 0, 3)
+	Comparing IVec3(1, 1, 6) to IVec3(2, 1, 3)
+	Comparing IVec3(1, 1, 6) to IVec3(2, 2, 3)
+Comparing to brick: F
+	Comparing IVec3(1, 1, 5) to IVec3(0, 1, 4)
+	Comparing IVec3(1, 1, 5) to IVec3(1, 1, 4)
+	Comparing IVec3(1, 1, 5) to IVec3(2, 1, 4)
+	Comparing IVec3(1, 1, 6) to IVec3(0, 1, 4)
+	Comparing IVec3(1, 1, 6) to IVec3(1, 1, 4)
+	Comparing IVec3(1, 1, 6) to IVec3(2, 1, 4)
+Moved 6
+Loop Start
+Looking at brick A
+Comparing to brick: B
+Brick is at bottom
+Comparing to brick: C
+Brick is at bottom
+Comparing to brick: D
+Brick is at bottom
+Comparing to brick: E
+Brick is at bottom
+Comparing to brick: F
+Brick is at bottom
+Comparing to brick: G
+Brick is at bottom
+Looking at brick B
+Comparing to brick: A
+	Comparing IVec3(0, 0, 1) to IVec3(1, 0, 1)
+	Comparing IVec3(0, 0, 1) to IVec3(1, 1, 1)
+	Comparing IVec3(0, 0, 1) to IVec3(1, 2, 1)
+	Comparing IVec3(1, 0, 1) to IVec3(1, 0, 1)
+Brick is crashing with A
+	Comparing IVec3(2, 0, 1) to IVec3(1, 0, 1)
+	Comparing IVec3(2, 0, 1) to IVec3(1, 1, 1)
+	Comparing IVec3(2, 0, 1) to IVec3(1, 2, 1)
+Comparing to brick: C
+	Comparing IVec3(0, 0, 1) to IVec3(0, 2, 2)
+	Comparing IVec3(0, 0, 1) to IVec3(1, 2, 2)
+	Comparing IVec3(0, 0, 1) to IVec3(2, 2, 2)
+	Comparing IVec3(1, 0, 1) to IVec3(0, 2, 2)
+	Comparing IVec3(1, 0, 1) to IVec3(1, 2, 2)
+	Comparing IVec3(1, 0, 1) to IVec3(2, 2, 2)
+	Comparing IVec3(2, 0, 1) to IVec3(0, 2, 2)
+	Comparing IVec3(2, 0, 1) to IVec3(1, 2, 2)
+	Comparing IVec3(2, 0, 1) to IVec3(2, 2, 2)
+Comparing to brick: D
+	Comparing IVec3(0, 0, 1) to IVec3(0, 0, 3)
+	Comparing IVec3(0, 0, 1) to IVec3(0, 1, 3)
+	Comparing IVec3(0, 0, 1) to IVec3(0, 2, 3)
+	Comparing IVec3(1, 0, 1) to IVec3(0, 0, 3)
+	Comparing IVec3(1, 0, 1) to IVec3(0, 1, 3)
+	Comparing IVec3(1, 0, 1) to IVec3(0, 2, 3)
+	Comparing IVec3(2, 0, 1) to IVec3(0, 0, 3)
+	Comparing IVec3(2, 0, 1) to IVec3(0, 1, 3)
+	Comparing IVec3(2, 0, 1) to IVec3(0, 2, 3)
+Comparing to brick: E
+	Comparing IVec3(0, 0, 1) to IVec3(2, 0, 3)
+	Comparing IVec3(0, 0, 1) to IVec3(2, 1, 3)
+	Comparing IVec3(0, 0, 1) to IVec3(2, 2, 3)
+	Comparing IVec3(1, 0, 1) to IVec3(2, 0, 3)
+	Comparing IVec3(1, 0, 1) to IVec3(2, 1, 3)
+	Comparing IVec3(1, 0, 1) to IVec3(2, 2, 3)
+	Comparing IVec3(2, 0, 1) to IVec3(2, 0, 3)
+	Comparing IVec3(2, 0, 1) to IVec3(2, 1, 3)
+	Comparing IVec3(2, 0, 1) to IVec3(2, 2, 3)
+Comparing to brick: F
+	Comparing IVec3(0, 0, 1) to IVec3(0, 1, 4)
+	Comparing IVec3(0, 0, 1) to IVec3(1, 1, 4)
+	Comparing IVec3(0, 0, 1) to IVec3(2, 1, 4)
+	Comparing IVec3(1, 0, 1) to IVec3(0, 1, 4)
+	Comparing IVec3(1, 0, 1) to IVec3(1, 1, 4)
+	Comparing IVec3(1, 0, 1) to IVec3(2, 1, 4)
+	Comparing IVec3(2, 0, 1) to IVec3(0, 1, 4)
+	Comparing IVec3(2, 0, 1) to IVec3(1, 1, 4)
+	Comparing IVec3(2, 0, 1) to IVec3(2, 1, 4)
+Comparing to brick: G
+	Comparing IVec3(0, 0, 1) to IVec3(1, 1, 5)
+	Comparing IVec3(0, 0, 1) to IVec3(1, 1, 6)
+	Comparing IVec3(1, 0, 1) to IVec3(1, 1, 5)
+	Comparing IVec3(1, 0, 1) to IVec3(1, 1, 6)
+	Comparing IVec3(2, 0, 1) to IVec3(1, 1, 5)
+	Comparing IVec3(2, 0, 1) to IVec3(1, 1, 6)
+Looking at brick C
+Comparing to brick: A
+	Comparing IVec3(0, 2, 1) to IVec3(1, 0, 1)
+	Comparing IVec3(0, 2, 1) to IVec3(1, 1, 1)
+	Comparing IVec3(0, 2, 1) to IVec3(1, 2, 1)
+	Comparing IVec3(1, 2, 1) to IVec3(1, 0, 1)
+	Comparing IVec3(1, 2, 1) to IVec3(1, 1, 1)
+	Comparing IVec3(1, 2, 1) to IVec3(1, 2, 1)
+Brick is crashing with A
+	Comparing IVec3(2, 2, 1) to IVec3(1, 0, 1)
+	Comparing IVec3(2, 2, 1) to IVec3(1, 1, 1)
+	Comparing IVec3(2, 2, 1) to IVec3(1, 2, 1)
+Comparing to brick: B
+	Comparing IVec3(0, 2, 1) to IVec3(0, 0, 2)
+	Comparing IVec3(0, 2, 1) to IVec3(1, 0, 2)
+	Comparing IVec3(0, 2, 1) to IVec3(2, 0, 2)
+	Comparing IVec3(1, 2, 1) to IVec3(0, 0, 2)
+	Comparing IVec3(1, 2, 1) to IVec3(1, 0, 2)
+	Comparing IVec3(1, 2, 1) to IVec3(2, 0, 2)
+	Comparing IVec3(2, 2, 1) to IVec3(0, 0, 2)
+	Comparing IVec3(2, 2, 1) to IVec3(1, 0, 2)
+	Comparing IVec3(2, 2, 1) to IVec3(2, 0, 2)
+Comparing to brick: D
+	Comparing IVec3(0, 2, 1) to IVec3(0, 0, 3)
+	Comparing IVec3(0, 2, 1) to IVec3(0, 1, 3)
+	Comparing IVec3(0, 2, 1) to IVec3(0, 2, 3)
+	Comparing IVec3(1, 2, 1) to IVec3(0, 0, 3)
+	Comparing IVec3(1, 2, 1) to IVec3(0, 1, 3)
+	Comparing IVec3(1, 2, 1) to IVec3(0, 2, 3)
+	Comparing IVec3(2, 2, 1) to IVec3(0, 0, 3)
+	Comparing IVec3(2, 2, 1) to IVec3(0, 1, 3)
+	Comparing IVec3(2, 2, 1) to IVec3(0, 2, 3)
+Comparing to brick: E
+	Comparing IVec3(0, 2, 1) to IVec3(2, 0, 3)
+	Comparing IVec3(0, 2, 1) to IVec3(2, 1, 3)
+	Comparing IVec3(0, 2, 1) to IVec3(2, 2, 3)
+	Comparing IVec3(1, 2, 1) to IVec3(2, 0, 3)
+	Comparing IVec3(1, 2, 1) to IVec3(2, 1, 3)
+	Comparing IVec3(1, 2, 1) to IVec3(2, 2, 3)
+	Comparing IVec3(2, 2, 1) to IVec3(2, 0, 3)
+	Comparing IVec3(2, 2, 1) to IVec3(2, 1, 3)
+	Comparing IVec3(2, 2, 1) to IVec3(2, 2, 3)
+Comparing to brick: F
+	Comparing IVec3(0, 2, 1) to IVec3(0, 1, 4)
+	Comparing IVec3(0, 2, 1) to IVec3(1, 1, 4)
+	Comparing IVec3(0, 2, 1) to IVec3(2, 1, 4)
+	Comparing IVec3(1, 2, 1) to IVec3(0, 1, 4)
+	Comparing IVec3(1, 2, 1) to IVec3(1, 1, 4)
+	Comparing IVec3(1, 2, 1) to IVec3(2, 1, 4)
+	Comparing IVec3(2, 2, 1) to IVec3(0, 1, 4)
+	Comparing IVec3(2, 2, 1) to IVec3(1, 1, 4)
+	Comparing IVec3(2, 2, 1) to IVec3(2, 1, 4)
+Comparing to brick: G
+	Comparing IVec3(0, 2, 1) to IVec3(1, 1, 5)
+	Comparing IVec3(0, 2, 1) to IVec3(1, 1, 6)
+	Comparing IVec3(1, 2, 1) to IVec3(1, 1, 5)
+	Comparing IVec3(1, 2, 1) to IVec3(1, 1, 6)
+	Comparing IVec3(2, 2, 1) to IVec3(1, 1, 5)
+	Comparing IVec3(2, 2, 1) to IVec3(1, 1, 6)
+Looking at brick D
+Comparing to brick: A
+	Comparing IVec3(0, 0, 2) to IVec3(1, 0, 1)
+	Comparing IVec3(0, 0, 2) to IVec3(1, 1, 1)
+	Comparing IVec3(0, 0, 2) to IVec3(1, 2, 1)
+	Comparing IVec3(0, 1, 2) to IVec3(1, 0, 1)
+	Comparing IVec3(0, 1, 2) to IVec3(1, 1, 1)
+	Comparing IVec3(0, 1, 2) to IVec3(1, 2, 1)
+	Comparing IVec3(0, 2, 2) to IVec3(1, 0, 1)
+	Comparing IVec3(0, 2, 2) to IVec3(1, 1, 1)
+	Comparing IVec3(0, 2, 2) to IVec3(1, 2, 1)
+Comparing to brick: B
+	Comparing IVec3(0, 0, 2) to IVec3(0, 0, 2)
+Brick is crashing with B
+	Comparing IVec3(0, 1, 2) to IVec3(0, 0, 2)
+	Comparing IVec3(0, 1, 2) to IVec3(1, 0, 2)
+	Comparing IVec3(0, 1, 2) to IVec3(2, 0, 2)
+	Comparing IVec3(0, 2, 2) to IVec3(0, 0, 2)
+	Comparing IVec3(0, 2, 2) to IVec3(1, 0, 2)
+	Comparing IVec3(0, 2, 2) to IVec3(2, 0, 2)
+Comparing to brick: C
+	Comparing IVec3(0, 0, 2) to IVec3(0, 2, 2)
+	Comparing IVec3(0, 0, 2) to IVec3(1, 2, 2)
+	Comparing IVec3(0, 0, 2) to IVec3(2, 2, 2)
+	Comparing IVec3(0, 1, 2) to IVec3(0, 2, 2)
+	Comparing IVec3(0, 1, 2) to IVec3(1, 2, 2)
+	Comparing IVec3(0, 1, 2) to IVec3(2, 2, 2)
+	Comparing IVec3(0, 2, 2) to IVec3(0, 2, 2)
+Brick is crashing with C
+Comparing to brick: E
+	Comparing IVec3(0, 0, 2) to IVec3(2, 0, 3)
+	Comparing IVec3(0, 0, 2) to IVec3(2, 1, 3)
+	Comparing IVec3(0, 0, 2) to IVec3(2, 2, 3)
+	Comparing IVec3(0, 1, 2) to IVec3(2, 0, 3)
+	Comparing IVec3(0, 1, 2) to IVec3(2, 1, 3)
+	Comparing IVec3(0, 1, 2) to IVec3(2, 2, 3)
+	Comparing IVec3(0, 2, 2) to IVec3(2, 0, 3)
+	Comparing IVec3(0, 2, 2) to IVec3(2, 1, 3)
+	Comparing IVec3(0, 2, 2) to IVec3(2, 2, 3)
+Comparing to brick: F
+	Comparing IVec3(0, 0, 2) to IVec3(0, 1, 4)
+	Comparing IVec3(0, 0, 2) to IVec3(1, 1, 4)
+	Comparing IVec3(0, 0, 2) to IVec3(2, 1, 4)
+	Comparing IVec3(0, 1, 2) to IVec3(0, 1, 4)
+	Comparing IVec3(0, 1, 2) to IVec3(1, 1, 4)
+	Comparing IVec3(0, 1, 2) to IVec3(2, 1, 4)
+	Comparing IVec3(0, 2, 2) to IVec3(0, 1, 4)
+	Comparing IVec3(0, 2, 2) to IVec3(1, 1, 4)
+	Comparing IVec3(0, 2, 2) to IVec3(2, 1, 4)
+Comparing to brick: G
+	Comparing IVec3(0, 0, 2) to IVec3(1, 1, 5)
+	Comparing IVec3(0, 0, 2) to IVec3(1, 1, 6)
+	Comparing IVec3(0, 1, 2) to IVec3(1, 1, 5)
+	Comparing IVec3(0, 1, 2) to IVec3(1, 1, 6)
+	Comparing IVec3(0, 2, 2) to IVec3(1, 1, 5)
+	Comparing IVec3(0, 2, 2) to IVec3(1, 1, 6)
+Looking at brick E
+Comparing to brick: A
+	Comparing IVec3(2, 0, 2) to IVec3(1, 0, 1)
+	Comparing IVec3(2, 0, 2) to IVec3(1, 1, 1)
+	Comparing IVec3(2, 0, 2) to IVec3(1, 2, 1)
+	Comparing IVec3(2, 1, 2) to IVec3(1, 0, 1)
+	Comparing IVec3(2, 1, 2) to IVec3(1, 1, 1)
+	Comparing IVec3(2, 1, 2) to IVec3(1, 2, 1)
+	Comparing IVec3(2, 2, 2) to IVec3(1, 0, 1)
+	Comparing IVec3(2, 2, 2) to IVec3(1, 1, 1)
+	Comparing IVec3(2, 2, 2) to IVec3(1, 2, 1)
+Comparing to brick: B
+	Comparing IVec3(2, 0, 2) to IVec3(0, 0, 2)
+	Comparing IVec3(2, 0, 2) to IVec3(1, 0, 2)
+	Comparing IVec3(2, 0, 2) to IVec3(2, 0, 2)
+Brick is crashing with B
+	Comparing IVec3(2, 1, 2) to IVec3(0, 0, 2)
+	Comparing IVec3(2, 1, 2) to IVec3(1, 0, 2)
+	Comparing IVec3(2, 1, 2) to IVec3(2, 0, 2)
+	Comparing IVec3(2, 2, 2) to IVec3(0, 0, 2)
+	Comparing IVec3(2, 2, 2) to IVec3(1, 0, 2)
+	Comparing IVec3(2, 2, 2) to IVec3(2, 0, 2)
+Comparing to brick: C
+	Comparing IVec3(2, 0, 2) to IVec3(0, 2, 2)
+	Comparing IVec3(2, 0, 2) to IVec3(1, 2, 2)
+	Comparing IVec3(2, 0, 2) to IVec3(2, 2, 2)
+	Comparing IVec3(2, 1, 2) to IVec3(0, 2, 2)
+	Comparing IVec3(2, 1, 2) to IVec3(1, 2, 2)
+	Comparing IVec3(2, 1, 2) to IVec3(2, 2, 2)
+	Comparing IVec3(2, 2, 2) to IVec3(0, 2, 2)
+	Comparing IVec3(2, 2, 2) to IVec3(1, 2, 2)
+	Comparing IVec3(2, 2, 2) to IVec3(2, 2, 2)
+Brick is crashing with C
+Comparing to brick: D
+	Comparing IVec3(2, 0, 2) to IVec3(0, 0, 3)
+	Comparing IVec3(2, 0, 2) to IVec3(0, 1, 3)
+	Comparing IVec3(2, 0, 2) to IVec3(0, 2, 3)
+	Comparing IVec3(2, 1, 2) to IVec3(0, 0, 3)
+	Comparing IVec3(2, 1, 2) to IVec3(0, 1, 3)
+	Comparing IVec3(2, 1, 2) to IVec3(0, 2, 3)
+	Comparing IVec3(2, 2, 2) to IVec3(0, 0, 3)
+	Comparing IVec3(2, 2, 2) to IVec3(0, 1, 3)
+	Comparing IVec3(2, 2, 2) to IVec3(0, 2, 3)
+Comparing to brick: F
+	Comparing IVec3(2, 0, 2) to IVec3(0, 1, 4)
+	Comparing IVec3(2, 0, 2) to IVec3(1, 1, 4)
+	Comparing IVec3(2, 0, 2) to IVec3(2, 1, 4)
+	Comparing IVec3(2, 1, 2) to IVec3(0, 1, 4)
+	Comparing IVec3(2, 1, 2) to IVec3(1, 1, 4)
+	Comparing IVec3(2, 1, 2) to IVec3(2, 1, 4)
+	Comparing IVec3(2, 2, 2) to IVec3(0, 1, 4)
+	Comparing IVec3(2, 2, 2) to IVec3(1, 1, 4)
+	Comparing IVec3(2, 2, 2) to IVec3(2, 1, 4)
+Comparing to brick: G
+	Comparing IVec3(2, 0, 2) to IVec3(1, 1, 5)
+	Comparing IVec3(2, 0, 2) to IVec3(1, 1, 6)
+	Comparing IVec3(2, 1, 2) to IVec3(1, 1, 5)
+	Comparing IVec3(2, 1, 2) to IVec3(1, 1, 6)
+	Comparing IVec3(2, 2, 2) to IVec3(1, 1, 5)
+	Comparing IVec3(2, 2, 2) to IVec3(1, 1, 6)
+Looking at brick F
+Comparing to brick: A
+	Comparing IVec3(0, 1, 3) to IVec3(1, 0, 1)
+	Comparing IVec3(0, 1, 3) to IVec3(1, 1, 1)
+	Comparing IVec3(0, 1, 3) to IVec3(1, 2, 1)
+	Comparing IVec3(1, 1, 3) to IVec3(1, 0, 1)
+	Comparing IVec3(1, 1, 3) to IVec3(1, 1, 1)
+	Comparing IVec3(1, 1, 3) to IVec3(1, 2, 1)
+	Comparing IVec3(2, 1, 3) to IVec3(1, 0, 1)
+	Comparing IVec3(2, 1, 3) to IVec3(1, 1, 1)
+	Comparing IVec3(2, 1, 3) to IVec3(1, 2, 1)
+Comparing to brick: B
+	Comparing IVec3(0, 1, 3) to IVec3(0, 0, 2)
+	Comparing IVec3(0, 1, 3) to IVec3(1, 0, 2)
+	Comparing IVec3(0, 1, 3) to IVec3(2, 0, 2)
+	Comparing IVec3(1, 1, 3) to IVec3(0, 0, 2)
+	Comparing IVec3(1, 1, 3) to IVec3(1, 0, 2)
+	Comparing IVec3(1, 1, 3) to IVec3(2, 0, 2)
+	Comparing IVec3(2, 1, 3) to IVec3(0, 0, 2)
+	Comparing IVec3(2, 1, 3) to IVec3(1, 0, 2)
+	Comparing IVec3(2, 1, 3) to IVec3(2, 0, 2)
+Comparing to brick: C
+	Comparing IVec3(0, 1, 3) to IVec3(0, 2, 2)
+	Comparing IVec3(0, 1, 3) to IVec3(1, 2, 2)
+	Comparing IVec3(0, 1, 3) to IVec3(2, 2, 2)
+	Comparing IVec3(1, 1, 3) to IVec3(0, 2, 2)
+	Comparing IVec3(1, 1, 3) to IVec3(1, 2, 2)
+	Comparing IVec3(1, 1, 3) to IVec3(2, 2, 2)
+	Comparing IVec3(2, 1, 3) to IVec3(0, 2, 2)
+	Comparing IVec3(2, 1, 3) to IVec3(1, 2, 2)
+	Comparing IVec3(2, 1, 3) to IVec3(2, 2, 2)
+Comparing to brick: D
+	Comparing IVec3(0, 1, 3) to IVec3(0, 0, 3)
+	Comparing IVec3(0, 1, 3) to IVec3(0, 1, 3)
+Brick is crashing with D
+	Comparing IVec3(1, 1, 3) to IVec3(0, 0, 3)
+	Comparing IVec3(1, 1, 3) to IVec3(0, 1, 3)
+	Comparing IVec3(1, 1, 3) to IVec3(0, 2, 3)
+	Comparing IVec3(2, 1, 3) to IVec3(0, 0, 3)
+	Comparing IVec3(2, 1, 3) to IVec3(0, 1, 3)
+	Comparing IVec3(2, 1, 3) to IVec3(0, 2, 3)
+Comparing to brick: E
+	Comparing IVec3(0, 1, 3) to IVec3(2, 0, 3)
+	Comparing IVec3(0, 1, 3) to IVec3(2, 1, 3)
+	Comparing IVec3(0, 1, 3) to IVec3(2, 2, 3)
+	Comparing IVec3(1, 1, 3) to IVec3(2, 0, 3)
+	Comparing IVec3(1, 1, 3) to IVec3(2, 1, 3)
+	Comparing IVec3(1, 1, 3) to IVec3(2, 2, 3)
+	Comparing IVec3(2, 1, 3) to IVec3(2, 0, 3)
+	Comparing IVec3(2, 1, 3) to IVec3(2, 1, 3)
+Brick is crashing with E
+Comparing to brick: G
+	Comparing IVec3(0, 1, 3) to IVec3(1, 1, 5)
+	Comparing IVec3(0, 1, 3) to IVec3(1, 1, 6)
+	Comparing IVec3(1, 1, 3) to IVec3(1, 1, 5)
+	Comparing IVec3(1, 1, 3) to IVec3(1, 1, 6)
+	Comparing IVec3(2, 1, 3) to IVec3(1, 1, 5)
+	Comparing IVec3(2, 1, 3) to IVec3(1, 1, 6)
+Looking at brick G
+Comparing to brick: A
+	Comparing IVec3(1, 1, 4) to IVec3(1, 0, 1)
+	Comparing IVec3(1, 1, 4) to IVec3(1, 1, 1)
+	Comparing IVec3(1, 1, 4) to IVec3(1, 2, 1)
+	Comparing IVec3(1, 1, 5) to IVec3(1, 0, 1)
+	Comparing IVec3(1, 1, 5) to IVec3(1, 1, 1)
+	Comparing IVec3(1, 1, 5) to IVec3(1, 2, 1)
+Comparing to brick: B
+	Comparing IVec3(1, 1, 4) to IVec3(0, 0, 2)
+	Comparing IVec3(1, 1, 4) to IVec3(1, 0, 2)
+	Comparing IVec3(1, 1, 4) to IVec3(2, 0, 2)
+	Comparing IVec3(1, 1, 5) to IVec3(0, 0, 2)
+	Comparing IVec3(1, 1, 5) to IVec3(1, 0, 2)
+	Comparing IVec3(1, 1, 5) to IVec3(2, 0, 2)
+Comparing to brick: C
+	Comparing IVec3(1, 1, 4) to IVec3(0, 2, 2)
+	Comparing IVec3(1, 1, 4) to IVec3(1, 2, 2)
+	Comparing IVec3(1, 1, 4) to IVec3(2, 2, 2)
+	Comparing IVec3(1, 1, 5) to IVec3(0, 2, 2)
+	Comparing IVec3(1, 1, 5) to IVec3(1, 2, 2)
+	Comparing IVec3(1, 1, 5) to IVec3(2, 2, 2)
+Comparing to brick: D
+	Comparing IVec3(1, 1, 4) to IVec3(0, 0, 3)
+	Comparing IVec3(1, 1, 4) to IVec3(0, 1, 3)
+	Comparing IVec3(1, 1, 4) to IVec3(0, 2, 3)
+	Comparing IVec3(1, 1, 5) to IVec3(0, 0, 3)
+	Comparing IVec3(1, 1, 5) to IVec3(0, 1, 3)
+	Comparing IVec3(1, 1, 5) to IVec3(0, 2, 3)
+Comparing to brick: E
+	Comparing IVec3(1, 1, 4) to IVec3(2, 0, 3)
+	Comparing IVec3(1, 1, 4) to IVec3(2, 1, 3)
+	Comparing IVec3(1, 1, 4) to IVec3(2, 2, 3)
+	Comparing IVec3(1, 1, 5) to IVec3(2, 0, 3)
+	Comparing IVec3(1, 1, 5) to IVec3(2, 1, 3)
+	Comparing IVec3(1, 1, 5) to IVec3(2, 2, 3)
+Comparing to brick: F
+	Comparing IVec3(1, 1, 4) to IVec3(0, 1, 4)
+	Comparing IVec3(1, 1, 4) to IVec3(1, 1, 4)
+Brick is crashing with F
+	Comparing IVec3(1, 1, 5) to IVec3(0, 1, 4)
+	Comparing IVec3(1, 1, 5) to IVec3(1, 1, 4)
+	Comparing IVec3(1, 1, 5) to IVec3(2, 1, 4)
+A is supporting B
+A is supporting C
+B is supporting D
+C is supporting D
+B is supporting E
+C is supporting E
+D is supporting F
+E is supporting F
+F is supporting G
+...
+...
+...
+.G.
+.G.
+FFF
+D.E
+BBB
+.A.
+---
+...
+...
+...
+.G.
+.G.
+.F.
+DDD
+B.C
+AAA
+---
 test tests::test_1 ... FAILED
 
 failures:
 
----- tests::smol_test2 stdout ----
-Popped: (0, (IVec2(0, 0), Right, 0)). from queue, rest: []
-Popped: (1, (IVec2(0, 1), Right, 1)). from queue, rest: [Priority { value: 9, data: (IVec2(1, 0), Down, 1) }]
-Popped: (2, (IVec2(0, 2), Right, 2)). from queue, rest: [Priority { value: 9, data: (IVec2(1, 0), Down, 1) }, Priority { value: 10, data: (IVec2(1, 1), Down, 1) }]
-Popped: (3, (IVec2(0, 3), Right, 3)). from queue, rest: [Priority { value: 9, data: (IVec2(1, 0), Down, 1) }, Priority { value: 10, data: (IVec2(1, 1), Down, 1) }, Priority { value: 11, data: (IVec2(1, 2), Down, 1) }]
-Popped: (9, (IVec2(1, 0), Down, 1)). from queue, rest: [Priority { value: 10, data: (IVec2(1, 1), Down, 1) }, Priority { value: 12, data: (IVec2(1, 3), Down, 1) }, Priority { value: 11, data: (IVec2(1, 2), Down, 1) }]
-Popped: (10, (IVec2(1, 1), Down, 1)). from queue, rest: [Priority { value: 11, data: (IVec2(1, 2), Down, 1) }, Priority { value: 12, data: (IVec2(1, 3), Down, 1) }, Priority { value: 18, data: (IVec2(2, 0), Down, 2) }]
-Popped: (11, (IVec2(1, 2), Down, 1)). from queue, rest: [Priority { value: 12, data: (IVec2(1, 3), Down, 1) }, Priority { value: 19, data: (IVec2(2, 1), Down, 2) }, Priority { value: 18, data: (IVec2(2, 0), Down, 2) }]
-Popped: (12, (IVec2(1, 3), Down, 1)). from queue, rest: [Priority { value: 13, data: (IVec2(2, 2), Down, 2) }, Priority { value: 19, data: (IVec2(2, 1), Down, 2) }, Priority { value: 18, data: (IVec2(2, 0), Down, 2) }]
-Popped: (13, (IVec2(2, 2), Down, 2)). from queue, rest: [Priority { value: 13, data: (IVec2(1, 4), Right, 1) }, Priority { value: 14, data: (IVec2(2, 3), Down, 2) }, Priority { value: 18, data: (IVec2(2, 0), Down, 2) }, Priority { value: 19, data: (IVec2(2, 1), Down, 2) }]
-Popped: (13, (IVec2(1, 4), Right, 1)). from queue, rest: [Priority { value: 14, data: (IVec2(2, 3), Down, 2) }, Priority { value: 15, data: (IVec2(3, 2), Down, 3) }, Priority { value: 18, data: (IVec2(2, 0), Down, 2) }, Priority { value: 19, data: (IVec2(2, 1), Down, 2) }]
-Popped: (14, (IVec2(2, 3), Down, 2)). from queue, rest: [Priority { value: 14, data: (IVec2(0, 4), Up, 1) }, Priority { value: 14, data: (IVec2(2, 4), Down, 1) }, Priority { value: 18, data: (IVec2(2, 0), Down, 2) }, Priority { value: 19, data: (IVec2(2, 1), Down, 2) }, Priority { value: 15, data: (IVec2(3, 2), Down, 3) }]
-Popped: (14, (IVec2(0, 4), Up, 1)). from queue, rest: [Priority { value: 14, data: (IVec2(2, 4), Down, 1) }, Priority { value: 15, data: (IVec2(3, 2), Down, 3) }, Priority { value: 18, data: (IVec2(2, 0), Down, 2) }, Priority { value: 19, data: (IVec2(2, 1), Down, 2) }, Priority { value: 23, data: (IVec2(3, 3), Down, 3) }]
-Popped: (14, (IVec2(2, 4), Down, 1)). from queue, rest: [Priority { value: 15, data: (IVec2(3, 2), Down, 3) }, Priority { value: 19, data: (IVec2(2, 1), Down, 2) }, Priority { value: 18, data: (IVec2(2, 0), Down, 2) }, Priority { value: 23, data: (IVec2(3, 3), Down, 3) }]
-Popped: (15, (IVec2(3, 2), Down, 3)). from queue, rest: [Priority { value: 15, data: (IVec2(3, 4), Down, 2) }, Priority { value: 19, data: (IVec2(2, 1), Down, 2) }, Priority { value: 18, data: (IVec2(2, 0), Down, 2) }, Priority { value: 23, data: (IVec2(3, 3), Down, 3) }]
-Popped: (15, (IVec2(3, 4), Down, 2)). from queue, rest: [Priority { value: 17, data: (IVec2(3, 1), Left, 1) }, Priority { value: 19, data: (IVec2(2, 1), Down, 2) }, Priority { value: 18, data: (IVec2(2, 0), Down, 2) }, Priority { value: 23, data: (IVec2(3, 3), Down, 3) }]
-Popped: (16, (IVec2(4, 4), Down, 3)). from queue, rest: [Priority { value: 17, data: (IVec2(3, 1), Left, 1) }, Priority { value: 19, data: (IVec2(2, 1), Down, 2) }, Priority { value: 18, data: (IVec2(2, 0), Down, 2) }, Priority { value: 23, data: (IVec2(3, 3), Down, 3) }]
-Popped: (17, (IVec2(3, 1), Left, 1)). from queue, rest: [Priority { value: 18, data: (IVec2(2, 0), Down, 2) }, Priority { value: 19, data: (IVec2(2, 1), Down, 2) }, Priority { value: 25, data: (IVec2(4, 3), Left, 1) }, Priority { value: 23, data: (IVec2(3, 3), Down, 3) }]
-Popped: (18, (IVec2(2, 0), Down, 2)). from queue, rest: [Priority { value: 19, data: (IVec2(4, 1), Down, 1) }, Priority { value: 19, data: (IVec2(2, 1), Down, 2) }, Priority { value: 25, data: (IVec2(4, 3), Left, 1) }, Priority { value: 23, data: (IVec2(3, 3), Down, 3) }, Priority { value: 26, data: (IVec2(3, 0), Left, 2) }]
-Popped: (19, (IVec2(4, 1), Down, 1)). from queue, rest: [Priority { value: 19, data: (IVec2(2, 1), Down, 2) }, Priority { value: 23, data: (IVec2(3, 3), Down, 3) }, Priority { value: 25, data: (IVec2(4, 3), Left, 1) }, Priority { value: 26, data: (IVec2(3, 0), Left, 2) }]
-Popped: (19, (IVec2(2, 1), Down, 2)). from queue, rest: [Priority { value: 21, data: (IVec2(5, 1), Down, 2) }, Priority { value: 23, data: (IVec2(3, 3), Down, 3) }, Priority { value: 25, data: (IVec2(4, 3), Left, 1) }, Priority { value: 26, data: (IVec2(3, 0), Left, 2) }, Priority { value: 28, data: (IVec2(4, 2), Right, 1) }, Priority { value: 28, data: (IVec2(4, 0), Left, 1) }]
-Popped: (21, (IVec2(5, 1), Down, 2)). from queue, rest: [Priority { value: 23, data: (IVec2(3, 3), Down, 3) }, Priority { value: 26, data: (IVec2(3, 0), Left, 2) }, Priority { value: 25, data: (IVec2(4, 3), Left, 1) }, Priority { value: 28, data: (IVec2(4, 0), Left, 1) }, Priority { value: 28, data: (IVec2(4, 2), Right, 1) }]
-Popped: (23, (IVec2(3, 3), Down, 3)). from queue, rest: [Priority { value: 23, data: (IVec2(6, 1), Down, 3) }, Priority { value: 26, data: (IVec2(3, 0), Left, 2) }, Priority { value: 25, data: (IVec2(4, 3), Left, 1) }, Priority { value: 28, data: (IVec2(4, 0), Left, 1) }, Priority { value: 28, data: (IVec2(4, 2), Right, 1) }, Priority { value: 30, data: (IVec2(5, 2), Right, 1) }, Priority { value: 30, data: (IVec2(5, 0), Left, 1) }]
-Popped: (23, (IVec2(6, 1), Down, 3)). from queue, rest: [Priority { value: 25, data: (IVec2(4, 3), Left, 1) }, Priority { value: 26, data: (IVec2(3, 0), Left, 2) }, Priority { value: 30, data: (IVec2(5, 2), Right, 1) }, Priority { value: 28, data: (IVec2(4, 0), Left, 1) }, Priority { value: 28, data: (IVec2(4, 2), Right, 1) }, Priority { value: 30, data: (IVec2(5, 0), Left, 1) }]
-Popped: (25, (IVec2(4, 3), Left, 1)). from queue, rest: [Priority { value: 25, data: (IVec2(6, 2), Right, 1) }, Priority { value: 26, data: (IVec2(3, 0), Left, 2) }, Priority { value: 30, data: (IVec2(5, 2), Right, 1) }, Priority { value: 28, data: (IVec2(4, 0), Left, 1) }, Priority { value: 28, data: (IVec2(4, 2), Right, 1) }, Priority { value: 30, data: (IVec2(5, 0), Left, 1) }, Priority { value: 32, data: (IVec2(6, 0), Left, 1) }]
-Popped: (25, (IVec2(6, 2), Right, 1)). from queue, rest: [Priority { value: 26, data: (IVec2(3, 0), Left, 2) }, Priority { value: 28, data: (IVec2(4, 2), Right, 1) }, Priority { value: 30, data: (IVec2(5, 2), Right, 1) }, Priority { value: 28, data: (IVec2(4, 0), Left, 1) }, Priority { value: 34, data: (IVec2(5, 3), Down, 1) }, Priority { value: 30, data: (IVec2(5, 0), Left, 1) }, Priority { value: 32, data: (IVec2(6, 0), Left, 1) }]
-Popped: (26, (IVec2(3, 0), Left, 2)). from queue, rest: [Priority { value: 27, data: (IVec2(6, 3), Right, 2) }, Priority { value: 28, data: (IVec2(4, 2), Right, 1) }, Priority { value: 30, data: (IVec2(5, 2), Right, 1) }, Priority { value: 28, data: (IVec2(4, 0), Left, 1) }, Priority { value: 34, data: (IVec2(5, 3), Down, 1) }, Priority { value: 30, data: (IVec2(5, 0), Left, 1) }, Priority { value: 32, data: (IVec2(6, 0), Left, 1) }]
-Popped: (27, (IVec2(6, 3), Right, 2)). from queue, rest: [Priority { value: 28, data: (IVec2(4, 2), Right, 1) }, Priority { value: 28, data: (IVec2(4, 0), Left, 1) }, Priority { value: 30, data: (IVec2(5, 2), Right, 1) }, Priority { value: 32, data: (IVec2(6, 0), Left, 1) }, Priority { value: 34, data: (IVec2(5, 3), Down, 1) }, Priority { value: 30, data: (IVec2(5, 0), Left, 1) }]
-Popped: (28, (IVec2(4, 2), Right, 1)). from queue, rest: [Priority { value: 28, data: (IVec2(6, 4), Right, 3) }, Priority { value: 28, data: (IVec2(4, 0), Left, 1) }, Priority { value: 30, data: (IVec2(5, 0), Left, 1) }, Priority { value: 32, data: (IVec2(6, 0), Left, 1) }, Priority { value: 34, data: (IVec2(5, 3), Down, 1) }, Priority { value: 30, data: (IVec2(5, 2), Right, 1) }]
-Popped: (28, (IVec2(6, 4), Right, 3)). from queue, rest: [Priority { value: 28, data: (IVec2(4, 0), Left, 1) }, Priority { value: 30, data: (IVec2(5, 2), Right, 1) }, Priority { value: 30, data: (IVec2(5, 0), Left, 1) }, Priority { value: 32, data: (IVec2(6, 0), Left, 1) }, Priority { value: 34, data: (IVec2(5, 3), Down, 1) }]
-[src/bin/day17-1-1-1.rs:108] &path = [
-    18446744073709551615,
-    0,
-    1,
-    2,
-    9,
-    0,
-    1,
-    2,
-    3,
-    8,
-    5,
-    6,
-    7,
-    8,
-    9,
-    16,
-    17,
-    12,
-    13,
-    14,
-    21,
-    16,
-    21,
-    24,
-    19,
-    26,
-    21,
-    26,
-    23,
-    18446744073709551615,
-    31,
-    26,
-    31,
-    32,
-    33,
-]
-###11
-99#91
-99#21
-9##91
-9#991
-9#991
-9###1
-thread 'tests::smol_test2' panicked at src/bin/day17-1-1-1.rs:278:9:
-assertion `left == right` failed
-  left: "28"
- right: "13"
-note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
-
----- tests::test_1 stdout ----
-Popped: (0, (IVec2(0, 0), Right, 0)). from queue, rest: []
-Popped: (3, (IVec2(1, 0), Down, 1)). from queue, rest: [Priority { value: 4, data: (IVec2(0, 1), Right, 1) }]
-Popped: (4, (IVec2(0, 1), Right, 1)). from queue, rest: [Priority { value: 5, data: (IVec2(1, 1), Right, 1) }, Priority { value: 6, data: (IVec2(2, 0), Down, 2) }]
-Popped: (5, (IVec2(1, 1), Right, 1)). from queue, rest: [Priority { value: 5, data: (IVec2(0, 2), Right, 2) }, Priority { value: 6, data: (IVec2(2, 0), Down, 2) }]
-Popped: (5, (IVec2(0, 2), Right, 2)). from queue, rest: [Priority { value: 6, data: (IVec2(1, 2), Right, 2) }, Priority { value: 6, data: (IVec2(2, 0), Down, 2) }, Priority { value: 7, data: (IVec2(2, 1), Down, 1) }]
-Popped: (6, (IVec2(1, 2), Right, 2)). from queue, rest: [Priority { value: 6, data: (IVec2(2, 0), Down, 2) }, Priority { value: 8, data: (IVec2(0, 3), Right, 3) }, Priority { value: 7, data: (IVec2(2, 1), Down, 1) }]
-Popped: (6, (IVec2(2, 0), Down, 2)). from queue, rest: [Priority { value: 7, data: (IVec2(2, 1), Down, 1) }, Priority { value: 8, data: (IVec2(0, 3), Right, 3) }, Priority { value: 11, data: (IVec2(2, 2), Down, 1) }, Priority { value: 11, data: (IVec2(1, 3), Right, 3) }]
-Popped: (7, (IVec2(2, 1), Down, 1)). from queue, rest: [Priority { value: 8, data: (IVec2(0, 3), Right, 3) }, Priority { value: 9, data: (IVec2(3, 0), Down, 3) }, Priority { value: 11, data: (IVec2(2, 2), Down, 1) }, Priority { value: 11, data: (IVec2(1, 3), Right, 3) }]
-Popped: (8, (IVec2(0, 3), Right, 3)). from queue, rest: [Priority { value: 9, data: (IVec2(3, 0), Down, 3) }, Priority { value: 11, data: (IVec2(1, 3), Right, 3) }, Priority { value: 11, data: (IVec2(2, 2), Down, 1) }, Priority { value: 11, data: (IVec2(3, 1), Down, 2) }]
-Popped: (9, (IVec2(3, 0), Down, 3)). from queue, rest: [Priority { value: 11, data: (IVec2(2, 2), Down, 1) }, Priority { value: 11, data: (IVec2(1, 3), Right, 3) }, Priority { value: 11, data: (IVec2(3, 1), Down, 2) }]
-Popped: (11, (IVec2(2, 2), Down, 1)). from queue, rest: [Priority { value: 11, data: (IVec2(1, 3), Right, 3) }, Priority { value: 11, data: (IVec2(3, 1), Down, 2) }]
-Popped: (11, (IVec2(1, 3), Right, 3)). from queue, rest: [Priority { value: 11, data: (IVec2(3, 1), Down, 2) }, Priority { value: 16, data: (IVec2(2, 3), Right, 1) }, Priority { value: 15, data: (IVec2(3, 2), Down, 2) }]
-Popped: (11, (IVec2(3, 1), Down, 2)). from queue, rest: [Priority { value: 15, data: (IVec2(3, 2), Down, 2) }, Priority { value: 16, data: (IVec2(2, 3), Right, 1) }]
-Popped: (15, (IVec2(3, 2), Down, 2)). from queue, rest: [Priority { value: 16, data: (IVec2(2, 3), Right, 1) }, Priority { value: 16, data: (IVec2(4, 1), Down, 3) }]
-Popped: (16, (IVec2(2, 3), Right, 1)). from queue, rest: [Priority { value: 16, data: (IVec2(4, 1), Down, 3) }, Priority { value: 21, data: (IVec2(3, 3), Right, 1) }, Priority { value: 19, data: (IVec2(4, 2), Down, 3) }]
-Popped: (16, (IVec2(4, 1), Down, 3)). from queue, rest: [Priority { value: 18, data: (IVec2(2, 4), Right, 2) }, Priority { value: 21, data: (IVec2(3, 3), Right, 1) }, Priority { value: 19, data: (IVec2(4, 2), Down, 3) }]
-Popped: (18, (IVec2(2, 4), Right, 2)). from queue, rest: [Priority { value: 19, data: (IVec2(4, 2), Down, 3) }, Priority { value: 20, data: (IVec2(4, 0), Left, 1) }, Priority { value: 21, data: (IVec2(3, 3), Right, 1) }]
-Popped: (19, (IVec2(4, 2), Down, 3)). from queue, rest: [Priority { value: 20, data: (IVec2(4, 0), Left, 1) }, Priority { value: 22, data: (IVec2(2, 5), Right, 3) }, Priority { value: 21, data: (IVec2(3, 3), Right, 1) }, Priority { value: 22, data: (IVec2(1, 4), Up, 1) }, Priority { value: 23, data: (IVec2(3, 4), Down, 1) }]
-Popped: (20, (IVec2(4, 0), Left, 1)). from queue, rest: [Priority { value: 21, data: (IVec2(3, 3), Right, 1) }, Priority { value: 22, data: (IVec2(2, 5), Right, 3) }, Priority { value: 25, data: (IVec2(4, 3), Right, 1) }, Priority { value: 22, data: (IVec2(1, 4), Up, 1) }, Priority { value: 23, data: (IVec2(3, 4), Down, 1) }]
-Popped: (21, (IVec2(3, 3), Right, 1)). from queue, rest: [Priority { value: 21, data: (IVec2(5, 0), Down, 1) }, Priority { value: 22, data: (IVec2(2, 5), Right, 3) }, Priority { value: 25, data: (IVec2(4, 3), Right, 1) }, Priority { value: 22, data: (IVec2(1, 4), Up, 1) }, Priority { value: 23, data: (IVec2(3, 4), Down, 1) }]
-Popped: (21, (IVec2(5, 0), Down, 1)). from queue, rest: [Priority { value: 22, data: (IVec2(2, 5), Right, 3) }, Priority { value: 22, data: (IVec2(1, 4), Up, 1) }, Priority { value: 25, data: (IVec2(4, 3), Right, 1) }, Priority { value: 23, data: (IVec2(3, 4), Down, 1) }]
-Popped: (22, (IVec2(2, 5), Right, 3)). from queue, rest: [Priority { value: 22, data: (IVec2(1, 4), Up, 1) }, Priority { value: 23, data: (IVec2(3, 4), Down, 1) }, Priority { value: 25, data: (IVec2(4, 3), Right, 1) }, Priority { value: 25, data: (IVec2(5, 1), Right, 1) }, Priority { value: 25, data: (IVec2(6, 0), Down, 2) }]
-Popped: (22, (IVec2(1, 4), Up, 1)). from queue, rest: [Priority { value: 23, data: (IVec2(3, 4), Down, 1) }, Priority { value: 25, data: (IVec2(6, 0), Down, 2) }, Priority { value: 25, data: (IVec2(4, 3), Right, 1) }, Priority { value: 25, data: (IVec2(5, 1), Right, 1) }, Priority { value: 27, data: (IVec2(1, 5), Up, 1) }, Priority { value: 30, data: (IVec2(3, 5), Down, 1) }]
-Popped: (23, (IVec2(3, 4), Down, 1)). from queue, rest: [Priority { value: 25, data: (IVec2(4, 3), Right, 1) }, Priority { value: 25, data: (IVec2(6, 0), Down, 2) }, Priority { value: 26, data: (IVec2(0, 4), Up, 2) }, Priority { value: 25, data: (IVec2(5, 1), Right, 1) }, Priority { value: 27, data: (IVec2(1, 5), Up, 1) }, Priority { value: 30, data: (IVec2(3, 5), Down, 1) }]
-Popped: (25, (IVec2(4, 3), Right, 1)). from queue, rest: [Priority { value: 25, data: (IVec2(6, 0), Down, 2) }, Priority { value: 25, data: (IVec2(5, 1), Right, 1) }, Priority { value: 26, data: (IVec2(0, 4), Up, 2) }, Priority { value: 29, data: (IVec2(4, 4), Down, 2) }, Priority { value: 27, data: (IVec2(1, 5), Up, 1) }, Priority { value: 30, data: (IVec2(3, 5), Down, 1) }]
-Popped: (25, (IVec2(6, 0), Down, 2)). from queue, rest: [Priority { value: 25, data: (IVec2(5, 1), Right, 1) }, Priority { value: 27, data: (IVec2(1, 5), Up, 1) }, Priority { value: 26, data: (IVec2(0, 4), Up, 2) }, Priority { value: 29, data: (IVec2(4, 4), Down, 2) }, Priority { value: 33, data: (IVec2(5, 3), Down, 1) }, Priority { value: 30, data: (IVec2(3, 5), Down, 1) }]
-Popped: (25, (IVec2(5, 1), Right, 1)). from queue, rest: [Priority { value: 26, data: (IVec2(0, 4), Up, 2) }, Priority { value: 27, data: (IVec2(1, 5), Up, 1) }, Priority { value: 28, data: (IVec2(7, 0), Down, 3) }, Priority { value: 29, data: (IVec2(4, 4), Down, 2) }, Priority { value: 33, data: (IVec2(5, 3), Down, 1) }, Priority { value: 30, data: (IVec2(3, 5), Down, 1) }, Priority { value: 29, data: (IVec2(6, 1), Right, 1) }]
-Popped: (26, (IVec2(0, 4), Up, 2)). from queue, rest: [Priority { value: 27, data: (IVec2(1, 5), Up, 1) }, Priority { value: 28, data: (IVec2(5, 2), Right, 2) }, Priority { value: 28, data: (IVec2(7, 0), Down, 3) }, Priority { value: 29, data: (IVec2(4, 4), Down, 2) }, Priority { value: 33, data: (IVec2(5, 3), Down, 1) }, Priority { value: 30, data: (IVec2(3, 5), Down, 1) }, Priority { value: 29, data: (IVec2(6, 1), Right, 1) }]
-Popped: (27, (IVec2(1, 5), Up, 1)). from queue, rest: [Priority { value: 28, data: (IVec2(7, 0), Down, 3) }, Priority { value: 28, data: (IVec2(5, 2), Right, 2) }, Priority { value: 29, data: (IVec2(6, 1), Right, 1) }, Priority { value: 29, data: (IVec2(4, 4), Down, 2) }, Priority { value: 33, data: (IVec2(5, 3), Down, 1) }, Priority { value: 30, data: (IVec2(3, 5), Down, 1) }, Priority { value: 29, data: (IVec2(0, 5), Right, 1) }]
-Popped: (28, (IVec2(7, 0), Down, 3)). from queue, rest: [Priority { value: 28, data: (IVec2(5, 2), Right, 2) }, Priority { value: 29, data: (IVec2(4, 4), Down, 2) }, Priority { value: 29, data: (IVec2(6, 1), Right, 1) }, Priority { value: 30, data: (IVec2(1, 6), Right, 1) }, Priority { value: 33, data: (IVec2(5, 3), Down, 1) }, Priority { value: 30, data: (IVec2(3, 5), Down, 1) }, Priority { value: 29, data: (IVec2(0, 5), Right, 1) }]
-Popped: (28, (IVec2(5, 2), Right, 2)). from queue, rest: [Priority { value: 29, data: (IVec2(6, 1), Right, 1) }, Priority { value: 29, data: (IVec2(4, 4), Down, 2) }, Priority { value: 29, data: (IVec2(0, 5), Right, 1) }, Priority { value: 30, data: (IVec2(1, 6), Right, 1) }, Priority { value: 33, data: (IVec2(5, 3), Down, 1) }, Priority { value: 30, data: (IVec2(3, 5), Down, 1) }, Priority { value: 34, data: (IVec2(7, 1), Right, 1) }]
-Popped: (29, (IVec2(6, 1), Right, 1)). from queue, rest: [Priority { value: 29, data: (IVec2(0, 5), Right, 1) }, Priority { value: 29, data: (IVec2(4, 4), Down, 2) }, Priority { value: 30, data: (IVec2(3, 5), Down, 1) }, Priority { value: 30, data: (IVec2(1, 6), Right, 1) }, Priority { value: 33, data: (IVec2(5, 3), Down, 1) }, Priority { value: 33, data: (IVec2(6, 2), Down, 1) }, Priority { value: 34, data: (IVec2(7, 1), Right, 1) }]
-Popped: (29, (IVec2(0, 5), Right, 1)). from queue, rest: [Priority { value: 29, data: (IVec2(4, 4), Down, 2) }, Priority { value: 30, data: (IVec2(1, 6), Right, 1) }, Priority { value: 30, data: (IVec2(3, 5), Down, 1) }, Priority { value: 34, data: (IVec2(7, 1), Right, 1) }, Priority { value: 33, data: (IVec2(5, 3), Down, 1) }, Priority { value: 33, data: (IVec2(6, 2), Down, 1) }]
-Popped: (29, (IVec2(4, 4), Down, 2)). from queue, rest: [Priority { value: 30, data: (IVec2(3, 5), Down, 1) }, Priority { value: 30, data: (IVec2(1, 6), Right, 1) }, Priority { value: 31, data: (IVec2(0, 6), Right, 2) }, Priority { value: 34, data: (IVec2(7, 1), Right, 1) }, Priority { value: 33, data: (IVec2(5, 3), Down, 1) }, Priority { value: 33, data: (IVec2(6, 2), Down, 1) }]
-Popped: (30, (IVec2(3, 5), Down, 1)). from queue, rest: [Priority { value: 30, data: (IVec2(1, 6), Right, 1) }, Priority { value: 33, data: (IVec2(5, 3), Down, 1) }, Priority { value: 31, data: (IVec2(0, 6), Right, 2) }, Priority { value: 34, data: (IVec2(7, 1), Right, 1) }, Priority { value: 34, data: (IVec2(4, 5), Right, 1) }, Priority { value: 33, data: (IVec2(6, 2), Down, 1) }, Priority { value: 34, data: (IVec2(5, 4), Down, 3) }]
-Popped: (30, (IVec2(1, 6), Right, 1)). from queue, rest: [Priority { value: 31, data: (IVec2(0, 6), Right, 2) }, Priority { value: 33, data: (IVec2(5, 3), Down, 1) }, Priority { value: 33, data: (IVec2(6, 2), Down, 1) }, Priority { value: 34, data: (IVec2(7, 1), Right, 1) }, Priority { value: 34, data: (IVec2(4, 5), Right, 1) }, Priority { value: 35, data: (IVec2(3, 6), Right, 1) }, Priority { value: 34, data: (IVec2(5, 4), Down, 3) }]
-Popped: (31, (IVec2(0, 6), Right, 2)). from queue, rest: [Priority { value: 33, data: (IVec2(6, 2), Down, 1) }, Priority { value: 33, data: (IVec2(5, 3), Down, 1) }, Priority { value: 34, data: (IVec2(5, 4), Down, 3) }, Priority { value: 34, data: (IVec2(7, 1), Right, 1) }, Priority { value: 34, data: (IVec2(4, 5), Right, 1) }, Priority { value: 35, data: (IVec2(3, 6), Right, 1) }, Priority { value: 35, data: (IVec2(2, 6), Down, 1) }, Priority { value: 35, data: (IVec2(1, 7), Right, 2) }]
-Popped: (33, (IVec2(6, 2), Down, 1)). from queue, rest: [Priority { value: 33, data: (IVec2(5, 3), Down, 1) }, Priority { value: 34, data: (IVec2(4, 5), Right, 1) }, Priority { value: 34, data: (IVec2(5, 4), Down, 3) }, Priority { value: 34, data: (IVec2(7, 1), Right, 1) }, Priority { value: 34, data: (IVec2(0, 7), Right, 3) }, Priority { value: 35, data: (IVec2(3, 6), Right, 1) }, Priority { value: 35, data: (IVec2(2, 6), Down, 1) }, Priority { value: 35, data: (IVec2(1, 7), Right, 2) }]
-Popped: (33, (IVec2(5, 3), Down, 1)). from queue, rest: [Priority { value: 34, data: (IVec2(5, 4), Down, 3) }, Priority { value: 34, data: (IVec2(4, 5), Right, 1) }, Priority { value: 35, data: (IVec2(2, 6), Down, 1) }, Priority { value: 34, data: (IVec2(7, 1), Right, 1) }, Priority { value: 34, data: (IVec2(0, 7), Right, 3) }, Priority { value: 35, data: (IVec2(3, 6), Right, 1) }, Priority { value: 40, data: (IVec2(6, 3), Right, 1) }, Priority { value: 35, data: (IVec2(1, 7), Right, 2) }, Priority { value: 36, data: (IVec2(7, 2), Down, 2) }]
-Popped: (34, (IVec2(5, 4), Down, 3)). from queue, rest: [Priority { value: 34, data: (IVec2(4, 5), Right, 1) }, Priority { value: 34, data: (IVec2(0, 7), Right, 3) }, Priority { value: 35, data: (IVec2(2, 6), Down, 1) }, Priority { value: 34, data: (IVec2(7, 1), Right, 1) }, Priority { value: 36, data: (IVec2(7, 2), Down, 2) }, Priority { value: 35, data: (IVec2(3, 6), Right, 1) }, Priority { value: 40, data: (IVec2(6, 3), Right, 1) }, Priority { value: 35, data: (IVec2(1, 7), Right, 2) }]
-Popped: (34, (IVec2(4, 5), Right, 1)). from queue, rest: [Priority { value: 34, data: (IVec2(0, 7), Right, 3) }, Priority { value: 34, data: (IVec2(7, 1), Right, 1) }, Priority { value: 35, data: (IVec2(2, 6), Down, 1) }, Priority { value: 35, data: (IVec2(1, 7), Right, 2) }, Priority { value: 36, data: (IVec2(7, 2), Down, 2) }, Priority { value: 35, data: (IVec2(3, 6), Right, 1) }, Priority { value: 40, data: (IVec2(6, 3), Right, 1) }, Priority { value: 43, data: (IVec2(5, 5), Right, 1) }]
-Popped: (34, (IVec2(0, 7), Right, 3)). from queue, rest: [Priority { value: 34, data: (IVec2(7, 1), Right, 1) }, Priority { value: 35, data: (IVec2(1, 7), Right, 2) }, Priority { value: 35, data: (IVec2(2, 6), Down, 1) }, Priority { value: 41, data: (IVec2(4, 6), Right, 2) }, Priority { value: 36, data: (IVec2(7, 2), Down, 2) }, Priority { value: 35, data: (IVec2(3, 6), Right, 1) }, Priority { value: 40, data: (IVec2(6, 3), Right, 1) }, Priority { value: 43, data: (IVec2(5, 5), Right, 1) }]
-Popped: (34, (IVec2(7, 1), Right, 1)). from queue, rest: [Priority { value: 35, data: (IVec2(2, 6), Down, 1) }, Priority { value: 35, data: (IVec2(1, 7), Right, 2) }, Priority { value: 35, data: (IVec2(3, 6), Right, 1) }, Priority { value: 41, data: (IVec2(4, 6), Right, 2) }, Priority { value: 36, data: (IVec2(7, 2), Down, 2) }, Priority { value: 43, data: (IVec2(5, 5), Right, 1) }, Priority { value: 40, data: (IVec2(6, 3), Right, 1) }]
-Popped: (35, (IVec2(2, 6), Down, 1)). from queue, rest: [Priority { value: 35, data: (IVec2(3, 6), Right, 1) }, Priority { value: 35, data: (IVec2(1, 7), Right, 2) }, Priority { value: 40, data: (IVec2(6, 3), Right, 1) }, Priority { value: 40, data: (IVec2(8, 1), Down, 1) }, Priority { value: 36, data: (IVec2(7, 2), Down, 2) }, Priority { value: 43, data: (IVec2(5, 5), Right, 1) }, Priority { value: 41, data: (IVec2(4, 6), Right, 2) }]
-Popped: (35, (IVec2(3, 6), Right, 1)). from queue, rest: [Priority { value: 35, data: (IVec2(1, 7), Right, 2) }, Priority { value: 36, data: (IVec2(7, 2), Down, 2) }, Priority { value: 40, data: (IVec2(6, 3), Right, 1) }, Priority { value: 40, data: (IVec2(8, 1), Down, 1) }, Priority { value: 41, data: (IVec2(2, 7), Right, 1) }, Priority { value: 43, data: (IVec2(5, 5), Right, 1) }, Priority { value: 41, data: (IVec2(4, 6), Right, 2) }]
-Popped: (35, (IVec2(1, 7), Right, 2)). from queue, rest: [Priority { value: 36, data: (IVec2(7, 2), Down, 2) }, Priority { value: 40, data: (IVec2(8, 1), Down, 1) }, Priority { value: 40, data: (IVec2(6, 3), Right, 1) }, Priority { value: 43, data: (IVec2(3, 7), Right, 2) }, Priority { value: 41, data: (IVec2(2, 7), Right, 1) }, Priority { value: 43, data: (IVec2(5, 5), Right, 1) }, Priority { value: 41, data: (IVec2(4, 6), Right, 2) }]
-Popped: (36, (IVec2(7, 2), Down, 2)). from queue, rest: [Priority { value: 38, data: (IVec2(1, 8), Right, 3) }, Priority { value: 40, data: (IVec2(8, 1), Down, 1) }, Priority { value: 40, data: (IVec2(6, 3), Right, 1) }, Priority { value: 43, data: (IVec2(3, 7), Right, 2) }, Priority { value: 41, data: (IVec2(2, 7), Right, 1) }, Priority { value: 43, data: (IVec2(5, 5), Right, 1) }, Priority { value: 41, data: (IVec2(4, 6), Right, 2) }]
-Popped: (38, (IVec2(1, 8), Right, 3)). from queue, rest: [Priority { value: 40, data: (IVec2(6, 3), Right, 1) }, Priority { value: 40, data: (IVec2(8, 1), Down, 1) }, Priority { value: 41, data: (IVec2(4, 6), Right, 2) }, Priority { value: 41, data: (IVec2(8, 2), Down, 3) }, Priority { value: 41, data: (IVec2(2, 7), Right, 1) }, Priority { value: 43, data: (IVec2(5, 5), Right, 1) }, Priority { value: 43, data: (IVec2(7, 3), Right, 1) }, Priority { value: 43, data: (IVec2(3, 7), Right, 2) }]
-Popped: (39, (IVec2(0, 8), Up, 1)). from queue, rest: [Priority { value: 40, data: (IVec2(6, 3), Right, 1) }, Priority { value: 40, data: (IVec2(8, 1), Down, 1) }, Priority { value: 41, data: (IVec2(4, 6), Right, 2) }, Priority { value: 41, data: (IVec2(8, 2), Down, 3) }, Priority { value: 41, data: (IVec2(2, 7), Right, 1) }, Priority { value: 43, data: (IVec2(5, 5), Right, 1) }, Priority { value: 43, data: (IVec2(7, 3), Right, 1) }, Priority { value: 43, data: (IVec2(3, 7), Right, 2) }, Priority { value: 43, data: (IVec2(2, 8), Down, 1) }]
-Popped: (40, (IVec2(6, 3), Right, 1)). from queue, rest: [Priority { value: 40, data: (IVec2(8, 1), Down, 1) }, Priority { value: 40, data: (IVec2(0, 9), Right, 1) }, Priority { value: 41, data: (IVec2(4, 6), Right, 2) }, Priority { value: 41, data: (IVec2(8, 2), Down, 3) }, Priority { value: 41, data: (IVec2(2, 7), Right, 1) }, Priority { value: 43, data: (IVec2(5, 5), Right, 1) }, Priority { value: 43, data: (IVec2(7, 3), Right, 1) }, Priority { value: 43, data: (IVec2(3, 7), Right, 2) }, Priority { value: 43, data: (IVec2(2, 8), Down, 1) }]
-Popped: (40, (IVec2(8, 1), Down, 1)). from queue, rest: [Priority { value: 40, data: (IVec2(0, 9), Right, 1) }, Priority { value: 41, data: (IVec2(2, 7), Right, 1) }, Priority { value: 41, data: (IVec2(4, 6), Right, 2) }, Priority { value: 41, data: (IVec2(8, 2), Down, 3) }, Priority { value: 48, data: (IVec2(6, 4), Right, 2) }, Priority { value: 43, data: (IVec2(5, 5), Right, 1) }, Priority { value: 43, data: (IVec2(7, 3), Right, 1) }, Priority { value: 43, data: (IVec2(3, 7), Right, 2) }, Priority { value: 43, data: (IVec2(2, 8), Down, 1) }]
-Popped: (40, (IVec2(0, 9), Right, 1)). from queue, rest: [Priority { value: 41, data: (IVec2(4, 6), Right, 2) }, Priority { value: 41, data: (IVec2(2, 7), Right, 1) }, Priority { value: 43, data: (IVec2(7, 3), Right, 1) }, Priority { value: 41, data: (IVec2(8, 2), Down, 3) }, Priority { value: 44, data: (IVec2(8, 0), Left, 1) }, Priority { value: 43, data: (IVec2(5, 5), Right, 1) }, Priority { value: 45, data: (IVec2(9, 1), Down, 2) }, Priority { value: 43, data: (IVec2(3, 7), Right, 2) }, Priority { value: 43, data: (IVec2(2, 8), Down, 1) }, Priority { value: 48, data: (IVec2(6, 4), Right, 2) }]
-Popped: (41, (IVec2(4, 6), Right, 2)). from queue, rest: [Priority { value: 41, data: (IVec2(2, 7), Right, 1) }, Priority { value: 41, data: (IVec2(8, 2), Down, 3) }, Priority { value: 43, data: (IVec2(7, 3), Right, 1) }, Priority { value: 43, data: (IVec2(2, 8), Down, 1) }, Priority { value: 43, data: (IVec2(0, 10), Right, 2) }, Priority { value: 43, data: (IVec2(5, 5), Right, 1) }, Priority { value: 45, data: (IVec2(9, 1), Down, 2) }, Priority { value: 43, data: (IVec2(3, 7), Right, 2) }, Priority { value: 45, data: (IVec2(1, 9), Down, 1) }, Priority { value: 48, data: (IVec2(6, 4), Right, 2) }, Priority { value: 44, data: (IVec2(8, 0), Left, 1) }]
-Popped: (41, (IVec2(2, 7), Right, 1)). from queue, rest: [Priority { value: 41, data: (IVec2(8, 2), Down, 3) }, Priority { value: 43, data: (IVec2(0, 10), Right, 2) }, Priority { value: 43, data: (IVec2(7, 3), Right, 1) }, Priority { value: 43, data: (IVec2(2, 8), Down, 1) }, Priority { value: 44, data: (IVec2(8, 0), Left, 1) }, Priority { value: 43, data: (IVec2(5, 5), Right, 1) }, Priority { value: 45, data: (IVec2(9, 1), Down, 2) }, Priority { value: 43, data: (IVec2(3, 7), Right, 2) }, Priority { value: 45, data: (IVec2(1, 9), Down, 1) }, Priority { value: 48, data: (IVec2(6, 4), Right, 2) }, Priority { value: 49, data: (IVec2(5, 6), Down, 1) }, Priority { value: 49, data: (IVec2(4, 7), Right, 3) }]
-Popped: (41, (IVec2(8, 2), Down, 3)). from queue, rest: [Priority { value: 43, data: (IVec2(7, 3), Right, 1) }, Priority { value: 43, data: (IVec2(0, 10), Right, 2) }, Priority { value: 43, data: (IVec2(5, 5), Right, 1) }, Priority { value: 43, data: (IVec2(2, 8), Down, 1) }, Priority { value: 44, data: (IVec2(8, 0), Left, 1) }, Priority { value: 49, data: (IVec2(4, 7), Right, 3) }, Priority { value: 45, data: (IVec2(9, 1), Down, 2) }, Priority { value: 43, data: (IVec2(3, 7), Right, 2) }, Priority { value: 45, data: (IVec2(1, 9), Down, 1) }, Priority { value: 48, data: (IVec2(6, 4), Right, 2) }, Priority { value: 49, data: (IVec2(5, 6), Down, 1) }]
-Popped: (43, (IVec2(7, 3), Right, 1)). from queue, rest: [Priority { value: 43, data: (IVec2(5, 5), Right, 1) }, Priority { value: 43, data: (IVec2(0, 10), Right, 2) }, Priority { value: 45, data: (IVec2(9, 1), Down, 2) }, Priority { value: 43, data: (IVec2(2, 8), Down, 1) }, Priority { value: 44, data: (IVec2(8, 0), Left, 1) }, Priority { value: 45, data: (IVec2(8, 3), Right, 1) }, Priority { value: 49, data: (IVec2(4, 7), Right, 3) }, Priority { value: 43, data: (IVec2(3, 7), Right, 2) }, Priority { value: 45, data: (IVec2(1, 9), Down, 1) }, Priority { value: 48, data: (IVec2(6, 4), Right, 2) }, Priority { value: 49, data: (IVec2(5, 6), Down, 1) }]
-Popped: (43, (IVec2(5, 5), Right, 1)). from queue, rest: [Priority { value: 43, data: (IVec2(0, 10), Right, 2) }, Priority { value: 43, data: (IVec2(2, 8), Down, 1) }, Priority { value: 45, data: (IVec2(9, 1), Down, 2) }, Priority { value: 43, data: (IVec2(3, 7), Right, 2) }, Priority { value: 44, data: (IVec2(8, 0), Left, 1) }, Priority { value: 45, data: (IVec2(8, 3), Right, 1) }, Priority { value: 49, data: (IVec2(4, 7), Right, 3) }, Priority { value: 51, data: (IVec2(7, 4), Right, 2) }, Priority { value: 45, data: (IVec2(1, 9), Down, 1) }, Priority { value: 48, data: (IVec2(6, 4), Right, 2) }, Priority { value: 49, data: (IVec2(5, 6), Down, 1) }]
-Popped: (43, (IVec2(0, 10), Right, 2)). from queue, rest: [Priority { value: 43, data: (IVec2(2, 8), Down, 1) }, Priority { value: 43, data: (IVec2(3, 7), Right, 2) }, Priority { value: 45, data: (IVec2(9, 1), Down, 2) }, Priority { value: 45, data: (IVec2(1, 9), Down, 1) }, Priority { value: 44, data: (IVec2(8, 0), Left, 1) }, Priority { value: 45, data: (IVec2(8, 3), Right, 1) }, Priority { value: 49, data: (IVec2(4, 7), Right, 3) }, Priority { value: 51, data: (IVec2(7, 4), Right, 2) }, Priority { value: 50, data: (IVec2(6, 5), Down, 1) }, Priority { value: 48, data: (IVec2(6, 4), Right, 2) }, Priority { value: 49, data: (IVec2(5, 6), Down, 1) }]
-Popped: (43, (IVec2(2, 8), Down, 1)). from queue, rest: [Priority { value: 43, data: (IVec2(3, 7), Right, 2) }, Priority { value: 44, data: (IVec2(8, 0), Left, 1) }, Priority { value: 45, data: (IVec2(9, 1), Down, 2) }, Priority { value: 45, data: (IVec2(1, 9), Down, 1) }, Priority { value: 48, data: (IVec2(6, 4), Right, 2) }, Priority { value: 45, data: (IVec2(8, 3), Right, 1) }, Priority { value: 49, data: (IVec2(4, 7), Right, 3) }, Priority { value: 51, data: (IVec2(7, 4), Right, 2) }, Priority { value: 50, data: (IVec2(6, 5), Down, 1) }, Priority { value: 49, data: (IVec2(1, 10), Down, 1) }, Priority { value: 49, data: (IVec2(5, 6), Down, 1) }, Priority { value: 45, data: (IVec2(0, 11), Right, 3) }]
-Popped: (43, (IVec2(3, 7), Right, 2)). from queue, rest: [Priority { value: 44, data: (IVec2(8, 0), Left, 1) }, Priority { value: 45, data: (IVec2(1, 9), Down, 1) }, Priority { value: 45, data: (IVec2(9, 1), Down, 2) }, Priority { value: 49, data: (IVec2(4, 7), Right, 3) }, Priority { value: 48, data: (IVec2(6, 4), Right, 2) }, Priority { value: 45, data: (IVec2(8, 3), Right, 1) }, Priority { value: 47, data: (IVec2(2, 9), Right, 1) }, Priority { value: 51, data: (IVec2(7, 4), Right, 2) }, Priority { value: 50, data: (IVec2(6, 5), Down, 1) }, Priority { value: 49, data: (IVec2(1, 10), Down, 1) }, Priority { value: 49, data: (IVec2(5, 6), Down, 1) }, Priority { value: 45, data: (IVec2(0, 11), Right, 3) }, Priority { value: 47, data: (IVec2(3, 8), Down, 2) }]
-Popped: (44, (IVec2(8, 0), Left, 1)). from queue, rest: [Priority { value: 45, data: (IVec2(9, 1), Down, 2) }, Priority { value: 45, data: (IVec2(1, 9), Down, 1) }, Priority { value: 45, data: (IVec2(8, 3), Right, 1) }, Priority { value: 49, data: (IVec2(4, 7), Right, 3) }, Priority { value: 48, data: (IVec2(6, 4), Right, 2) }, Priority { value: 45, data: (IVec2(0, 11), Right, 3) }, Priority { value: 47, data: (IVec2(2, 9), Right, 1) }, Priority { value: 51, data: (IVec2(7, 4), Right, 2) }, Priority { value: 50, data: (IVec2(6, 5), Down, 1) }, Priority { value: 49, data: (IVec2(1, 10), Down, 1) }, Priority { value: 49, data: (IVec2(5, 6), Down, 1) }, Priority { value: 47, data: (IVec2(3, 8), Down, 2) }]
-Popped: (45, (IVec2(9, 1), Down, 2)). from queue, rest: [Priority { value: 45, data: (IVec2(8, 3), Right, 1) }, Priority { value: 45, data: (IVec2(1, 9), Down, 1) }, Priority { value: 45, data: (IVec2(0, 11), Right, 3) }, Priority { value: 49, data: (IVec2(4, 7), Right, 3) }, Priority { value: 48, data: (IVec2(6, 4), Right, 2) }, Priority { value: 47, data: (IVec2(3, 8), Down, 2) }, Priority { value: 47, data: (IVec2(2, 9), Right, 1) }, Priority { value: 51, data: (IVec2(7, 4), Right, 2) }, Priority { value: 50, data: (IVec2(6, 5), Down, 1) }, Priority { value: 49, data: (IVec2(1, 10), Down, 1) }, Priority { value: 49, data: (IVec2(5, 6), Down, 1) }, Priority { value: 48, data: (IVec2(9, 0), Down, 1) }]
-Popped: (45, (IVec2(8, 3), Right, 1)). from queue, rest: [Priority { value: 45, data: (IVec2(0, 11), Right, 3) }, Priority { value: 45, data: (IVec2(1, 9), Down, 1) }, Priority { value: 47, data: (IVec2(2, 9), Right, 1) }, Priority { value: 49, data: (IVec2(4, 7), Right, 3) }, Priority { value: 48, data: (IVec2(6, 4), Right, 2) }, Priority { value: 47, data: (IVec2(3, 8), Down, 2) }, Priority { value: 51, data: (IVec2(9, 2), Right, 1) }, Priority { value: 51, data: (IVec2(7, 4), Right, 2) }, Priority { value: 50, data: (IVec2(6, 5), Down, 1) }, Priority { value: 49, data: (IVec2(1, 10), Down, 1) }, Priority { value: 49, data: (IVec2(5, 6), Down, 1) }, Priority { value: 48, data: (IVec2(9, 0), Down, 1) }, Priority { value: 47, data: (IVec2(10, 1), Down, 3) }]
-Popped: (45, (IVec2(0, 11), Right, 3)). from queue, rest: [Priority { value: 45, data: (IVec2(1, 9), Down, 1) }, Priority { value: 48, data: (IVec2(6, 4), Right, 2) }, Priority { value: 47, data: (IVec2(2, 9), Right, 1) }, Priority { value: 49, data: (IVec2(4, 7), Right, 3) }, Priority { value: 49, data: (IVec2(5, 6), Down, 1) }, Priority { value: 47, data: (IVec2(3, 8), Down, 2) }, Priority { value: 49, data: (IVec2(9, 3), Down, 1) }, Priority { value: 51, data: (IVec2(7, 4), Right, 2) }, Priority { value: 50, data: (IVec2(6, 5), Down, 1) }, Priority { value: 49, data: (IVec2(1, 10), Down, 1) }, Priority { value: 51, data: (IVec2(9, 2), Right, 1) }, Priority { value: 48, data: (IVec2(9, 0), Down, 1) }, Priority { value: 47, data: (IVec2(10, 1), Down, 3) }, Priority { value: 54, data: (IVec2(8, 4), Right, 2) }]
-Popped: (45, (IVec2(1, 9), Down, 1)). from queue, rest: [Priority { value: 47, data: (IVec2(2, 9), Right, 1) }, Priority { value: 48, data: (IVec2(6, 4), Right, 2) }, Priority { value: 47, data: (IVec2(1, 11), Down, 1) }, Priority { value: 49, data: (IVec2(4, 7), Right, 3) }, Priority { value: 49, data: (IVec2(5, 6), Down, 1) }, Priority { value: 47, data: (IVec2(3, 8), Down, 2) }, Priority { value: 49, data: (IVec2(9, 3), Down, 1) }, Priority { value: 51, data: (IVec2(7, 4), Right, 2) }, Priority { value: 50, data: (IVec2(6, 5), Down, 1) }, Priority { value: 49, data: (IVec2(1, 10), Down, 1) }, Priority { value: 51, data: (IVec2(9, 2), Right, 1) }, Priority { value: 48, data: (IVec2(9, 0), Down, 1) }, Priority { value: 47, data: (IVec2(10, 1), Down, 3) }, Priority { value: 54, data: (IVec2(8, 4), Right, 2) }]
-Popped: (47, (IVec2(2, 9), Right, 1)). from queue, rest: [Priority { value: 47, data: (IVec2(1, 11), Down, 1) }, Priority { value: 48, data: (IVec2(6, 4), Right, 2) }, Priority { value: 47, data: (IVec2(3, 8), Down, 2) }, Priority { value: 49, data: (IVec2(4, 7), Right, 3) }, Priority { value: 49, data: (IVec2(5, 6), Down, 1) }, Priority { value: 47, data: (IVec2(10, 1), Down, 3) }, Priority { value: 49, data: (IVec2(9, 3), Down, 1) }, Priority { value: 51, data: (IVec2(7, 4), Right, 2) }, Priority { value: 50, data: (IVec2(6, 5), Down, 1) }, Priority { value: 49, data: (IVec2(1, 10), Down, 1) }, Priority { value: 51, data: (IVec2(9, 2), Right, 1) }, Priority { value: 48, data: (IVec2(9, 0), Down, 1) }, Priority { value: 54, data: (IVec2(8, 4), Right, 2) }]
-Popped: (47, (IVec2(1, 11), Down, 1)). from queue, rest: [Priority { value: 47, data: (IVec2(3, 8), Down, 2) }, Priority { value: 48, data: (IVec2(6, 4), Right, 2) }, Priority { value: 47, data: (IVec2(10, 1), Down, 3) }, Priority { value: 49, data: (IVec2(4, 7), Right, 3) }, Priority { value: 49, data: (IVec2(5, 6), Down, 1) }, Priority { value: 48, data: (IVec2(9, 0), Down, 1) }, Priority { value: 49, data: (IVec2(9, 3), Down, 1) }, Priority { value: 51, data: (IVec2(7, 4), Right, 2) }, Priority { value: 50, data: (IVec2(6, 5), Down, 1) }, Priority { value: 49, data: (IVec2(1, 10), Down, 1) }, Priority { value: 51, data: (IVec2(9, 2), Right, 1) }, Priority { value: 52, data: (IVec2(3, 9), Down, 1) }, Priority { value: 54, data: (IVec2(8, 4), Right, 2) }, Priority { value: 49, data: (IVec2(2, 10), Right, 2) }]
-Popped: (47, (IVec2(3, 8), Down, 2)). from queue, rest: [Priority { value: 47, data: (IVec2(10, 1), Down, 3) }, Priority { value: 48, data: (IVec2(6, 4), Right, 2) }, Priority { value: 48, data: (IVec2(9, 0), Down, 1) }, Priority { value: 49, data: (IVec2(4, 7), Right, 3) }, Priority { value: 49, data: (IVec2(5, 6), Down, 1) }, Priority { value: 51, data: (IVec2(7, 4), Right, 2) }, Priority { value: 49, data: (IVec2(9, 3), Down, 1) }, Priority { value: 50, data: (IVec2(1, 12), Right, 1) }, Priority { value: 50, data: (IVec2(6, 5), Down, 1) }, Priority { value: 49, data: (IVec2(1, 10), Down, 1) }, Priority { value: 51, data: (IVec2(9, 2), Right, 1) }, Priority { value: 52, data: (IVec2(3, 9), Down, 1) }, Priority { value: 54, data: (IVec2(8, 4), Right, 2) }, Priority { value: 49, data: (IVec2(2, 10), Right, 2) }, Priority { value: 52, data: (IVec2(2, 11), Down, 2) }]
-Popped: (47, (IVec2(10, 1), Down, 3)). from queue, rest: [Priority { value: 48, data: (IVec2(9, 0), Down, 1) }, Priority { value: 48, data: (IVec2(6, 4), Right, 2) }, Priority { value: 49, data: (IVec2(9, 3), Down, 1) }, Priority { value: 49, data: (IVec2(4, 7), Right, 3) }, Priority { value: 49, data: (IVec2(5, 6), Down, 1) }, Priority { value: 51, data: (IVec2(7, 4), Right, 2) }, Priority { value: 49, data: (IVec2(2, 10), Right, 2) }, Priority { value: 50, data: (IVec2(1, 12), Right, 1) }, Priority { value: 50, data: (IVec2(6, 5), Down, 1) }, Priority { value: 49, data: (IVec2(1, 10), Down, 1) }, Priority { value: 51, data: (IVec2(9, 2), Right, 1) }, Priority { value: 52, data: (IVec2(3, 9), Down, 1) }, Priority { value: 54, data: (IVec2(8, 4), Right, 2) }, Priority { value: 53, data: (IVec2(4, 8), Down, 3) }, Priority { value: 52, data: (IVec2(2, 11), Down, 2) }]
-Popped: (48, (IVec2(9, 0), Down, 1)). from queue, rest: [Priority { value: 48, data: (IVec2(6, 4), Right, 2) }, Priority { value: 48, data: (IVec2(10, 0), Left, 1) }, Priority { value: 49, data: (IVec2(9, 3), Down, 1) }, Priority { value: 49, data: (IVec2(4, 7), Right, 3) }, Priority { value: 49, data: (IVec2(5, 6), Down, 1) }, Priority { value: 51, data: (IVec2(7, 4), Right, 2) }, Priority { value: 49, data: (IVec2(2, 10), Right, 2) }, Priority { value: 49, data: (IVec2(10, 2), Right, 1) }, Priority { value: 50, data: (IVec2(6, 5), Down, 1) }, Priority { value: 49, data: (IVec2(1, 10), Down, 1) }, Priority { value: 51, data: (IVec2(9, 2), Right, 1) }, Priority { value: 52, data: (IVec2(3, 9), Down, 1) }, Priority { value: 54, data: (IVec2(8, 4), Right, 2) }, Priority { value: 53, data: (IVec2(4, 8), Down, 3) }, Priority { value: 52, data: (IVec2(2, 11), Down, 2) }, Priority { value: 50, data: (IVec2(1, 12), Right, 1) }]
-Popped: (48, (IVec2(6, 4), Right, 2)). from queue, rest: [Priority { value: 48, data: (IVec2(10, 0), Left, 1) }, Priority { value: 49, data: (IVec2(5, 6), Down, 1) }, Priority { value: 49, data: (IVec2(9, 3), Down, 1) }, Priority { value: 49, data: (IVec2(4, 7), Right, 3) }, Priority { value: 49, data: (IVec2(1, 10), Down, 1) }, Priority { value: 51, data: (IVec2(7, 4), Right, 2) }, Priority { value: 49, data: (IVec2(2, 10), Right, 2) }, Priority { value: 49, data: (IVec2(10, 2), Right, 1) }, Priority { value: 50, data: (IVec2(6, 5), Down, 1) }, Priority { value: 50, data: (IVec2(1, 12), Right, 1) }, Priority { value: 51, data: (IVec2(9, 2), Right, 1) }, Priority { value: 52, data: (IVec2(3, 9), Down, 1) }, Priority { value: 54, data: (IVec2(8, 4), Right, 2) }, Priority { value: 53, data: (IVec2(4, 8), Down, 3) }, Priority { value: 52, data: (IVec2(2, 11), Down, 2) }]
-Popped: (48, (IVec2(10, 0), Left, 1)). from queue, rest: [Priority { value: 49, data: (IVec2(9, 3), Down, 1) }, Priority { value: 49, data: (IVec2(5, 6), Down, 1) }, Priority { value: 49, data: (IVec2(2, 10), Right, 2) }, Priority { value: 49, data: (IVec2(4, 7), Right, 3) }, Priority { value: 49, data: (IVec2(1, 10), Down, 1) }, Priority { value: 51, data: (IVec2(7, 4), Right, 2) }, Priority { value: 52, data: (IVec2(2, 11), Down, 2) }, Priority { value: 49, data: (IVec2(10, 2), Right, 1) }, Priority { value: 50, data: (IVec2(6, 5), Down, 1) }, Priority { value: 50, data: (IVec2(1, 12), Right, 1) }, Priority { value: 51, data: (IVec2(9, 2), Right, 1) }, Priority { value: 52, data: (IVec2(3, 9), Down, 1) }, Priority { value: 54, data: (IVec2(8, 4), Right, 2) }, Priority { value: 53, data: (IVec2(4, 8), Down, 3) }]
-Popped: (49, (IVec2(9, 3), Down, 1)). from queue, rest: [Priority { value: 49, data: (IVec2(2, 10), Right, 2) }, Priority { value: 49, data: (IVec2(5, 6), Down, 1) }, Priority { value: 50, data: (IVec2(11, 0), Down, 1) }, Priority { value: 49, data: (IVec2(4, 7), Right, 3) }, Priority { value: 49, data: (IVec2(1, 10), Down, 1) }, Priority { value: 51, data: (IVec2(7, 4), Right, 2) }, Priority { value: 52, data: (IVec2(2, 11), Down, 2) }, Priority { value: 49, data: (IVec2(10, 2), Right, 1) }, Priority { value: 50, data: (IVec2(6, 5), Down, 1) }, Priority { value: 50, data: (IVec2(1, 12), Right, 1) }, Priority { value: 51, data: (IVec2(9, 2), Right, 1) }, Priority { value: 52, data: (IVec2(3, 9), Down, 1) }, Priority { value: 54, data: (IVec2(8, 4), Right, 2) }, Priority { value: 53, data: (IVec2(4, 8), Down, 3) }]
-Popped: (49, (IVec2(2, 10), Right, 2)). from queue, rest: [Priority { value: 49, data: (IVec2(5, 6), Down, 1) }, Priority { value: 49, data: (IVec2(1, 10), Down, 1) }, Priority { value: 50, data: (IVec2(11, 0), Down, 1) }, Priority { value: 49, data: (IVec2(4, 7), Right, 3) }, Priority { value: 50, data: (IVec2(1, 12), Right, 1) }, Priority { value: 51, data: (IVec2(7, 4), Right, 2) }, Priority { value: 52, data: (IVec2(2, 11), Down, 2) }, Priority { value: 49, data: (IVec2(10, 2), Right, 1) }, Priority { value: 50, data: (IVec2(6, 5), Down, 1) }, Priority { value: 55, data: (IVec2(9, 4), Right, 1) }, Priority { value: 51, data: (IVec2(9, 2), Right, 1) }, Priority { value: 52, data: (IVec2(3, 9), Down, 1) }, Priority { value: 54, data: (IVec2(8, 4), Right, 2) }, Priority { value: 53, data: (IVec2(4, 8), Down, 3) }, Priority { value: 53, data: (IVec2(10, 3), Down, 2) }]
-Popped: (49, (IVec2(5, 6), Down, 1)). from queue, rest: [Priority { value: 49, data: (IVec2(1, 10), Down, 1) }, Priority { value: 49, data: (IVec2(4, 7), Right, 3) }, Priority { value: 50, data: (IVec2(11, 0), Down, 1) }, Priority { value: 49, data: (IVec2(10, 2), Right, 1) }, Priority { value: 50, data: (IVec2(1, 12), Right, 1) }, Priority { value: 51, data: (IVec2(7, 4), Right, 2) }, Priority { value: 52, data: (IVec2(2, 11), Down, 2) }, Priority { value: 53, data: (IVec2(3, 10), Down, 1) }, Priority { value: 50, data: (IVec2(6, 5), Down, 1) }, Priority { value: 55, data: (IVec2(9, 4), Right, 1) }, Priority { value: 51, data: (IVec2(9, 2), Right, 1) }, Priority { value: 52, data: (IVec2(3, 9), Down, 1) }, Priority { value: 54, data: (IVec2(8, 4), Right, 2) }, Priority { value: 53, data: (IVec2(4, 8), Down, 3) }, Priority { value: 53, data: (IVec2(10, 3), Down, 2) }]
-Popped: (49, (IVec2(1, 10), Down, 1)). from queue, rest: [Priority { value: 49, data: (IVec2(4, 7), Right, 3) }, Priority { value: 49, data: (IVec2(10, 2), Right, 1) }, Priority { value: 50, data: (IVec2(11, 0), Down, 1) }, Priority { value: 50, data: (IVec2(6, 5), Down, 1) }, Priority { value: 50, data: (IVec2(1, 12), Right, 1) }, Priority { value: 51, data: (IVec2(7, 4), Right, 2) }, Priority { value: 52, data: (IVec2(2, 11), Down, 2) }, Priority { value: 53, data: (IVec2(3, 10), Down, 1) }, Priority { value: 56, data: (IVec2(5, 7), Right, 1) }, Priority { value: 55, data: (IVec2(9, 4), Right, 1) }, Priority { value: 51, data: (IVec2(9, 2), Right, 1) }, Priority { value: 52, data: (IVec2(3, 9), Down, 1) }, Priority { value: 54, data: (IVec2(8, 4), Right, 2) }, Priority { value: 53, data: (IVec2(4, 8), Down, 3) }, Priority { value: 53, data: (IVec2(10, 3), Down, 2) }, Priority { value: 55, data: (IVec2(6, 6), Down, 2) }]
-Popped: (49, (IVec2(4, 7), Right, 3)). from queue, rest: [Priority { value: 49, data: (IVec2(10, 2), Right, 1) }, Priority { value: 50, data: (IVec2(1, 12), Right, 1) }, Priority { value: 50, data: (IVec2(11, 0), Down, 1) }, Priority { value: 50, data: (IVec2(6, 5), Down, 1) }, Priority { value: 51, data: (IVec2(9, 2), Right, 1) }, Priority { value: 51, data: (IVec2(7, 4), Right, 2) }, Priority { value: 52, data: (IVec2(2, 11), Down, 2) }, Priority { value: 53, data: (IVec2(3, 10), Down, 1) }, Priority { value: 56, data: (IVec2(5, 7), Right, 1) }, Priority { value: 55, data: (IVec2(9, 4), Right, 1) }, Priority { value: 55, data: (IVec2(6, 6), Down, 2) }, Priority { value: 52, data: (IVec2(3, 9), Down, 1) }, Priority { value: 54, data: (IVec2(8, 4), Right, 2) }, Priority { value: 53, data: (IVec2(4, 8), Down, 3) }, Priority { value: 53, data: (IVec2(10, 3), Down, 2) }]
-Popped: (49, (IVec2(10, 2), Right, 1)). from queue, rest: [Priority { value: 50, data: (IVec2(11, 0), Down, 1) }, Priority { value: 50, data: (IVec2(1, 12), Right, 1) }, Priority { value: 51, data: (IVec2(7, 4), Right, 2) }, Priority { value: 50, data: (IVec2(6, 5), Down, 1) }, Priority { value: 51, data: (IVec2(9, 2), Right, 1) }, Priority { value: 52, data: (IVec2(3, 9), Down, 1) }, Priority { value: 52, data: (IVec2(2, 11), Down, 2) }, Priority { value: 53, data: (IVec2(3, 10), Down, 1) }, Priority { value: 56, data: (IVec2(5, 7), Right, 1) }, Priority { value: 55, data: (IVec2(9, 4), Right, 1) }, Priority { value: 55, data: (IVec2(6, 6), Down, 2) }, Priority { value: 53, data: (IVec2(10, 3), Down, 2) }, Priority { value: 54, data: (IVec2(8, 4), Right, 2) }, Priority { value: 53, data: (IVec2(4, 8), Down, 3) }]
-Popped: (50, (IVec2(11, 0), Down, 1)). from queue, rest: [Priority { value: 50, data: (IVec2(1, 12), Right, 1) }, Priority { value: 50, data: (IVec2(6, 5), Down, 1) }, Priority { value: 51, data: (IVec2(7, 4), Right, 2) }, Priority { value: 53, data: (IVec2(3, 10), Down, 1) }, Priority { value: 51, data: (IVec2(9, 2), Right, 1) }, Priority { value: 52, data: (IVec2(3, 9), Down, 1) }, Priority { value: 52, data: (IVec2(2, 11), Down, 2) }, Priority { value: 53, data: (IVec2(11, 2), Down, 1) }, Priority { value: 56, data: (IVec2(5, 7), Right, 1) }, Priority { value: 55, data: (IVec2(9, 4), Right, 1) }, Priority { value: 55, data: (IVec2(6, 6), Down, 2) }, Priority { value: 53, data: (IVec2(10, 3), Down, 2) }, Priority { value: 54, data: (IVec2(8, 4), Right, 2) }, Priority { value: 53, data: (IVec2(4, 8), Down, 3) }]
-Popped: (50, (IVec2(1, 12), Right, 1)). from queue, rest: [Priority { value: 50, data: (IVec2(6, 5), Down, 1) }, Priority { value: 51, data: (IVec2(9, 2), Right, 1) }, Priority { value: 51, data: (IVec2(7, 4), Right, 2) }, Priority { value: 53, data: (IVec2(3, 10), Down, 1) }, Priority { value: 55, data: (IVec2(6, 6), Down, 2) }, Priority { value: 52, data: (IVec2(3, 9), Down, 1) }, Priority { value: 52, data: (IVec2(2, 11), Down, 2) }, Priority { value: 53, data: (IVec2(11, 2), Down, 1) }, Priority { value: 56, data: (IVec2(5, 7), Right, 1) }, Priority { value: 55, data: (IVec2(9, 4), Right, 1) }, Priority { value: 55, data: (IVec2(11, 1), Right, 1) }, Priority { value: 53, data: (IVec2(10, 3), Down, 2) }, Priority { value: 54, data: (IVec2(8, 4), Right, 2) }, Priority { value: 53, data: (IVec2(4, 8), Down, 3) }, Priority { value: 54, data: (IVec2(12, 0), Down, 2) }]
-Popped: (50, (IVec2(6, 5), Down, 1)). from queue, rest: [Priority { value: 51, data: (IVec2(7, 4), Right, 2) }, Priority { value: 51, data: (IVec2(9, 2), Right, 1) }, Priority { value: 52, data: (IVec2(2, 11), Down, 2) }, Priority { value: 53, data: (IVec2(3, 10), Down, 1) }, Priority { value: 55, data: (IVec2(6, 6), Down, 2) }, Priority { value: 52, data: (IVec2(3, 9), Down, 1) }, Priority { value: 53, data: (IVec2(4, 8), Down, 3) }, Priority { value: 53, data: (IVec2(11, 2), Down, 1) }, Priority { value: 56, data: (IVec2(5, 7), Right, 1) }, Priority { value: 55, data: (IVec2(9, 4), Right, 1) }, Priority { value: 55, data: (IVec2(11, 1), Right, 1) }, Priority { value: 53, data: (IVec2(10, 3), Down, 2) }, Priority { value: 54, data: (IVec2(8, 4), Right, 2) }, Priority { value: 53, data: (IVec2(0, 12), Up, 1) }, Priority { value: 54, data: (IVec2(12, 0), Down, 2) }, Priority { value: 54, data: (IVec2(2, 12), Down, 1) }]
-Popped: (51, (IVec2(7, 4), Right, 2)). from queue, rest: [Priority { value: 51, data: (IVec2(9, 2), Right, 1) }, Priority { value: 53, data: (IVec2(3, 10), Down, 1) }, Priority { value: 52, data: (IVec2(2, 11), Down, 2) }, Priority { value: 53, data: (IVec2(11, 2), Down, 1) }, Priority { value: 55, data: (IVec2(6, 6), Down, 2) }, Priority { value: 52, data: (IVec2(3, 9), Down, 1) }, Priority { value: 53, data: (IVec2(4, 8), Down, 3) }, Priority { value: 54, data: (IVec2(2, 12), Down, 1) }, Priority { value: 56, data: (IVec2(5, 7), Right, 1) }, Priority { value: 55, data: (IVec2(9, 4), Right, 1) }, Priority { value: 55, data: (IVec2(11, 1), Right, 1) }, Priority { value: 53, data: (IVec2(10, 3), Down, 2) }, Priority { value: 54, data: (IVec2(8, 4), Right, 2) }, Priority { value: 53, data: (IVec2(0, 12), Up, 1) }, Priority { value: 54, data: (IVec2(12, 0), Down, 2) }, Priority { value: 57, data: (IVec2(7, 5), Down, 2) }]
-Popped: (51, (IVec2(9, 2), Right, 1)). from queue, rest: [Priority { value: 52, data: (IVec2(2, 11), Down, 2) }, Priority { value: 53, data: (IVec2(3, 10), Down, 1) }, Priority { value: 52, data: (IVec2(3, 9), Down, 1) }, Priority { value: 53, data: (IVec2(11, 2), Down, 1) }, Priority { value: 55, data: (IVec2(6, 6), Down, 2) }, Priority { value: 53, data: (IVec2(10, 3), Down, 2) }, Priority { value: 53, data: (IVec2(4, 8), Down, 3) }, Priority { value: 54, data: (IVec2(2, 12), Down, 1) }, Priority { value: 56, data: (IVec2(5, 7), Right, 1) }, Priority { value: 55, data: (IVec2(9, 4), Right, 1) }, Priority { value: 55, data: (IVec2(11, 1), Right, 1) }, Priority { value: 57, data: (IVec2(7, 5), Down, 2) }, Priority { value: 54, data: (IVec2(8, 4), Right, 2) }, Priority { value: 53, data: (IVec2(0, 12), Up, 1) }, Priority { value: 54, data: (IVec2(12, 0), Down, 2) }]
-Popped: (52, (IVec2(2, 11), Down, 2)). from queue, rest: [Priority { value: 52, data: (IVec2(3, 9), Down, 1) }, Priority { value: 53, data: (IVec2(3, 10), Down, 1) }, Priority { value: 53, data: (IVec2(4, 8), Down, 3) }, Priority { value: 53, data: (IVec2(11, 2), Down, 1) }, Priority { value: 55, data: (IVec2(6, 6), Down, 2) }, Priority { value: 53, data: (IVec2(10, 3), Down, 2) }, Priority { value: 53, data: (IVec2(0, 12), Up, 1) }, Priority { value: 54, data: (IVec2(2, 12), Down, 1) }, Priority { value: 56, data: (IVec2(5, 7), Right, 1) }, Priority { value: 55, data: (IVec2(9, 4), Right, 1) }, Priority { value: 55, data: (IVec2(11, 1), Right, 1) }, Priority { value: 57, data: (IVec2(7, 5), Down, 2) }, Priority { value: 54, data: (IVec2(8, 4), Right, 2) }, Priority { value: 54, data: (IVec2(12, 0), Down, 2) }]
-Popped: (52, (IVec2(3, 9), Down, 1)). from queue, rest: [Priority { value: 53, data: (IVec2(4, 8), Down, 3) }, Priority { value: 53, data: (IVec2(3, 10), Down, 1) }, Priority { value: 53, data: (IVec2(0, 12), Up, 1) }, Priority { value: 53, data: (IVec2(11, 2), Down, 1) }, Priority { value: 55, data: (IVec2(6, 6), Down, 2) }, Priority { value: 53, data: (IVec2(10, 3), Down, 2) }, Priority { value: 54, data: (IVec2(12, 0), Down, 2) }, Priority { value: 54, data: (IVec2(2, 12), Down, 1) }, Priority { value: 56, data: (IVec2(5, 7), Right, 1) }, Priority { value: 55, data: (IVec2(9, 4), Right, 1) }, Priority { value: 55, data: (IVec2(11, 1), Right, 1) }, Priority { value: 57, data: (IVec2(7, 5), Down, 2) }, Priority { value: 54, data: (IVec2(8, 4), Right, 2) }, Priority { value: 57, data: (IVec2(3, 11), Down, 3) }]
-Popped: (53, (IVec2(4, 8), Down, 3)). from queue, rest: [Priority { value: 53, data: (IVec2(0, 12), Up, 1) }, Priority { value: 53, data: (IVec2(3, 10), Down, 1) }, Priority { value: 53, data: (IVec2(10, 3), Down, 2) }, Priority { value: 53, data: (IVec2(11, 2), Down, 1) }, Priority { value: 55, data: (IVec2(6, 6), Down, 2) }, Priority { value: 54, data: (IVec2(8, 4), Right, 2) }, Priority { value: 54, data: (IVec2(12, 0), Down, 2) }, Priority { value: 54, data: (IVec2(2, 12), Down, 1) }, Priority { value: 56, data: (IVec2(5, 7), Right, 1) }, Priority { value: 55, data: (IVec2(9, 4), Right, 1) }, Priority { value: 55, data: (IVec2(11, 1), Right, 1) }, Priority { value: 57, data: (IVec2(7, 5), Down, 2) }, Priority { value: 59, data: (IVec2(4, 9), Down, 2) }, Priority { value: 57, data: (IVec2(3, 11), Down, 3) }]
-Popped: (53, (IVec2(0, 12), Up, 1)). from queue, rest: [Priority { value: 53, data: (IVec2(10, 3), Down, 2) }, Priority { value: 53, data: (IVec2(3, 10), Down, 1) }, Priority { value: 54, data: (IVec2(12, 0), Down, 2) }, Priority { value: 53, data: (IVec2(11, 2), Down, 1) }, Priority { value: 55, data: (IVec2(6, 6), Down, 2) }, Priority { value: 54, data: (IVec2(8, 4), Right, 2) }, Priority { value: 57, data: (IVec2(3, 11), Down, 3) }, Priority { value: 54, data: (IVec2(2, 12), Down, 1) }, Priority { value: 56, data: (IVec2(5, 7), Right, 1) }, Priority { value: 55, data: (IVec2(9, 4), Right, 1) }, Priority { value: 55, data: (IVec2(11, 1), Right, 1) }, Priority { value: 57, data: (IVec2(7, 5), Down, 2) }, Priority { value: 59, data: (IVec2(4, 9), Down, 2) }]
-Popped: (53, (IVec2(10, 3), Down, 2)). from queue, rest: [Priority { value: 53, data: (IVec2(3, 10), Down, 1) }, Priority { value: 53, data: (IVec2(11, 2), Down, 1) }, Priority { value: 54, data: (IVec2(12, 0), Down, 2) }, Priority { value: 54, data: (IVec2(2, 12), Down, 1) }, Priority { value: 55, data: (IVec2(6, 6), Down, 2) }, Priority { value: 54, data: (IVec2(8, 4), Right, 2) }, Priority { value: 57, data: (IVec2(3, 11), Down, 3) }, Priority { value: 59, data: (IVec2(4, 9), Down, 2) }, Priority { value: 56, data: (IVec2(5, 7), Right, 1) }, Priority { value: 55, data: (IVec2(9, 4), Right, 1) }, Priority { value: 55, data: (IVec2(11, 1), Right, 1) }, Priority { value: 57, data: (IVec2(7, 5), Down, 2) }]
-Popped: (53, (IVec2(3, 10), Down, 1)). from queue, rest: [Priority { value: 53, data: (IVec2(11, 2), Down, 1) }, Priority { value: 54, data: (IVec2(2, 12), Down, 1) }, Priority { value: 54, data: (IVec2(12, 0), Down, 2) }, Priority { value: 56, data: (IVec2(5, 7), Right, 1) }, Priority { value: 55, data: (IVec2(6, 6), Down, 2) }, Priority { value: 54, data: (IVec2(8, 4), Right, 2) }, Priority { value: 57, data: (IVec2(3, 11), Down, 3) }, Priority { value: 59, data: (IVec2(4, 9), Down, 2) }, Priority { value: 59, data: (IVec2(10, 4), Right, 1) }, Priority { value: 55, data: (IVec2(9, 4), Right, 1) }, Priority { value: 55, data: (IVec2(11, 1), Right, 1) }, Priority { value: 57, data: (IVec2(7, 5), Down, 2) }, Priority { value: 59, data: (IVec2(11, 3), Down, 3) }]
-Popped: (53, (IVec2(11, 2), Down, 1)). from queue, rest: [Priority { value: 54, data: (IVec2(12, 0), Down, 2) }, Priority { value: 54, data: (IVec2(2, 12), Down, 1) }, Priority { value: 54, data: (IVec2(8, 4), Right, 2) }, Priority { value: 56, data: (IVec2(5, 7), Right, 1) }, Priority { value: 55, data: (IVec2(6, 6), Down, 2) }, Priority { value: 57, data: (IVec2(7, 5), Down, 2) }, Priority { value: 57, data: (IVec2(3, 11), Down, 3) }, Priority { value: 59, data: (IVec2(4, 9), Down, 2) }, Priority { value: 59, data: (IVec2(10, 4), Right, 1) }, Priority { value: 55, data: (IVec2(9, 4), Right, 1) }, Priority { value: 55, data: (IVec2(11, 1), Right, 1) }, Priority { value: 58, data: (IVec2(4, 10), Down, 2) }, Priority { value: 59, data: (IVec2(11, 3), Down, 3) }]
-Popped: (54, (IVec2(12, 0), Down, 2)). from queue, rest: [Priority { value: 54, data: (IVec2(8, 4), Right, 2) }, Priority { value: 54, data: (IVec2(2, 12), Down, 1) }, Priority { value: 55, data: (IVec2(12, 2), Down, 2) }, Priority { value: 56, data: (IVec2(5, 7), Right, 1) }, Priority { value: 55, data: (IVec2(6, 6), Down, 2) }, Priority { value: 57, data: (IVec2(7, 5), Down, 2) }, Priority { value: 57, data: (IVec2(3, 11), Down, 3) }, Priority { value: 59, data: (IVec2(4, 9), Down, 2) }, Priority { value: 59, data: (IVec2(10, 4), Right, 1) }, Priority { value: 55, data: (IVec2(9, 4), Right, 1) }, Priority { value: 55, data: (IVec2(11, 1), Right, 1) }, Priority { value: 58, data: (IVec2(4, 10), Down, 2) }, Priority { value: 59, data: (IVec2(11, 3), Down, 3) }]
-Popped: (54, (IVec2(8, 4), Right, 2)). from queue, rest: [Priority { value: 54, data: (IVec2(2, 12), Down, 1) }, Priority { value: 55, data: (IVec2(6, 6), Down, 2) }, Priority { value: 55, data: (IVec2(12, 2), Down, 2) }, Priority { value: 56, data: (IVec2(5, 7), Right, 1) }, Priority { value: 55, data: (IVec2(11, 1), Right, 1) }, Priority { value: 57, data: (IVec2(7, 5), Down, 2) }, Priority { value: 57, data: (IVec2(3, 11), Down, 3) }, Priority { value: 59, data: (IVec2(4, 9), Down, 2) }, Priority { value: 59, data: (IVec2(10, 4), Right, 1) }, Priority { value: 55, data: (IVec2(9, 4), Right, 1) }, Priority { value: 57, data: (IVec2(12, 1), Right, 1) }, Priority { value: 58, data: (IVec2(4, 10), Down, 2) }, Priority { value: 59, data: (IVec2(11, 3), Down, 3) }]
-Popped: (54, (IVec2(2, 12), Down, 1)). from queue, rest: [Priority { value: 55, data: (IVec2(12, 2), Down, 2) }, Priority { value: 55, data: (IVec2(6, 6), Down, 2) }, Priority { value: 57, data: (IVec2(3, 11), Down, 3) }, Priority { value: 56, data: (IVec2(5, 7), Right, 1) }, Priority { value: 55, data: (IVec2(11, 1), Right, 1) }, Priority { value: 57, data: (IVec2(7, 5), Down, 2) }, Priority { value: 60, data: (IVec2(8, 5), Right, 3) }, Priority { value: 59, data: (IVec2(4, 9), Down, 2) }, Priority { value: 59, data: (IVec2(10, 4), Right, 1) }, Priority { value: 55, data: (IVec2(9, 4), Right, 1) }, Priority { value: 57, data: (IVec2(12, 1), Right, 1) }, Priority { value: 58, data: (IVec2(4, 10), Down, 2) }, Priority { value: 59, data: (IVec2(11, 3), Down, 3) }]
-Popped: (55, (IVec2(12, 2), Down, 2)). from queue, rest: [Priority { value: 55, data: (IVec2(6, 6), Down, 2) }, Priority { value: 55, data: (IVec2(11, 1), Right, 1) }, Priority { value: 56, data: (IVec2(3, 12), Down, 2) }, Priority { value: 56, data: (IVec2(5, 7), Right, 1) }, Priority { value: 55, data: (IVec2(9, 4), Right, 1) }, Priority { value: 57, data: (IVec2(7, 5), Down, 2) }, Priority { value: 57, data: (IVec2(3, 11), Down, 3) }, Priority { value: 59, data: (IVec2(4, 9), Down, 2) }, Priority { value: 59, data: (IVec2(10, 4), Right, 1) }, Priority { value: 60, data: (IVec2(8, 5), Right, 3) }, Priority { value: 57, data: (IVec2(12, 1), Right, 1) }, Priority { value: 58, data: (IVec2(4, 10), Down, 2) }, Priority { value: 59, data: (IVec2(11, 3), Down, 3) }]
-Popped: (55, (IVec2(6, 6), Down, 2)). from queue, rest: [Priority { value: 55, data: (IVec2(11, 1), Right, 1) }, Priority { value: 55, data: (IVec2(9, 4), Right, 1) }, Priority { value: 56, data: (IVec2(3, 12), Down, 2) }, Priority { value: 56, data: (IVec2(5, 7), Right, 1) }, Priority { value: 57, data: (IVec2(12, 1), Right, 1) }, Priority { value: 57, data: (IVec2(7, 5), Down, 2) }, Priority { value: 57, data: (IVec2(3, 11), Down, 3) }, Priority { value: 59, data: (IVec2(4, 9), Down, 2) }, Priority { value: 59, data: (IVec2(10, 4), Right, 1) }, Priority { value: 60, data: (IVec2(8, 5), Right, 3) }, Priority { value: 57, data: (IVec2(12, 3), Right, 1) }, Priority { value: 58, data: (IVec2(4, 10), Down, 2) }, Priority { value: 59, data: (IVec2(11, 3), Down, 3) }]
-Popped: (55, (IVec2(11, 1), Right, 1)). from queue, rest: [Priority { value: 55, data: (IVec2(9, 4), Right, 1) }, Priority { value: 56, data: (IVec2(5, 7), Right, 1) }, Priority { value: 56, data: (IVec2(3, 12), Down, 2) }, Priority { value: 59, data: (IVec2(10, 4), Right, 1) }, Priority { value: 57, data: (IVec2(12, 1), Right, 1) }, Priority { value: 57, data: (IVec2(7, 5), Down, 2) }, Priority { value: 57, data: (IVec2(3, 11), Down, 3) }, Priority { value: 59, data: (IVec2(4, 9), Down, 2) }, Priority { value: 64, data: (IVec2(6, 7), Right, 1) }, Priority { value: 60, data: (IVec2(8, 5), Right, 3) }, Priority { value: 57, data: (IVec2(12, 3), Right, 1) }, Priority { value: 58, data: (IVec2(4, 10), Down, 2) }, Priority { value: 59, data: (IVec2(11, 3), Down, 3) }, Priority { value: 62, data: (IVec2(7, 6), Down, 3) }]
-Popped: (55, (IVec2(9, 4), Right, 1)). from queue, rest: [Priority { value: 56, data: (IVec2(3, 12), Down, 2) }, Priority { value: 56, data: (IVec2(5, 7), Right, 1) }, Priority { value: 57, data: (IVec2(3, 11), Down, 3) }, Priority { value: 59, data: (IVec2(10, 4), Right, 1) }, Priority { value: 57, data: (IVec2(12, 1), Right, 1) }, Priority { value: 57, data: (IVec2(7, 5), Down, 2) }, Priority { value: 62, data: (IVec2(7, 6), Down, 3) }, Priority { value: 59, data: (IVec2(4, 9), Down, 2) }, Priority { value: 64, data: (IVec2(6, 7), Right, 1) }, Priority { value: 60, data: (IVec2(8, 5), Right, 3) }, Priority { value: 57, data: (IVec2(12, 3), Right, 1) }, Priority { value: 58, data: (IVec2(4, 10), Down, 2) }, Priority { value: 59, data: (IVec2(11, 3), Down, 3) }]
-Popped: (56, (IVec2(3, 12), Down, 2)). from queue, rest: [Priority { value: 56, data: (IVec2(5, 7), Right, 1) }, Priority { value: 57, data: (IVec2(12, 1), Right, 1) }, Priority { value: 57, data: (IVec2(3, 11), Down, 3) }, Priority { value: 59, data: (IVec2(10, 4), Right, 1) }, Priority { value: 57, data: (IVec2(12, 3), Right, 1) }, Priority { value: 57, data: (IVec2(7, 5), Down, 2) }, Priority { value: 62, data: (IVec2(7, 6), Down, 3) }, Priority { value: 59, data: (IVec2(4, 9), Down, 2) }, Priority { value: 64, data: (IVec2(6, 7), Right, 1) }, Priority { value: 60, data: (IVec2(8, 5), Right, 3) }, Priority { value: 62, data: (IVec2(9, 5), Right, 2) }, Priority { value: 58, data: (IVec2(4, 10), Down, 2) }, Priority { value: 59, data: (IVec2(11, 3), Down, 3) }]
-Popped: (56, (IVec2(5, 7), Right, 1)). from queue, rest: [Priority { value: 57, data: (IVec2(3, 11), Down, 3) }, Priority { value: 57, data: (IVec2(12, 1), Right, 1) }, Priority { value: 57, data: (IVec2(7, 5), Down, 2) }, Priority { value: 59, data: (IVec2(10, 4), Right, 1) }, Priority { value: 57, data: (IVec2(12, 3), Right, 1) }, Priority { value: 58, data: (IVec2(4, 10), Down, 2) }, Priority { value: 62, data: (IVec2(7, 6), Down, 3) }, Priority { value: 59, data: (IVec2(4, 9), Down, 2) }, Priority { value: 64, data: (IVec2(6, 7), Right, 1) }, Priority { value: 60, data: (IVec2(8, 5), Right, 3) }, Priority { value: 62, data: (IVec2(9, 5), Right, 2) }, Priority { value: 62, data: (IVec2(4, 12), Down, 3) }, Priority { value: 59, data: (IVec2(11, 3), Down, 3) }]
-Popped: (57, (IVec2(3, 11), Down, 3)). from queue, rest: [Priority { value: 57, data: (IVec2(7, 5), Down, 2) }, Priority { value: 57, data: (IVec2(12, 1), Right, 1) }, Priority { value: 58, data: (IVec2(4, 10), Down, 2) }, Priority { value: 59, data: (IVec2(10, 4), Right, 1) }, Priority { value: 57, data: (IVec2(12, 3), Right, 1) }, Priority { value: 59, data: (IVec2(11, 3), Down, 3) }, Priority { value: 62, data: (IVec2(7, 6), Down, 3) }, Priority { value: 59, data: (IVec2(4, 9), Down, 2) }, Priority { value: 64, data: (IVec2(6, 7), Right, 1) }, Priority { value: 60, data: (IVec2(8, 5), Right, 3) }, Priority { value: 62, data: (IVec2(9, 5), Right, 2) }, Priority { value: 62, data: (IVec2(4, 12), Down, 3) }, Priority { value: 65, data: (IVec2(5, 8), Right, 2) }]
-Popped: (57, (IVec2(7, 5), Down, 2)). from queue, rest: [Priority { value: 57, data: (IVec2(12, 1), Right, 1) }, Priority { value: 57, data: (IVec2(12, 3), Right, 1) }, Priority { value: 58, data: (IVec2(4, 10), Down, 2) }, Priority { value: 59, data: (IVec2(10, 4), Right, 1) }, Priority { value: 60, data: (IVec2(8, 5), Right, 3) }, Priority { value: 59, data: (IVec2(11, 3), Down, 3) }, Priority { value: 62, data: (IVec2(7, 6), Down, 3) }, Priority { value: 59, data: (IVec2(4, 9), Down, 2) }, Priority { value: 64, data: (IVec2(6, 7), Right, 1) }, Priority { value: 65, data: (IVec2(5, 8), Right, 2) }, Priority { value: 62, data: (IVec2(9, 5), Right, 2) }, Priority { value: 62, data: (IVec2(4, 12), Down, 3) }]
-Popped: (57, (IVec2(12, 1), Right, 1)). from queue, rest: [Priority { value: 57, data: (IVec2(12, 3), Right, 1) }, Priority { value: 59, data: (IVec2(10, 4), Right, 1) }, Priority { value: 58, data: (IVec2(4, 10), Down, 2) }, Priority { value: 59, data: (IVec2(4, 9), Down, 2) }, Priority { value: 60, data: (IVec2(8, 5), Right, 3) }, Priority { value: 59, data: (IVec2(11, 3), Down, 3) }, Priority { value: 62, data: (IVec2(7, 6), Down, 3) }, Priority { value: 62, data: (IVec2(4, 12), Down, 3) }, Priority { value: 64, data: (IVec2(6, 7), Right, 1) }, Priority { value: 65, data: (IVec2(5, 8), Right, 2) }, Priority { value: 62, data: (IVec2(9, 5), Right, 2) }]
-Popped: (57, (IVec2(12, 3), Right, 1)). from queue, rest: [Priority { value: 58, data: (IVec2(4, 10), Down, 2) }, Priority { value: 59, data: (IVec2(10, 4), Right, 1) }, Priority { value: 59, data: (IVec2(11, 3), Down, 3) }, Priority { value: 59, data: (IVec2(4, 9), Down, 2) }, Priority { value: 60, data: (IVec2(8, 5), Right, 3) }, Priority { value: 62, data: (IVec2(9, 5), Right, 2) }, Priority { value: 62, data: (IVec2(7, 6), Down, 3) }, Priority { value: 62, data: (IVec2(4, 12), Down, 3) }, Priority { value: 64, data: (IVec2(6, 7), Right, 1) }, Priority { value: 65, data: (IVec2(5, 8), Right, 2) }]
-Popped: (58, (IVec2(4, 10), Down, 2)). from queue, rest: [Priority { value: 59, data: (IVec2(11, 3), Down, 3) }, Priority { value: 59, data: (IVec2(10, 4), Right, 1) }, Priority { value: 62, data: (IVec2(7, 6), Down, 3) }, Priority { value: 59, data: (IVec2(4, 9), Down, 2) }, Priority { value: 60, data: (IVec2(8, 5), Right, 3) }, Priority { value: 62, data: (IVec2(9, 5), Right, 2) }, Priority { value: 63, data: (IVec2(12, 4), Right, 2) }, Priority { value: 62, data: (IVec2(4, 12), Down, 3) }, Priority { value: 64, data: (IVec2(6, 7), Right, 1) }, Priority { value: 65, data: (IVec2(5, 8), Right, 2) }]
-Popped: (59, (IVec2(11, 3), Down, 3)). from queue, rest: [Priority { value: 59, data: (IVec2(10, 4), Right, 1) }, Priority { value: 59, data: (IVec2(4, 9), Down, 2) }, Priority { value: 61, data: (IVec2(4, 11), Right, 1) }, Priority { value: 62, data: (IVec2(4, 12), Down, 3) }, Priority { value: 60, data: (IVec2(8, 5), Right, 3) }, Priority { value: 62, data: (IVec2(7, 6), Down, 3) }, Priority { value: 63, data: (IVec2(12, 4), Right, 2) }, Priority { value: 62, data: (IVec2(9, 5), Right, 2) }, Priority { value: 64, data: (IVec2(6, 7), Right, 1) }, Priority { value: 65, data: (IVec2(5, 8), Right, 2) }, Priority { value: 62, data: (IVec2(5, 10), Down, 3) }]
-Popped: (59, (IVec2(10, 4), Right, 1)). from queue, rest: [Priority { value: 59, data: (IVec2(4, 9), Down, 2) }, Priority { value: 60, data: (IVec2(8, 5), Right, 3) }, Priority { value: 61, data: (IVec2(4, 11), Right, 1) }, Priority { value: 62, data: (IVec2(4, 12), Down, 3) }, Priority { value: 62, data: (IVec2(5, 10), Down, 3) }, Priority { value: 62, data: (IVec2(7, 6), Down, 3) }, Priority { value: 63, data: (IVec2(12, 4), Right, 2) }, Priority { value: 62, data: (IVec2(9, 5), Right, 2) }, Priority { value: 64, data: (IVec2(6, 7), Right, 1) }, Priority { value: 65, data: (IVec2(5, 8), Right, 2) }, Priority { value: 64, data: (IVec2(11, 4), Right, 1) }]
-Popped: (59, (IVec2(4, 9), Down, 2)). from queue, rest: [Priority { value: 60, data: (IVec2(8, 5), Right, 3) }, Priority { value: 62, data: (IVec2(5, 10), Down, 3) }, Priority { value: 61, data: (IVec2(4, 11), Right, 1) }, Priority { value: 62, data: (IVec2(4, 12), Down, 3) }, Priority { value: 64, data: (IVec2(11, 4), Right, 1) }, Priority { value: 62, data: (IVec2(7, 6), Down, 3) }, Priority { value: 63, data: (IVec2(12, 4), Right, 2) }, Priority { value: 62, data: (IVec2(9, 5), Right, 2) }, Priority { value: 64, data: (IVec2(6, 7), Right, 1) }, Priority { value: 65, data: (IVec2(5, 8), Right, 2) }, Priority { value: 67, data: (IVec2(10, 5), Right, 2) }]
-Popped: (60, (IVec2(8, 5), Right, 3)). from queue, rest: [Priority { value: 61, data: (IVec2(4, 11), Right, 1) }, Priority { value: 62, data: (IVec2(5, 10), Down, 3) }, Priority { value: 62, data: (IVec2(7, 6), Down, 3) }, Priority { value: 62, data: (IVec2(4, 12), Down, 3) }, Priority { value: 64, data: (IVec2(11, 4), Right, 1) }, Priority { value: 67, data: (IVec2(5, 9), Down, 3) }, Priority { value: 63, data: (IVec2(12, 4), Right, 2) }, Priority { value: 62, data: (IVec2(9, 5), Right, 2) }, Priority { value: 64, data: (IVec2(6, 7), Right, 1) }, Priority { value: 65, data: (IVec2(5, 8), Right, 2) }, Priority { value: 67, data: (IVec2(10, 5), Right, 2) }]
-Popped: (61, (IVec2(4, 11), Right, 1)). from queue, rest: [Priority { value: 62, data: (IVec2(7, 6), Down, 3) }, Priority { value: 62, data: (IVec2(5, 10), Down, 3) }, Priority { value: 63, data: (IVec2(12, 4), Right, 2) }, Priority { value: 62, data: (IVec2(4, 12), Down, 3) }, Priority { value: 64, data: (IVec2(11, 4), Right, 1) }, Priority { value: 67, data: (IVec2(5, 9), Down, 3) }, Priority { value: 67, data: (IVec2(10, 5), Right, 2) }, Priority { value: 62, data: (IVec2(9, 5), Right, 2) }, Priority { value: 64, data: (IVec2(6, 7), Right, 1) }, Priority { value: 65, data: (IVec2(5, 8), Right, 2) }]
-Popped: (62, (IVec2(7, 6), Down, 3)). from queue, rest: [Priority { value: 62, data: (IVec2(5, 10), Down, 3) }, Priority { value: 62, data: (IVec2(4, 12), Down, 3) }, Priority { value: 63, data: (IVec2(12, 4), Right, 2) }, Priority { value: 62, data: (IVec2(9, 5), Right, 2) }, Priority { value: 64, data: (IVec2(11, 4), Right, 1) }, Priority { value: 67, data: (IVec2(5, 9), Down, 3) }, Priority { value: 67, data: (IVec2(10, 5), Right, 2) }, Priority { value: 66, data: (IVec2(5, 11), Down, 1) }, Priority { value: 64, data: (IVec2(6, 7), Right, 1) }, Priority { value: 65, data: (IVec2(5, 8), Right, 2) }]
-Popped: (62, (IVec2(5, 10), Down, 3)). from queue, rest: [Priority { value: 62, data: (IVec2(4, 12), Down, 3) }, Priority { value: 62, data: (IVec2(9, 5), Right, 2) }, Priority { value: 63, data: (IVec2(12, 4), Right, 2) }, Priority { value: 64, data: (IVec2(6, 7), Right, 1) }, Priority { value: 64, data: (IVec2(11, 4), Right, 1) }, Priority { value: 67, data: (IVec2(5, 9), Down, 3) }, Priority { value: 67, data: (IVec2(10, 5), Right, 2) }, Priority { value: 66, data: (IVec2(5, 11), Down, 1) }, Priority { value: 71, data: (IVec2(7, 7), Right, 1) }, Priority { value: 65, data: (IVec2(5, 8), Right, 2) }]
-Popped: (62, (IVec2(4, 12), Down, 3)). from queue, rest: [Priority { value: 62, data: (IVec2(9, 5), Right, 2) }, Priority { value: 64, data: (IVec2(11, 4), Right, 1) }, Priority { value: 63, data: (IVec2(12, 4), Right, 2) }, Priority { value: 64, data: (IVec2(6, 7), Right, 1) }, Priority { value: 65, data: (IVec2(5, 8), Right, 2) }, Priority { value: 67, data: (IVec2(5, 9), Down, 3) }, Priority { value: 67, data: (IVec2(10, 5), Right, 2) }, Priority { value: 66, data: (IVec2(5, 11), Down, 1) }, Priority { value: 71, data: (IVec2(7, 7), Right, 1) }]
-Popped: (62, (IVec2(9, 5), Right, 2)). from queue, rest: [Priority { value: 63, data: (IVec2(12, 4), Right, 2) }, Priority { value: 64, data: (IVec2(11, 4), Right, 1) }, Priority { value: 67, data: (IVec2(10, 5), Right, 2) }, Priority { value: 64, data: (IVec2(6, 7), Right, 1) }, Priority { value: 65, data: (IVec2(5, 8), Right, 2) }, Priority { value: 67, data: (IVec2(5, 9), Down, 3) }, Priority { value: 71, data: (IVec2(7, 7), Right, 1) }, Priority { value: 66, data: (IVec2(5, 11), Down, 1) }]
-Popped: (63, (IVec2(12, 4), Right, 2)). from queue, rest: [Priority { value: 64, data: (IVec2(11, 4), Right, 1) }, Priority { value: 64, data: (IVec2(6, 7), Right, 1) }, Priority { value: 67, data: (IVec2(10, 5), Right, 2) }, Priority { value: 66, data: (IVec2(5, 11), Down, 1) }, Priority { value: 65, data: (IVec2(5, 8), Right, 2) }, Priority { value: 67, data: (IVec2(5, 9), Down, 3) }, Priority { value: 71, data: (IVec2(7, 7), Right, 1) }, Priority { value: 71, data: (IVec2(9, 6), Right, 3) }]
-Popped: (64, (IVec2(11, 4), Right, 1)). from queue, rest: [Priority { value: 64, data: (IVec2(6, 7), Right, 1) }, Priority { value: 65, data: (IVec2(5, 8), Right, 2) }, Priority { value: 67, data: (IVec2(10, 5), Right, 2) }, Priority { value: 66, data: (IVec2(5, 11), Down, 1) }, Priority { value: 70, data: (IVec2(12, 5), Right, 3) }, Priority { value: 67, data: (IVec2(5, 9), Down, 3) }, Priority { value: 71, data: (IVec2(7, 7), Right, 1) }, Priority { value: 71, data: (IVec2(9, 6), Right, 3) }]
-Popped: (64, (IVec2(6, 7), Right, 1)). from queue, rest: [Priority { value: 65, data: (IVec2(5, 8), Right, 2) }, Priority { value: 66, data: (IVec2(5, 11), Down, 1) }, Priority { value: 67, data: (IVec2(10, 5), Right, 2) }, Priority { value: 68, data: (IVec2(11, 5), Right, 2) }, Priority { value: 70, data: (IVec2(12, 5), Right, 3) }, Priority { value: 67, data: (IVec2(5, 9), Down, 3) }, Priority { value: 71, data: (IVec2(7, 7), Right, 1) }, Priority { value: 71, data: (IVec2(9, 6), Right, 3) }]
-Popped: (65, (IVec2(5, 8), Right, 2)). from queue, rest: [Priority { value: 66, data: (IVec2(5, 11), Down, 1) }, Priority { value: 68, data: (IVec2(11, 5), Right, 2) }, Priority { value: 67, data: (IVec2(10, 5), Right, 2) }, Priority { value: 71, data: (IVec2(9, 6), Right, 3) }, Priority { value: 70, data: (IVec2(12, 5), Right, 3) }, Priority { value: 67, data: (IVec2(5, 9), Down, 3) }, Priority { value: 71, data: (IVec2(7, 7), Right, 1) }, Priority { value: 72, data: (IVec2(6, 8), Right, 2) }]
-Popped: (66, (IVec2(5, 11), Down, 1)). from queue, rest: [Priority { value: 67, data: (IVec2(10, 5), Right, 2) }, Priority { value: 68, data: (IVec2(11, 5), Right, 2) }, Priority { value: 67, data: (IVec2(5, 9), Down, 3) }, Priority { value: 71, data: (IVec2(9, 6), Right, 3) }, Priority { value: 70, data: (IVec2(12, 5), Right, 3) }, Priority { value: 72, data: (IVec2(6, 8), Right, 2) }, Priority { value: 71, data: (IVec2(7, 7), Right, 1) }]
-Popped: (67, (IVec2(10, 5), Right, 2)). from queue, rest: [Priority { value: 67, data: (IVec2(5, 9), Down, 3) }, Priority { value: 68, data: (IVec2(11, 5), Right, 2) }, Priority { value: 71, data: (IVec2(7, 7), Right, 1) }, Priority { value: 70, data: (IVec2(5, 12), Right, 1) }, Priority { value: 70, data: (IVec2(12, 5), Right, 3) }, Priority { value: 72, data: (IVec2(6, 8), Right, 2) }, Priority { value: 71, data: (IVec2(9, 6), Right, 3) }, Priority { value: 72, data: (IVec2(6, 11), Down, 2) }]
-Popped: (67, (IVec2(5, 9), Down, 3)). from queue, rest: [Priority { value: 68, data: (IVec2(11, 5), Right, 2) }, Priority { value: 70, data: (IVec2(12, 5), Right, 3) }, Priority { value: 71, data: (IVec2(7, 7), Right, 1) }, Priority { value: 70, data: (IVec2(5, 12), Right, 1) }, Priority { value: 73, data: (IVec2(10, 6), Right, 3) }, Priority { value: 72, data: (IVec2(6, 8), Right, 2) }, Priority { value: 71, data: (IVec2(9, 6), Right, 3) }, Priority { value: 72, data: (IVec2(6, 11), Down, 2) }]
-Popped: (68, (IVec2(11, 5), Right, 2)). from queue, rest: [Priority { value: 70, data: (IVec2(12, 5), Right, 3) }, Priority { value: 70, data: (IVec2(5, 12), Right, 1) }, Priority { value: 71, data: (IVec2(7, 7), Right, 1) }, Priority { value: 72, data: (IVec2(6, 11), Down, 2) }, Priority { value: 73, data: (IVec2(10, 6), Right, 3) }, Priority { value: 72, data: (IVec2(6, 8), Right, 2) }, Priority { value: 71, data: (IVec2(9, 6), Right, 3) }]
-Popped: (70, (IVec2(12, 5), Right, 3)). from queue, rest: [Priority { value: 70, data: (IVec2(5, 12), Right, 1) }, Priority { value: 72, data: (IVec2(6, 11), Down, 2) }, Priority { value: 71, data: (IVec2(7, 7), Right, 1) }, Priority { value: 76, data: (IVec2(11, 6), Right, 3) }, Priority { value: 73, data: (IVec2(10, 6), Right, 3) }, Priority { value: 72, data: (IVec2(6, 8), Right, 2) }, Priority { value: 71, data: (IVec2(9, 6), Right, 3) }]
-Popped: (70, (IVec2(5, 12), Right, 1)). from queue, rest: [Priority { value: 71, data: (IVec2(7, 7), Right, 1) }, Priority { value: 72, data: (IVec2(6, 11), Down, 2) }, Priority { value: 71, data: (IVec2(9, 6), Right, 3) }, Priority { value: 76, data: (IVec2(11, 6), Right, 3) }, Priority { value: 73, data: (IVec2(10, 6), Right, 3) }, Priority { value: 72, data: (IVec2(6, 8), Right, 2) }]
-Popped: (71, (IVec2(7, 7), Right, 1)). from queue, rest: [Priority { value: 71, data: (IVec2(9, 6), Right, 3) }, Priority { value: 72, data: (IVec2(6, 11), Down, 2) }, Priority { value: 72, data: (IVec2(6, 8), Right, 2) }, Priority { value: 76, data: (IVec2(11, 6), Right, 3) }, Priority { value: 73, data: (IVec2(10, 6), Right, 3) }, Priority { value: 76, data: (IVec2(6, 12), Down, 1) }]
-Popped: (71, (IVec2(9, 6), Right, 3)). from queue, rest: [Priority { value: 72, data: (IVec2(6, 8), Right, 2) }, Priority { value: 72, data: (IVec2(6, 11), Down, 2) }, Priority { value: 76, data: (IVec2(6, 12), Down, 1) }, Priority { value: 76, data: (IVec2(11, 6), Right, 3) }, Priority { value: 73, data: (IVec2(10, 6), Right, 3) }, Priority { value: 80, data: (IVec2(8, 7), Down, 1) }, Priority { value: 78, data: (IVec2(7, 8), Right, 2) }]
-Popped: (72, (IVec2(6, 8), Right, 2)). from queue, rest: [Priority { value: 72, data: (IVec2(6, 11), Down, 2) }, Priority { value: 73, data: (IVec2(10, 6), Right, 3) }, Priority { value: 76, data: (IVec2(6, 12), Down, 1) }, Priority { value: 76, data: (IVec2(11, 6), Right, 3) }, Priority { value: 78, data: (IVec2(8, 6), Up, 1) }, Priority { value: 80, data: (IVec2(8, 7), Down, 1) }, Priority { value: 78, data: (IVec2(7, 8), Right, 2) }]
-Popped: (72, (IVec2(6, 11), Down, 2)). from queue, rest: [Priority { value: 73, data: (IVec2(10, 6), Right, 3) }, Priority { value: 76, data: (IVec2(11, 6), Right, 3) }, Priority { value: 76, data: (IVec2(6, 12), Down, 1) }, Priority { value: 79, data: (IVec2(6, 9), Right, 3) }, Priority { value: 78, data: (IVec2(8, 6), Up, 1) }, Priority { value: 80, data: (IVec2(8, 7), Down, 1) }, Priority { value: 78, data: (IVec2(7, 8), Right, 2) }]
-Popped: (73, (IVec2(10, 6), Right, 3)). from queue, rest: [Priority { value: 76, data: (IVec2(6, 12), Down, 1) }, Priority { value: 76, data: (IVec2(11, 6), Right, 3) }, Priority { value: 78, data: (IVec2(7, 8), Right, 2) }, Priority { value: 77, data: (IVec2(7, 11), Down, 3) }, Priority { value: 78, data: (IVec2(8, 6), Up, 1) }, Priority { value: 80, data: (IVec2(8, 7), Down, 1) }, Priority { value: 79, data: (IVec2(6, 10), Left, 1) }, Priority { value: 79, data: (IVec2(6, 9), Right, 3) }]
-Popped: (76, (IVec2(6, 12), Down, 1)). from queue, rest: [Priority { value: 76, data: (IVec2(11, 6), Right, 3) }, Priority { value: 77, data: (IVec2(7, 11), Down, 3) }, Priority { value: 78, data: (IVec2(7, 8), Right, 2) }, Priority { value: 79, data: (IVec2(6, 9), Right, 3) }, Priority { value: 78, data: (IVec2(8, 6), Up, 1) }, Priority { value: 80, data: (IVec2(8, 7), Down, 1) }, Priority { value: 79, data: (IVec2(6, 10), Left, 1) }]
-Popped: (76, (IVec2(11, 6), Right, 3)). from queue, rest: [Priority { value: 77, data: (IVec2(7, 11), Down, 3) }, Priority { value: 78, data: (IVec2(8, 6), Up, 1) }, Priority { value: 78, data: (IVec2(7, 8), Right, 2) }, Priority { value: 79, data: (IVec2(6, 9), Right, 3) }, Priority { value: 79, data: (IVec2(7, 12), Down, 2) }, Priority { value: 80, data: (IVec2(8, 7), Down, 1) }, Priority { value: 79, data: (IVec2(6, 10), Left, 1) }]
-Popped: (77, (IVec2(7, 11), Down, 3)). from queue, rest: [Priority { value: 78, data: (IVec2(7, 8), Right, 2) }, Priority { value: 78, data: (IVec2(8, 6), Up, 1) }, Priority { value: 79, data: (IVec2(6, 10), Left, 1) }, Priority { value: 79, data: (IVec2(6, 9), Right, 3) }, Priority { value: 79, data: (IVec2(7, 12), Down, 2) }, Priority { value: 80, data: (IVec2(8, 7), Down, 1) }, Priority { value: 80, data: (IVec2(12, 6), Down, 1) }]
-Popped: (78, (IVec2(7, 8), Right, 2)). from queue, rest: [Priority { value: 78, data: (IVec2(8, 6), Up, 1) }, Priority { value: 79, data: (IVec2(7, 12), Down, 2) }, Priority { value: 79, data: (IVec2(6, 10), Left, 1) }, Priority { value: 79, data: (IVec2(6, 9), Right, 3) }, Priority { value: 83, data: (IVec2(7, 10), Left, 1) }, Priority { value: 80, data: (IVec2(8, 7), Down, 1) }, Priority { value: 80, data: (IVec2(12, 6), Down, 1) }]
-Popped: (78, (IVec2(8, 6), Up, 1)). from queue, rest: [Priority { value: 79, data: (IVec2(6, 10), Left, 1) }, Priority { value: 79, data: (IVec2(7, 12), Down, 2) }, Priority { value: 80, data: (IVec2(12, 6), Down, 1) }, Priority { value: 79, data: (IVec2(6, 9), Right, 3) }, Priority { value: 83, data: (IVec2(7, 10), Left, 1) }, Priority { value: 80, data: (IVec2(8, 7), Down, 1) }, Priority { value: 86, data: (IVec2(8, 8), Down, 1) }, Priority { value: 87, data: (IVec2(7, 9), Right, 3) }]
-Popped: (79, (IVec2(6, 10), Left, 1)). from queue, rest: [Priority { value: 79, data: (IVec2(7, 12), Down, 2) }, Priority { value: 79, data: (IVec2(6, 9), Right, 3) }, Priority { value: 80, data: (IVec2(12, 6), Down, 1) }, Priority { value: 87, data: (IVec2(7, 9), Right, 3) }, Priority { value: 83, data: (IVec2(7, 10), Left, 1) }, Priority { value: 80, data: (IVec2(8, 7), Down, 1) }, Priority { value: 86, data: (IVec2(8, 8), Down, 1) }]
-Popped: (79, (IVec2(7, 12), Down, 2)). from queue, rest: [Priority { value: 79, data: (IVec2(6, 9), Right, 3) }, Priority { value: 83, data: (IVec2(7, 10), Left, 1) }, Priority { value: 80, data: (IVec2(12, 6), Down, 1) }, Priority { value: 87, data: (IVec2(7, 9), Right, 3) }, Priority { value: 86, data: (IVec2(8, 8), Down, 1) }, Priority { value: 80, data: (IVec2(8, 7), Down, 1) }]
-Popped: (79, (IVec2(6, 9), Right, 3)). from queue, rest: [Priority { value: 80, data: (IVec2(12, 6), Down, 1) }, Priority { value: 83, data: (IVec2(7, 10), Left, 1) }, Priority { value: 80, data: (IVec2(8, 7), Down, 1) }, Priority { value: 87, data: (IVec2(7, 9), Right, 3) }, Priority { value: 86, data: (IVec2(8, 8), Down, 1) }, Priority { value: 86, data: (IVec2(8, 12), Down, 3) }]
-Popped: (80, (IVec2(12, 6), Down, 1)). from queue, rest: [Priority { value: 80, data: (IVec2(8, 7), Down, 1) }, Priority { value: 83, data: (IVec2(7, 10), Left, 1) }, Priority { value: 86, data: (IVec2(8, 12), Down, 3) }, Priority { value: 87, data: (IVec2(7, 9), Right, 3) }, Priority { value: 86, data: (IVec2(8, 8), Down, 1) }]
-Popped: (80, (IVec2(8, 7), Down, 1)). from queue, rest: [Priority { value: 83, data: (IVec2(7, 10), Left, 1) }, Priority { value: 86, data: (IVec2(8, 8), Down, 1) }, Priority { value: 86, data: (IVec2(8, 12), Down, 3) }, Priority { value: 87, data: (IVec2(7, 9), Right, 3) }, Priority { value: 86, data: (IVec2(12, 7), Right, 1) }]
-Popped: (83, (IVec2(7, 10), Left, 1)). from queue, rest: [Priority { value: 86, data: (IVec2(8, 12), Down, 3) }, Priority { value: 86, data: (IVec2(8, 8), Down, 1) }, Priority { value: 89, data: (IVec2(9, 7), Down, 2) }, Priority { value: 87, data: (IVec2(7, 9), Right, 3) }, Priority { value: 86, data: (IVec2(12, 7), Right, 1) }]
-Popped: (86, (IVec2(8, 12), Down, 3)). from queue, rest: [Priority { value: 86, data: (IVec2(8, 8), Down, 1) }, Priority { value: 86, data: (IVec2(12, 7), Right, 1) }, Priority { value: 89, data: (IVec2(9, 7), Down, 2) }, Priority { value: 87, data: (IVec2(7, 9), Right, 3) }, Priority { value: 91, data: (IVec2(8, 10), Down, 1) }]
-Popped: (86, (IVec2(8, 8), Down, 1)). from queue, rest: [Priority { value: 86, data: (IVec2(12, 7), Right, 1) }, Priority { value: 87, data: (IVec2(7, 9), Right, 3) }, Priority { value: 89, data: (IVec2(9, 7), Down, 2) }, Priority { value: 94, data: (IVec2(8, 11), Left, 1) }, Priority { value: 91, data: (IVec2(8, 10), Down, 1) }]
-Popped: (86, (IVec2(12, 7), Right, 1)). from queue, rest: [Priority { value: 87, data: (IVec2(7, 9), Right, 3) }, Priority { value: 91, data: (IVec2(8, 10), Down, 1) }, Priority { value: 89, data: (IVec2(9, 7), Down, 2) }, Priority { value: 94, data: (IVec2(8, 11), Left, 1) }, Priority { value: 92, data: (IVec2(8, 9), Right, 1) }, Priority { value: 94, data: (IVec2(9, 8), Down, 2) }]
-Popped: (87, (IVec2(7, 9), Right, 3)). from queue, rest: [Priority { value: 89, data: (IVec2(9, 7), Down, 2) }, Priority { value: 91, data: (IVec2(8, 10), Down, 1) }, Priority { value: 91, data: (IVec2(12, 8), Right, 2) }, Priority { value: 94, data: (IVec2(8, 11), Left, 1) }, Priority { value: 92, data: (IVec2(8, 9), Right, 1) }, Priority { value: 94, data: (IVec2(9, 8), Down, 2) }, Priority { value: 94, data: (IVec2(11, 7), Up, 1) }]
-Popped: (89, (IVec2(9, 7), Down, 2)). from queue, rest: [Priority { value: 91, data: (IVec2(12, 8), Right, 2) }, Priority { value: 91, data: (IVec2(8, 10), Down, 1) }, Priority { value: 94, data: (IVec2(9, 8), Down, 2) }, Priority { value: 94, data: (IVec2(8, 11), Left, 1) }, Priority { value: 92, data: (IVec2(8, 9), Right, 1) }, Priority { value: 94, data: (IVec2(11, 7), Up, 1) }]
-Popped: (91, (IVec2(12, 8), Right, 2)). from queue, rest: [Priority { value: 91, data: (IVec2(8, 10), Down, 1) }, Priority { value: 92, data: (IVec2(8, 9), Right, 1) }, Priority { value: 94, data: (IVec2(9, 8), Down, 2) }, Priority { value: 94, data: (IVec2(8, 11), Left, 1) }, Priority { value: 97, data: (IVec2(10, 7), Down, 3) }, Priority { value: 94, data: (IVec2(11, 7), Up, 1) }]
-Popped: (91, (IVec2(8, 10), Down, 1)). from queue, rest: [Priority { value: 92, data: (IVec2(8, 9), Right, 1) }, Priority { value: 94, data: (IVec2(8, 11), Left, 1) }, Priority { value: 94, data: (IVec2(9, 8), Down, 2) }, Priority { value: 99, data: (IVec2(11, 8), Up, 1) }, Priority { value: 97, data: (IVec2(10, 7), Down, 3) }, Priority { value: 94, data: (IVec2(11, 7), Up, 1) }, Priority { value: 96, data: (IVec2(12, 9), Right, 3) }]
-Popped: (92, (IVec2(8, 9), Right, 1)). from queue, rest: [Priority { value: 94, data: (IVec2(9, 8), Down, 2) }, Priority { value: 94, data: (IVec2(8, 11), Left, 1) }, Priority { value: 94, data: (IVec2(11, 7), Up, 1) }, Priority { value: 95, data: (IVec2(9, 10), Down, 2) }, Priority { value: 97, data: (IVec2(10, 7), Down, 3) }, Priority { value: 99, data: (IVec2(11, 8), Up, 1) }, Priority { value: 96, data: (IVec2(12, 9), Right, 3) }]
-Popped: (94, (IVec2(9, 8), Down, 2)). from queue, rest: [Priority { value: 94, data: (IVec2(11, 7), Up, 1) }, Priority { value: 94, data: (IVec2(8, 11), Left, 1) }, Priority { value: 96, data: (IVec2(12, 9), Right, 3) }, Priority { value: 95, data: (IVec2(9, 10), Down, 2) }, Priority { value: 97, data: (IVec2(10, 7), Down, 3) }, Priority { value: 99, data: (IVec2(11, 8), Up, 1) }, Priority { value: 98, data: (IVec2(9, 9), Down, 1) }]
-Popped: (94, (IVec2(11, 7), Up, 1)). from queue, rest: [Priority { value: 94, data: (IVec2(8, 11), Left, 1) }, Priority { value: 95, data: (IVec2(9, 10), Down, 2) }, Priority { value: 96, data: (IVec2(12, 9), Right, 3) }, Priority { value: 100, data: (IVec2(10, 8), Down, 3) }, Priority { value: 97, data: (IVec2(10, 7), Down, 3) }, Priority { value: 99, data: (IVec2(11, 8), Up, 1) }, Priority { value: 98, data: (IVec2(9, 9), Down, 1) }]
-Popped: (94, (IVec2(8, 11), Left, 1)). from queue, rest: [Priority { value: 95, data: (IVec2(9, 10), Down, 2) }, Priority { value: 97, data: (IVec2(10, 7), Down, 3) }, Priority { value: 96, data: (IVec2(12, 9), Right, 3) }, Priority { value: 100, data: (IVec2(10, 8), Down, 3) }, Priority { value: 98, data: (IVec2(9, 9), Down, 1) }, Priority { value: 99, data: (IVec2(11, 8), Up, 1) }]
-Popped: (95, (IVec2(9, 10), Down, 2)). from queue, rest: [Priority { value: 96, data: (IVec2(12, 9), Right, 3) }, Priority { value: 97, data: (IVec2(10, 7), Down, 3) }, Priority { value: 99, data: (IVec2(11, 8), Up, 1) }, Priority { value: 100, data: (IVec2(10, 8), Down, 3) }, Priority { value: 98, data: (IVec2(9, 9), Down, 1) }, Priority { value: 99, data: (IVec2(9, 11), Down, 1) }]
-Popped: (96, (IVec2(12, 9), Right, 3)). from queue, rest: [Priority { value: 97, data: (IVec2(10, 7), Down, 3) }, Priority { value: 98, data: (IVec2(9, 9), Down, 1) }, Priority { value: 99, data: (IVec2(11, 8), Up, 1) }, Priority { value: 100, data: (IVec2(10, 8), Down, 3) }, Priority { value: 100, data: (IVec2(10, 10), Down, 3) }, Priority { value: 99, data: (IVec2(9, 11), Down, 1) }]
-Popped: (97, (IVec2(10, 7), Down, 3)). from queue, rest: [Priority { value: 98, data: (IVec2(9, 9), Down, 1) }, Priority { value: 100, data: (IVec2(10, 10), Down, 3) }, Priority { value: 99, data: (IVec2(11, 8), Up, 1) }, Priority { value: 100, data: (IVec2(10, 8), Down, 3) }, Priority { value: 103, data: (IVec2(11, 9), Up, 1) }, Priority { value: 99, data: (IVec2(9, 11), Down, 1) }]
-Popped: (98, (IVec2(9, 9), Down, 1)). from queue, rest: [Priority { value: 99, data: (IVec2(11, 8), Up, 1) }, Priority { value: 100, data: (IVec2(10, 10), Down, 3) }, Priority { value: 99, data: (IVec2(9, 11), Down, 1) }, Priority { value: 100, data: (IVec2(10, 8), Down, 3) }, Priority { value: 103, data: (IVec2(11, 9), Up, 1) }]
-Popped: (99, (IVec2(11, 8), Up, 1)). from queue, rest: [Priority { value: 99, data: (IVec2(9, 11), Down, 1) }, Priority { value: 100, data: (IVec2(10, 10), Down, 3) }, Priority { value: 103, data: (IVec2(10, 9), Down, 2) }, Priority { value: 100, data: (IVec2(10, 8), Down, 3) }, Priority { value: 103, data: (IVec2(11, 9), Up, 1) }]
-Popped: (99, (IVec2(9, 11), Down, 1)). from queue, rest: [Priority { value: 100, data: (IVec2(10, 10), Down, 3) }, Priority { value: 100, data: (IVec2(10, 8), Down, 3) }, Priority { value: 103, data: (IVec2(10, 9), Down, 2) }, Priority { value: 103, data: (IVec2(11, 9), Up, 1) }]
-Popped: (100, (IVec2(10, 10), Down, 3)). from queue, rest: [Priority { value: 100, data: (IVec2(10, 8), Down, 3) }, Priority { value: 103, data: (IVec2(11, 9), Up, 1) }, Priority { value: 102, data: (IVec2(9, 12), Right, 1) }, Priority { value: 103, data: (IVec2(10, 9), Down, 2) }, Priority { value: 105, data: (IVec2(10, 11), Down, 2) }]
-Popped: (100, (IVec2(10, 8), Down, 3)). from queue, rest: [Priority { value: 102, data: (IVec2(9, 12), Right, 1) }, Priority { value: 103, data: (IVec2(11, 9), Up, 1) }, Priority { value: 105, data: (IVec2(10, 11), Down, 2) }, Priority { value: 103, data: (IVec2(10, 9), Down, 2) }]
-Popped: (102, (IVec2(9, 12), Right, 1)). from queue, rest: [Priority { value: 103, data: (IVec2(11, 9), Up, 1) }, Priority { value: 103, data: (IVec2(10, 9), Down, 2) }, Priority { value: 105, data: (IVec2(10, 11), Down, 2) }]
-Popped: (103, (IVec2(11, 9), Up, 1)). from queue, rest: [Priority { value: 103, data: (IVec2(10, 9), Down, 2) }, Priority { value: 105, data: (IVec2(10, 12), Down, 1) }, Priority { value: 105, data: (IVec2(10, 11), Down, 2) }]
-Popped: (103, (IVec2(10, 9), Down, 2)). from queue, rest: [Priority { value: 105, data: (IVec2(10, 11), Down, 2) }, Priority { value: 105, data: (IVec2(10, 12), Down, 1) }, Priority { value: 110, data: (IVec2(11, 10), Right, 1) }]
-Popped: (105, (IVec2(10, 11), Down, 2)). from queue, rest: [Priority { value: 105, data: (IVec2(10, 12), Down, 1) }, Priority { value: 110, data: (IVec2(11, 10), Right, 1) }]
-Popped: (105, (IVec2(10, 12), Down, 1)). from queue, rest: [Priority { value: 108, data: (IVec2(11, 11), Down, 3) }, Priority { value: 110, data: (IVec2(11, 10), Right, 1) }]
-Popped: (108, (IVec2(11, 11), Down, 3)). from queue, rest: [Priority { value: 110, data: (IVec2(11, 10), Right, 1) }, Priority { value: 110, data: (IVec2(11, 12), Down, 2) }]
-Popped: (110, (IVec2(11, 10), Right, 1)). from queue, rest: [Priority { value: 110, data: (IVec2(11, 12), Down, 2) }]
-Popped: (110, (IVec2(11, 12), Down, 2)). from queue, rest: [Priority { value: 115, data: (IVec2(12, 10), Down, 1) }]
-Popped: (113, (IVec2(12, 12), Down, 3)). from queue, rest: [Priority { value: 115, data: (IVec2(12, 10), Down, 1) }]
-[src/bin/day17-1-1-1.rs:108] &path = [
-    18446744073709551615,
-    0,
-    1,
-    2,
-    17,
-    4,
-    5,
-    6,
-    21,
-    8,
-    9,
-    10,
-    25,
-    0,
-    13,
-    14,
-    15,
-    30,
-    31,
-    18,
-    19,
-    20,
-    9,
-    10,
-    11,
-    24,
-    13,
-    14,
-    15,
-    28,
-    29,
-    30,
-    19,
-    32,
-    21,
-    34,
-    35,
-    24,
-    25,
-    26,
-    27,
-    28,
-    41,
-    30,
-    31,
-    44,
-    45,
-    34,
-    35,
-    36,
-    37,
-    38,
-    53,
-    40,
-    41,
-    54,
-    43,
-    56,
-    57,
-    58,
-    47,
-    48,
-    49,
-    62,
-    51,
-    52,
-    65,
-    66,
-    55,
-    56,
-    69,
-    58,
-    71,
-    72,
-    61,
-    62,
-    63,
-    76,
-    65,
-    78,
-    67,
-    80,
-    81,
-    70,
-    71,
-    84,
-    85,
-    86,
-    89,
-    76,
-    77,
-    78,
-    91,
-    80,
-    93,
-    94,
-    83,
-    84,
-    97,
-    98,
-    99,
-    102,
-    89,
-    90,
-    105,
-    92,
-    93,
-    106,
-    107,
-    108,
-    123,
-    98,
-    99,
-    112,
-    101,
-    116,
-    103,
-    104,
-    105,
-    118,
-    107,
-    120,
-    121,
-    122,
-    111,
-    112,
-    113,
-    114,
-    115,
-    128,
-    131,
-    118,
-    131,
-    120,
-    133,
-    134,
-    135,
-    124,
-    125,
-    126,
-    127,
-    128,
-    129,
-    130,
-    143,
-    132,
-    133,
-    146,
-    147,
-    148,
-    163,
-    164,
-    165,
-    152,
-    141,
-    142,
-    143,
-    156,
-    145,
-    158,
-    159,
-    160,
-    149,
-    162,
-    163,
-    164,
-    153,
-    18446744073709551615,
-    155,
-]
-#413432311323
-###54####5623
-32####56###54
-3446585845#52
-4546657867##6
-14385987984##
-445787698776#
-363787797965#
-46549679868##
-45646799864##
-122468686556#
-254654888773#
-4322674655533
-thread 'tests::test_1' panicked at src/bin/day17-1-1-1.rs:247:9:
-assertion `left == right` failed
-  left: "113"
- right: "102"
-
-
 failures:
-    tests::smol_test2
     tests::test_1
 
-test result: FAILED. 2 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
 

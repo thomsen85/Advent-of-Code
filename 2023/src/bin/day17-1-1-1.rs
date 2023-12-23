@@ -12,7 +12,7 @@ fn main() {
     dbg!(solve(include_str!("../../inputs/day17.txt")));
 }
 
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
 enum Direction {
     Up,
     Down,
@@ -89,39 +89,78 @@ where
 }
 fn solve(input: &str) -> String {
     // IVec is now Row, Columns
-    let columns = input.lines().next().unwrap().len();
-    let rows = input.lines().count();
 
     let map = input
         .lines()
-        .enumerate()
-        .map(|(row, l)| {
+        .map(|l| {
             l.chars()
-                .enumerate()
-                .map(|(col, c)| c.to_digit(10).expect(&format!("Got {}", c)))
+                .map(|c| c.to_digit(10).expect(&format!("Got {}", c)))
                 .collect_vec()
         })
         .collect_vec();
-    let goal = IVec2::new(rows as i32 - 1, columns as i32 - 1);
+    let cols = map[0].len();
+    let rows = map.len();
+    let goal = IVec2::new(rows as i32 - 1, cols as i32 - 1);
 
     let (ans, path) = shortest_path(&map, IVec2::new(0, 0), goal).unwrap();
-    dbg!(&path);
 
     let mut visited = HashSet::new();
-    let mut last = path[ivec_2_index(goal, columns)];
+    use Direction::*;
+    dbg!(&path, ans);
+    let mut last = [Down, Up, Left, Right]
+        .into_iter()
+        .map(|d| path[ivec_2_index(goal, rows, cols, d)])
+        .inspect(|i| println!("Goal: {}", i))
+        .min()
+        .unwrap();
+
     visited.insert(last);
+    dbg!(rows, cols);
     loop {
+        println!("Last: {}", last);
+        println!(
+            "Row, Column, {}, {}",
+            last % (rows * cols) / cols,
+            last % (rows * cols) % cols
+        );
         last = path[last];
         visited.insert(last);
-        if last == 0 {
+        if last % (rows * cols) == 0 {
             break;
         }
     }
 
     for (x, row) in map.iter().enumerate() {
         for (y, v) in row.iter().enumerate() {
-            if visited.contains(&ivec_2_index(IVec2::new(x as i32, y as i32), columns)) {
-                print!("#");
+            use Direction::*;
+            if visited.contains(&ivec_2_index(
+                IVec2::new(x as i32, y as i32),
+                rows,
+                cols,
+                Right,
+            )) {
+                print!(">");
+            } else if visited.contains(&ivec_2_index(
+                IVec2::new(x as i32, y as i32),
+                rows,
+                cols,
+                Left,
+            )) {
+                print!("<");
+            } else if visited.contains(&ivec_2_index(
+                IVec2::new(x as i32, y as i32),
+                rows,
+                cols,
+                Up,
+            )) {
+                print!("^");
+            } else if visited.contains(&ivec_2_index(
+                IVec2::new(x as i32, y as i32),
+                rows,
+                cols,
+                Down,
+            )) {
+                print!("v");
             } else {
                 print!("{}", v);
             }
@@ -138,14 +177,13 @@ fn shortest_path(map: &Vec<Vec<u32>>, start: IVec2, goal: IVec2) -> Option<(u32,
     let rows = map.len();
     let cols = map[0].len();
 
-    let mut dist: Vec<_> = (0..(rows * cols)).map(|_| u32::MAX).collect();
-    let mut prev: Vec<_> = (0..(rows * cols)).map(|_| usize::MAX).collect();
-    let mut seen = HashSet::new();
+    let mut dist: Vec<_> = (0..(rows * cols * 4)).map(|_| u32::MAX).collect();
+    let mut prev: Vec<_> = (0..(rows * cols * 4)).map(|_| usize::MAX).collect();
 
     let mut heap = BinaryHeap::new();
 
     // We're at `start`, with a zero cost
-    dist[ivec_2_index(start, cols)] = 0;
+    dist[ivec_2_index(start, rows, cols, Right)] = 0;
     heap.push(Priority {
         value: 0,
         data: (start, Right, 0),
@@ -153,30 +191,29 @@ fn shortest_path(map: &Vec<Vec<u32>>, start: IVec2, goal: IVec2) -> Option<(u32,
 
     // Examine the frontier with lower cost nodes first (min-heap)
     while let Some(Priority { value, data }) = heap.pop() {
-        println!("Popped: {:?}. from queue, rest: {:?}", (value, data), &heap);
+        //println!("Popped: {:?}. from queue, rest: {:?}", (value, data), &heap);
         // Alternatively, we could have continued to find all shortest paths
-        let current_index = ivec_2_index(data.0, cols);
+        let current_index = ivec_2_index(data.0, rows, cols, data.1);
 
         if data.0 == goal {
             return Some((value, prev));
         }
 
         // Important as we may have already found a better way
-        if seen.contains(&data) && value > dist[current_index] {
+        if value > dist[current_index] {
             continue;
         }
 
-        seen.insert(data);
         // For each node we can reach, see if we can find a way with
         // a lower cost going through this node
         for n_data in get_edges(data, rows, cols) {
-            let next_index = ivec_2_index(n_data.0, cols);
+            let next_index = ivec_2_index(n_data.0, rows, cols, n_data.1);
             let next = Priority {
                 value: value + map[n_data.0.x as usize][n_data.0.y as usize],
                 data: n_data,
             };
             // If so, add it to the frontier and continue
-            if !seen.contains(&next.data) && next.value < dist[next_index] {
+            if next.value < dist[next_index] {
                 // Relaxation, we have now found a better way
                 dist[next_index] = next.value;
                 prev[next_index] = current_index;
@@ -217,8 +254,8 @@ fn get_edges(
     v
 }
 
-fn ivec_2_index(vec: IVec2, cols: usize) -> usize {
-    (vec.x * cols as i32 + vec.y) as usize
+fn ivec_2_index(vec: IVec2, rows: usize, cols: usize, direction: Direction) -> usize {
+    (vec.x * cols as i32 + vec.y) as usize + (rows * cols * direction as usize)
 }
 
 fn is_invalid_pos(pos: IVec2, rows: usize, cols: usize) -> bool {
@@ -249,7 +286,11 @@ mod tests {
 
     #[test]
     fn test_ivec2index() {
-        assert_eq!(ivec_2_index(IVec2::new(10, 8), 10), 108);
+        assert_eq!(ivec_2_index(IVec2::new(5, 8), 10, 10, Direction::Up), 58);
+        assert_eq!(
+            ivec_2_index(IVec2::new(5, 8), 10, 10, Direction::Right),
+            358
+        );
     }
 
     #[test]
