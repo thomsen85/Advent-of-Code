@@ -132,6 +132,7 @@ fn dijkstra_ish(map: &Vec<Vec<i32>>, start: IVec2, end: IVec2) -> usize {
         if seen.contains(&this) {
             continue;
         }
+
         seen.insert(this);
 
         let nexts = get_edges(this, rows, cols);
@@ -157,8 +158,12 @@ fn get_edges(
     let (pos, direction, suc_moves) = data;
 
     let s_pos = pos + direction.ivec_delta();
-    if suc_moves < 3 && !is_invalid_pos(s_pos, rows, cols) {
+    if suc_moves < 10 && !is_invalid_pos(s_pos, rows, cols) {
         v.push((s_pos, direction, suc_moves + 1));
+    }
+
+    if suc_moves < 4 {
+        return v;
     }
 
     let r_direction = direction.rot90();
@@ -198,6 +203,16 @@ mod tests {
 1224686865563
 2546548887735
 4322674655533";
-        assert_eq!(solve(ti), "102".to_string());
+        assert_eq!(solve(ti), "94".to_string());
+    }
+
+    #[test]
+    fn test_2() {
+        let ti = "111111111111
+999999999991
+999999999991
+999999999991
+999999999991";
+        assert_eq!(solve(ti), "71")
     }
 }
