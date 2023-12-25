@@ -32,7 +32,11 @@ impl Module {
                 Low => {
                     if b {
                         b = false;
-                        Some(Low)
+                        Some(Low)19, 13, 30 @ -2,  1, -2
+18, 19, 22 @ -1, -1, -2
+20, 25, 34 @ -2, -2, -4
+12, 31, 28 @ -1, -2, -1
+20, 19, 15 @  1, -5, -3
                     } else {
                         b = true;
                         Some(High)
@@ -67,21 +71,24 @@ fn solve(input: &str) -> String {
 
 fn parse(input: &str) -> IResult<&str, Vec<((&str, Module), Vec<&str>)>> {
     use Module::*;
-    // let (input, ans) = separated_list1(
-    //     newline,
-    //     separated_pair(
-    //         alt((
-    //             map(tag("broadcaster"), |name| (name, Brodcast),
-    //             map(preceded(cnom::char('%'), alpha1), |name| (name, FlipFlop(false))),
-    //             map(preceded(cnom::char('&'), alpha1), |name| (name, Conjuction(Vec::new()))),
-    //         )),
-    //         tag(" -> "),
-    //         separated_list1(tag(", "), alpha1),
-    //     ),
-    // )(input)?;
+    let (input, ans) = separated_list1(
+        newline,
+        separated_pair(
+            alt((
+                map(tag("broadcaster"), |name| (name, Brodcast)),
+                map(preceded(cnom::char('%'), alpha1), |name| {
+                    (name, FlipFlop(false))
+                }),
+                map(preceded(cnom::char('&'), alpha1), |name| {
+                    (name, Conjuction(Vec::new()))
+                }),
+            )),
+            tag(" -> "),
+            separated_list1(tag(", "), alpha1),
+        ),
+    )(input)?;
 
-    todo!();
-    Ok((input, ()))
+    Ok((input, ans))
 }
 
 #[cfg(test)]
