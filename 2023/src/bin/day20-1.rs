@@ -1,4 +1,4 @@
-use std::collections::HashMap;
+use std::collections::{HashMap, VecDeque};
 
 use itertools::Itertools;
 use nom::{
@@ -72,7 +72,6 @@ fn main() {
 fn solve(input: &str) -> String {
     use Module::*;
     let mut modules = parse(input).unwrap().1;
-    dbg!(&modules);
 
     // Preprosses Conjuctions
 
@@ -97,17 +96,32 @@ fn solve(input: &str) -> String {
 
     dbg!(&modules);
 
+    let mut high = 0;
+    let mut low = 0;
+
     const LOOP_TIMES: usize = 1;
-    for i in 0..LOOP_TIMES {
+    for _i in 0..LOOP_TIMES {
         use Pulse::*;
-        // Press Button
-        let (module, to) = modules.get_mut("broadcaster").unwrap();
-        let ret = module.tick(Low, "broadcaster".to_string());
+
+        let mut queue =
+            VecDeque::from(vec![("button".to_string(), "broadcaster".to_string(), Low)]);
+
+        while let Some((from, to, pulse)) = queue.pop_front() {
+            let (to_mod, tos) = modules.get_mut(&to).unwrap();
+
+            if let Some(res) = to_mod.tick(pulse, from) {
+                match res {
+                    Low => low += 1,
+                    High => high += 1,
+                }
+                for to_other in tos {
+                    queue.push_back((to.clone(), to_other.clone(), res))
+                }
+            }
+        }
     }
 
-    todo!("Add solution");
-
-    " ".to_string()
+    (low * high).to_string()
 }
 
 fn parse(input: &str) -> IResult<&str, HashMap<String, (Module, Vec<String>)>> {
