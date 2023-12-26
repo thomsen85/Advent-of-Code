@@ -1,3 +1,6 @@
+use std::collections::HashMap;
+
+use itertools::Itertools;
 use nom::{
     branch::alt,
     bytes::complete::tag,
@@ -5,7 +8,7 @@ use nom::{
     combinator::map,
     multi::separated_list1,
     sequence::{delimited, preceded, separated_pair},
-    IResult,
+    IResult, Parser,
 };
 // For number types
 use nom::character::complete as cnom;
@@ -16,27 +19,24 @@ enum Pulse {
     High,
 }
 
+#[derive(Debug, Clone)]
 enum Module {
-    Brodcast(),
+    Broadcast,
     FlipFlop(bool),
-    Conjuction(Vec<Pulse>),
+    Conjuction(HashMap<String, Option<Pulse>>),
 }
 
 impl Module {
-    fn tick(&mut self, pulse: Pulse) -> Option<Pulse> {
+    fn tick(&mut self, pulse: Pulse, from: String) -> Option<Pulse> {
         use Module::*;
         use Pulse::*;
         match self {
-            Brodcast() => Some(pulse),
+            Broadcast => Some(pulse),
             FlipFlop(mut b) => match pulse {
                 Low => {
                     if b {
                         b = false;
-                        Some(Low)19, 13, 30 @ -2,  1, -2
-18, 19, 22 @ -1, -1, -2
-20, 25, 34 @ -2, -2, -4
-12, 31, 28 @ -1, -2, -1
-20, 19, 15 @  1, -5, -3
+                        Some(Low)
                     } else {
                         b = true;
                         Some(High)
@@ -44,15 +44,23 @@ impl Module {
                 }
                 High => None,
             },
-            Conjuction(mut v) => {
-                v.push(pulse);
-                // Dette funker ikke
-                if v.iter().all(|p| matches!(p, High)) {
+            Conjuction(v) => {
+                v.insert(from, Some(pulse));
+                if v.iter().all(|(_k, p)| matches!(p.unwrap_or(Low), High)) {
                     Some(Low)
                 } else {
                     Some(High)
                 }
             }
+        }
+    }
+
+    fn reset(&mut self) {
+        use Module::*;
+        match self {
+            Broadcast => todo!(),
+            FlipFlop(_) => todo!(),
+            Conjuction(_) => todo!(),
         }
     }
 }
@@ -62,31 +70,74 @@ fn main() {
 }
 
 fn solve(input: &str) -> String {
-    let p = parse(input).unwrap().1;
+    use Module::*;
+    let mut modules = parse(input).unwrap().1;
+    dbg!(&modules);
+
+    // Preprosses Conjuctions
+
+    let conjunctions = modules
+        .iter()
+        .filter(|(_, (m, _))| matches!(m, Conjuction(_)))
+        .map(|(a, _)| a.to_owned())
+        .collect_vec();
+
+    for con_name in conjunctions {
+        let connections = modules
+            .iter()
+            .filter(|(_, (_, m_cons))| m_cons.contains(&con_name))
+            .map(|(n, _)| (n.to_owned(), None))
+            .collect_vec();
+
+        match modules.get_mut(&con_name).unwrap() {
+            (Conjuction(s), _) => s.extend(connections),
+            _ => panic!(),
+        };
+    }
+
+    dbg!(&modules);
+
+    const LOOP_TIMES: usize = 1;
+    for i in 0..LOOP_TIMES {
+        use Pulse::*;
+        // Press Button
+        let (module, to) = modules.get_mut("broadcaster").unwrap();
+        let ret = module.tick(Low, "broadcaster".to_string());
+    }
 
     todo!("Add solution");
 
     " ".to_string()
 }
 
-fn parse(input: &str) -> IResult<&str, Vec<((&str, Module), Vec<&str>)>> {
+fn parse(input: &str) -> IResult<&str, HashMap<String, (Module, Vec<String>)>> {
     use Module::*;
     let (input, ans) = separated_list1(
         newline,
         separated_pair(
             alt((
-                map(tag("broadcaster"), |name| (name, Brodcast)),
+                map(tag("broadcaster"), |name| (name, Broadcast)),
                 map(preceded(cnom::char('%'), alpha1), |name| {
                     (name, FlipFlop(false))
                 }),
                 map(preceded(cnom::char('&'), alpha1), |name| {
-                    (name, Conjuction(Vec::new()))
+                    (name, Conjuction(HashMap::new()))
                 }),
             )),
             tag(" -> "),
             separated_list1(tag(", "), alpha1),
         ),
     )(input)?;
+
+    let ans: HashMap<String, (Module, Vec<String>)> = ans
+        .into_iter()
+        .map(|(l, r)| {
+            (
+                l.0.to_string(),
+                (l.1, r.into_iter().map(|a| a.to_string()).collect_vec()),
+            )
+        })
+        .collect();
 
     Ok((input, ans))
 }

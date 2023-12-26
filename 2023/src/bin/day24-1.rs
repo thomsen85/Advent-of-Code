@@ -1,12 +1,5 @@
+use glam::{DMat2, DVec2};
 use itertools::Itertools;
-use nom::{
-    bytes::complete::tag,
-    character::complete::{multispace0, multispace1, newline, space0, space1},
-    sequence::{delimited, preceded},
-    IResult,
-};
-// For number types
-use nom::character::complete as cnom;
 
 fn main() {
     dbg!(solve(
@@ -17,6 +10,8 @@ fn main() {
 }
 
 fn solve(input: &str, test_min: f64, test_max: f64) -> String {
+    assert!(test_max < 2_f64.powi(52)); // 52 accurate mantissa
+
     let hails = input
         .lines()
         .map(|line| {
@@ -30,50 +25,49 @@ fn solve(input: &str, test_min: f64, test_max: f64) -> String {
                 .collect_tuple::<(f64, f64, f64, f64, f64, f64)>()
                 .unwrap()
         })
+        .map(|x| (DVec2::new(x.0, x.1), DVec2::new(x.3, x.4)))
         .collect_vec();
 
     let mut sum = 0;
 
     for h1_i in 0..hails.len() {
-        let (x1, y1, _z1, dx1, dy1, _dz1) = hails[h1_i];
+        let (p1, d1) = hails[h1_i];
+
         for h2_i in 0..hails.len() {
             if h1_i == h2_i {
                 continue;
             }
-            let (x2, y2, _z2, dx2, dy2, _dz2) = hails[h2_i];
+            let (p2, d2) = hails[h2_i];
+            // https://en.wikipedia.org/wiki/Line%E2%80%93line_intersection
 
-            println!(
-                "Hailstone A: {}, {}, {} @ {}, {}, {}",
-                x1, y1, _z1, dx1, dy1, _dz1
-            );
-            println!(
-                "Hailstone B: {}, {}, {} @ {}, {}, {}",
-                x2, y2, _z2, dx2, dy2, _dz2
-            );
+            // Putter konstanter på høyre side som b
+            // Koefissienter som A
+            // løser for x
+            //
+            let b = p2 - p1;
 
-            let t = (x1 - x2) / (dx2 - dx1);
-            let x = t * dx1 + x1;
-            dbg!(x, t);
-            if t > 0. || x < test_min || x > test_max {
+            let a = DMat2::from_cols(d1, -d2);
+
+            if a.determinant() == 0.0 {
+                continue;
+            }
+            let x = a.inverse().mul_vec2(b);
+
+            let dx = x.x * d1;
+            let p = p1 + dx;
+
+            if x.min_element() < 0. {
                 continue;
             }
 
-            let y = t * dy1 + y1;
-            if y < test_min || y > test_max || y != y2 + dy2 * t {
-                dbg!(y1 + dy1 * t, y2 + dy2 * t);
-                continue;
+            if p.min_element() > test_min && p.max_element() < test_max {
+                sum += 1;
+            } else {
             }
-            sum += 1;
         }
     }
 
-    sum.to_string()
-}
-
-fn parse(input: &str) -> IResult<&str, ()> {
-    todo!("Add parser");
-
-    Ok((input, ()))
+    (sum / 2).to_string()
 }
 
 #[cfg(test)]
