@@ -12,6 +12,7 @@ use nom::{
 };
 // For number types
 use nom::character::complete as cnom;
+use num::Integer;
 
 #[derive(Debug, Clone, Copy)]
 enum Pulse {
@@ -94,40 +95,68 @@ fn solve(input: &str) -> String {
         };
     }
 
-    dbg!(&modules);
+    let to_rx = modules
+        .iter()
+        .filter(|(_name, (_module, tos))| tos.contains(&"rx".to_string()))
+        .map(|(n, _)| n.to_owned())
+        .collect_vec();
 
-    let mut high = 0;
-    let mut low = 0;
+    assert!(to_rx.len() == 1);
+    // Is a singe conjunction, If all are high from the input iit outputs low
+    let to_rx = to_rx.into_iter().next().unwrap();
 
-    const LOOP_TIMES: usize = 1000;
-    for _i in 0..LOOP_TIMES {
-        println!();
+    dbg!(&to_rx);
+
+    // See that all of these are conjuctions with only one conenction making them inverters
+    // let to_to_rx = modules
+    //     .iter()
+    //     .filter(|(_name, (_module, tos))| tos.contains(&to_rx.0))
+    //     .collect_vec();
+
+    // dbg!(to_to_rx);
+
+    let mut c: usize = 0;
+    let mut rep: HashMap<String, usize> = HashMap::new();
+    loop {
+        c += 1;
         use Pulse::*;
 
         let mut queue =
             VecDeque::from(vec![("button".to_string(), "broadcaster".to_string(), Low)]);
-        low += 1;
 
         while let Some((from, to, pulse)) = queue.pop_front() {
-            println!("{} -{:?}-> {}", from, pulse, to);
+            // println!("{} -{:?}-> {}", from, pulse, to);
             let Some((to_mod, tos)) = modules.get_mut(&to) else {
                 continue;
             };
 
             if let Some(res) = to_mod.tick(pulse, from) {
-                match res {
-                    Low => low += tos.len(),
-                    High => high += tos.len(),
-                }
                 for to_other in tos {
+                    if to_other == &to_rx && matches!(res, High) {
+                        //println!("{} | {:?} From {:?} to {:?}", c, pulse, to, to_other);
+                        if !rep.contains_key(&to) {
+                            rep.insert(to.clone(), c);
+                        }
+                    }
                     queue.push_back((to.clone(), to_other.clone(), res))
                 }
             }
         }
+        if rep.len() == 4 {
+            break;
+        }
+    }
+    dbg!(&rep);
+
+    let mut reps = rep.values();
+
+    let mut lcm = *reps.next().unwrap();
+    while let Some(i) = reps.next() {
+        dbg!(lcm);
+        lcm = lcm.lcm(i);
     }
 
-    dbg!(low, high);
-    (low * high).to_string()
+    lcm.to_string()
 }
 
 fn parse(input: &str) -> IResult<&str, HashMap<String, (Module, Vec<String>)>> {
