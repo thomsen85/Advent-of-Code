@@ -1,4 +1,3 @@
-use rstest::rstest;
 use std::{collections::HashSet, f64};
 
 use common::utils;
@@ -9,11 +8,18 @@ use ndarray_linalg::Inverse;
 fn main() {
     dbg!(solve(include_str!("../../inputs/day21.txt"), 26501365));
 
-    // 621289980339486 Too High
-    // 621289922886178 Too High
-    // 621289922885837 : ?
-    // 10 , 3 : 621289922898471: ?
+    //         621289980339486 Too High
+    //         621289922886178 Too High
+    //         621289922885837 : ?
+    // 10, 3 : 621289922898471: ?
+    // 20, 5 : 621289980342474
+    // 25, 5 : 621289980344769
+    // 35, 3 : 621289980353529
+    // 45, 5 : 621289980281748
+    // 10, 5 : 621289922886372
 }
+
+const MOVES: [IVec2; 4] = [IVec2::X, IVec2::NEG_X, IVec2::Y, IVec2::NEG_Y];
 
 fn solve(input: &str, steps: usize) -> String {
     println!("Solving for {} steps", steps);
@@ -41,7 +47,7 @@ fn solve(input: &str, steps: usize) -> String {
     println!("Map is of size {}x{}", size, size);
 
     let rem = steps % size;
-    let start_i = 10;
+    let start_i = 0;
     let sample_points = 3;
 
     println!(
@@ -49,35 +55,49 @@ fn solve(input: &str, steps: usize) -> String {
         sample_points, start_i
     );
 
-    let mut visited: HashSet<IVec2> = HashSet::from([start]);
     let mut y_p = vec![];
     let mut x_p = vec![];
     let mut samples = 0;
 
-    const MOVES: [IVec2; 4] = [IVec2::X, IVec2::NEG_X, IVec2::Y, IVec2::NEG_Y];
-    for step in 0..steps {
-        let visited_c = visited.clone();
-        visited.clear();
+    let start_visited: HashSet<IVec2> = if steps % 2 == 0 {
+        HashSet::from([start])
+    } else {
+        HashSet::from_iter(
+            MOVES
+                .iter()
+                .map(|d| *d + start)
+                .filter(|p| map[p.x as usize][p.y as usize] != '#'),
+        )
+    };
 
-        for p in visited_c {
-            for mov in MOVES {
-                let new_p = p + mov;
-                if map[new_p.x.rem_euclid(size as i32) as usize]
-                    [new_p.y.rem_euclid(size as i32) as usize]
-                    == '#'
-                {
-                    continue;
-                }
+    let mut old_current_visited = HashSet::new();
+    let mut current_visited = start_visited.clone();
+    let mut reached = current_visited.len();
 
-                visited.insert(new_p);
-            }
-        }
+    let mut step = steps % 2;
+    for _ in 0..(steps / 2) {
+        let first = get_new_visited(&map, size, &current_visited);
+        let second = get_new_visited(&map, size, &first);
 
-        if step >= start_i * size && (step + 1) % size == rem {
-            y_p.push(visited.len() as f64);
-            x_p.push(1. + step as f64);
+        step += 2;
+        let next_current_visited = second
+            .difference(&current_visited)
+            .map(|v| v.to_owned())
+            .collect::<HashSet<IVec2>>()
+            .difference(&old_current_visited)
+            .map(|v| v.to_owned())
+            .collect::<HashSet<IVec2>>();
+
+        reached += next_current_visited.len();
+        old_current_visited = current_visited;
+        current_visited = next_current_visited;
+
+        //println!("Step: {}, Reached: {}", step, reached);
+        if step >= start_i * size && step % size == rem {
+            y_p.push(reached as f64);
+            x_p.push(step as f64);
             samples += 1;
-            println!("Collected {}. sample", samples);
+            println!("Collected {}. sample. x: {}, y: {}", samples, reached, step);
         }
 
         if samples >= sample_points {
@@ -86,7 +106,11 @@ fn solve(input: &str, steps: usize) -> String {
     }
 
     if x_p.len() < 3 {
-        return visited.len().to_string();
+        return reached.to_string();
+    }
+
+    for (x, y) in x_p.iter().zip(y_p.iter()) {
+        println!("{}\t{}", x, y);
     }
     // https://en.wikipedia.org/wiki/Polynomial_regression
     // 1 x_n (x^2)_n
@@ -124,9 +148,28 @@ fn solve(input: &str, steps: usize) -> String {
     (ans.round() as usize).to_string()
 }
 
+fn get_new_visited(map: &Vec<Vec<char>>, size: usize, current: &HashSet<IVec2>) -> HashSet<IVec2> {
+    let mut new = HashSet::new();
+    for p in current {
+        for mov in MOVES {
+            let new_p = *p + mov;
+            if map[new_p.x.rem_euclid(size as i32) as usize]
+                [new_p.y.rem_euclid(size as i32) as usize]
+                == '#'
+            {
+                continue;
+            }
+
+            new.insert(new_p);
+        }
+    }
+    new
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
+    use rstest::rstest;
 
     #[rstest]
     #[case(6, "16")]
