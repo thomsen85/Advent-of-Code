@@ -43,7 +43,6 @@ fn solve(input: &str, test_min: f64, test_max: f64) -> String {
             // Putter konstanter på høyre side som b
             // Koefissienter som A
             // løser for x
-            //
             let b = p2 - p1;
 
             let a = DMat2::from_cols(d1, -d2);
@@ -62,7 +61,6 @@ fn solve(input: &str, test_min: f64, test_max: f64) -> String {
 
             if p.min_element() > test_min && p.max_element() < test_max {
                 sum += 1;
-            } else {
             }
         }
     }
