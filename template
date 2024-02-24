@@ -13,13 +13,11 @@ fn main() {
 
 fn solve(input: &str) -> String {
     let p = parse(input).unwrap().1;
-    todo!("Add solution");
 
     " ".to_string()
 }
 
 fn parse(input: &str) -> IResult<&str, ()> {
-    todo!("Add parser");
 
     Ok((input, ()))
 }

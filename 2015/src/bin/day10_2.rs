@@ -11,7 +11,7 @@ fn main() {
 
 fn solve(mut input: String) -> String {
     dbg!(&input);
-    for _ in 0..40 {
+    for _ in 0..50 {
         let s = input.chars().collect_vec();
 
         let mut sub = 1;
