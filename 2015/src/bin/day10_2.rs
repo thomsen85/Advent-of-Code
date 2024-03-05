@@ -1,7 +1,7 @@
 use itertools::Itertools;
 
 fn main() {
-    // 439880 to high
+    // 1 min more than part one
     dbg!(
         solve(include_str!("../../inputs/day10.txt").trim().to_string())
             .len()
