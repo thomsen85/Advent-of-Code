@@ -67,9 +67,8 @@ fn solve(input: &str) {
     let mut wires: HashMap<String, u16> = HashMap::new();
     let mut lines = input.lines().collect::<VecDeque<_>>();
 
-    let mut c = 0;
+    let b = 16076;
     while let Some(line) = lines.pop_front() {
-        c += 1;
         let lex = parse_line(line).unwrap().1;
         let mut failed = true;
 
@@ -77,7 +76,11 @@ fn solve(input: &str) {
 
         match &lex[..] {
             [v1, To, Wire(w)] => {
-                if let Some(val_1) = v1.to_val(&mut wires) {
+                if w == "b" {
+                    wires.insert(w.to_owned(), b);
+                    failed = false;
+                    dbg!("Overrided B");
+                } else if let Some(val_1) = v1.to_val(&mut wires) {
                     wires.insert(w.to_owned(), val_1);
                     failed = false;
                 }
@@ -108,16 +111,10 @@ fn solve(input: &str) {
         }
         if failed {
             lines.push_back(line);
-        } else {
-            c = 0;
-        }
-
-        if c >= lines.len() * 3 {
-            break;
         }
     }
 
-    dbg!(wires);
+    dbg!(wires.get("a"));
 }
 
 fn parse_line(input: &str) -> IResult<&str, Vec<Lexicon>> {
