@@ -1,6 +1,7 @@
 use std::hash::Hash;
 use std::{collections::HashMap, usize};
 
+#[derive(Debug)]
 pub struct BiDirectionalMap<K, V> {
     pub key_val: HashMap<K, V>,
     pub val_key: HashMap<V, K>,
@@ -30,8 +31,13 @@ where
     pub fn get_key(&self, val: &V) -> Option<&K> {
         self.val_key.get(val)
     }
+
+    fn contains(&self, node_name: &K) -> bool {
+        self.key_val.contains_key(node_name)
+    }
 }
 
+#[derive(Debug)]
 pub struct NodeTranslator<T> {
     current_id: usize,
     bi_map: BiDirectionalMap<T, usize>,
@@ -48,9 +54,13 @@ where
         }
     }
 
+    pub fn get(&self, key: &T) -> Option<usize> {
+        self.bi_map.get_val(key).map(usize::to_owned)
+    }
+
     pub fn get_or_insert(&mut self, key: T) -> usize {
-        if let Some(val) = self.bi_map.get_val(&key) {
-            return *val;
+        if let Some(val) = self.get(&key) {
+            return val;
         }
 
         let id = self.current_id;
@@ -59,5 +69,9 @@ where
         self.bi_map.insert(key, id);
 
         return id;
+    }
+
+    pub fn contains(&self, node_name: &T) -> bool {
+        self.bi_map.contains(node_name)
     }
 }
