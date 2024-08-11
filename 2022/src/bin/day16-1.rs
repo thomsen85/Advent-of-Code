@@ -1,5 +1,9 @@
-use std::collections::{HashSet, VecDeque};
+use std::{
+    collections::{HashSet, VecDeque},
+    time::Instant,
+};
 
+use cgmath::num_traits::Pow;
 use common::graphs::graph::NamedNodesWeightedGraph;
 use itertools::Itertools;
 use nom::{
@@ -14,7 +18,10 @@ use nom::{
 use nom::character::complete as cnom;
 
 fn main() {
+    let timer = Instant::now();
     dbg!(solve(include_str!("../../inputs/day16.txt")));
+    let elapsed = timer.elapsed();
+    println!("Took: {}", elapsed.as_secs_f64());
 }
 
 fn solve(input: &str) -> String {
@@ -55,7 +62,11 @@ fn solve(input: &str) -> String {
     let mut cache = HashSet::new();
 
     while let Some((minute, current, opened, score)) = queue.pop_front() {
-        let state = (current, opened.clone().into_iter().collect_vec(), score);
+        let state = (
+            minute,
+            current,
+            opened.iter().map(|a| 2_usize.pow(*a as u32)).sum::<usize>(),
+        );
         if cache.contains(&state) {
             continue;
         }
