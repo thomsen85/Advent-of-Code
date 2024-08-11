@@ -1,8 +1,4 @@
-use std::{
-    collections::{HashSet, VecDeque},
-    thread,
-    time::Duration,
-};
+use std::collections::{HashSet, VecDeque};
 
 use common::graphs::graph::NamedNodesWeightedGraph;
 use itertools::Itertools;
@@ -24,7 +20,8 @@ fn main() {
 fn solve(input: &str) -> String {
     let start = "AA";
 
-    let p = parse(input).unwrap().1;
+    let p = parse_input(input).unwrap().1;
+
     let null_nodes = p
         .iter()
         .filter(|a| a.1 == 0 && a.0 != start)
@@ -50,60 +47,67 @@ fn solve(input: &str) -> String {
     let mut queue = VecDeque::new();
     let start_i = graph.translation_map.get(&start.to_owned()).unwrap();
 
-    queue.push_back((0, start_i, HashSet::from([start_i]), 0));
+    queue.push_back((1, start_i, HashSet::from([start_i]), 0));
 
     let mut best_score = 0;
+    // let mut best_story = None;
 
     let mut cache = HashSet::new();
 
     while let Some((minute, current, opened, score)) = queue.pop_front() {
-        if cache.contains(&(
-            minute,
-            current,
-            opened.clone().into_iter().collect_vec(),
-            score,
-        )) {
+        let state = (current, opened.clone().into_iter().collect_vec(), score);
+        if cache.contains(&state) {
             continue;
         }
-        cache.insert((
-            minute,
-            current,
-            opened.clone().into_iter().collect_vec(),
-            score,
-        ));
-
-        let score = score
-            + opened
-                .iter()
-                .map(|a| graph.nodes[*a].unwrap_or(0))
-                .sum::<i32>();
+        cache.insert(state);
 
         if minute >= 30 {
-            best_score = best_score.max(score);
+            if score > best_score {
+                best_score = score;
+                // best_story = Some(story);
+            }
             continue;
         }
+        let pressure_per_minute = opened
+            .iter()
+            .map(|a| graph.nodes[*a].unwrap_or(0))
+            .sum::<i32>();
+
+        let score = score + pressure_per_minute;
+        //         story.push_str(&format!(
+        //             "\n== Minute {} ==
+        // Valve {:?}, releasing {} pressure. ({})\n",
+        //             minute, opened, pressure_per_minute, score
+        //         ));
 
         if !opened.contains(&current) {
             let mut opened_clone = opened.clone();
             opened_clone.insert(current);
+            // story.push_str(&format!("You open valve {}", current));
             queue.push_back((minute + 1, current, opened_clone, score));
         }
 
         for edge in &graph.edges[current] {
-            let score = score
-                + opened
-                    .iter()
-                    .map(|a| graph.nodes[*a].unwrap_or(0))
-                    .sum::<i32>()
-                    * (edge.weight - 1).min(30 - minute);
-            queue.push_back((minute + edge.weight, edge.to, opened.clone(), score))
+            let score = score + pressure_per_minute * (edge.weight - 1).min(30 - minute);
+
+            // let mut story_c = story.clone();
+            // story_c.push_str(&format!("You move to valve {}", edge.to));
+            queue.push_back((
+                minute + edge.weight,
+                edge.to,
+                opened.clone(),
+                score,
+                // story_c,
+            ))
         }
     }
+
+    // println!("{}", best_story.unwrap());
 
     best_score.to_string()
 }
 
-fn parse(input: &str) -> IResult<&str, Vec<(&str, i32, Vec<&str>)>> {
+fn parse_input(input: &str) -> IResult<&str, Vec<(&str, i32, Vec<&str>)>> {
     separated_list1(
         newline,
         tuple((
