@@ -8,18 +8,13 @@ use nom::{
 use nom::character::complete as cnom;
 
 fn main() {
-    dbg!(solve(include_str!("../../inputs/dayX.txt")));
+    dbg!(solve(include_str!("../../inputs/day20.txt")));
 }
 
 fn solve(input: &str) -> String {
     let p = parse(input).unwrap().1;
 
     " ".to_string()
-}
-
-fn parse(input: &str) -> IResult<&str, ()> {
-
-    Ok((input, ()))
 }
 
 #[cfg(test)]

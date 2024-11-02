@@ -2,5 +2,5 @@ target/
 .vscode/
 .idea/
 **/inputs/
-
+**/COOKIE
 **/.DS_Store
