@@ -31,7 +31,7 @@ mod tests {
     #[test]
     fn test_1() {
         let ti = "***input***";
-        assert_eq!(solve(ti), "**ans**".to_string());
+        assert_eq!(solve(ti), "***output***".to_string());
     }
 ***|end test|***
 }

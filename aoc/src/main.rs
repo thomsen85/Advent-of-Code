@@ -1,5 +1,4 @@
 use std::fs;
-use std::io::Read;
 
 use arboard::Clipboard;
 use chrono::Datelike;
@@ -14,11 +13,11 @@ enum Cmd {
     New {
         // This should be a templated file with the correct keywords:
         // TODO: Fill here
-        #[arg(short, long, default_value = "template")]
+        #[arg(short, long, default_value = "aoc/template")]
         template_path: String,
 
         #[arg(short, long)]
-        do_not_fetch_input: bool,
+        no_fetch_input: bool,
     },
     Submit,
 }
@@ -31,7 +30,7 @@ struct Args {
     #[arg(short, long)]
     day: Option<u32>,
 
-    #[arg(short, long, default_value = "COOKIE")]
+    #[arg(short, long, default_value = "aoc/COOKIE")]
     cookie_file: String,
 
     #[command(subcommand)]
@@ -76,16 +75,16 @@ fn main() {
     match args.option {
         Cmd::New {
             template_path,
-            do_not_fetch_input,
-        } => new(client, year, day, template_path, do_not_fetch_input),
+            no_fetch_input,
+        } => new(client, year, day, template_path, no_fetch_input),
         Cmd::Submit => submit(),
     }
 }
 
-fn new(client: Client, year: i32, day: u32, template_path: String, do_not_fetch_input: bool) {
+fn new(client: Client, year: i32, day: u32, template_path: String, no_fetch_input: bool) {
     // Wait for the task to drop with a nice timer :)
 
-    if !do_not_fetch_input {
+    if !no_fetch_input {
         let opening_time = chrono::Utc
             .with_ymd_and_hms(year, 12, day, 5, 0, 1)
             .unwrap();
@@ -119,67 +118,61 @@ fn new(client: Client, year: i32, day: u32, template_path: String, do_not_fetch_
     let mut clipboard = Clipboard::new().unwrap();
     let mut content = clipboard.get_text().unwrap();
     loop {
-        // loop {
-        //     if clipboard.get_text().unwrap() != content {
-        //         content = clipboard.get_text().unwrap();
-        //         break;
-        //     }
-        //     std::thread::sleep(std::time::Duration::from_millis(300));
-        // }
-
         println!("Please enter test input for test {}:", test_cases.len() + 1);
-        let mut input_buf = String::new();
-        std::io::stdin()
-            .read_line(&mut input_buf)
-            .expect("Cannot read test input from stdin");
-
-        let input = input_buf.trim_end();
-        if input.is_empty() {
-            break;
+        loop {
+            if clipboard.get_text().unwrap() != content {
+                content = clipboard.get_text().unwrap();
+                break;
+            }
+            std::thread::sleep(std::time::Duration::from_millis(300));
         }
+
+        let input = dbg!(content.clone());
 
         println!(
             "Please enter test output for test {}:",
             test_cases.len() + 1
         );
-
         loop {
-            let mut output_buf = String::new();
-            std::io::stdin()
-                .read_line(&mut output_buf)
-                .expect("Cannot read test output from stdin");
-
-            let output = output_buf.trim_end();
-            if output.is_empty() {
-                println!("Output cannot be empty, please enter again:");
-                continue;
+            if clipboard.get_text().unwrap() != content {
+                content = clipboard.get_text().unwrap();
+                break;
             }
+            std::thread::sleep(std::time::Duration::from_millis(300));
+        }
 
-            test_cases.push(Tests {
-                input: input.to_string(),
-                output: output.to_string(),
-            });
+        let output = dbg!(content.clone());
+
+        test_cases.push(Tests {
+            input: input.to_string(),
+            output: output.to_string(),
+        });
+
+        println!("Do you want to add another test case? (y/n)");
+        let mut input_buf = String::new();
+        std::io::stdin()
+            .read_line(&mut input_buf)
+            .expect("Cannot read test input from stdin");
+
+        if input_buf.trim().is_empty() || input_buf.trim() != "y" {
             break;
         }
     }
 
-    dbg!(&test_cases);
-    let file_path = format!("{}/src/day{}_1.rs", year, day);
+    let file_path = format!("{}/src/bin/day{}_1.rs", year, day);
 
-    let test_path = "test.rs";
     let template = fs::read_to_string(template_path).expect("Cannot remove template file");
     let code = substitute_template(&template, year, day, &test_cases);
-    println!("{}", code);
-    fs::write(test_path, code).expect("Cannot write test file");
-    // Ask for test cases
-    // Create files from template
+    fs::write(&file_path, code).expect("Cannot write test file");
+
+    println!("Created {}", file_path);
 }
 
 fn substitute_template(template: &str, year: i32, day: u32, tests: &[Tests]) -> String {
     let mut template = template.to_string();
 
     template = template.replace("***year***", &year.to_string());
-    template = template.replace("**day***", &day.to_string());
+    template = template.replace("***day***", &day.to_string());
 
     let test_start_pattern = "***|begin test|***";
     let test_end_pattern = "***|end test|***";
