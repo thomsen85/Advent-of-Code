@@ -13,6 +13,7 @@ use nom::{
 // For number types
 use nom::character::complete as cnom;
 
+#[derive(Debug)]
 enum V {
     Const(i64),
     Dep(String, char, String),
@@ -28,17 +29,47 @@ fn solve(input: &str) -> String {
         let line = parse(line).unwrap().1;
         m.insert(line.0, line.1);
     }
+    let mut max = i64::MAX / 100;
+    let mut min = i64::MIN / 100;
+    let mut t = 0;
+    let mut d = 200;
+    loop {
+        if let V::Dep(a, _, b) = m.get("root").unwrap() {
+            let a = get(&m, a, t);
+            let b = get(&m, b, t);
+            dbg!(a, b, a == b);
+            dbg!(a - b);
 
-    let res = get(&m, "root");
+            if a == b {
+                return t.to_string();
+            } else if a > b {
+                min = t
+            } else {
+                max = t;
+            }
+            t = (max + min) / 2;
+        }
 
-    res.to_string()
+        if d < 0 {
+            dbg!("depth reached ");
+            break;
+        }
+
+        t += 1;
+        d -= 1
+    }
+
+    t.to_string()
 }
 
-fn get(m: &HashMap<String, V>, v: &str) -> i64 {
+fn get(m: &HashMap<String, V>, v: &str, t: i64) -> i64 {
+    if v == "humn" {
+        return t;
+    }
     match m.get(v).unwrap() {
         V::Dep(a, o, b) => {
-            let a = get(m, a);
-            let b = get(m, b);
+            let a = get(m, a, t);
+            let b = get(m, b, t);
             match o {
                 '+' => a + b,
                 '*' => a * b,
@@ -91,6 +122,6 @@ pppw: cczh / lfqf
 lgvd: ljgn * ptdq
 drzm: hmdt - zczc
 hmdt: 32";
-        assert_eq!(solve(ti), "152".to_string());
+        assert_eq!(solve(ti), "301".to_string());
     }
 }
