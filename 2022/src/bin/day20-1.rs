@@ -25,24 +25,20 @@ fn solve(input: &str) -> String {
     let len = inp.len();
     let mut i = 0;
     loop {
-        let mut index_item = dbg!(index.iter().position(|&a| a as usize == i).unwrap()) as i32;
+        let index_item = index.iter().position(|&a| a as usize == i).unwrap() as i32;
         println!("{}", inp.iter().map(|a| a.to_string()).join(", "));
         // dbg!(&index.);
 
-        let mut c = inp.remove(index_item as usize).unwrap();
+        let c = inp.remove(index_item as usize).unwrap();
         println!("Moving {}", c);
         let d = index.remove(index_item as usize).unwrap();
 
-        if index_item as i32 + c < 0 {
-            index_item -= 1;
-        } else if index_item as i32 + c >= len as i32 {
-            index_item += 1
+        let mut x = index_item + c;
+        if x == 0 {
+            x = len as i32 - 1;
         }
 
-        let mut new_index = (index_item as i32 + c).rem_euclid(len as i32) as usize;
-        if new_index == 0 {
-            new_index = len - 1;
-        }
+        let new_index = x.rem_euclid(len as i32 - 1) as usize;
 
         inp.insert(new_index, c);
         index.insert(new_index, d);
