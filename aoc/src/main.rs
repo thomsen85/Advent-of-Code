@@ -1,4 +1,6 @@
 use std::fs;
+use std::io::Write;
+use std::process::Command;
 
 use arboard::Clipboard;
 use chrono::Datelike;
@@ -19,7 +21,10 @@ enum Cmd {
         #[arg(short, long)]
         no_fetch_input: bool,
     },
-    Submit,
+    Submit {
+        #[arg(short, long)]
+        no_check_tests: bool,
+    },
 }
 
 #[derive(Debug, Parser)]
@@ -30,7 +35,14 @@ struct Args {
     #[arg(short, long)]
     day: Option<u32>,
 
-    #[arg(short, long, default_value = "aoc/COOKIE")]
+    #[arg(short, long, default_value = "1")]
+    part: u32,
+
+    #[arg(
+        short,
+        long,
+        default_value = "/home/thomas/Development/Advent-of-Code/aoc/COOKIE"
+    )]
     cookie_file: String,
 
     #[command(subcommand)]
@@ -58,27 +70,34 @@ fn main() {
         (today.year(), today.day())
     };
 
-    let cookie = std::fs::read_to_string(&args.cookie_file)
-        .unwrap_or_else(|_| panic!("Cannot find cookie file {}", args.cookie_file));
+    println!("===== Advent of Code =====");
+    println!("Year: {}\nDay: {}", year, day);
+    println!("==========================");
 
-    let cookie = format!("session={}", cookie.trim());
-    dbg!(&args);
-
-    let mut headers = reqwest::header::HeaderMap::new();
-    headers.insert("Cookie", HeaderValue::from_str(&cookie).unwrap());
-
-    let client = reqwest::blocking::Client::builder()
-        .default_headers(headers)
-        .build()
-        .unwrap();
+    let client = create_client(&args.cookie_file);
 
     match args.option {
         Cmd::New {
             template_path,
             no_fetch_input,
         } => new(client, year, day, template_path, no_fetch_input),
-        Cmd::Submit => submit(),
+        Cmd::Submit { no_check_tests } => submit(client, year, day, args.part, no_check_tests),
     }
+}
+
+fn create_client(cookie_file: &str) -> Client {
+    let cookie = std::fs::read_to_string(cookie_file)
+        .unwrap_or_else(|_| panic!("Cannot find cookie file {}", cookie_file));
+
+    let cookie = format!("session={}", cookie.trim());
+
+    let mut headers = reqwest::header::HeaderMap::new();
+    headers.insert("Cookie", HeaderValue::from_str(&cookie).unwrap());
+
+    reqwest::blocking::Client::builder()
+        .default_headers(headers)
+        .build()
+        .unwrap()
 }
 
 fn new(client: Client, year: i32, day: u32, template_path: String, no_fetch_input: bool) {
@@ -127,7 +146,7 @@ fn new(client: Client, year: i32, day: u32, template_path: String, no_fetch_inpu
             std::thread::sleep(std::time::Duration::from_millis(300));
         }
 
-        let input = dbg!(content.clone());
+        let input = content.clone();
 
         println!(
             "Please enter test output for test {}:",
@@ -141,7 +160,7 @@ fn new(client: Client, year: i32, day: u32, template_path: String, no_fetch_inpu
             std::thread::sleep(std::time::Duration::from_millis(300));
         }
 
-        let output = dbg!(content.clone());
+        let output = content.clone();
 
         test_cases.push(Tests {
             input: input.to_string(),
@@ -159,11 +178,11 @@ fn new(client: Client, year: i32, day: u32, template_path: String, no_fetch_inpu
         }
     }
 
-    let file_path = format!("{}/src/bin/day{}_1.rs", year, day);
+    let file_path = format!("{}/src/bin/day{}-1.rs", year, day);
 
     let template = fs::read_to_string(template_path).expect("Cannot remove template file");
     let code = substitute_template(&template, year, day, &test_cases);
-    fs::write(&file_path, code).expect("Cannot write test file");
+    fs::write(&file_path, code.clone()).expect("Cannot write test file");
 
     println!("Created {}", file_path);
 }
@@ -204,4 +223,53 @@ fn substitute_template(template: &str, year: i32, day: u32, tests: &[Tests]) -> 
     template
 }
 
-fn submit() {}
+fn submit(client: Client, year: i32, day: u32, part: u32, no_check_tests: bool) {
+    println!();
+    if no_check_tests {
+        println!("Skipping tests");
+    } else {
+        println!("Running tests...");
+
+        let output = Command::new("cargo")
+            .arg("test")
+            .arg("--bin")
+            .arg(format!("day{}-{}", day, part))
+            .output()
+            .expect("Cannot run tests");
+
+        if !output.status.success() {
+            println!("Tests failed");
+            println!("============= stdout =============");
+            std::io::stdout().write_all(&output.stdout).unwrap();
+            std::io::stderr().write_all(&output.stderr).unwrap();
+            // flush
+            std::io::Write::flush(&mut std::io::stdout()).unwrap();
+            std::io::Write::flush(&mut std::io::stderr()).unwrap();
+            std::process::exit(1);
+        }
+    }
+
+    println!("Tests passed");
+
+    let output = Command::new("cargo")
+        .arg("run")
+        .arg("--bin")
+        .arg(format!("day{}-{}", day, part))
+        .output()
+        .unwrap();
+
+    std::io::stdout().write_all(&output.stdout).unwrap();
+    std::io::Write::flush(&mut std::io::stderr()).unwrap();
+
+    let val = String::from_utf8(output.stderr.clone())
+        .unwrap()
+        .trim()
+        .split(" = ")
+        .last()
+        .unwrap()
+        .replace("\"", "");
+    println!("Submit the following output? (y/n)");
+    println!("{}", val);
+
+    unimplemented!();
+}
