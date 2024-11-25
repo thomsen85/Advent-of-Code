@@ -71,7 +71,9 @@ fn main() {
     };
 
     println!("===== Advent of Code =====");
-    println!("Year: {}\nDay: {}", year, day);
+    println!("Year: {}", year);
+    println!("Day: {}", day);
+    println!("Part {}", args.part);
     println!("==========================");
 
     let client = create_client(&args.cookie_file);
