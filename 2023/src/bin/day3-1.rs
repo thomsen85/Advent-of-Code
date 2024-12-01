@@ -1,86 +1,59 @@
-#![allow(dead_code)]
+use std::ops::RangeBounds;
 
-use nom::{combinator::opt, IResult};
-
-#[derive(Debug, Clone, Copy)]
-struct Num {
-    num: i32,
-    width: i32,
-    pos: (i32, i32),
-}
-
-#[derive(Debug)]
-struct Symbol {
-    cont: char,
-    width: i32,
-    pos: (i32, i32),
-}
+use nom::{
+    bytes::complete::tag,
+    character::complete::{multispace0, multispace1, newline, space0, space1},
+    sequence::{delimited, preceded},
+    IResult,
+};
+// For number types
+use nom::character::complete as cnom;
 
 fn main() {
-    solve(include_str!("../../inputs/day3.txt"));
+    dbg!(solve(include_str!("../../inputs/day3.txt")));
 }
 
-fn solve(input: &str) -> i32 {
-    let (nums, symbols) = parse(input).unwrap().1;
+fn solve(input: &str) -> String {
+    let mut nums = Vec::new();
+    let mut chars = Vec::new();
+    for (line_i, line) in input.lines().enumerate() {
+        let mut current_num = String::new();
+        for (char_i, c) in line.chars().enumerate() {
+            if c.is_numeric() {
+                current_num.push(c)
+            } else {
+                if !current_num.is_empty() {
+                    nums.push((
+                        char_i - current_num.len(),
+                        char_i,
+                        line_i,
+                        current_num.parse::<i32>().unwrap(),
+                    ));
+                    current_num.clear()
+                }
 
-    let mut sum = 0;
-    for d in nums {
-        let mut breaked = false;
-        for s in &symbols {
-            if ((d.pos.0 - 1)..(d.pos.0 + d.width + 1)).contains(&s.pos.0) {
-                if ((d.pos.1 - 1)..(d.pos.1 + 2)).contains(&s.pos.1) {
-                    sum += d.num;
-                    breaked = true;
-                    break;
+                if c != '.' {
+                    chars.push((char_i, line_i))
                 }
             }
         }
-        if !breaked {
-            dbg!(d);
-        }
     }
-    dbg!(sum);
-    sum
-}
+    dbg!(&nums);
 
-fn parse(input: &str) -> IResult<&str, (Vec<Num>, Vec<Symbol>)> {
-    let mut nums = Vec::new();
-    let mut symbols = Vec::new();
-    for (height, line) in input.lines().enumerate() {
-        let mut i: i32 = 0;
-        loop {
-            if i as usize >= line.len() {
-                break;
-            }
-            if !line.chars().nth(i as usize).unwrap().is_numeric()
-                && line.chars().nth(i as usize).unwrap() != '.'
+    let mut sum = 0;
+    for num in &nums {
+        for c in &chars {
+            if ((num.0..=num.1).contains(&(c.0 + 1))
+                || (num.0..num.1).contains(&(c.0))
+                || (num.0..num.1).contains(&(c.0 - 1)))
+                && ((c.1 - 1)..=(c.1 + 1)).contains(&num.2)
             {
-                symbols.push(Symbol {
-                    cont: line.chars().nth(i as usize).unwrap(),
-                    width: 1,
-                    pos: (i, height as i32),
-                });
-                i += 1;
-                continue;
+                sum += num.3
             }
-
-            let (_, num) = opt(nom::character::complete::i32)(&line[(i as usize)..line.len()])?;
-
-            if let Some(res) = num {
-                let width = res.to_string().len() as i32;
-                nums.push(Num {
-                    num: res,
-                    width,
-                    pos: (i, height as i32),
-                });
-                i += width as i32;
-                continue;
-            }
-
-            i += 1;
         }
     }
-    Ok(("", (nums, symbols)))
+
+    sum.to_string()
 }
 
 #[cfg(test)]
@@ -99,49 +72,6 @@ mod tests {
 ......755.
 ...$.*....
 .664.598..";
-        assert_eq!(solve(ti), 4361);
-    }
-
-    #[test]
-    fn tets2() {
-        let ti = "#..
-.1.
-...";
-        assert_eq!(solve(ti), 1);
-    }
-    #[test]
-    fn tets25() {
-        let ti = "..#
-.1.
-...";
-        assert_eq!(solve(ti), 1);
-    }
-    #[test]
-    fn tets21() {
-        let ti = "...
-.1.
-..#";
-        assert_eq!(solve(ti), 1);
-    }
-    #[test]
-    fn tets22() {
-        let ti = "#..
-.1.
-#..";
-        assert_eq!(solve(ti), 1);
-    }
-    #[test]
-    fn tets13() {
-        let ti = "#..
-#1.
-...";
-        assert_eq!(solve(ti), 1);
-    }
-    #[test]
-    fn tets23() {
-        let ti = "#..
-.1.
-.#.";
-        assert_eq!(solve(ti), 1);
+        assert_eq!(solve(ti), "4361".to_string());
     }
 }
