@@ -1,4 +1,4 @@
-use super::bi_directional_map::NodeTranslator;
+use super::node_translator::NodeTranslator;
 
 #[derive(PartialEq, Eq, Debug, Clone)]
 pub struct WeightedEdge {
@@ -100,5 +100,11 @@ impl<N> NamedNodesWeightedGraph<N> {
                 }
             }
         }
+    }
+}
+
+impl<N> Default for NamedNodesWeightedGraph<N> {
+    fn default() -> Self {
+        Self::new()
     }
 }
