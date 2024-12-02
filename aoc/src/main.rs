@@ -99,7 +99,7 @@ fn create_client(cookie_file: &str) -> Client {
     reqwest::blocking::Client::builder()
         .default_headers(headers)
         .build()
-        .unwrap()
+        .expect("Problems Initializing the reqwest backend")
 }
 
 fn new(client: Client, year: i32, day: u32, template_path: String, no_fetch_input: bool) {
@@ -132,7 +132,8 @@ fn new(client: Client, year: i32, day: u32, template_path: String, no_fetch_inpu
             .unwrap();
 
         let input_path = format!("{}/inputs/day{}.txt", year, day);
-        fs::write(input_path, res).unwrap();
+        fs::write(&input_path, res)
+            .unwrap_or_else(|err| panic!("Couldnt write to file: {}\n{}", &input_path, err));
     }
     // Read stdin to get the tests:
     let mut test_cases = Vec::new();
