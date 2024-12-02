@@ -1,13 +1,4 @@
 use itertools::Itertools;
-use nom::{
-    bytes::complete::tag,
-    character::complete::{multispace0, multispace1, newline, space0, space1},
-    sequence::{delimited, preceded},
-    IResult,
-};
-// For number types
-use nom::character::complete as cnom;
-
 fn main() {
     dbg!(solve(include_str!("../../inputs/day1.txt")));
 }
@@ -32,17 +23,18 @@ fn solve(input: &str) -> String {
         .to_string()
 }
 
-fn parse(input: &str) -> IResult<&str, ()> {
-    Ok((input, ()))
-}
-
 #[cfg(test)]
 mod tests {
     use super::*;
 
     #[test]
     fn test_1() {
-        let ti = "***input***";
-        assert_eq!(solve(ti), "***output***".to_string());
+        let ti = "3   4
+4   3
+2   5
+1   3
+3   9
+3   3";
+        assert_eq!(solve(ti), "31".to_string());
     }
 }
