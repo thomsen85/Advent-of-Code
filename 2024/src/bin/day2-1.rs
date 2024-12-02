@@ -1,3 +1,5 @@
+use std::ops::RangeBounds;
+
 use itertools::Itertools;
 use nom::{
     bytes::complete::tag,
@@ -13,26 +15,27 @@ fn main() {
 }
 
 fn solve(input: &str) -> String {
-    let mut reports = 0;
+    let mut safe = 0;
     for line in input.lines() {
         let nums = line
             .split(" ")
-            .map(|a| dbg!(a).parse::<i32>().unwrap())
+            .map(|a| a.parse::<i32>().unwrap())
             .collect_vec();
-        if nums.iter().tuple_windows().map(|(a, b)| a < b).all(|a| a)
-            || nums.iter().tuple_windows().map(|(a, b)| a < b).all(|a| !a)
-        {
-            if nums
-                .iter()
-                .tuple_windows()
-                .map(|(a, b)| (a - b).abs())
-                .all(|a| a >= 1 && a <= 3)
-            {
-                reports += 1;
-            }
+
+        let increasing = nums.iter().tuple_windows().map(|(a, b)| a < b).all(|a| a);
+        let decreasing = nums.iter().tuple_windows().map(|(a, b)| a > b).all(|a| a);
+        let within_nums = nums
+            .iter()
+            .tuple_windows()
+            .map(|(a, b)| a.abs_diff(*b))
+            .all(|a| (0..=3).contains(&a));
+
+        if (increasing || decreasing) && within_nums {
+            safe += 1;
         }
     }
-    reports.to_string()
+
+    safe.to_string()
 }
 
 fn parse(input: &str) -> IResult<&str, ()> {

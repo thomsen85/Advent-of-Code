@@ -1,3 +1,5 @@
+use std::ops::RangeBounds;
+
 use itertools::Itertools;
 use nom::{
     bytes::complete::tag,
@@ -13,43 +15,37 @@ fn main() {
 }
 
 fn solve(input: &str) -> String {
-    let mut reports = 0;
+    let mut safe = 0;
     for line in input.lines() {
+        let mut all_nums = Vec::new();
         let nums = line
             .split(" ")
             .map(|a| a.parse::<i32>().unwrap())
             .collect_vec();
+        all_nums.push(nums.clone());
+        for i in 0..nums.len() {
+            let mut n = nums.clone();
+            n.remove(i);
+            all_nums.push(n);
+        }
 
-        if (nums.iter().tuple_windows().map(|(a, b)| a < b).all(|a| a)
-            || nums.iter().tuple_windows().map(|(a, b)| a < b).all(|a| !a))
-            && nums
+        for nums in all_nums {
+            let increasing = nums.iter().tuple_windows().map(|(a, b)| a < b).all(|a| a);
+            let decreasing = nums.iter().tuple_windows().map(|(a, b)| a > b).all(|a| a);
+            let within_nums = nums
                 .iter()
                 .tuple_windows()
-                .map(|(a, b)| (a - b).abs())
-                .all(|a| a >= 1 && a <= 3)
-        {
-            reports += 1;
-        } else {
-            for n in 0..nums.len() {
-                let mut nums = nums.clone();
-                nums.remove(n);
-                dbg!(&nums);
+                .map(|(a, b)| a.abs_diff(*b))
+                .all(|a| (0..=3).contains(&a));
 
-                if (nums.iter().tuple_windows().map(|(a, b)| a < b).all(|a| a)
-                    || nums.iter().tuple_windows().map(|(a, b)| a < b).all(|a| !a))
-                    && nums
-                        .iter()
-                        .tuple_windows()
-                        .map(|(a, b)| (a - b).abs())
-                        .all(|a| a >= 1 && a <= 3)
-                {
-                    reports += 1;
-                    break;
-                }
+            if (increasing || decreasing) && within_nums {
+                safe += 1;
+                break;
             }
         }
     }
-    reports.to_string()
+
+    safe.to_string()
 }
 
 fn parse(input: &str) -> IResult<&str, ()> {
@@ -61,13 +57,13 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_1() {
+    fn test_2() {
         let ti = "7 6 4 2 1
 1 2 7 8 9
 9 7 6 2 1
 1 3 2 4 5
 8 6 4 4 1
 1 3 6 7 9";
-        assert_eq!(solve(ti), "2".to_string());
+        assert_eq!(solve(ti), "4".to_string());
     }
 }
