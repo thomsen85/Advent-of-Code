@@ -1,4 +1,4 @@
-use std::ops::{Add, Div, Mul, Sub};
+use std::ops::{Add, Div, Mul, RangeBounds, Sub};
 
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Hash, Clone, Copy)]
 pub struct Vec2 {
@@ -8,33 +8,77 @@ pub struct Vec2 {
 
 impl Vec2 {
     pub const UP: Self = Self { x: 0, y: -1 };
-    pub const LEFT: Self = Self { x: -1, y: 0 };
+    pub const UP_RIGHT: Self = Self { x: 1, y: -1 };
     pub const RIGHT: Self = Self { x: 1, y: 0 };
+    pub const DOWN_RIGHT: Self = Self { x: 1, y: 1 };
     pub const DOWN: Self = Self { x: 0, y: 1 };
     pub const DOWN_LEFT: Self = Self { x: -1, y: 1 };
-    pub const DOWN_RIGHT: Self = Self { x: 1, y: 1 };
+    pub const LEFT: Self = Self { x: -1, y: 0 };
+    pub const UP_LEFT: Self = Self { x: -1, y: -1 };
+
+    pub const EIGHT_CONNECTNESS: [Self; 8] = [
+        Self::UP,
+        Self::UP_RIGHT,
+        Self::RIGHT,
+        Self::DOWN_RIGHT,
+        Self::DOWN,
+        Self::DOWN_LEFT,
+        Self::LEFT,
+        Self::UP_LEFT,
+    ];
+    pub const FOUR_CONNECTNESS: [Self; 4] = [Self::UP, Self::RIGHT, Self::DOWN, Self::LEFT];
 
     pub fn new(x: i32, y: i32) -> Self {
         Self { x, y }
     }
 
-    pub fn len(self) -> f32 {
-        ((self.x.pow(2) + self.y.pow(2)) as f32).sqrt()
+    /// Shortcut for not casting to i32 and calling new
+    pub fn from_row_col(row: usize, col: usize) -> Self {
+        Self {
+            x: row as i32,
+            y: col as i32,
+        }
     }
 
-    pub fn direction(&self) -> Option<Self> {
-        if self.x == 0 && self.y == 0 {
-            return None;
-        } else if self.x == 0 {
-            return Some(Self::new(0, self.y.signum()));
-        } else if self.y == 0 {
-            return Some(Self::new(self.x.signum(), 0));
-        }
-        None
+    pub fn neighbours_8_ranged<R1, R2>(&self, x_range: R1, y_range: R2) -> Vec<Self>
+    where
+        R1: RangeBounds<i32>,
+        R2: RangeBounds<i32>,
+    {
+        Self::EIGHT_CONNECTNESS
+            .into_iter()
+            .map(|diff| *self + diff)
+            .filter(|neighbour| x_range.contains(&neighbour.x) && y_range.contains(&neighbour.y))
+            .collect()
+    }
+
+    pub fn neighbours_4_ranged<T, R1, R2>(&self, x_range: R1, y_range: R2) -> Vec<Self>
+    where
+        R1: RangeBounds<i32>,
+        R2: RangeBounds<i32>,
+    {
+        Self::FOUR_CONNECTNESS
+            .into_iter()
+            .map(|diff| *self + diff)
+            .filter(|neighbour| x_range.contains(&neighbour.x) && y_range.contains(&neighbour.y))
+            .collect()
+    }
+
+    pub fn magnitude_f32(self) -> f32 {
+        ((self.x.pow(2) + self.y.pow(2)) as f32).sqrt()
     }
 
     pub fn decomposition(&self) -> (Self, Self) {
         (Self::new(self.x, 0), Self::new(0, self.y))
+    }
+
+    /// Mini function for working with arrays, this is just the x val casted to usize
+    pub fn row(&self) -> usize {
+        self.x as usize
+    }
+    /// Mini function for working with arrays, this is just the y val casted to usize
+    pub fn col(&self) -> usize {
+        self.y as usize
     }
 }
 
