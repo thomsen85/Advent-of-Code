@@ -1,15 +1,6 @@
 use std::collections::{HashMap, VecDeque};
 
-use common::{graphs::bi_directional_map::BiDirectionalMap, strings::string_to_t_vec};
 use itertools::Itertools;
-use nom::{
-    bytes::complete::tag,
-    character::complete::{multispace0, multispace1, newline, space0, space1},
-    sequence::{delimited, preceded},
-    IResult,
-};
-// For number types
-use nom::character::complete as cnom;
 
 fn main() {
     dbg!(solve(include_str!("../../inputs/day5.txt")));
@@ -75,10 +66,6 @@ fn solve(input: &str) -> String {
     }
 
     safe.to_string()
-}
-
-fn parse(input: &str) -> IResult<&str, ()> {
-    Ok((input, ()))
 }
 
 #[cfg(test)]
