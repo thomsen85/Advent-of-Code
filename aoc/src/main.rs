@@ -137,16 +137,24 @@ fn new(client: Client, year: i32, day: u32, template_path: String, no_fetch_inpu
     }
     // Read stdin to get the tests:
     let mut test_cases = Vec::new();
-    let mut clipboard = Clipboard::new().unwrap();
-    let mut content = clipboard.get_text().unwrap();
+    let mut clipboard = Clipboard::new();
+    let mut content = clipboard
+        .as_mut()
+        .map(|cb| cb.get_text().unwrap())
+        .unwrap_or_default();
+
     loop {
         println!("Please enter test input for test {}:", test_cases.len() + 1);
-        loop {
-            if clipboard.get_text().unwrap() != content {
-                content = clipboard.get_text().unwrap();
-                break;
+        if let Ok(cb) = clipboard.as_mut() {
+            loop {
+                if cb.get_text().unwrap() != content {
+                    content = cb.get_text().unwrap();
+                    break;
+                }
+                std::thread::sleep(std::time::Duration::from_millis(300));
             }
-            std::thread::sleep(std::time::Duration::from_millis(300));
+        } else {
+            println!("Clipboard failed, fallback to empty test input")
         }
 
         let input = content.clone();
@@ -155,12 +163,16 @@ fn new(client: Client, year: i32, day: u32, template_path: String, no_fetch_inpu
             "Please enter test output for test {}:",
             test_cases.len() + 1
         );
-        loop {
-            if clipboard.get_text().unwrap() != content {
-                content = clipboard.get_text().unwrap();
-                break;
+        if let Ok(cb) = clipboard.as_mut() {
+            loop {
+                if cb.get_text().unwrap() != content {
+                    content = cb.get_text().unwrap();
+                    break;
+                }
+                std::thread::sleep(std::time::Duration::from_millis(300));
             }
-            std::thread::sleep(std::time::Duration::from_millis(300));
+        } else {
+            println!("Clipboard failed, fallback to empty test output")
         }
 
         let output = content.clone();
@@ -226,7 +238,7 @@ fn substitute_template(template: &str, year: i32, day: u32, tests: &[Tests]) -> 
     template
 }
 
-fn submit(client: Client, year: i32, day: u32, part: u32, no_check_tests: bool) {
+fn submit(_client: Client, _year: i32, day: u32, part: u32, no_check_tests: bool) {
     println!();
     if no_check_tests {
         println!("Skipping tests");
@@ -273,6 +285,14 @@ fn submit(client: Client, year: i32, day: u32, part: u32, no_check_tests: bool) 
         .replace("\"", "");
     println!("Submit the following output? (y/n)");
     println!("{}", val);
+
+    let mut clipboard = Clipboard::new();
+    if let Ok(cb) = clipboard.as_mut() {
+        match cb.set_text(val) {
+            Ok(_) => println!("Value set to cliboard"),
+            Err(e) => eprintln!("Could not copy value to clipboard: {e}"),
+        }
+    }
 
     unimplemented!();
 }
