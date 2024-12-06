@@ -6,27 +6,42 @@ pub struct Vec2 {
     pub y: i32,
 }
 
+// x is row, y is col
 impl Vec2 {
-    pub const UP: Self = Self { x: 0, y: -1 };
-    pub const UP_RIGHT: Self = Self { x: 1, y: -1 };
-    pub const RIGHT: Self = Self { x: 1, y: 0 };
-    pub const DOWN_RIGHT: Self = Self { x: 1, y: 1 };
-    pub const DOWN: Self = Self { x: 0, y: 1 };
-    pub const DOWN_LEFT: Self = Self { x: -1, y: 1 };
-    pub const LEFT: Self = Self { x: -1, y: 0 };
-    pub const UP_LEFT: Self = Self { x: -1, y: -1 };
+    pub const CART_UP: Self = Self { x: 0, y: 1 };
+    pub const CART_UP_RIGHT: Self = Self { x: 1, y: 1 };
+    pub const CART_RIGHT: Self = Self { x: 1, y: 0 };
+    pub const CART_DOWN_RIGHT: Self = Self { x: 1, y: -1 };
+    pub const CART_DOWN: Self = Self { x: 0, y: -1 };
+    pub const CART_DOWN_LEFT: Self = Self { x: -1, y: -1 };
+    pub const CART_LEFT: Self = Self { x: -1, y: 0 };
+    pub const CART_UP_LEFT: Self = Self { x: -1, y: 1 };
+
+    pub const ARR_UP: Self = Self { x: -1, y: 0 };
+    pub const ARR_UP_RIGHT: Self = Self { x: -1, y: 1 };
+    pub const ARR_RIGHT: Self = Self { x: 0, y: 1 };
+    pub const ARR_DOWN_RIGHT: Self = Self { x: 1, y: 1 };
+    pub const ARR_DOWN: Self = Self { x: 1, y: 0 };
+    pub const ARR_DOWN_LEFT: Self = Self { x: 1, y: -1 };
+    pub const ARR_LEFT: Self = Self { x: 0, y: -1 };
+    pub const ARR_UP_LEFT: Self = Self { x: -1, y: -1 };
 
     pub const EIGHT_CONNECTNESS: [Self; 8] = [
-        Self::UP,
-        Self::UP_RIGHT,
-        Self::RIGHT,
-        Self::DOWN_RIGHT,
-        Self::DOWN,
-        Self::DOWN_LEFT,
-        Self::LEFT,
-        Self::UP_LEFT,
+        Self::CART_UP,
+        Self::CART_UP_RIGHT,
+        Self::CART_RIGHT,
+        Self::CART_DOWN_RIGHT,
+        Self::CART_DOWN,
+        Self::CART_DOWN_LEFT,
+        Self::CART_LEFT,
+        Self::CART_UP_LEFT,
     ];
-    pub const FOUR_CONNECTNESS: [Self; 4] = [Self::UP, Self::RIGHT, Self::DOWN, Self::LEFT];
+    pub const FOUR_CONNECTNESS: [Self; 4] = [
+        Self::CART_UP,
+        Self::CART_RIGHT,
+        Self::CART_DOWN,
+        Self::CART_LEFT,
+    ];
 
     pub fn new(x: i32, y: i32) -> Self {
         Self { x, y }

@@ -25,10 +25,10 @@ fn solve(input: &str) -> String {
 
     while let Some(n) = stack.pop() {
         let nb = vec![
-            Vec2::UP_RIGHT,
-            Vec2::DOWN_RIGHT,
-            Vec2::DOWN_LEFT,
-            Vec2::UP_LEFT,
+            Vec2::ARR_UP_RIGHT,
+            Vec2::ARR_DOWN_RIGHT,
+            Vec2::ARR_DOWN_LEFT,
+            Vec2::ARR_UP_LEFT,
         ];
         for nbr in nb {
             if let Some(dir) = n.2 {

@@ -1,15 +1,6 @@
 use std::collections::HashSet;
 
 use common::{datastructs::vec2::Vec2, utils::string_to_char_grid};
-use itertools::Itertools;
-use nom::{
-    bytes::complete::tag,
-    character::complete::{multispace0, multispace1, newline, space0, space1},
-    sequence::{delimited, preceded},
-    IResult,
-};
-// For number types
-use nom::character::complete as cnom;
 
 fn main() {
     dbg!(solve(include_str!("../../inputs/day6.txt")));
@@ -41,10 +32,10 @@ fn solve(input: &str) -> String {
             break;
         } else if m[next_pos.row()][next_pos.col()] == '#' {
             current_dir = match current_dir {
-                Vec2::UP => Vec2::LEFT,
-                Vec2::RIGHT => Vec2::UP,
-                Vec2::DOWN => Vec2::RIGHT,
-                Vec2::LEFT => Vec2::DOWN,
+                Vec2::ARR_UP => Vec2::ARR_RIGHT,
+                Vec2::ARR_RIGHT => Vec2::ARR_DOWN,
+                Vec2::ARR_DOWN => Vec2::ARR_LEFT,
+                Vec2::ARR_LEFT => Vec2::ARR_UP,
                 _ => panic!(),
             };
 

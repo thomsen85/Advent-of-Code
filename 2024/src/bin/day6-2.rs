@@ -34,10 +34,10 @@ fn solve(input: &str) -> String {
             break;
         } else if m[next_pos.row()][next_pos.col()] == '#' {
             current_dir = match current_dir {
-                Vec2::UP => Vec2::LEFT,
-                Vec2::RIGHT => Vec2::UP,
-                Vec2::DOWN => Vec2::RIGHT,
-                Vec2::LEFT => Vec2::DOWN,
+                Vec2::ARR_UP => Vec2::ARR_RIGHT,
+                Vec2::ARR_RIGHT => Vec2::ARR_DOWN,
+                Vec2::ARR_DOWN => Vec2::ARR_LEFT,
+                Vec2::ARR_LEFT => Vec2::ARR_UP,
                 _ => panic!(),
             };
 
@@ -70,10 +70,10 @@ fn solve(input: &str) -> String {
 
             if m[next_pos.row()][next_pos.col()] == '#' || next_pos == *p {
                 current_dir = match current_dir {
-                    Vec2::UP => Vec2::LEFT,
-                    Vec2::RIGHT => Vec2::UP,
-                    Vec2::DOWN => Vec2::RIGHT,
-                    Vec2::LEFT => Vec2::DOWN,
+                    Vec2::ARR_UP => Vec2::ARR_RIGHT,
+                    Vec2::ARR_RIGHT => Vec2::ARR_DOWN,
+                    Vec2::ARR_DOWN => Vec2::ARR_LEFT,
+                    Vec2::ARR_LEFT => Vec2::ARR_UP,
                     _ => panic!(),
                 };
             } else {
