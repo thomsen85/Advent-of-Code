@@ -27,24 +27,18 @@ fn solve(input: &str) -> String {
     loop {
         visited.insert(pos);
 
-        let mut next_pos = pos + current_dir;
+        let next_pos = pos + current_dir;
         if !(0..m.len() as i32).contains(&next_pos.x)
             || !(0..m[0].len() as i32).contains(&next_pos.y)
         {
             break;
-        } else if m[next_pos.row()][next_pos.col()] == '#' {
-            current_dir = match current_dir {
-                Vec2::ARR_UP => Vec2::ARR_RIGHT,
-                Vec2::ARR_RIGHT => Vec2::ARR_DOWN,
-                Vec2::ARR_DOWN => Vec2::ARR_LEFT,
-                Vec2::ARR_LEFT => Vec2::ARR_UP,
-                _ => panic!(),
-            };
-
-            next_pos = pos + current_dir;
         }
 
-        pos = next_pos;
+        if m[next_pos.row()][next_pos.col()] == '#' {
+            current_dir = current_dir.arr_rot_90_clockwise();
+        } else {
+            pos = next_pos;
+        }
     }
 
     let vs = visited.clone();
@@ -59,9 +53,10 @@ fn solve(input: &str) -> String {
         let mut current_dir = Vec2::new(-1, 0);
 
         loop {
-            visited.insert((pos.x, pos.y, current_dir.x, current_dir.y));
+            visited.insert((pos, current_dir));
 
             let next_pos = pos + current_dir;
+
             if !(0..m.len() as i32).contains(&next_pos.x)
                 || !(0..m[0].len() as i32).contains(&next_pos.y)
             {
@@ -69,23 +64,15 @@ fn solve(input: &str) -> String {
             }
 
             if m[next_pos.row()][next_pos.col()] == '#' || next_pos == *p {
-                current_dir = match current_dir {
-                    Vec2::ARR_UP => Vec2::ARR_RIGHT,
-                    Vec2::ARR_RIGHT => Vec2::ARR_DOWN,
-                    Vec2::ARR_DOWN => Vec2::ARR_LEFT,
-                    Vec2::ARR_LEFT => Vec2::ARR_UP,
-                    _ => panic!(),
-                };
+                current_dir = current_dir.arr_rot_90_clockwise();
             } else {
                 pos = next_pos;
             }
 
-            if visited.contains(&(pos.x, pos.y, current_dir.x, current_dir.y)) {
+            if visited.contains(&(pos, current_dir)) {
                 sum += 1;
                 break;
             }
-
-            visited.insert((pos.x, pos.y, current_dir.x, current_dir.y));
         }
     }
     sum.to_string()

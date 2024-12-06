@@ -25,24 +25,19 @@ fn solve(input: &str) -> String {
 
     loop {
         visited.insert(start_pos);
-        let mut next_pos = dbg!(start_pos + current_dir);
+
+        let next_pos = start_pos + current_dir;
         if !(0..m.len() as i32).contains(&next_pos.x)
             || !(0..m[0].len() as i32).contains(&next_pos.y)
         {
             break;
-        } else if m[next_pos.row()][next_pos.col()] == '#' {
-            current_dir = match current_dir {
-                Vec2::ARR_UP => Vec2::ARR_RIGHT,
-                Vec2::ARR_RIGHT => Vec2::ARR_DOWN,
-                Vec2::ARR_DOWN => Vec2::ARR_LEFT,
-                Vec2::ARR_LEFT => Vec2::ARR_UP,
-                _ => panic!(),
-            };
-
-            next_pos = start_pos + current_dir;
         }
 
-        start_pos = next_pos;
+        if m[next_pos.row()][next_pos.col()] == '#' {
+            current_dir = current_dir.arr_rot_90_clockwise();
+        } else {
+            start_pos = next_pos;
+        }
     }
 
     visited.len().to_string()

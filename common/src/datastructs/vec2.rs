@@ -95,6 +95,13 @@ impl Vec2 {
     pub fn col(&self) -> usize {
         self.y as usize
     }
+    pub fn arr_rot_90_clockwise(&self) -> Self {
+        Vec2::new(self.y, -self.x)
+    }
+
+    pub fn arr_rot_90_counter_clockwise(&self) -> Self {
+        Vec2::new(-self.y, self.x)
+    }
 }
 
 impl Add for Vec2 {
