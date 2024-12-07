@@ -9,14 +9,12 @@ fn main() {
 fn solve(input: &str) -> String {
     let (l, p) = input.split_once("\n\n").unwrap();
 
-    let mut map = HashMap::new();
     let mut map_r = HashMap::new();
 
     for line in l.lines() {
         let (key, val) = line.split_once("|").unwrap();
         let key = key.parse::<i32>().unwrap();
         let val = val.parse::<i32>().unwrap();
-        map.entry(key).or_insert(Vec::new()).push(val);
         map_r.entry(val).or_insert(Vec::new()).push(key);
     }
 
