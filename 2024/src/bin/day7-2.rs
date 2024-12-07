@@ -18,7 +18,7 @@ fn solve(input: &str) -> String {
         let mut stack = vec![(&exp[1..], exp[0])];
 
         while let Some((e, s)) = stack.pop() {
-            if e.is_empty() {
+            if e.is_empty() || s > tot {
                 if s == tot {
                     sum += tot;
                     break;
