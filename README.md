@@ -7,7 +7,7 @@ My first year was 2022, I completed about half before exams caught up with me.
 2023 was the first year I finished them all.
 
 **2024's goal is to achive top 1000 global rank on some days with Rust.**
-_Top until now is 2500th place_
+_Top time (any part) 2024 until now is 2457th place_
 
 The project is structured mainly by year.
 The `aoc` folder is a script I made to create a new day from a template, create tests from the clipboard, fetch the input, and automatically run the tests and the program.
@@ -24,4 +24,4 @@ The `common` folder contains functions and structs commonly used to solve proble
 | 2021      | ✅  | ✅  | ✅  |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
 | 2022      | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ½   | ½   | ✅  | ✅  | ✅  |     |     |     |     |     |
 | 2023      | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |
-| 2024      | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
+| 2024      | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  | ✅  |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
