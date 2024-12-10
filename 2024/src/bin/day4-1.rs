@@ -1,4 +1,4 @@
-use common::{datastructs::vec2::Vec2, utils::string_to_char_grid};
+use common::{datastructs::vec2::Vec2, strings::string_to_char_grid};
 
 fn main() {
     dbg!(solve(include_str!("../../inputs/day4.txt")));

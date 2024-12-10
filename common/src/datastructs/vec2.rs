@@ -67,7 +67,7 @@ impl Vec2 {
             .collect()
     }
 
-    pub fn neighbours_4_ranged<T, R1, R2>(&self, x_range: R1, y_range: R2) -> Vec<Self>
+    pub fn neighbours_4_ranged<R1, R2>(&self, x_range: R1, y_range: R2) -> Vec<Self>
     where
         R1: RangeBounds<i32>,
         R2: RangeBounds<i32>,
@@ -102,6 +102,15 @@ impl Vec2 {
 
     pub fn arr_rot_90_counter_clockwise(&self) -> Self {
         Vec2::new(-self.y, self.x)
+    }
+
+    // Shortcut for indexing an array
+    pub fn i_arr<'a, T>(&self, arr: &'a [Vec<T>]) -> &'a T {
+        &arr[self.row()][self.col()]
+    }
+
+    pub fn i_arr_mut<'a, T>(&self, arr: &'a mut [Vec<T>]) -> &'a mut T {
+        &mut arr[self.row()][self.col()]
     }
 }
 

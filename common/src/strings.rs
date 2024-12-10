@@ -23,3 +23,25 @@ pub fn string_to_t_vec<T: std::str::FromStr>(input: &str) -> Vec<T> {
         })
         .collect()
 }
+
+pub fn string_to_char_grid(input: &str) -> Vec<Vec<char>> {
+    input
+        .lines()
+        .map(|line| line.chars().collect::<Vec<_>>())
+        .collect()
+}
+
+pub fn string_to_single_int_grid(input: &str) -> Vec<Vec<i32>> {
+    input
+        .lines()
+        .map(|line| {
+            line.chars()
+                .map(|c| {
+                    c.to_digit(10)
+                        .unwrap_or_else(|| panic!("{c:?} is not a base10 digit"))
+                        as i32
+                })
+                .collect::<Vec<_>>()
+        })
+        .collect()
+}

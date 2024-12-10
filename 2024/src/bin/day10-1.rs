@@ -1,6 +1,6 @@
 use std::{collections::HashSet, ops::Range};
 
-use common::{datastructs::vec2::Vec2, utils::string_to_char_grid};
+use common::{datastructs::vec2::Vec2, strings::string_to_char_grid};
 use itertools::Itertools;
 
 fn main() {
@@ -17,17 +17,17 @@ fn solve(input: &str) -> String {
         })
         .collect_vec();
 
-    let mut s = Vec::new();
+    let mut start_points = Vec::new();
     for r in 0..m.len() {
         for c in 0..m[0].len() {
             if m[r][c] == 0 {
-                s.push(Vec2::from_row_col(r, c));
+                start_points.push(Vec2::from_row_col(r, c));
             }
         }
     }
 
     let mut sum = 0;
-    for start in s {
+    for start in start_points {
         let mut visited = HashSet::new();
         let mut tops = 0;
         let mut stack = Vec::new();
@@ -43,10 +43,7 @@ fn solve(input: &str) -> String {
                 tops += 1;
                 continue;
             }
-            for n in curr.neighbours_4_ranged::<i32, Range<i32>, Range<i32>>(
-                0..m.len() as i32,
-                0..m[0].len() as i32,
-            ) {
+            for n in curr.neighbours_4_ranged(0..m.len() as i32, 0..m[0].len() as i32) {
                 if m[curr.row()][curr.col()] + 1 == m[n.row()][n.col()] {
                     stack.push(n);
                 }

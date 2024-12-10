@@ -1,6 +1,9 @@
 use std::ops::Range;
 
-use common::{datastructs::vec2::Vec2, utils::string_to_char_grid};
+use common::{
+    datastructs::vec2::Vec2,
+    strings::{string_to_char_grid, string_to_single_int_grid},
+};
 use itertools::Itertools;
 
 fn main() {
@@ -8,14 +11,7 @@ fn main() {
 }
 
 fn solve(input: &str) -> String {
-    let m = string_to_char_grid(input)
-        .into_iter()
-        .map(|row| {
-            row.into_iter()
-                .map(|c| c.to_digit(10).map(|a| a as i32).unwrap_or(-1))
-                .collect_vec()
-        })
-        .collect_vec();
+    let m = string_to_single_int_grid(input);
 
     let mut s = Vec::new();
     for r in 0..m.len() {
@@ -38,10 +34,7 @@ fn solve(input: &str) -> String {
                 tops += 1;
                 continue;
             }
-            for n in curr.neighbours_4_ranged::<i32, Range<i32>, Range<i32>>(
-                0..m.len() as i32,
-                0..m[0].len() as i32,
-            ) {
+            for n in curr.neighbours_4_ranged(0..m.len() as i32, 0..m[0].len() as i32) {
                 if m[curr.row()][curr.col()] + 1 == m[n.row()][n.col()] {
                     stack.push(n);
                 }
