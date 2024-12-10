@@ -26,7 +26,6 @@ fn solve(input: &str) -> String {
         for p1 in 0..l.len() {
             for p2 in (p1 + 1)..l.len() {
                 // Do both ways
-                // dbg!(_ch, l, p1, p2);
                 let l1 = l[p1];
                 let l2 = l[p2];
                 let diff = dbg!(l2 - l1);

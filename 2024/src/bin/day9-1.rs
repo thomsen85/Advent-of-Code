@@ -18,10 +18,7 @@ fn solve(input: &str) -> String {
     let mut id = 0;
     for c in input.trim().chars() {
         if free_space {
-            t.push(Free(
-                c.to_digit(10)
-                    .unwrap_or_else(|| panic!("{:?} is not a digit", c)) as usize,
-            ));
+            t.push(Free(c.to_digit(10).unwrap() as usize));
             id += 1
         } else {
             t.push(File(id, c.to_digit(10).unwrap() as usize));
