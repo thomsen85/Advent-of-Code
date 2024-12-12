@@ -1,14 +1,6 @@
 use std::collections::HashSet;
 
 use common::{datastructs::vec2::Vec2, strings::string_to_char_grid};
-use nom::{
-    bytes::complete::tag,
-    character::complete::{multispace0, multispace1, newline, space0, space1},
-    sequence::{delimited, preceded},
-    IResult,
-};
-// For number types
-use nom::character::complete as cnom;
 
 fn main() {
     dbg!(solve(include_str!("../../inputs/day12.txt")));
@@ -84,10 +76,6 @@ fn solve(input: &str) -> String {
         .map(|(a, b)| dbg!(a) as i32 * dbg!(b))
         .sum::<i32>()
         .to_string()
-}
-
-fn parse(input: &str) -> IResult<&str, ()> {
-    Ok((input, ()))
 }
 
 #[cfg(test)]

@@ -1,7 +1,6 @@
 use std::{collections::HashSet, time::Instant};
 
 use common::{datastructs::vec2::Vec2, strings::string_to_char_grid};
-use itertools::Itertools;
 
 fn main() {
     let now = Instant::now();
@@ -61,50 +60,47 @@ fn solve(input: &str) -> String {
     //
     let sides = shapes.iter().map(|shape| {
         let shape_points = shape.iter().copied().collect::<HashSet<_>>();
-        let mut shape_drain = shape.clone();
-        let mut amnt_side = 0;
+        let mut amnt_sides = 0;
 
-        let mut sides_vis = HashSet::new();
-        while let Some(p) = shape_drain.pop() {
-            let sides = p
+        let mut sides_visited = HashSet::new();
+        for &p in shape {
+            let valid_sides = p
                 .neighbours_4_ranged(-1..=m.len() as i32, -1..=m[0].len() as i32)
                 .into_iter()
-                .filter(|n| !shape_points.contains(n))
-                .collect_vec();
+                .filter(|n| !shape_points.contains(n));
 
-            for side in sides {
-                // møte endedn side_vis eller shape_point done
-                let ang = side - p;
+            for side in valid_sides {
+                let angle = side - p;
 
-                if sides_vis.contains(&(side, ang)) {
+                if sides_visited.contains(&(side, angle)) {
                     continue;
                 }
-                sides_vis.insert((side, ang));
-                amnt_side += 1;
+                sides_visited.insert((side, angle));
+                amnt_sides += 1;
 
                 let mut stack = vec![
                     (
-                        side + ang.arr_rot_90_clockwise(),
-                        ang.arr_rot_90_clockwise(),
+                        side + angle.arr_rot_90_clockwise(),
+                        angle.arr_rot_90_clockwise(),
                     ),
                     (
-                        side + ang.arr_rot_90_counter_clockwise(),
-                        ang.arr_rot_90_counter_clockwise(),
+                        side + angle.arr_rot_90_counter_clockwise(),
+                        angle.arr_rot_90_counter_clockwise(),
                     ),
                 ];
 
-                while let Some((p, dir)) = stack.pop() {
-                    if shape_points.contains(&p) || !shape_points.contains(&(p - ang)) {
+                while let Some((p, direction)) = stack.pop() {
+                    if shape_points.contains(&p) || !shape_points.contains(&(p - angle)) {
                         continue;
                     }
-                    sides_vis.insert((p, ang));
+                    sides_visited.insert((p, angle));
 
-                    stack.push((p + dir, dir))
+                    stack.push((p + direction, direction))
                 }
             }
         }
 
-        amnt_side
+        amnt_sides
     });
 
     area.zip(sides)
