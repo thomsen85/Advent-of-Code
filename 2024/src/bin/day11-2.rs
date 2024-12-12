@@ -1,9 +1,12 @@
-use std::collections::HashMap;
+use std::{collections::HashMap, time::Instant};
 
 use common::strings::string_to_t_grid;
 
 fn main() {
+    let now = Instant::now();
     dbg!(solve(include_str!("../../inputs/day11.txt")));
+    let elapsed = now.elapsed();
+    println!("Time used {elapsed:?}");
 }
 
 fn solve(input: &str) -> String {

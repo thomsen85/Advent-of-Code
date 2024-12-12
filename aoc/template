@@ -1,3 +1,4 @@
+use std::time::Instant;
 use nom::{
     bytes::complete::tag,
     character::complete::{multispace0, multispace1, newline, space0, space1},
@@ -8,7 +9,10 @@ use nom::{
 use nom::character::complete as cnom;
 
 fn main() {
+    let now = Instant::now();
     dbg!(solve(include_str!("../../inputs/day***day***.txt")));
+    let elapsed = now.elapsed();
+    println!("Time used {elapsed:?}");
 }
 
 fn solve(input: &str) -> String {

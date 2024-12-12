@@ -1,12 +1,4 @@
-use common::strings::{string_to_t_grid, string_to_t_vec};
-use nom::{
-    bytes::complete::tag,
-    character::complete::{multispace0, multispace1, newline, space0, space1},
-    sequence::{delimited, preceded},
-    IResult,
-};
-// For number types
-use nom::character::complete as cnom;
+use common::strings::string_to_t_grid;
 
 fn main() {
     dbg!(solve(include_str!("../../inputs/day11.txt")));
@@ -42,10 +34,6 @@ fn solve(input: &str) -> String {
     }
 
     prev_m.len().to_string()
-}
-
-fn parse(input: &str) -> IResult<&str, ()> {
-    Ok((input, ()))
 }
 
 #[cfg(test)]

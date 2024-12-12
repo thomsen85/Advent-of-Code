@@ -1,10 +1,4 @@
-use std::ops::Range;
-
-use common::{
-    datastructs::vec2::Vec2,
-    strings::{string_to_char_grid, string_to_single_int_grid},
-};
-use itertools::Itertools;
+use common::{datastructs::vec2::Vec2, strings::string_to_single_int_grid};
 
 fn main() {
     dbg!(solve(include_str!("../../inputs/day10.txt")));
