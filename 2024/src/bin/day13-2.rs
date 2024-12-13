@@ -1,7 +1,6 @@
 use common::strings::string_to_extracted_nums_t_vec;
 use ndarray::prelude::*;
 use ndarray_linalg::Solve;
-use num::Float;
 use std::time::Instant;
 // For number types
 

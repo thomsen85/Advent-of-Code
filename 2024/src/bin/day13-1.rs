@@ -13,7 +13,7 @@ fn solve(input: &str) -> String {
     for price in input.split("\n\n") {
         let (ax, ay) = price
             .lines()
-            .nth(0)
+            .next()
             .unwrap()
             .split_once(": ")
             .unwrap()
