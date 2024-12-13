@@ -41,6 +41,9 @@
                   })
               )
               just
+              gcc
+              gdb
+              clang-tools
             ];
           };
         }

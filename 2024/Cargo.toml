@@ -10,3 +10,6 @@ indicatif = "0.17.9"
 nom = "7.1.3"
 rayon = "1.10.0"
 common = { path = "../common" }
+num = "0.4.3"
+ndarray-linalg = { version = "0.16.0", features = ["openblas-static"] }
+ndarray = "0.15.6"
