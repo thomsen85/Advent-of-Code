@@ -45,3 +45,28 @@ pub fn string_to_single_int_grid(input: &str) -> Vec<Vec<i32>> {
         })
         .collect()
 }
+
+// If a string contains a lot of padding this function will just retrive all the numbers and parse
+// them into type t
+pub fn string_to_extracted_nums_t_vec<T: std::str::FromStr>(input: &str) -> Vec<T> {
+    let mut nums = Vec::new();
+    let mut new_num = true;
+    for c in input.chars() {
+        if c.is_ascii_digit() || c == '-' {
+            if new_num {
+                nums.push(String::new());
+            }
+            nums.last_mut().unwrap().push(c);
+            new_num = false;
+        } else {
+            new_num = true;
+        }
+    }
+
+    nums.into_iter()
+        .map(|num| {
+            num.parse::<T>()
+                .unwrap_or_else(|_err| panic!("Couldn't parse {:?} to given type", num))
+        })
+        .collect()
+}
