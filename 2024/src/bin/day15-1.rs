@@ -1,5 +1,4 @@
 use common::{datastructs::vec2::Vec2, strings::string_to_char_grid};
-use itertools::Itertools;
 use std::time::Instant;
 
 fn main() {
