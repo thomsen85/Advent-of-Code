@@ -15,14 +15,21 @@ fn solve(input: &str) -> String {
     let m = string_to_char_grid(input);
 
     let mut start_p = None;
+    let mut end_p = None;
     for row in 0..m.len() {
         for col in 0..m[0].len() {
-            if m[row][col] == 'S' {
-                start_p = Some(Vec2::from_row_col(row, col));
+            match m[row][col] {
+                'S' => {
+                    start_p = Some(Vec2::from_row_col(row, col));
+                }
+
+                'E' => end_p = Some(Vec2::from_row_col(row, col)),
+                _ => (),
             }
         }
     }
     let start_p = start_p.unwrap();
+    let end_p = end_p.unwrap();
 
     let mut heap = BinaryHeap::new();
     let mut distance = HashMap::new();
@@ -36,7 +43,7 @@ fn solve(input: &str) -> String {
     let mut paths: HashSet<Vec2> = HashSet::new();
     while let Some(Priority { value, data }) = heap.pop() {
         if value > min_score {
-            continue;
+            break;
         }
 
         let ent = distance.entry((data.0, data.1)).or_insert(i32::MAX);
@@ -46,10 +53,10 @@ fn solve(input: &str) -> String {
         }
         *ent = value;
 
-        let mut path = data.2.clone();
+        let mut path = data.2;
         path.push(data.0);
 
-        if *data.0.i_arr(&m) == 'E' {
+        if data.0 == end_p {
             min_score = value;
             paths.extend(path);
             continue;

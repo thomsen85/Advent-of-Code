@@ -1,17 +1,8 @@
 use common::{datastructs::vec2::Vec2, graphs::priority::Priority, strings::string_to_char_grid};
-use itertools::Itertools;
-use nom::{
-    bytes::complete::tag,
-    character::complete::{multispace0, multispace1, newline, space0, space1},
-    sequence::{delimited, preceded},
-    IResult,
-};
 use std::{
     collections::{BinaryHeap, HashMap},
     time::Instant,
 };
-// For number types
-use nom::character::complete as cnom;
 
 fn main() {
     let now = Instant::now();
@@ -43,7 +34,7 @@ fn solve(input: &str) -> String {
 
     let mut min_score = 0;
     while let Some(Priority { value, data }) = heap.pop() {
-        let mut ent = distance.entry(data).or_insert(i32::MAX);
+        let ent = distance.entry(data).or_insert(i32::MAX);
 
         if *data.0.i_arr(&m) == 'E' {
             min_score = value;
