@@ -18,9 +18,6 @@ fn solve(input: &str) -> String {
         .unwrap();
     let program = string_to_extracted_nums_t_vec::<u8>(program.split_once(": ").unwrap().1);
 
-    dbg!(a, b, c);
-    dbg!(&program);
-
     let mut sout = Vec::new();
     let mut ip = 0;
     loop {
@@ -35,41 +32,26 @@ fn solve(input: &str) -> String {
             _ => panic!("{}", operand),
         };
         match instruction {
-            0 => {
-                a /= 2i64.pow(combo_operand as u32);
-            }
-            1 => {
-                b = b.bitxor(operand as i64);
-            }
-            2 => {
-                b = combo_operand % 8;
-            }
-            3 => {
-                // jump
+            0 => a /= 2i64.pow(combo_operand as u32),
+            1 => b = b.bitxor(operand as i64),
+            2 => b = combo_operand % 8,
+            3 =>
+            // jump
+            {
                 if a != 0 {
                     ip = operand as usize;
                     continue;
                 }
             }
-            4 => {
-                b = b.bitxor(c);
-            }
-            5 => {
-                sout.push(combo_operand % 8);
-            }
-            6 => {
-                b = a / 2i64.pow(combo_operand as u32);
-            }
-            7 => {
-                c = a / 2i64.pow(combo_operand as u32);
-            }
 
+            4 => b = b.bitxor(c),
+            5 => sout.push(combo_operand % 8),
+            6 => b = a / 2i64.pow(combo_operand as u32),
+            7 => c = a / 2i64.pow(combo_operand as u32),
             _ => panic!("{} not yet planed for", instruction),
         };
 
         ip += 2;
-        dbg!(ip);
-        dbg!(a);
         if ip >= program.len() - 1 {
             break;
         }

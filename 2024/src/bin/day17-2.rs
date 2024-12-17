@@ -59,15 +59,9 @@ fn get_correct_back(program: &[u8], mut a: i64, mut b: i64, mut c: i64) -> usize
             _ => panic!("{}", operand),
         };
         match instruction {
-            0 => {
-                a /= 2i64.pow(combo_operand as u32);
-            }
-            1 => {
-                b = b.bitxor(operand as i64);
-            }
-            2 => {
-                b = combo_operand % 8;
-            }
+            0 => a /= 2i64.pow(combo_operand as u32),
+            1 => b = b.bitxor(operand as i64),
+            2 => b = combo_operand % 8,
             3 => {
                 // jump
                 if a != 0 {
@@ -75,16 +69,11 @@ fn get_correct_back(program: &[u8], mut a: i64, mut b: i64, mut c: i64) -> usize
                     continue;
                 }
             }
-            4 => {
-                b = b.bitxor(c);
-            }
+            4 => b = b.bitxor(c),
+
             5 => sout.push(combo_operand % 8),
-            6 => {
-                b = a / 2i64.pow(combo_operand as u32);
-            }
-            7 => {
-                c = a / 2i64.pow(combo_operand as u32);
-            }
+            6 => b = a / 2i64.pow(combo_operand as u32),
+            7 => c = a / 2i64.pow(combo_operand as u32),
 
             _ => panic!("{} not yet planed for", instruction),
         };
