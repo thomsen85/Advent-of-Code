@@ -1,15 +1,8 @@
 use common::strings::string_to_extracted_nums_t_vec;
 use core::panic;
 use itertools::Itertools;
-use nom::{
-    bytes::complete::tag,
-    character::complete::{multispace0, multispace1, newline, space0, space1},
-    sequence::{delimited, preceded},
-    IResult,
-};
 use std::{ops::BitXor, time::Instant};
 // For number types
-use nom::character::complete as cnom;
 
 fn main() {
     let now = Instant::now();
