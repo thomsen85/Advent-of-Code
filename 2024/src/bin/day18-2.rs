@@ -1,13 +1,6 @@
 use common::{
     datastructs::vec2::Vec2, graphs::priority::Priority, strings::string_to_extracted_nums_t_vec,
 };
-use itertools::Itertools;
-use nom::{
-    bytes::complete::tag,
-    character::complete::{multispace0, multispace1, newline, space0, space1},
-    sequence::{delimited, preceded},
-    IResult,
-};
 use std::{
     collections::{BinaryHeap, HashMap, HashSet},
     time::Instant,
@@ -75,14 +68,10 @@ fn solve(input: &str, size: usize, bytes: usize) -> String {
                 .map(|[col, row]: [i32; 2]| Vec2::from_row_col(row as usize, col as usize))
                 .nth(b - 1)
                 .unwrap();
-            return format!("{},{}", a.row(), a.col());
+            return format!("{},{}", a.col(), a.row());
         }
         b += 1;
     }
-}
-
-fn parse(input: &str) -> IResult<&str, ()> {
-    Ok((input, ()))
 }
 
 #[cfg(test)]

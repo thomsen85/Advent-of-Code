@@ -1,13 +1,6 @@
 use common::{
     datastructs::vec2::Vec2, graphs::priority::Priority, strings::string_to_extracted_nums_t_vec,
 };
-use itertools::Itertools;
-use nom::{
-    bytes::complete::tag,
-    character::complete::{multispace0, multispace1, newline, space0, space1},
-    sequence::{delimited, preceded},
-    IResult,
-};
 use std::{
     collections::{BinaryHeap, HashMap, HashSet},
     time::Instant,
@@ -64,10 +57,6 @@ fn solve(input: &str, size: usize, bytes: usize) -> String {
     }
 
     " ".to_string()
-}
-
-fn parse(input: &str) -> IResult<&str, ()> {
-    Ok((input, ()))
 }
 
 #[cfg(test)]
