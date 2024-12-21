@@ -70,113 +70,143 @@ fn solve(input: &str) -> String {
 
     let mut sum = 0;
     for (&seq, num) in sequences.iter().zip(num_part) {
-        let mut presses = String::new();
-        let mut needed_seq = seq.to_owned();
+        let mut needed_seqs = vec![seq.to_owned()];
+        let mut new_needed_seqs = Vec::new();
 
         let mut robot_arms_c = robot_arms.clone();
         for robot_arm in robot_arms_c.iter_mut() {
-            for needed_char in needed_seq.chars()
-            // .zip(vec!['A'; needed_seq.len()])
-            // .flat_map(|(a, b)| [a, b])
-            {
-                let mut q = VecDeque::from([(robot_arm.0, String::new())]);
-                // let mut visited = HashSet::new();
+            for needed_seq in needed_seqs {
+                let mut presses_options: Vec<String> = Vec::new();
+                for needed_char in needed_seq.chars() {
+                    let mut q = VecDeque::from([(robot_arm.0, String::new())]);
 
-                // let map = match robot_arm.1 {
-                //     Keypad::Directional => &directional_keypad,
-                //     Keypad::Numeric => &numeric_keypad,
-                // };
-
-                let mut target = match robot_arm.1 {
-                    Keypad::Directional => {
-                        if needed_char == 'A' {
-                            Button::A
-                        } else {
-                            Button::Dir(match needed_char {
-                                '^' => Vec2::ARR_UP,
-                                'v' => Vec2::ARR_DOWN,
-                                '<' => Vec2::ARR_LEFT,
-                                '>' => Vec2::ARR_RIGHT,
-                                _ => panic!("{} not valid char", needed_char),
-                            })
+                    let target = match robot_arm.1 {
+                        Keypad::Directional => {
+                            if needed_char == 'A' {
+                                Button::A
+                            } else {
+                                Button::Dir(match needed_char {
+                                    '^' => Vec2::ARR_UP,
+                                    'v' => Vec2::ARR_DOWN,
+                                    '<' => Vec2::ARR_LEFT,
+                                    '>' => Vec2::ARR_RIGHT,
+                                    _ => panic!("{} not valid char", needed_char),
+                                })
+                            }
                         }
-                    }
-                    Keypad::Numeric => {
-                        if needed_char == 'A' {
-                            Button::A
-                        } else {
-                            Button::Num(
-                                needed_char
-                                    .to_digit(10)
-                                    .expect("Invalid char to digit converstion")
-                                    as i32,
-                            )
+                        Keypad::Numeric => {
+                            if needed_char == 'A' {
+                                Button::A
+                            } else {
+                                Button::Num(
+                                    needed_char
+                                        .to_digit(10)
+                                        .expect("Invalid char to digit converstion")
+                                        as i32,
+                                )
+                            }
                         }
-                    }
-                };
+                    };
 
-                let bounds = match robot_arm.1 {
-                    Keypad::Directional => (directional_keypad.len(), directional_keypad[0].len()),
-                    Keypad::Numeric => (numeric_keypad.len(), numeric_keypad[0].len()),
-                };
-
-                while let Some((curr_p, path)) = q.pop_front() {
-                    // if visited.contains(&curr_p) {
-                    //     continue;
-                    // }
-
-                    // check if is at place to be
-                    if match robot_arm.1 {
-                        Keypad::Directional => &directional_keypad[curr_p.row()][curr_p.col()],
-                        Keypad::Numeric => &numeric_keypad[curr_p.row()][curr_p.col()],
-                    } == &target
-                    {
-                        presses.push_str(&path);
-                        presses.push('A');
-                        robot_arm.0 = curr_p;
-                        break;
-                    }
-
-                    // Order matters it seems like
-                    // for n_p in curr_p.neighbours_4_ranged(0..bounds.0 as i32, 0..bounds.1 as i32) {
-                    for d_p in [
-                        Vec2::ARR_RIGHT,
-                        Vec2::ARR_UP,
-                        Vec2::ARR_DOWN,
-                        Vec2::ARR_LEFT,
-                    ] {
-                        let n_p = curr_p + d_p;
-                        if !(0..bounds.0 as i32).contains(&n_p.x)
-                            || !(0..bounds.1 as i32).contains(&n_p.y)
-                        {
-                            continue;
+                    let bounds = match robot_arm.1 {
+                        Keypad::Directional => {
+                            (directional_keypad.len(), directional_keypad[0].len())
                         }
+                        Keypad::Numeric => (numeric_keypad.len(), numeric_keypad[0].len()),
+                    };
+
+                    let mut valid_paths: Vec<String> = Vec::new();
+                    while let Some((curr_p, path)) = q.pop_front() {
+                        // if visited.contains(&curr_p) {
+                        //     continue;
+                        // }
+
+                        // check if is at place to be
                         if match robot_arm.1 {
                             Keypad::Directional => &directional_keypad[curr_p.row()][curr_p.col()],
                             Keypad::Numeric => &numeric_keypad[curr_p.row()][curr_p.col()],
-                        } == &Empty
+                        } == &target
                         {
+                            let path = path + "A";
+
+                            if let Some(prev) = valid_paths.last() {
+                                if prev.len() == path.len() {
+                                    valid_paths.push(path);
+                                } else {
+                                    robot_arm.0 = curr_p;
+                                    break;
+                                }
+                            } else {
+                                valid_paths.push(path);
+                            }
                             continue;
+                            // presses.push_str(&path);
+                            // presses.push('A');
                         }
 
-                        let mut new_path = path.clone();
-                        new_path.push(match n_p - curr_p {
-                            Vec2::ARR_UP => '^',
-                            Vec2::ARR_DOWN => 'v',
-                            Vec2::ARR_LEFT => '<',
-                            Vec2::ARR_RIGHT => '>',
-                            _ => panic!(),
-                        });
-                        q.push_back((n_p, new_path))
-                    }
-                }
-            }
+                        // Order matters it seems like
+                        // for n_p in curr_p.neighbours_4_ranged(0..bounds.0 as i32, 0..bounds.1 as i32) {
+                        for d_p in [
+                            Vec2::ARR_RIGHT,
+                            Vec2::ARR_UP,
+                            Vec2::ARR_DOWN,
+                            Vec2::ARR_LEFT,
+                        ] {
+                            let n_p = curr_p + d_p;
+                            if !(0..bounds.0 as i32).contains(&n_p.x)
+                                || !(0..bounds.1 as i32).contains(&n_p.y)
+                            {
+                                continue;
+                            }
+                            if match robot_arm.1 {
+                                Keypad::Directional => {
+                                    &directional_keypad[curr_p.row()][curr_p.col()]
+                                }
+                                Keypad::Numeric => &numeric_keypad[curr_p.row()][curr_p.col()],
+                            } == &Empty
+                            {
+                                continue;
+                            }
 
-            println!("Seq: {}, typed with {}", needed_seq, presses);
-            needed_seq = presses.clone();
-            presses.clear();
+                            let mut new_path = path.clone();
+                            new_path.push(match n_p - curr_p {
+                                Vec2::ARR_UP => '^',
+                                Vec2::ARR_DOWN => 'v',
+                                Vec2::ARR_LEFT => '<',
+                                Vec2::ARR_RIGHT => '>',
+                                _ => panic!(),
+                            });
+                            q.push_back((n_p, new_path))
+                        }
+                    }
+
+                    // dbg!(&valid_paths);
+                    if presses_options.is_empty() {
+                        presses_options = valid_paths
+                    } else {
+                        presses_options = presses_options
+                            .into_iter()
+                            .flat_map(|a| {
+                                valid_paths.iter().map(move |suffix| (a.clone() + suffix))
+                            })
+                            .collect()
+                    }
+                    // dbg!(&presses_options);
+                }
+
+                // println!(
+                //     "Seq: {}, can by typed with: \n{}",
+                //     needed_seq,
+                //     presses_options.join("\n")
+                // );
+                new_needed_seqs.extend(presses_options);
+            }
+            // dbg!(&new_needed_seqs.len());
+            needed_seqs = new_needed_seqs.clone();
+            new_needed_seqs.clear()
         }
-        sum += dbg!(needed_seq.len()) * dbg!(*num.first().unwrap() as usize);
+        sum += dbg!(needed_seqs.iter().map(|a| a.len()).min().unwrap())
+            * dbg!(*num.first().unwrap() as usize);
     }
     sum.to_string()
 }
