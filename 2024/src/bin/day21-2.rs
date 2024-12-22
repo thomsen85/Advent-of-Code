@@ -50,12 +50,6 @@ fn solve(input: &str) -> String {
         .map(string_to_extracted_nums_t_vec::<i32>)
         .collect_vec());
 
-    let robot_arms = [
-        (Vec2::from_row_col(3, 2), Keypad::Numeric), // Numeric
-        (Vec2::from_row_col(0, 2), Keypad::Directional), //  First
-        (Vec2::from_row_col(0, 2), Keypad::Directional), //  Second
-    ];
-
     let mut sum = 0;
     let mut cache = HashMap::new();
     for (&seq, num) in sequences.iter().zip(num_part) {
