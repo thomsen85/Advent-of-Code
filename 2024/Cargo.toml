@@ -13,3 +13,5 @@ common = { path = "../common" }
 num = "0.4.3"
 ndarray-linalg = { version = "0.16.0", features = ["openblas-static"] }
 ndarray = "0.15.6"
+petgraph = "0.6.5"
+graph-cycles = "0.1.0"

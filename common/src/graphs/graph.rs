@@ -66,6 +66,11 @@ impl<N> NamedNodesWeightedGraph<N> {
         self.add_edge(from_node, to_node, weight, bi_directional);
     }
 
+    pub fn is_edge_between(&self, a: usize, b: usize) -> bool {
+        self.edges[a].iter().any(|node| node.to == b)
+            && self.edges[b].iter().any(|node| node.to == a)
+    }
+
     /// Removes the node and creates a connection between them.
     /// Will not add conneciton if a better one is present
     /// Will replace if a existing edge is heavier

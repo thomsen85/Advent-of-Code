@@ -5,7 +5,7 @@ use super::bi_directional_map::BiDirectionalMap;
 #[derive(Debug)]
 pub struct NodeTranslator<T> {
     current_id: usize,
-    bi_map: BiDirectionalMap<T, usize>,
+    pub bi_map: BiDirectionalMap<T, usize>,
 }
 
 impl<T> NodeTranslator<T>
