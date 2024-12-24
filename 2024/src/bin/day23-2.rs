@@ -97,6 +97,6 @@ co-tc
 wh-qp
 tb-vc
 td-yn";
-        assert_eq!(solve(ti), "7".to_string());
+        assert_eq!(solve(ti), "co,de,ka,ta".to_string());
     }
 }
