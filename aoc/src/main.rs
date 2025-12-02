@@ -41,7 +41,7 @@ struct Args {
     #[arg(
         short,
         long,
-        default_value = "/home/thomas/Development/Advent-of-Code/aoc/COOKIE"
+        default_value = "/home/thomas/Development/Advent-of-Code/aoc/COOKIE" // HACK: This isnt very nice
     )]
     cookie_file: String,
 
@@ -140,7 +140,7 @@ fn new(client: Client, year: i32, day: u32, template_path: String, no_fetch_inpu
     let mut clipboard = Clipboard::new();
     let mut content = clipboard
         .as_mut()
-        .map(|cb| cb.get_text().unwrap())
+        .map(|cb| cb.get_text().unwrap_or_default())
         .unwrap_or_default();
 
     loop {
@@ -148,7 +148,7 @@ fn new(client: Client, year: i32, day: u32, template_path: String, no_fetch_inpu
         if let Ok(cb) = clipboard.as_mut() {
             loop {
                 if cb.get_text().unwrap() != content {
-                    content = cb.get_text().unwrap();
+                    content = cb.get_text().unwrap_or_default();
                     break;
                 }
                 std::thread::sleep(std::time::Duration::from_millis(300));
@@ -166,7 +166,7 @@ fn new(client: Client, year: i32, day: u32, template_path: String, no_fetch_inpu
         if let Ok(cb) = clipboard.as_mut() {
             loop {
                 if cb.get_text().unwrap() != content {
-                    content = cb.get_text().unwrap();
+                    content = cb.get_text().unwrap_or_default();
                     break;
                 }
                 std::thread::sleep(std::time::Duration::from_millis(300));

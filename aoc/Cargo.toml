@@ -1,10 +1,10 @@
 [package]
 name = "aoc"
 version = "0.1.0"
-edition = "2021"
+edition = "2024"
 
 [dependencies]
-arboard = "3.4.1"
+arboard = { version = "3.6.1", features = ["wayland-data-control"] }
 chrono = "0.4.38"
 clap = { version = "4.5.20", features = ["derive"] }
 reqwest = { version = "0.12.9", features = ["blocking"] }

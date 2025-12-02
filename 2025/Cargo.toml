@@ -1,0 +1,16 @@
+[package]
+name = "aoc-2025"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+itertools = "0.14.0"
+glam = "0.30.9"
+indicatif = { version = "0.18.3", features = ["rayon"] }
+nom = "7.1.3"
+rayon = "1.10.0"
+common = { path = "../common" }
+num = "0.4.3"
+ndarray-linalg = { version = "0.16.0", features = ["openblas-static"] }
+ndarray = "0.15.6"
+petgraph = "0.6.5"
