@@ -10,8 +10,9 @@ use nom::character::complete as cnom;
 
 fn main() {
     let now = Instant::now();
-    dbg!(solve(include_str!("../../inputs/day***day***.txt")));
+    let res = solve(include_str!("../../inputs/day***day***.txt"));
     let elapsed = now.elapsed();
+    dbg!(res);
     println!("Time used {elapsed:?}");
 }
 
