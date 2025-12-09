@@ -2,7 +2,7 @@ use itertools::Itertools;
 use std::{collections::HashMap, time::Instant};
 fn main() {
     let now = Instant::now();
-    let res = solve(include_str!("../../inputs/day8.txt"), 1000);
+    let res = solve(include_str!("../../inputs/day8.txt"));
     let elapsed = now.elapsed();
     dbg!(res);
     println!("Time used {elapsed:?}");
@@ -36,7 +36,7 @@ impl JunctionBox {
     }
 }
 
-fn solve(input: &str, connections: usize) -> String {
+fn solve(input: &str) -> String {
     let boxes = input
         .trim()
         .split("\n")
@@ -123,6 +123,6 @@ mod tests {
 862,61,35
 984,92,344
 425,690,689";
-        assert_eq!(solve(ti, 10), "25272".to_string());
+        assert_eq!(solve(ti), "25272".to_string());
     }
 }
