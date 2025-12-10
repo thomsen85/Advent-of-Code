@@ -14,3 +14,4 @@ num = "0.4.3"
 ndarray-linalg = { version = "0.16.0", features = ["openblas-static"] }
 ndarray = "0.15.6"
 petgraph = "0.6.5"
+good_lp = { version = "*", features = ["microlp"], default-features = false }
